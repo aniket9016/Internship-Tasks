@@ -1,0 +1,58 @@
+﻿@model IEnumerable<StudentCourseSubscriptionMVCCRUD.Models.Course>
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        @TempData["SuccessMessage"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+<div class="container mt-4">
+    <div class="card shadow-lg p-4">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h2 class="text-primary">Course List</h2>
+            <a href="@Url.Action("Create")" class="btn btn-success btn-lg">
+                <i class="fas fa-user-plus"></i> Add New Course
+            </a>
+        </div>
+
+        <div class="table-responsive">
+            <table class="table table-striped table-hover table-bordered text-center">
+                <thead class="table-dark">
+                    <tr>
+                        <th>@Html.DisplayNameFor(m => m.CourseID)</th>
+                        <th>@Html.DisplayNameFor(m => m.CourseName)</th>
+                        <th>@Html.DisplayNameFor(m => m.Duration)</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@Html.DisplayFor(m => item.CourseID)</td>
+                            <td>@Html.DisplayFor(m => item.CourseName)</td>
+                            <td>@Html.DisplayFor(m => item.Duration)</td>
+                            <td>
+                                <div class="btn-group">
+                                    <a href="@Url.Action("Edit", new { id = item.CourseID })" class="btn btn-warning btn-sm">
+                                        <i class="fas fa-edit"></i> Edit
+                                    </a>
+                                    <a href="@Url.Action("Details", new { id = item.CourseID })" class="btn btn-info btn-sm text-white">
+                                        <i class="fas fa-info-circle"></i> Details
+                                    </a>
+                                    @using (Html.BeginForm("Delete", "Course", new { id = item.CourseID }, FormMethod.Post, new { onsubmit = "return confirm('Are you sure you want to delete this student?');" }))
+                                    {
+                                        <button type="submit" class="btn btn-danger btn-sm">
+                                            <i class="fas fa-trash"></i> Delete
+                                        </button>
+                                    }
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,101 @@
+﻿@model IEnumerable<EmployeeManagement.Models.City>
+
+@{
+    ViewData["Title"] = "City Management";
+}
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<div class="container mt-4">
+    <h2><i class="fas fa-city"></i> City Management</h2>
+
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            @TempData["SuccessMessage"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+    }
+
+    @if (TempData["ErrorMessage"] != null)
+    {
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            @TempData["ErrorMessage"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+    }
+
+    <button class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#cityModal" onclick="openModal(0, '')">
+        <i class="fa fa-plus"></i> Add City
+    </button>
+
+    <table class="table table-striped">
+        <thead class="table-dark">
+            <tr>
+                <th>ID</th>
+                <th>City Name</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var city in Model)
+            {
+                <tr>
+                    <td>@city.CityId</td>
+                    <td>@city.CityName</td>
+                    <td>
+                        <button class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#cityModal"
+                                onclick="openModal(@city.CityId, '@city.CityName')">
+                            <i class="fa fa-edit"></i> Edit
+                        </button>
+                        <button class="btn btn-danger btn-sm" onclick="confirmDelete(@city.CityId)">
+                            <i class="fa fa-trash"></i> Delete
+                        </button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<div class="modal fade" id="cityModal" tabindex="-1" aria-labelledby="cityModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="cityModalLabel">City</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form id="cityForm" method="post" asp-action="CreateOrEdit">
+                    <input type="hidden" id="CityId" name="CityId">
+
+                    <div class="mb-3">
+                        <label class="form-label">City Name</label>
+                        <input type="text" class="form-control" id="CityName" name="CityName" required>
+                        <div class="text-danger validation-error" data-for="CityName"></div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-success"><i class="fa fa-save"></i> Save</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function confirmDelete(cityId) {
+        if (confirm("Are you sure you want to delete this city?")) {
+            window.location.href = "/City/Delete/" + cityId;
+        }
+    }
+
+    function openModal(id, cityName) {
+        document.getElementById("CityId").value = id || 0;
+        document.getElementById("CityName").value = cityName || '';
+    }
+</script>
+

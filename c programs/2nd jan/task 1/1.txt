@@ -1,0 +1,19 @@
+Take input of two numbers and find Maximum from them.
+
+#include <stdio.h>
+int main() {
+    int a;
+    int b;
+    printf("Enter number 1: ");
+    scanf("%d",&a);
+    printf("Enter number 2: ");
+    scanf("%d",&b);
+    if(a>b)
+    {
+        printf("%d",a);
+    }else
+    {
+        printf("%d",b);
+    }
+    return 0;
+}

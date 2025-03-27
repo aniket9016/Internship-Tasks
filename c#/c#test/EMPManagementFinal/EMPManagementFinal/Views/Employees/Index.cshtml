@@ -1,0 +1,79 @@
+﻿@model IEnumerable<EMPManagementFinal.Models.Employee>
+
+@{
+    ViewData["Title"] = "Employee List";
+}
+
+<h2 class="mb-3">@ViewData["Title"]</h2>
+
+<!-- Search Form (Using POST to Hide Data from URL) -->
+<form asp-action="Index" method="post">
+    @Html.AntiForgeryToken()
+    <div class="input-group mb-3" style="max-width: 400px;">
+        <input type="text" name="searchString" class="form-control" placeholder="Search by Employee Name">
+        <button type="submit" class="btn btn-primary">
+            <i class="bi bi-search"></i> Search
+        </button>
+    </div>
+</form>
+
+<p>
+    <a asp-action="CreateOrEdit" class="btn btn-success">
+        <i class="bi bi-plus-circle"></i> Add Employee
+    </a>
+</p>
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        @TempData["SuccessMessage"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        @TempData["ErrorMessage"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+
+<table class="table table-bordered table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th>Employee Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Gender</th>
+            <th>DOB</th>
+            <th>Department</th>
+            <th>City</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.EmpName</td>
+                <td>@item.Email</td>
+                <td>@item.Phone</td>
+                <td>@item.Gender</td>
+                <td>@item.DOB.ToShortDateString()</td>
+                <td>@item.Department.DeptName</td>
+                <td>@item.City.CityName</td>
+                <td>
+                    <a asp-action="CreateOrEdit" asp-route-id="@item.EmpId" class="btn btn-warning btn-sm">
+                        <i class="bi bi-pencil"></i> Edit
+                    </a>
+                    <a asp-action="Details" asp-route-id="@item.EmpId" class="btn btn-info btn-sm">
+                        <i class="bi bi-eye"></i> Details
+                    </a>
+                    <a asp-action="Delete" asp-route-id="@item.EmpId" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure?');">
+                        <i class="bi bi-trash"></i> Delete
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

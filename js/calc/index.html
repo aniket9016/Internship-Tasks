@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="first.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div style="padding-left: 450px;">
+        <h1>Calculator</h1>
+
+        <table border="1px solid black" style="height: 450px; width: 350px;">
+            <tr>
+                <td colspan="4">
+                    <input style=" font-weight: bold; background-color: white; color: black; height: 100%; width: 97%;"
+                        type="number" name="" id="value" on-keydown="">
+                </td>
+            </tr>
+            <tr>
+                <td><button style="height: 100%; width: 100%; font-size:larger;" onclick="funbtn7()" value="7"
+                        id="btn7">7</button></td>
+                <td><button style="height: 100%; width: 100%; font-size:larger;" onclick="funbtn8()" value="8"
+                        id="btn8">8</button></td>
+                <td><button style="height: 100%; width: 100%; font-size:larger;" onclick="funbtn9()" value="9"
+                        id="btn9">9</button></td>
+                <td><button style="height: 100%; width: 100%; font-size:larger;" onclick="fundiv()"
+                        id="btndivide">/</button></td>
+            </tr>
+            <tr>
+                <td><button style="height: 100%; width: 100%; font-size:larger;" value="4" onclick="funbtn4()"
+                        id="btn4">4</button></td>
+                <td><button style="height: 100%; width: 100%; font-size:larger;" value="5" onclick="funbtn5()"
+                        id="btn5">5</button></td>
+                <td><button style="height: 100%; width: 100%; font-size:larger;" value="6" onclick="funbtn6()"
+                        id="btn6">6</button></td>
+                <td><button style="height: 100%; width: 100%; font-size:larger;" onclick="funmul()"
+                        id="btnmultiply">x</button></td>
+            </tr>
+            <tr>
+                <td><button style="height: 100%; width: 100%; font-size:larger;" value="1" onclick="funbtn1()"
+                        id="btn1">1</button></td>
+                <td><button style="height: 100%; width: 100%; font-size:larger;" value="2" onclick="funbtn2()"
+                        id="btn2">2</button></td>
+                <td><button style="height: 100%; width: 100%; font-size:larger;" value="3" onclick="funbtn3()"
+                        id="btn3">3</button></td>
+                <td><button style="height: 100%; width: 100%; font-size:larger;" onclick="funsub()"
+                        id="btnminus">-</button></td>
+            </tr>
+            <tr>
+                <td><button style="height: 100%; width: 100%; font-size:larger;" id="btnC"
+                        onclick="funclear()">C</button></td>
+                <td><button style="height: 100%; width: 100%; font-size:larger;" onclick="funbtn0()"
+                        id="btn0">0</button></td>
+                <td><button style="height: 100%; width: 100%; font-size:larger;" id="btnDot">.</button></td>
+                <td><button style="height: 100%; width: 100%; font-size:larger;" onclick="funadd()"
+                        id="btnPlus">+</button></td>
+            </tr>
+            <tr>
+                <td colspan="4"><button style="height: 100%; width: 100%; font-size:larger;" onclick="funresult()"
+                        id="btn">=</button></td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>

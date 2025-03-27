@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+int main() {
+    int length,breadth;
+    printf("Enter length:- ");
+    scanf("%d",&length);
+    printf("Enter a another breadth:- ");
+    scanf("%d",&breadth);
+    printf("Area of rectangle with length %d and breadth %d is %d",length,breadth,length*breadth);
+    printf("\nPerimeter of rectangle with length %d and breadth %d is %d",length,breadth,2*(length+breadth));
+    
+    return 0;
+}

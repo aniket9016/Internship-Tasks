@@ -1,0 +1,33 @@
+"Take input of an Integer and output Temperature value according to the following conditions.
+          If Temp <= 0 output ""Freezing""
+          If Temp is between 1 - 10 output ""Very Cold""
+          If Temp is between 11 - 20 output ""Cold""
+          If Temp is between 21 - 30 output ""Moderate""
+          If Temp is >= 30 output ""Hot"""
+
+#include <stdio.h>
+
+int main() {
+    int temp;
+    
+    printf("Enter num to check temperature:- ");
+    
+    scanf("%d",&temp);
+    if(temp<=0)
+    {
+         printf("\"Freezing\"");
+    }else if(temp>=1 && temp<=10)
+    {
+        printf("\"Very Cold\"");
+    }else if(temp>=11 && temp<=20)
+    {
+        printf("\"Cold\"");
+    }else if(temp>=21 && temp<=30)
+    {
+        printf("\"Moderate\"");
+    }else if(temp>=30)
+    {
+        printf("\"Hot\"");
+    }
+    return 0;
+}

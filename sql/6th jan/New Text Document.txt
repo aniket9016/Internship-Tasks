@@ -1,0 +1,12 @@
+use DB_SOCCER_GAME create table match_mast(match_no numeric(10) identity(9001,1) primary key,play_stage varchar(10),play_date date,
+results varchar(10), decided_by varchar(10),goal_score varchar(10),venue_id numeric(10) foreign key references soccer_venue(venue_id)
+,referee_id numeric(10) foreign key references referee(referee_id),audence numeric(10),plr_of_match numeric(10) foreign key references player_mast(player_id),
+stop1_sec numeric(10),stop_sec numeric(10));
+
+use DB_SOCCER_GAME create table asst_referee_mast(ass_ref_id numeric(10) identity(201,1),ass_ref_name varchar(40),country_id numeric(10)
+foreign key references soccer_country(country_id));
+
+
+use DB_SOCCER_GAME create table player_mast(player_id numeric(10) identity(8001,1) primary key,team_id numeric(10) foreign key 
+references soccer_team(team_id),jersey_no numeric(10),player_name varchar(40),posi_to_play int foreign key references
+playing_position(position_id),dt_of_birth date,age numeric(15),playing_club varchar(40));

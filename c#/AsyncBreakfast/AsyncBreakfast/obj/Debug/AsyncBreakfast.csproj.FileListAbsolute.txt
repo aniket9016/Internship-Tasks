@@ -1,0 +1,7 @@
+E:\aniket\c#\AsyncBreakfast\AsyncBreakfast\bin\Debug\AsyncBreakfast.exe.config
+E:\aniket\c#\AsyncBreakfast\AsyncBreakfast\bin\Debug\AsyncBreakfast.exe
+E:\aniket\c#\AsyncBreakfast\AsyncBreakfast\bin\Debug\AsyncBreakfast.pdb
+E:\aniket\c#\AsyncBreakfast\AsyncBreakfast\obj\Debug\AsyncBreakfast.csproj.AssemblyReference.cache
+E:\aniket\c#\AsyncBreakfast\AsyncBreakfast\obj\Debug\AsyncBreakfast.csproj.CoreCompileInputs.cache
+E:\aniket\c#\AsyncBreakfast\AsyncBreakfast\obj\Debug\AsyncBreakfast.exe
+E:\aniket\c#\AsyncBreakfast\AsyncBreakfast\obj\Debug\AsyncBreakfast.pdb

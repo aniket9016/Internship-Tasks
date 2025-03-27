@@ -1,0 +1,2 @@
+E:\aniket\c#\crudrough2\crudrough2\obj\Debug\crudrough2.csproj.AssemblyReference.cache
+E:\aniket\c#\crudrough2\crudrough2\obj\Debug\crudrough2.csproj.CoreCompileInputs.cache

@@ -1,0 +1,60 @@
+﻿@model StudentCourseSubscriptionMVCCRUD.Models.Subscription
+
+@{
+    ViewBag.Title = "Create Subscription";
+}
+
+<h2 class="text-center text-primary">Create Subscription</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="container card shadow-lg p-4">
+        <h4 class="mb-3">Subscription Details</h4>
+        <hr />
+
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <div class="mb-3">
+            @Html.LabelFor(model => model.StudentID, "Student", new { @class = "form-label fw-bold" })
+            @Html.DropDownList("StudentID", ViewBag.StudentID as SelectList, "Select Student", new { @class = "form-select" })
+            @Html.ValidationMessageFor(model => model.StudentID, "", new { @class = "text-danger" })
+        </div>
+
+        <div class="mb-3">
+            @Html.LabelFor(model => model.CourseID, "Course", new { @class = "form-label fw-bold" })
+            @Html.DropDownList("CourseID", ViewBag.CourseID as SelectList, "Select Course", new { @class = "form-select" })
+            @Html.ValidationMessageFor(model => model.CourseID, "", new { @class = "text-danger" })
+        </div>
+
+        <div class="form-check mb-3">
+            <input type="checkbox" id="statusCheckbox" class="form-check-input" />
+            <label for="statusCheckbox" class="form-check-label fw-bold">Active</label>
+        </div>
+
+        @Html.HiddenFor(model => model.Status, new { id = "Status" })
+
+        <div class="d-flex justify-content-between">
+            <button type="submit" class="btn btn-success">
+                <i class="fas fa-save"></i> Save
+            </button>
+            @Html.ActionLink("Cancel", "Index", null, new { @class = "btn btn-secondary" })
+        </div>
+    </div>
+}
+
+@section Scripts {
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var checkbox = document.getElementById("statusCheckbox");
+            var statusField = document.getElementById("Status");
+
+            statusField.value = checkbox.checked ? "Active" : "Inactive";
+
+            checkbox.addEventListener("change", function () {
+                statusField.value = checkbox.checked ? "Active" : "Inactive";
+            });
+        });
+    </script>
+}

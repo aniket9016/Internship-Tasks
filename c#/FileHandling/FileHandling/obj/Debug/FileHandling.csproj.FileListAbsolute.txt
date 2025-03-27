@@ -1,0 +1,7 @@
+E:\aniket\c#\FileHandling\FileHandling\bin\Debug\FileHandling.exe.config
+E:\aniket\c#\FileHandling\FileHandling\bin\Debug\FileHandling.exe
+E:\aniket\c#\FileHandling\FileHandling\bin\Debug\FileHandling.pdb
+E:\aniket\c#\FileHandling\FileHandling\obj\Debug\FileHandling.csproj.AssemblyReference.cache
+E:\aniket\c#\FileHandling\FileHandling\obj\Debug\FileHandling.csproj.CoreCompileInputs.cache
+E:\aniket\c#\FileHandling\FileHandling\obj\Debug\FileHandling.exe
+E:\aniket\c#\FileHandling\FileHandling\obj\Debug\FileHandling.pdb

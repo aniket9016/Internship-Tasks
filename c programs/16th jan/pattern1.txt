@@ -1,0 +1,16 @@
+#include <stdio.h>
+int main() {
+    int n,total=1;
+    int j=2;
+    int k=3;
+    printf("Enter n");
+    scanf("%d",&n);
+    for(int i=1;i<=n;i++)
+    {
+        printf("\n%d",total);
+        total=total*j*k;
+        j=j+2;
+        k=k+2;
+    }
+    return 0;
+}

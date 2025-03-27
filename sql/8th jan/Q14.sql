@@ -1,0 +1,3 @@
+use assignment1
+select top(5) WORKER_ID, FIRST_NAME,LAST_NAME,SALARY,JOINING_DATE,DEPARTMENT
+from Tbl_Worker;

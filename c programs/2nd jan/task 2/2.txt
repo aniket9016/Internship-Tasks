@@ -1,0 +1,25 @@
+Take input of Three Numbers and find Maximum from them using Boolean operators.
+
+#include <stdio.h>
+int main() {
+    int a;
+    int b;
+    int c;
+    printf("Enter number 1: ");
+    scanf("%d",&a);
+    printf("Enter number 2: ");
+    scanf("%d",&b);
+    printf("Enter number 3: ");
+    scanf("%d",&c);
+    if(a>b && a>c) 
+    {
+        printf("%d",a);
+    }else if(b>c)
+    {
+            printf("%d",b);
+    }else
+    {
+        printf("%d",c);
+    }
+    return 0;
+}

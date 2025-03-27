@@ -1,0 +1,59 @@
+﻿@model StudentCourseSubscriptionMVCCRUD.Models.Student
+
+@{
+    ViewBag.Title = "Student Details";
+}
+
+<div class="container mt-4">
+    <div class="card shadow-lg p-4">
+        <h2 class="text-center text-primary mb-4">Student Details</h2>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="table-responsive">
+                    <table class="table table-bordered table-striped">
+                        <tbody>
+                            <tr>
+                                <th class="bg-light">Student Name</th>
+                                <td>@Html.DisplayFor(model => model.StudentName)</td>
+                            </tr>
+                            <tr>
+                                <th class="bg-light">Address</th>
+                                <td>@Html.DisplayFor(model => model.Address)</td>
+                            </tr>
+                            <tr>
+                                <th class="bg-light">Phone</th>
+                                <td>@Html.DisplayFor(model => model.Phone)</td>
+                            </tr>
+                            <tr>
+                                <th class="bg-light">Email</th>
+                                <td>@Html.DisplayFor(model => model.Email)</td>
+                            </tr>
+                            <tr>
+                                <th class="bg-light">Gender</th>
+                                <td>@Html.DisplayFor(model => model.Gender)</td>
+                            </tr>
+                            <tr>
+                                <th class="bg-light">City</th>
+                                <td>@Html.DisplayFor(model => model.City)</td>
+                            </tr>
+                            <tr>
+                                <th class="bg-light">Enrollment No.</th>
+                                <td>@Html.DisplayFor(model => model.EnrollmentNo)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-4">
+            <a href="@Url.Action("Edit", new { id = Model.StudentID })" class="btn btn-warning btn-lg text-white">
+                <i class="bi bi-pencil-square"></i> Edit
+            </a>
+            <a href="@Url.Action("Index")" class="btn btn-secondary btn-lg">
+                <i class="bi bi-arrow-left-circle"></i> Back to List
+            </a>
+        </div>
+    </div>
+</div>

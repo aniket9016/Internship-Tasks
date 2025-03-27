@@ -1,0 +1,7 @@
+E:\aniket\c#\problems\Employee Payroll System\Employee Payroll System\Employee Payroll System\bin\Debug\Employee Payroll System.exe.config
+E:\aniket\c#\problems\Employee Payroll System\Employee Payroll System\Employee Payroll System\bin\Debug\Employee Payroll System.exe
+E:\aniket\c#\problems\Employee Payroll System\Employee Payroll System\Employee Payroll System\bin\Debug\Employee Payroll System.pdb
+E:\aniket\c#\problems\Employee Payroll System\Employee Payroll System\Employee Payroll System\obj\Debug\Employee Payroll System.csproj.AssemblyReference.cache
+E:\aniket\c#\problems\Employee Payroll System\Employee Payroll System\Employee Payroll System\obj\Debug\Employee Payroll System.csproj.CoreCompileInputs.cache
+E:\aniket\c#\problems\Employee Payroll System\Employee Payroll System\Employee Payroll System\obj\Debug\Employee Payroll System.exe
+E:\aniket\c#\problems\Employee Payroll System\Employee Payroll System\Employee Payroll System\obj\Debug\Employee Payroll System.pdb

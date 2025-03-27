@@ -1,0 +1,7 @@
+E:\aniket\c#\c#test\Practical1\Practical1\bin\Debug\Practical1.exe.config
+E:\aniket\c#\c#test\Practical1\Practical1\bin\Debug\Practical1.exe
+E:\aniket\c#\c#test\Practical1\Practical1\bin\Debug\Practical1.pdb
+E:\aniket\c#\c#test\Practical1\Practical1\obj\Debug\Practical1.csproj.AssemblyReference.cache
+E:\aniket\c#\c#test\Practical1\Practical1\obj\Debug\Practical1.csproj.CoreCompileInputs.cache
+E:\aniket\c#\c#test\Practical1\Practical1\obj\Debug\Practical1.exe
+E:\aniket\c#\c#test\Practical1\Practical1\obj\Debug\Practical1.pdb

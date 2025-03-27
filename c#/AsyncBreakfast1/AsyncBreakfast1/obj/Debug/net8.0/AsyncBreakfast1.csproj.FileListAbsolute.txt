@@ -1,0 +1,14 @@
+E:\aniket\c#\AsyncBreakfast1\AsyncBreakfast1\bin\Debug\net8.0\AsyncBreakfast1.exe
+E:\aniket\c#\AsyncBreakfast1\AsyncBreakfast1\bin\Debug\net8.0\AsyncBreakfast1.deps.json
+E:\aniket\c#\AsyncBreakfast1\AsyncBreakfast1\bin\Debug\net8.0\AsyncBreakfast1.runtimeconfig.json
+E:\aniket\c#\AsyncBreakfast1\AsyncBreakfast1\bin\Debug\net8.0\AsyncBreakfast1.dll
+E:\aniket\c#\AsyncBreakfast1\AsyncBreakfast1\bin\Debug\net8.0\AsyncBreakfast1.pdb
+E:\aniket\c#\AsyncBreakfast1\AsyncBreakfast1\obj\Debug\net8.0\AsyncBreakfast1.GeneratedMSBuildEditorConfig.editorconfig
+E:\aniket\c#\AsyncBreakfast1\AsyncBreakfast1\obj\Debug\net8.0\AsyncBreakfast1.AssemblyInfoInputs.cache
+E:\aniket\c#\AsyncBreakfast1\AsyncBreakfast1\obj\Debug\net8.0\AsyncBreakfast1.AssemblyInfo.cs
+E:\aniket\c#\AsyncBreakfast1\AsyncBreakfast1\obj\Debug\net8.0\AsyncBreakfast1.csproj.CoreCompileInputs.cache
+E:\aniket\c#\AsyncBreakfast1\AsyncBreakfast1\obj\Debug\net8.0\AsyncBreakfast1.dll
+E:\aniket\c#\AsyncBreakfast1\AsyncBreakfast1\obj\Debug\net8.0\refint\AsyncBreakfast1.dll
+E:\aniket\c#\AsyncBreakfast1\AsyncBreakfast1\obj\Debug\net8.0\AsyncBreakfast1.pdb
+E:\aniket\c#\AsyncBreakfast1\AsyncBreakfast1\obj\Debug\net8.0\AsyncBreakfast1.genruntimeconfig.cache
+E:\aniket\c#\AsyncBreakfast1\AsyncBreakfast1\obj\Debug\net8.0\ref\AsyncBreakfast1.dll

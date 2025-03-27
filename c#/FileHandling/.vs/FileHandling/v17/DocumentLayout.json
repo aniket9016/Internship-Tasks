@@ -1,0 +1,142 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\aniket\\c#\\FileHandling\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9989F53B-7338-4DBD-A4C3-FEE0750AD370}|FileHandling\\FileHandling.csproj|e:\\aniket\\c#\\filehandling\\filehandling\\file7.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9989F53B-7338-4DBD-A4C3-FEE0750AD370}|FileHandling\\FileHandling.csproj|solutionrelative:filehandling\\file7.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|FileHandling||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9989F53B-7338-4DBD-A4C3-FEE0750AD370}|FileHandling\\FileHandling.csproj|e:\\aniket\\c#\\filehandling\\filehandling\\file6.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9989F53B-7338-4DBD-A4C3-FEE0750AD370}|FileHandling\\FileHandling.csproj|solutionrelative:filehandling\\file6.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9989F53B-7338-4DBD-A4C3-FEE0750AD370}|FileHandling\\FileHandling.csproj|e:\\aniket\\c#\\filehandling\\filehandling\\file5.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9989F53B-7338-4DBD-A4C3-FEE0750AD370}|FileHandling\\FileHandling.csproj|solutionrelative:filehandling\\file5.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9989F53B-7338-4DBD-A4C3-FEE0750AD370}|FileHandling\\FileHandling.csproj|e:\\aniket\\c#\\filehandling\\filehandling\\file4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9989F53B-7338-4DBD-A4C3-FEE0750AD370}|FileHandling\\FileHandling.csproj|solutionrelative:filehandling\\file4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9989F53B-7338-4DBD-A4C3-FEE0750AD370}|FileHandling\\FileHandling.csproj|E:\\aniket\\c#\\FileHandling\\filehandling\\file3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9989F53B-7338-4DBD-A4C3-FEE0750AD370}|FileHandling\\FileHandling.csproj|solutionrelative:filehandling\\file3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9989F53B-7338-4DBD-A4C3-FEE0750AD370}|FileHandling\\FileHandling.csproj|E:\\aniket\\c#\\FileHandling\\filehandling\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9989F53B-7338-4DBD-A4C3-FEE0750AD370}|FileHandling\\FileHandling.csproj|solutionrelative:filehandling\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9989F53B-7338-4DBD-A4C3-FEE0750AD370}|FileHandling\\FileHandling.csproj|e:\\aniket\\c#\\filehandling\\filehandling\\||{B270807C-D8C6-49EB-8EBE-8E8D566637A1}|5e9a8ac2-4f34-4521-858f-4c248ba31532"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "File7.cs",
+              "DocumentMoniker": "E:\\aniket\\c#\\FileHandling\\FileHandling\\File7.cs",
+              "RelativeDocumentMoniker": "FileHandling\\File7.cs",
+              "ToolTip": "E:\\aniket\\c#\\FileHandling\\FileHandling\\File7.cs",
+              "RelativeToolTip": "FileHandling\\File7.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-17T12:35:32.772Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "File6.cs",
+              "DocumentMoniker": "E:\\aniket\\c#\\FileHandling\\FileHandling\\File6.cs",
+              "RelativeDocumentMoniker": "FileHandling\\File6.cs",
+              "ToolTip": "E:\\aniket\\c#\\FileHandling\\FileHandling\\File6.cs",
+              "RelativeToolTip": "FileHandling\\File6.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAgAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-17T12:06:05.279Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "File5.cs",
+              "DocumentMoniker": "E:\\aniket\\c#\\FileHandling\\FileHandling\\File5.cs",
+              "RelativeDocumentMoniker": "FileHandling\\File5.cs",
+              "ToolTip": "E:\\aniket\\c#\\FileHandling\\FileHandling\\File5.cs",
+              "RelativeToolTip": "FileHandling\\File5.cs",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAcwBMAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-17T11:58:57.532Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "File4.cs",
+              "DocumentMoniker": "E:\\aniket\\c#\\FileHandling\\FileHandling\\File4.cs",
+              "RelativeDocumentMoniker": "FileHandling\\File4.cs",
+              "ToolTip": "E:\\aniket\\c#\\FileHandling\\FileHandling\\File4.cs",
+              "RelativeToolTip": "FileHandling\\File4.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-17T11:54:58.892Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FileHandling",
+              "DocumentMoniker": "E:\\aniket\\c#\\FileHandling\\FileHandling\\FileHandling.csproj",
+              "RelativeDocumentMoniker": "FileHandling\\FileHandling.csproj",
+              "ToolTip": "E:\\aniket\\c#\\FileHandling\\FileHandling\\FileHandling.csproj",
+              "RelativeToolTip": "FileHandling\\FileHandling.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-02-17T11:32:41.57Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "File3.cs",
+              "DocumentMoniker": "E:\\aniket\\c#\\FileHandling\\FileHandling\\File3.cs",
+              "RelativeDocumentMoniker": "FileHandling\\File3.cs",
+              "ToolTip": "E:\\aniket\\c#\\FileHandling\\FileHandling\\File3.cs",
+              "RelativeToolTip": "FileHandling\\File3.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-17T11:32:34.441Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\aniket\\c#\\FileHandling\\FileHandling\\Program.cs",
+              "RelativeDocumentMoniker": "FileHandling\\Program.cs",
+              "ToolTip": "E:\\aniket\\c#\\FileHandling\\FileHandling\\Program.cs",
+              "RelativeToolTip": "FileHandling\\Program.cs",
+              "ViewState": "AQIAABoAAAAAAAAAAAAYwCsAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-17T10:07:09.185Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

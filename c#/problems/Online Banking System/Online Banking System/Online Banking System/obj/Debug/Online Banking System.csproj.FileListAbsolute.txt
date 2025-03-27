@@ -1,0 +1,7 @@
+E:\aniket\c#\problems\Online Banking System\Online Banking System\Online Banking System\bin\Debug\Online Banking System.exe.config
+E:\aniket\c#\problems\Online Banking System\Online Banking System\Online Banking System\bin\Debug\Online Banking System.exe
+E:\aniket\c#\problems\Online Banking System\Online Banking System\Online Banking System\bin\Debug\Online Banking System.pdb
+E:\aniket\c#\problems\Online Banking System\Online Banking System\Online Banking System\obj\Debug\Online Banking System.csproj.AssemblyReference.cache
+E:\aniket\c#\problems\Online Banking System\Online Banking System\Online Banking System\obj\Debug\Online Banking System.csproj.CoreCompileInputs.cache
+E:\aniket\c#\problems\Online Banking System\Online Banking System\Online Banking System\obj\Debug\Online Banking System.exe
+E:\aniket\c#\problems\Online Banking System\Online Banking System\Online Banking System\obj\Debug\Online Banking System.pdb

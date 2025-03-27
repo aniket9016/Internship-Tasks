@@ -1,0 +1,156 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\aniket\\c#\\test2\\EmployeeManagement\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5BD65579-F93A-4DB8-ACB6-80080FE98506}|EmployeeManagement\\EmployeeManagement.csproj|e:\\aniket\\c#\\test2\\employeemanagement\\employeemanagement\\models\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BD65579-F93A-4DB8-ACB6-80080FE98506}|EmployeeManagement\\EmployeeManagement.csproj|solutionrelative:employeemanagement\\models\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BD65579-F93A-4DB8-ACB6-80080FE98506}|EmployeeManagement\\EmployeeManagement.csproj|e:\\aniket\\c#\\test2\\employeemanagement\\employeemanagement\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5BD65579-F93A-4DB8-ACB6-80080FE98506}|EmployeeManagement\\EmployeeManagement.csproj|solutionrelative:employeemanagement\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BD65579-F93A-4DB8-ACB6-80080FE98506}|EmployeeManagement\\EmployeeManagement.csproj|e:\\aniket\\c#\\test2\\employeemanagement\\employeemanagement\\controllers\\salariescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BD65579-F93A-4DB8-ACB6-80080FE98506}|EmployeeManagement\\EmployeeManagement.csproj|solutionrelative:employeemanagement\\controllers\\salariescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BD65579-F93A-4DB8-ACB6-80080FE98506}|EmployeeManagement\\EmployeeManagement.csproj|e:\\aniket\\c#\\test2\\employeemanagement\\employeemanagement\\controllers\\employeescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BD65579-F93A-4DB8-ACB6-80080FE98506}|EmployeeManagement\\EmployeeManagement.csproj|solutionrelative:employeemanagement\\controllers\\employeescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BD65579-F93A-4DB8-ACB6-80080FE98506}|EmployeeManagement\\EmployeeManagement.csproj|e:\\aniket\\c#\\test2\\employeemanagement\\employeemanagement\\controllers\\departmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BD65579-F93A-4DB8-ACB6-80080FE98506}|EmployeeManagement\\EmployeeManagement.csproj|solutionrelative:employeemanagement\\controllers\\departmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BD65579-F93A-4DB8-ACB6-80080FE98506}|EmployeeManagement\\EmployeeManagement.csproj|e:\\aniket\\c#\\test2\\employeemanagement\\employeemanagement\\controllers\\citiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BD65579-F93A-4DB8-ACB6-80080FE98506}|EmployeeManagement\\EmployeeManagement.csproj|solutionrelative:employeemanagement\\controllers\\citiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BD65579-F93A-4DB8-ACB6-80080FE98506}|EmployeeManagement\\EmployeeManagement.csproj|e:\\aniket\\c#\\test2\\employeemanagement\\employeemanagement\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{5BD65579-F93A-4DB8-ACB6-80080FE98506}|EmployeeManagement\\EmployeeManagement.csproj|solutionrelative:employeemanagement\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BD65579-F93A-4DB8-ACB6-80080FE98506}|EmployeeManagement\\EmployeeManagement.csproj|e:\\aniket\\c#\\test2\\employeemanagement\\employeemanagement\\models\\city.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BD65579-F93A-4DB8-ACB6-80080FE98506}|EmployeeManagement\\EmployeeManagement.csproj|solutionrelative:employeemanagement\\models\\city.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "E:\\aniket\\c#\\test2\\EmployeeManagement\\EmployeeManagement\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "EmployeeManagement\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "E:\\aniket\\c#\\test2\\EmployeeManagement\\EmployeeManagement\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "EmployeeManagement\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAAACUAAAB5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-17T11:07:22.721Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "EmployeesController.cs",
+              "DocumentMoniker": "E:\\aniket\\c#\\test2\\EmployeeManagement\\EmployeeManagement\\Controllers\\EmployeesController.cs",
+              "RelativeDocumentMoniker": "EmployeeManagement\\Controllers\\EmployeesController.cs",
+              "ToolTip": "E:\\aniket\\c#\\test2\\EmployeeManagement\\EmployeeManagement\\Controllers\\EmployeesController.cs",
+              "RelativeToolTip": "EmployeeManagement\\Controllers\\EmployeesController.cs",
+              "ViewState": "AQIAAJwAAAAAAAAAAAAuwKwAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T11:04:04.447Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DepartmentsController.cs",
+              "DocumentMoniker": "E:\\aniket\\c#\\test2\\EmployeeManagement\\EmployeeManagement\\Controllers\\DepartmentsController.cs",
+              "RelativeDocumentMoniker": "EmployeeManagement\\Controllers\\DepartmentsController.cs",
+              "ToolTip": "E:\\aniket\\c#\\test2\\EmployeeManagement\\EmployeeManagement\\Controllers\\DepartmentsController.cs",
+              "RelativeToolTip": "EmployeeManagement\\Controllers\\DepartmentsController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T11:03:28.298Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CitiesController.cs",
+              "DocumentMoniker": "E:\\aniket\\c#\\test2\\EmployeeManagement\\EmployeeManagement\\Controllers\\CitiesController.cs",
+              "RelativeDocumentMoniker": "EmployeeManagement\\Controllers\\CitiesController.cs",
+              "ToolTip": "E:\\aniket\\c#\\test2\\EmployeeManagement\\EmployeeManagement\\Controllers\\CitiesController.cs",
+              "RelativeToolTip": "EmployeeManagement\\Controllers\\CitiesController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T11:02:51.901Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "E:\\aniket\\c#\\test2\\EmployeeManagement\\EmployeeManagement\\Models\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "EmployeeManagement\\Models\\ApplicationDbContext.cs",
+              "ToolTip": "E:\\aniket\\c#\\test2\\EmployeeManagement\\EmployeeManagement\\Models\\ApplicationDbContext.cs",
+              "RelativeToolTip": "EmployeeManagement\\Models\\ApplicationDbContext.cs",
+              "ViewState": "AQIAABoAAAAAAAAAAAAuwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T11:01:25.147Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SalariesController.cs",
+              "DocumentMoniker": "E:\\aniket\\c#\\test2\\EmployeeManagement\\EmployeeManagement\\Controllers\\SalariesController.cs",
+              "RelativeDocumentMoniker": "EmployeeManagement\\Controllers\\SalariesController.cs",
+              "ToolTip": "E:\\aniket\\c#\\test2\\EmployeeManagement\\EmployeeManagement\\Controllers\\SalariesController.cs",
+              "RelativeToolTip": "EmployeeManagement\\Controllers\\SalariesController.cs",
+              "ViewState": "AQIAAJoAAAAAAAAAAAAYwKUAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T11:04:36.51Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "E:\\aniket\\c#\\test2\\EmployeeManagement\\EmployeeManagement\\appsettings.json",
+              "RelativeDocumentMoniker": "EmployeeManagement\\appsettings.json",
+              "ToolTip": "E:\\aniket\\c#\\test2\\EmployeeManagement\\EmployeeManagement\\appsettings.json",
+              "RelativeToolTip": "EmployeeManagement\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAowAkAAADZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-17T11:00:34.385Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "City.cs",
+              "DocumentMoniker": "E:\\aniket\\c#\\test2\\EmployeeManagement\\EmployeeManagement\\Models\\City.cs",
+              "RelativeDocumentMoniker": "EmployeeManagement\\Models\\City.cs",
+              "ToolTip": "E:\\aniket\\c#\\test2\\EmployeeManagement\\EmployeeManagement\\Models\\City.cs",
+              "RelativeToolTip": "EmployeeManagement\\Models\\City.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAzwA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T10:58:03.538Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

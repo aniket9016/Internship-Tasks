@@ -1,0 +1,105 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\aniket\\c#\\c#test\\EmpMan\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{50A0C12E-7A60-4C1A-B599-645CB034B3C4}|EmpMan\\EmpMan.csproj|e:\\aniket\\c#\\c#test\\empman\\empman\\views\\department\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{50A0C12E-7A60-4C1A-B599-645CB034B3C4}|EmpMan\\EmpMan.csproj|solutionrelative:empman\\views\\department\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50A0C12E-7A60-4C1A-B599-645CB034B3C4}|EmpMan\\EmpMan.csproj|e:\\aniket\\c#\\c#test\\empman\\empman\\models\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50A0C12E-7A60-4C1A-B599-645CB034B3C4}|EmpMan\\EmpMan.csproj|solutionrelative:empman\\models\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50A0C12E-7A60-4C1A-B599-645CB034B3C4}|EmpMan\\EmpMan.csproj|e:\\aniket\\c#\\c#test\\empman\\empman\\views\\city\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{50A0C12E-7A60-4C1A-B599-645CB034B3C4}|EmpMan\\EmpMan.csproj|solutionrelative:empman\\views\\city\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50A0C12E-7A60-4C1A-B599-645CB034B3C4}|EmpMan\\EmpMan.csproj|e:\\aniket\\c#\\c#test\\empman\\empman\\controllers\\citycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50A0C12E-7A60-4C1A-B599-645CB034B3C4}|EmpMan\\EmpMan.csproj|solutionrelative:empman\\controllers\\citycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50A0C12E-7A60-4C1A-B599-645CB034B3C4}|EmpMan\\EmpMan.csproj|e:\\aniket\\c#\\c#test\\empman\\empman\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50A0C12E-7A60-4C1A-B599-645CB034B3C4}|EmpMan\\EmpMan.csproj|solutionrelative:empman\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "E:\\aniket\\c#\\c#test\\EmpMan\\EmpMan\\Views\\Department\\Index.cshtml",
+              "RelativeDocumentMoniker": "EmpMan\\Views\\Department\\Index.cshtml",
+              "ToolTip": "E:\\aniket\\c#\\c#test\\EmpMan\\EmpMan\\Views\\Department\\Index.cshtml",
+              "RelativeToolTip": "EmpMan\\Views\\Department\\Index.cshtml",
+              "ViewState": "AQIAAFEAAAAAAAAAAAAAAGYAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-17T08:48:00.016Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Department.cs",
+              "DocumentMoniker": "E:\\aniket\\c#\\c#test\\EmpMan\\EmpMan\\Models\\Department.cs",
+              "RelativeDocumentMoniker": "EmpMan\\Models\\Department.cs",
+              "ToolTip": "E:\\aniket\\c#\\c#test\\EmpMan\\EmpMan\\Models\\Department.cs",
+              "RelativeToolTip": "EmpMan\\Models\\Department.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T08:47:11.943Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "E:\\aniket\\c#\\c#test\\EmpMan\\EmpMan\\Views\\City\\Index.cshtml",
+              "RelativeDocumentMoniker": "EmpMan\\Views\\City\\Index.cshtml",
+              "ToolTip": "E:\\aniket\\c#\\c#test\\EmpMan\\EmpMan\\Views\\City\\Index.cshtml",
+              "RelativeToolTip": "EmpMan\\Views\\City\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAGQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-17T07:35:55.366Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CityController.cs",
+              "DocumentMoniker": "E:\\aniket\\c#\\c#test\\EmpMan\\EmpMan\\Controllers\\CityController.cs",
+              "RelativeDocumentMoniker": "EmpMan\\Controllers\\CityController.cs",
+              "ToolTip": "E:\\aniket\\c#\\c#test\\EmpMan\\EmpMan\\Controllers\\CityController.cs",
+              "RelativeToolTip": "EmpMan\\Controllers\\CityController.cs",
+              "ViewState": "AQIAADoAAAAAAAAAAAAuwFQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T07:34:56.734Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\aniket\\c#\\c#test\\EmpMan\\EmpMan\\Program.cs",
+              "RelativeDocumentMoniker": "EmpMan\\Program.cs",
+              "ToolTip": "E:\\aniket\\c#\\c#test\\EmpMan\\EmpMan\\Program.cs",
+              "RelativeToolTip": "EmpMan\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T07:33:53.263Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

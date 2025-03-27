@@ -1,0 +1,139 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\aniket\\c#\\FIrstMVC\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BEB45368-07E2-4A0A-91A4-7EFB555EA665}|FIrstMVC\\FIrstMVC.csproj|e:\\aniket\\c#\\firstmvc\\firstmvc\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BEB45368-07E2-4A0A-91A4-7EFB555EA665}|FIrstMVC\\FIrstMVC.csproj|solutionrelative:firstmvc\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BEB45368-07E2-4A0A-91A4-7EFB555EA665}|FIrstMVC\\FIrstMVC.csproj|e:\\aniket\\c#\\firstmvc\\firstmvc\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BEB45368-07E2-4A0A-91A4-7EFB555EA665}|FIrstMVC\\FIrstMVC.csproj|solutionrelative:firstmvc\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BEB45368-07E2-4A0A-91A4-7EFB555EA665}|FIrstMVC\\FIrstMVC.csproj|e:\\aniket\\c#\\firstmvc\\firstmvc\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BEB45368-07E2-4A0A-91A4-7EFB555EA665}|FIrstMVC\\FIrstMVC.csproj|solutionrelative:firstmvc\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BEB45368-07E2-4A0A-91A4-7EFB555EA665}|FIrstMVC\\FIrstMVC.csproj|E:\\aniket\\c#\\FIrstMVC\\firstmvc\\models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BEB45368-07E2-4A0A-91A4-7EFB555EA665}|FIrstMVC\\FIrstMVC.csproj|solutionrelative:firstmvc\\models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BEB45368-07E2-4A0A-91A4-7EFB555EA665}|FIrstMVC\\FIrstMVC.csproj|E:\\aniket\\c#\\FIrstMVC\\firstmvc\\app_start\\routeconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BEB45368-07E2-4A0A-91A4-7EFB555EA665}|FIrstMVC\\FIrstMVC.csproj|solutionrelative:firstmvc\\app_start\\routeconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BEB45368-07E2-4A0A-91A4-7EFB555EA665}|FIrstMVC\\FIrstMVC.csproj|E:\\aniket\\c#\\FIrstMVC\\firstmvc\\views\\student\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BEB45368-07E2-4A0A-91A4-7EFB555EA665}|FIrstMVC\\FIrstMVC.csproj|solutionrelative:firstmvc\\views\\student\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BEB45368-07E2-4A0A-91A4-7EFB555EA665}|FIrstMVC\\FIrstMVC.csproj|E:\\aniket\\c#\\FIrstMVC\\firstmvc\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BEB45368-07E2-4A0A-91A4-7EFB555EA665}|FIrstMVC\\FIrstMVC.csproj|solutionrelative:firstmvc\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "E:\\aniket\\c#\\FIrstMVC\\FIrstMVC\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "FIrstMVC\\Views\\Home\\Index.cshtml",
+              "ToolTip": "E:\\aniket\\c#\\FIrstMVC\\FIrstMVC\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "FIrstMVC\\Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-19T10:31:59.713Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "E:\\aniket\\c#\\FIrstMVC\\FIrstMVC\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "FIrstMVC\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "E:\\aniket\\c#\\FIrstMVC\\FIrstMVC\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "FIrstMVC\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAABdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-19T10:31:46.829Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "StudentController.cs",
+              "DocumentMoniker": "E:\\aniket\\c#\\FIrstMVC\\FIrstMVC\\Controllers\\StudentController.cs",
+              "RelativeDocumentMoniker": "FIrstMVC\\Controllers\\StudentController.cs",
+              "ToolTip": "E:\\aniket\\c#\\FIrstMVC\\FIrstMVC\\Controllers\\StudentController.cs",
+              "RelativeToolTip": "FIrstMVC\\Controllers\\StudentController.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-19T06:38:02.407Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "E:\\aniket\\c#\\FIrstMVC\\FIrstMVC\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "FIrstMVC\\Controllers\\HomeController.cs",
+              "ToolTip": "E:\\aniket\\c#\\FIrstMVC\\FIrstMVC\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "FIrstMVC\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-19T07:20:11.804Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "E:\\aniket\\c#\\FIrstMVC\\FIrstMVC\\Views\\Student\\Index.cshtml",
+              "RelativeDocumentMoniker": "FIrstMVC\\Views\\Student\\Index.cshtml",
+              "ToolTip": "E:\\aniket\\c#\\FIrstMVC\\FIrstMVC\\Views\\Student\\Index.cshtml",
+              "RelativeToolTip": "FIrstMVC\\Views\\Student\\Index.cshtml",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAAABcAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-19T07:12:48.791Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Student.cs",
+              "DocumentMoniker": "E:\\aniket\\c#\\FIrstMVC\\FIrstMVC\\Models\\Student.cs",
+              "RelativeDocumentMoniker": "FIrstMVC\\Models\\Student.cs",
+              "ToolTip": "E:\\aniket\\c#\\FIrstMVC\\FIrstMVC\\Models\\Student.cs",
+              "RelativeToolTip": "FIrstMVC\\Models\\Student.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-19T07:06:32.751Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "RouteConfig.cs",
+              "DocumentMoniker": "E:\\aniket\\c#\\FIrstMVC\\FIrstMVC\\App_Start\\RouteConfig.cs",
+              "RelativeDocumentMoniker": "FIrstMVC\\App_Start\\RouteConfig.cs",
+              "ToolTip": "E:\\aniket\\c#\\FIrstMVC\\FIrstMVC\\App_Start\\RouteConfig.cs",
+              "RelativeToolTip": "FIrstMVC\\App_Start\\RouteConfig.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABMAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-19T06:34:21.085Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

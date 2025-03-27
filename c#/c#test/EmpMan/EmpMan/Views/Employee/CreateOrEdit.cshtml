@@ -1,0 +1,79 @@
+﻿@model EmpMan.Models.Employee
+
+@{
+    ViewData["Title"] = "Create or Edit Employee";
+    var departments = ViewBag.Departments as List<EmpMan.Models.Department>;
+    var cities = ViewBag.Cities as List<EmpMan.Models.City>;
+}
+
+<h2 class="text-center">@(Model.EmpId == 0 ? "Add Employee" : "Edit Employee")</h2>
+
+<div class="container mt-4">
+    <div class="card">
+        <div class="card-body">
+            <form asp-action="CreateOrEdit" method="post">
+                <input type="hidden" asp-for="EmpId" />
+
+                <div class="mb-3">
+                    <label asp-for="EmpName" class="form-label"></label>
+                    <input asp-for="EmpName" class="form-control" />
+                    <span asp-validation-for="EmpName" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Email" class="form-label"></label>
+                    <input asp-for="Email" class="form-control" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Phone" class="form-label"></label>
+                    <input asp-for="Phone" class="form-control" />
+                    <span asp-validation-for="Phone" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Gender" class="form-label"></label>
+                    <select asp-for="Gender" class="form-control">
+                        <option value="">Select Gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                    </select>
+                    <span asp-validation-for="Gender" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="DOB" class="form-label"></label>
+                    <input asp-for="DOB" class="form-control" type="date" />
+                    <span asp-validation-for="DOB" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="DeptId" class="form-label"></label>
+                    <select asp-for="DeptId" asp-items="@(new SelectList(departments, "DeptId", "DeptName"))" class="form-control">
+                        <option value="">Select Department</option>
+                    </select>
+                    <span asp-validation-for="DeptId" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="CityId" class="form-label"></label>
+                    <select asp-for="CityId" asp-items="@(new SelectList(cities, "CityId", "CityName"))" class="form-control">
+                        <option value="">Select City</option>
+                    </select>
+                    <span asp-validation-for="CityId" class="text-danger"></span>
+                </div>
+
+                <div class="text-center">
+                    <button type="submit" class="btn btn-success">Save</button>
+                    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

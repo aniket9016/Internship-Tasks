@@ -1,0 +1,326 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\aniket\\c#\\JobPortal\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1B111855-13A9-4727-8CCC-3D8B6C8D60C2}|JobPortal\\JobPortal.csproj|e:\\aniket\\c#\\jobportal\\jobportal\\global.asax.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1B111855-13A9-4727-8CCC-3D8B6C8D60C2}|JobPortal\\JobPortal.csproj|solutionrelative:jobportal\\global.asax.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B111855-13A9-4727-8CCC-3D8B6C8D60C2}|JobPortal\\JobPortal.csproj|E:\\aniket\\c#\\JobPortal\\jobportal\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1B111855-13A9-4727-8CCC-3D8B6C8D60C2}|JobPortal\\JobPortal.csproj|solutionrelative:jobportal\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B111855-13A9-4727-8CCC-3D8B6C8D60C2}|JobPortal\\JobPortal.csproj|E:\\aniket\\c#\\JobPortal\\jobportal\\models\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1B111855-13A9-4727-8CCC-3D8B6C8D60C2}|JobPortal\\JobPortal.csproj|solutionrelative:jobportal\\models\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B111855-13A9-4727-8CCC-3D8B6C8D60C2}|JobPortal\\JobPortal.csproj|E:\\aniket\\c#\\JobPortal\\jobportal\\models\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1B111855-13A9-4727-8CCC-3D8B6C8D60C2}|JobPortal\\JobPortal.csproj|solutionrelative:jobportal\\models\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B111855-13A9-4727-8CCC-3D8B6C8D60C2}|JobPortal\\JobPortal.csproj|E:\\aniket\\c#\\JobPortal\\jobportal\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1B111855-13A9-4727-8CCC-3D8B6C8D60C2}|JobPortal\\JobPortal.csproj|solutionrelative:jobportal\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B111855-13A9-4727-8CCC-3D8B6C8D60C2}|JobPortal\\JobPortal.csproj|E:\\aniket\\c#\\JobPortal\\jobportal\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1B111855-13A9-4727-8CCC-3D8B6C8D60C2}|JobPortal\\JobPortal.csproj|solutionrelative:jobportal\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B111855-13A9-4727-8CCC-3D8B6C8D60C2}|JobPortal\\JobPortal.csproj|E:\\aniket\\c#\\JobPortal\\jobportal\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1B111855-13A9-4727-8CCC-3D8B6C8D60C2}|JobPortal\\JobPortal.csproj|solutionrelative:jobportal\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B111855-13A9-4727-8CCC-3D8B6C8D60C2}|JobPortal\\JobPortal.csproj|E:\\aniket\\c#\\JobPortal\\jobportal\\views\\admin\\manageusers.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1B111855-13A9-4727-8CCC-3D8B6C8D60C2}|JobPortal\\JobPortal.csproj|solutionrelative:jobportal\\views\\admin\\manageusers.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B111855-13A9-4727-8CCC-3D8B6C8D60C2}|JobPortal\\JobPortal.csproj|E:\\aniket\\c#\\JobPortal\\jobportal\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1B111855-13A9-4727-8CCC-3D8B6C8D60C2}|JobPortal\\JobPortal.csproj|solutionrelative:jobportal\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B111855-13A9-4727-8CCC-3D8B6C8D60C2}|JobPortal\\JobPortal.csproj|E:\\aniket\\c#\\JobPortal\\jobportal\\models\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1B111855-13A9-4727-8CCC-3D8B6C8D60C2}|JobPortal\\JobPortal.csproj|solutionrelative:jobportal\\models\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B111855-13A9-4727-8CCC-3D8B6C8D60C2}|JobPortal\\JobPortal.csproj|E:\\aniket\\c#\\JobPortal\\jobportal\\controllers\\jobapplicationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1B111855-13A9-4727-8CCC-3D8B6C8D60C2}|JobPortal\\JobPortal.csproj|solutionrelative:jobportal\\controllers\\jobapplicationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B111855-13A9-4727-8CCC-3D8B6C8D60C2}|JobPortal\\JobPortal.csproj|E:\\aniket\\c#\\JobPortal\\jobportal\\views\\admin\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1B111855-13A9-4727-8CCC-3D8B6C8D60C2}|JobPortal\\JobPortal.csproj|solutionrelative:jobportal\\views\\admin\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B111855-13A9-4727-8CCC-3D8B6C8D60C2}|JobPortal\\JobPortal.csproj|E:\\aniket\\c#\\JobPortal\\jobportal\\controllers\\jobcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1B111855-13A9-4727-8CCC-3D8B6C8D60C2}|JobPortal\\JobPortal.csproj|solutionrelative:jobportal\\controllers\\jobcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B111855-13A9-4727-8CCC-3D8B6C8D60C2}|JobPortal\\JobPortal.csproj|E:\\aniket\\c#\\JobPortal\\jobportal\\views\\account\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1B111855-13A9-4727-8CCC-3D8B6C8D60C2}|JobPortal\\JobPortal.csproj|solutionrelative:jobportal\\views\\account\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B111855-13A9-4727-8CCC-3D8B6C8D60C2}|JobPortal\\JobPortal.csproj|E:\\aniket\\c#\\JobPortal\\jobportal\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{1B111855-13A9-4727-8CCC-3D8B6C8D60C2}|JobPortal\\JobPortal.csproj|solutionrelative:jobportal\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B111855-13A9-4727-8CCC-3D8B6C8D60C2}|JobPortal\\JobPortal.csproj|E:\\aniket\\c#\\JobPortal\\jobportal\\models\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1B111855-13A9-4727-8CCC-3D8B6C8D60C2}|JobPortal\\JobPortal.csproj|solutionrelative:jobportal\\models\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B111855-13A9-4727-8CCC-3D8B6C8D60C2}|JobPortal\\JobPortal.csproj|E:\\aniket\\c#\\JobPortal\\jobportal\\models\\company.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1B111855-13A9-4727-8CCC-3D8B6C8D60C2}|JobPortal\\JobPortal.csproj|solutionrelative:jobportal\\models\\company.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B111855-13A9-4727-8CCC-3D8B6C8D60C2}|JobPortal\\JobPortal.csproj|E:\\aniket\\c#\\JobPortal\\jobportal\\models\\jobapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1B111855-13A9-4727-8CCC-3D8B6C8D60C2}|JobPortal\\JobPortal.csproj|solutionrelative:jobportal\\models\\jobapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B111855-13A9-4727-8CCC-3D8B6C8D60C2}|JobPortal\\JobPortal.csproj|E:\\aniket\\c#\\JobPortal\\jobportal\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1B111855-13A9-4727-8CCC-3D8B6C8D60C2}|JobPortal\\JobPortal.csproj|solutionrelative:jobportal\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LoginViewModel.cs",
+              "DocumentMoniker": "E:\\aniket\\c#\\JobPortal\\JobPortal\\Models\\LoginViewModel.cs",
+              "RelativeDocumentMoniker": "JobPortal\\Models\\LoginViewModel.cs",
+              "ToolTip": "E:\\aniket\\c#\\JobPortal\\JobPortal\\Models\\LoginViewModel.cs",
+              "RelativeToolTip": "JobPortal\\Models\\LoginViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-11T08:44:42.222Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "RegisterViewModel.cs",
+              "DocumentMoniker": "E:\\aniket\\c#\\JobPortal\\JobPortal\\Models\\RegisterViewModel.cs",
+              "RelativeDocumentMoniker": "JobPortal\\Models\\RegisterViewModel.cs",
+              "ToolTip": "E:\\aniket\\c#\\JobPortal\\JobPortal\\Models\\RegisterViewModel.cs",
+              "RelativeToolTip": "JobPortal\\Models\\RegisterViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-11T08:38:38.981Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Global.asax.cs",
+              "DocumentMoniker": "E:\\aniket\\c#\\JobPortal\\JobPortal\\Global.asax.cs",
+              "RelativeDocumentMoniker": "JobPortal\\Global.asax.cs",
+              "ToolTip": "E:\\aniket\\c#\\JobPortal\\JobPortal\\Global.asax.cs",
+              "RelativeToolTip": "JobPortal\\Global.asax.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAgwCsAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-11T08:35:44.176Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "E:\\aniket\\c#\\JobPortal\\JobPortal\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "JobPortal\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "E:\\aniket\\c#\\JobPortal\\JobPortal\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "JobPortal\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAADAAAAAAAAAAAAAkwC0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-11T08:34:44.846Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "E:\\aniket\\c#\\JobPortal\\JobPortal\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "JobPortal\\Controllers\\AccountController.cs",
+              "ToolTip": "E:\\aniket\\c#\\JobPortal\\JobPortal\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "JobPortal\\Controllers\\AccountController.cs",
+              "ViewState": "AQIAAEYAAAAAAAAAAAAQwE4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-11T07:24:00.146Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "E:\\aniket\\c#\\JobPortal\\JobPortal\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "JobPortal\\Views\\Home\\Index.cshtml",
+              "ToolTip": "E:\\aniket\\c#\\JobPortal\\JobPortal\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "JobPortal\\Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAkwBEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-11T07:34:08.322Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "E:\\aniket\\c#\\JobPortal\\JobPortal\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "JobPortal\\Controllers\\HomeController.cs",
+              "ToolTip": "E:\\aniket\\c#\\JobPortal\\JobPortal\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "JobPortal\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAkwAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-11T07:33:52.482Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ManageUsers.cshtml",
+              "DocumentMoniker": "E:\\aniket\\c#\\JobPortal\\JobPortal\\Views\\Admin\\ManageUsers.cshtml",
+              "RelativeDocumentMoniker": "JobPortal\\Views\\Admin\\ManageUsers.cshtml",
+              "ToolTip": "E:\\aniket\\c#\\JobPortal\\JobPortal\\Views\\Admin\\ManageUsers.cshtml",
+              "RelativeToolTip": "JobPortal\\Views\\Admin\\ManageUsers.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-11T07:33:41.519Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Dashboard.cshtml",
+              "DocumentMoniker": "E:\\aniket\\c#\\JobPortal\\JobPortal\\Views\\Admin\\Dashboard.cshtml",
+              "RelativeDocumentMoniker": "JobPortal\\Views\\Admin\\Dashboard.cshtml",
+              "ToolTip": "E:\\aniket\\c#\\JobPortal\\JobPortal\\Views\\Admin\\Dashboard.cshtml",
+              "RelativeToolTip": "JobPortal\\Views\\Admin\\Dashboard.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-11T07:32:49.197Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "JobApplicationController.cs",
+              "DocumentMoniker": "E:\\aniket\\c#\\JobPortal\\JobPortal\\Controllers\\JobApplicationController.cs",
+              "RelativeDocumentMoniker": "JobPortal\\Controllers\\JobApplicationController.cs",
+              "ToolTip": "E:\\aniket\\c#\\JobPortal\\JobPortal\\Controllers\\JobApplicationController.cs",
+              "RelativeToolTip": "JobPortal\\Controllers\\JobApplicationController.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAgwCcAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-11T07:30:11.167Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "JobController.cs",
+              "DocumentMoniker": "E:\\aniket\\c#\\JobPortal\\JobPortal\\Controllers\\JobController.cs",
+              "RelativeDocumentMoniker": "JobPortal\\Controllers\\JobController.cs",
+              "ToolTip": "E:\\aniket\\c#\\JobPortal\\JobPortal\\Controllers\\JobController.cs",
+              "RelativeToolTip": "JobPortal\\Controllers\\JobController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-11T07:29:35.243Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "E:\\aniket\\c#\\JobPortal\\JobPortal\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "JobPortal\\Controllers\\AdminController.cs",
+              "ToolTip": "E:\\aniket\\c#\\JobPortal\\JobPortal\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "JobPortal\\Controllers\\AdminController.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAgwBsAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-11T07:27:54.313Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Admin.cs",
+              "DocumentMoniker": "E:\\aniket\\c#\\JobPortal\\JobPortal\\Models\\Admin.cs",
+              "RelativeDocumentMoniker": "JobPortal\\Models\\Admin.cs",
+              "ToolTip": "E:\\aniket\\c#\\JobPortal\\JobPortal\\Models\\Admin.cs",
+              "RelativeToolTip": "JobPortal\\Models\\Admin.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-11T07:17:21.532Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Profile.cshtml",
+              "DocumentMoniker": "E:\\aniket\\c#\\JobPortal\\JobPortal\\Views\\Account\\Profile.cshtml",
+              "RelativeDocumentMoniker": "JobPortal\\Views\\Account\\Profile.cshtml",
+              "ToolTip": "E:\\aniket\\c#\\JobPortal\\JobPortal\\Views\\Account\\Profile.cshtml",
+              "RelativeToolTip": "JobPortal\\Views\\Account\\Profile.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-11T07:27:25.364Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Company.cs",
+              "DocumentMoniker": "E:\\aniket\\c#\\JobPortal\\JobPortal\\Models\\Company.cs",
+              "RelativeDocumentMoniker": "JobPortal\\Models\\Company.cs",
+              "ToolTip": "E:\\aniket\\c#\\JobPortal\\JobPortal\\Models\\Company.cs",
+              "RelativeToolTip": "JobPortal\\Models\\Company.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-11T07:18:44.876Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "JobApplication.cs",
+              "DocumentMoniker": "E:\\aniket\\c#\\JobPortal\\JobPortal\\Models\\JobApplication.cs",
+              "RelativeDocumentMoniker": "JobPortal\\Models\\JobApplication.cs",
+              "ToolTip": "E:\\aniket\\c#\\JobPortal\\JobPortal\\Models\\JobApplication.cs",
+              "RelativeToolTip": "JobPortal\\Models\\JobApplication.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAgwBsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-11T07:18:22.527Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ApplicationUser.cs",
+              "DocumentMoniker": "E:\\aniket\\c#\\JobPortal\\JobPortal\\Models\\ApplicationUser.cs",
+              "RelativeDocumentMoniker": "JobPortal\\Models\\ApplicationUser.cs",
+              "ToolTip": "E:\\aniket\\c#\\JobPortal\\JobPortal\\Models\\ApplicationUser.cs",
+              "RelativeToolTip": "JobPortal\\Models\\ApplicationUser.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-11T07:14:53.955Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Web.config",
+              "DocumentMoniker": "E:\\aniket\\c#\\JobPortal\\JobPortal\\Web.config",
+              "RelativeDocumentMoniker": "JobPortal\\Web.config",
+              "ToolTip": "E:\\aniket\\c#\\JobPortal\\JobPortal\\Web.config",
+              "RelativeToolTip": "JobPortal\\Web.config",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAkwAsAAAA/AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-03-11T07:14:03.725Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "E:\\aniket\\c#\\JobPortal\\JobPortal\\Models\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "JobPortal\\Models\\ApplicationDbContext.cs",
+              "ToolTip": "E:\\aniket\\c#\\JobPortal\\JobPortal\\Models\\ApplicationDbContext.cs",
+              "RelativeToolTip": "JobPortal\\Models\\ApplicationDbContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-11T07:14:34.253Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

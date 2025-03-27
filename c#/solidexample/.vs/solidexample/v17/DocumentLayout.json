@@ -1,0 +1,58 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\aniket\\c#\\solidexample\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{07888A8A-EF85-485D-B5D9-D01A5877A900}|solidexample\\solidexample.csproj|e:\\aniket\\c#\\solidexample\\solidexample\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07888A8A-EF85-485D-B5D9-D01A5877A900}|solidexample\\solidexample.csproj|solutionrelative:solidexample\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07888A8A-EF85-485D-B5D9-D01A5877A900}|solidexample\\solidexample.csproj|e:\\aniket\\c#\\solidexample\\solidexample\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07888A8A-EF85-485D-B5D9-D01A5877A900}|solidexample\\solidexample.csproj|solutionrelative:solidexample\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "E:\\aniket\\c#\\solidexample\\solidexample\\Class1.cs",
+              "RelativeDocumentMoniker": "solidexample\\Class1.cs",
+              "ToolTip": "E:\\aniket\\c#\\solidexample\\solidexample\\Class1.cs",
+              "RelativeToolTip": "solidexample\\Class1.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-17T08:58:18.121Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\aniket\\c#\\solidexample\\solidexample\\Program.cs",
+              "RelativeDocumentMoniker": "solidexample\\Program.cs",
+              "ToolTip": "E:\\aniket\\c#\\solidexample\\solidexample\\Program.cs",
+              "RelativeToolTip": "solidexample\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAALwAAABVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-17T05:54:59.162Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

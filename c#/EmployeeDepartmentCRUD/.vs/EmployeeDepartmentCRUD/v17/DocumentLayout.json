@@ -1,0 +1,70 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\aniket\\c#\\EmployeeDepartmentCRUD\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{53E40B12-FBDB-47E2-A52E-F00F8F98C882}|EmployeeDepartmentCRUD\\EmployeeDepartmentCRUD.csproj|E:\\aniket\\c#\\EmployeeDepartmentCRUD\\employeedepartmentcrud\\controllers\\employeescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{53E40B12-FBDB-47E2-A52E-F00F8F98C882}|EmployeeDepartmentCRUD\\EmployeeDepartmentCRUD.csproj|solutionrelative:employeedepartmentcrud\\controllers\\employeescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53E40B12-FBDB-47E2-A52E-F00F8F98C882}|EmployeeDepartmentCRUD\\EmployeeDepartmentCRUD.csproj|e:\\aniket\\c#\\employeedepartmentcrud\\employeedepartmentcrud\\views\\employees\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{53E40B12-FBDB-47E2-A52E-F00F8F98C882}|EmployeeDepartmentCRUD\\EmployeeDepartmentCRUD.csproj|solutionrelative:employeedepartmentcrud\\views\\employees\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53E40B12-FBDB-47E2-A52E-F00F8F98C882}|EmployeeDepartmentCRUD\\EmployeeDepartmentCRUD.csproj|E:\\aniket\\c#\\EmployeeDepartmentCRUD\\employeedepartmentcrud\\views\\employees\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{53E40B12-FBDB-47E2-A52E-F00F8F98C882}|EmployeeDepartmentCRUD\\EmployeeDepartmentCRUD.csproj|solutionrelative:employeedepartmentcrud\\views\\employees\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EmployeesController.cs",
+              "DocumentMoniker": "E:\\aniket\\c#\\EmployeeDepartmentCRUD\\EmployeeDepartmentCRUD\\Controllers\\EmployeesController.cs",
+              "RelativeDocumentMoniker": "EmployeeDepartmentCRUD\\Controllers\\EmployeesController.cs",
+              "ToolTip": "E:\\aniket\\c#\\EmployeeDepartmentCRUD\\EmployeeDepartmentCRUD\\Controllers\\EmployeesController.cs",
+              "RelativeToolTip": "EmployeeDepartmentCRUD\\Controllers\\EmployeesController.cs",
+              "ViewState": "AQIAAFIAAAAAAAAAAAAcwF4AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-03T06:02:49.76Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "E:\\aniket\\c#\\EmployeeDepartmentCRUD\\EmployeeDepartmentCRUD\\Views\\Employees\\Edit.cshtml",
+              "RelativeDocumentMoniker": "EmployeeDepartmentCRUD\\Views\\Employees\\Edit.cshtml",
+              "ToolTip": "E:\\aniket\\c#\\EmployeeDepartmentCRUD\\EmployeeDepartmentCRUD\\Views\\Employees\\Edit.cshtml",
+              "RelativeToolTip": "EmployeeDepartmentCRUD\\Views\\Employees\\Edit.cshtml",
+              "ViewState": "AQIAAEUAAAAAAAAAAAAuwIcAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-03T05:54:57.617Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "E:\\aniket\\c#\\EmployeeDepartmentCRUD\\EmployeeDepartmentCRUD\\Views\\Employees\\Details.cshtml",
+              "RelativeDocumentMoniker": "EmployeeDepartmentCRUD\\Views\\Employees\\Details.cshtml",
+              "ToolTip": "E:\\aniket\\c#\\EmployeeDepartmentCRUD\\EmployeeDepartmentCRUD\\Views\\Employees\\Details.cshtml",
+              "RelativeToolTip": "EmployeeDepartmentCRUD\\Views\\Employees\\Details.cshtml",
+              "ViewState": "AQIAAGYAAAAAAAAAAAAAAAIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-03T05:38:35.533Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

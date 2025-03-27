@@ -1,0 +1,15 @@
+Take input of an integer and output it's factorial value.
+
+#include <stdio.h>
+int main() {
+    int a;
+    printf("Enter number : ");
+    scanf("%d",&a);
+    int temp=1;
+    for(int i=1;i<=a;i++)
+    {
+        temp=i*temp;
+    }
+    printf("%d",temp);
+    return 0;
+}

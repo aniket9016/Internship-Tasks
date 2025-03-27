@@ -1,0 +1,133 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\aniket\\c#\\jQueryAjaxCRUDInASPNETCore\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B97288D1-A88E-4538-849E-C9892D86FF6C}|jQueryAjaxCRUDInASPNETCore\\jQueryAjaxCRUDInASPNETCore.csproj|e:\\aniket\\c#\\jqueryajaxcrudinaspnetcore\\jqueryajaxcrudinaspnetcore\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B97288D1-A88E-4538-849E-C9892D86FF6C}|jQueryAjaxCRUDInASPNETCore\\jQueryAjaxCRUDInASPNETCore.csproj|solutionrelative:jqueryajaxcrudinaspnetcore\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B97288D1-A88E-4538-849E-C9892D86FF6C}|jQueryAjaxCRUDInASPNETCore\\jQueryAjaxCRUDInASPNETCore.csproj|e:\\aniket\\c#\\jqueryajaxcrudinaspnetcore\\jqueryajaxcrudinaspnetcore\\views\\transaction\\_viewall.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B97288D1-A88E-4538-849E-C9892D86FF6C}|jQueryAjaxCRUDInASPNETCore\\jQueryAjaxCRUDInASPNETCore.csproj|solutionrelative:jqueryajaxcrudinaspnetcore\\views\\transaction\\_viewall.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B97288D1-A88E-4538-849E-C9892D86FF6C}|jQueryAjaxCRUDInASPNETCore\\jQueryAjaxCRUDInASPNETCore.csproj|e:\\aniket\\c#\\jqueryajaxcrudinaspnetcore\\jqueryajaxcrudinaspnetcore\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{B97288D1-A88E-4538-849E-C9892D86FF6C}|jQueryAjaxCRUDInASPNETCore\\jQueryAjaxCRUDInASPNETCore.csproj|solutionrelative:jqueryajaxcrudinaspnetcore\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B97288D1-A88E-4538-849E-C9892D86FF6C}|jQueryAjaxCRUDInASPNETCore\\jQueryAjaxCRUDInASPNETCore.csproj|e:\\aniket\\c#\\jqueryajaxcrudinaspnetcore\\jqueryajaxcrudinaspnetcore\\views\\transaction\\addoredit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B97288D1-A88E-4538-849E-C9892D86FF6C}|jQueryAjaxCRUDInASPNETCore\\jQueryAjaxCRUDInASPNETCore.csproj|solutionrelative:jqueryajaxcrudinaspnetcore\\views\\transaction\\addoredit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B97288D1-A88E-4538-849E-C9892D86FF6C}|jQueryAjaxCRUDInASPNETCore\\jQueryAjaxCRUDInASPNETCore.csproj|e:\\aniket\\c#\\jqueryajaxcrudinaspnetcore\\jqueryajaxcrudinaspnetcore\\controllers\\transactioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B97288D1-A88E-4538-849E-C9892D86FF6C}|jQueryAjaxCRUDInASPNETCore\\jQueryAjaxCRUDInASPNETCore.csproj|solutionrelative:jqueryajaxcrudinaspnetcore\\controllers\\transactioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B97288D1-A88E-4538-849E-C9892D86FF6C}|jQueryAjaxCRUDInASPNETCore\\jQueryAjaxCRUDInASPNETCore.csproj|e:\\aniket\\c#\\jqueryajaxcrudinaspnetcore\\jqueryajaxcrudinaspnetcore\\views\\transaction\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B97288D1-A88E-4538-849E-C9892D86FF6C}|jQueryAjaxCRUDInASPNETCore\\jQueryAjaxCRUDInASPNETCore.csproj|solutionrelative:jqueryajaxcrudinaspnetcore\\views\\transaction\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B97288D1-A88E-4538-849E-C9892D86FF6C}|jQueryAjaxCRUDInASPNETCore\\jQueryAjaxCRUDInASPNETCore.csproj|e:\\aniket\\c#\\jqueryajaxcrudinaspnetcore\\jqueryajaxcrudinaspnetcore\\models\\transaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B97288D1-A88E-4538-849E-C9892D86FF6C}|jQueryAjaxCRUDInASPNETCore\\jQueryAjaxCRUDInASPNETCore.csproj|solutionrelative:jqueryajaxcrudinaspnetcore\\models\\transaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "E:\\aniket\\c#\\jQueryAjaxCRUDInASPNETCore\\jQueryAjaxCRUDInASPNETCore\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "jQueryAjaxCRUDInASPNETCore\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "E:\\aniket\\c#\\jQueryAjaxCRUDInASPNETCore\\jQueryAjaxCRUDInASPNETCore\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "jQueryAjaxCRUDInASPNETCore\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAABUAAAAAAAAAAAAAADMAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-20T07:10:39.321Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_ViewAll.cshtml",
+              "DocumentMoniker": "E:\\aniket\\c#\\jQueryAjaxCRUDInASPNETCore\\jQueryAjaxCRUDInASPNETCore\\Views\\Transaction\\_ViewAll.cshtml",
+              "RelativeDocumentMoniker": "jQueryAjaxCRUDInASPNETCore\\Views\\Transaction\\_ViewAll.cshtml",
+              "ToolTip": "E:\\aniket\\c#\\jQueryAjaxCRUDInASPNETCore\\jQueryAjaxCRUDInASPNETCore\\Views\\Transaction\\_ViewAll.cshtml",
+              "RelativeToolTip": "jQueryAjaxCRUDInASPNETCore\\Views\\Transaction\\_ViewAll.cshtml",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAAACcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-19T08:50:23.133Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TransactionController.cs",
+              "DocumentMoniker": "E:\\aniket\\c#\\jQueryAjaxCRUDInASPNETCore\\jQueryAjaxCRUDInASPNETCore\\Controllers\\TransactionController.cs",
+              "RelativeDocumentMoniker": "jQueryAjaxCRUDInASPNETCore\\Controllers\\TransactionController.cs",
+              "ToolTip": "E:\\aniket\\c#\\jQueryAjaxCRUDInASPNETCore\\jQueryAjaxCRUDInASPNETCore\\Controllers\\TransactionController.cs",
+              "RelativeToolTip": "jQueryAjaxCRUDInASPNETCore\\Controllers\\TransactionController.cs",
+              "ViewState": "AQIAAFEAAAAAAAAAAAAmwFUAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T08:36:05.036Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AddOrEdit.cshtml",
+              "DocumentMoniker": "E:\\aniket\\c#\\jQueryAjaxCRUDInASPNETCore\\jQueryAjaxCRUDInASPNETCore\\Views\\Transaction\\AddOrEdit.cshtml",
+              "RelativeDocumentMoniker": "jQueryAjaxCRUDInASPNETCore\\Views\\Transaction\\AddOrEdit.cshtml",
+              "ToolTip": "E:\\aniket\\c#\\jQueryAjaxCRUDInASPNETCore\\jQueryAjaxCRUDInASPNETCore\\Views\\Transaction\\AddOrEdit.cshtml",
+              "RelativeToolTip": "jQueryAjaxCRUDInASPNETCore\\Views\\Transaction\\AddOrEdit.cshtml",
+              "ViewState": "AQIAADAAAAAAAAAAAAAAAEoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-19T08:32:13.468Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "site.js",
+              "DocumentMoniker": "E:\\aniket\\c#\\jQueryAjaxCRUDInASPNETCore\\jQueryAjaxCRUDInASPNETCore\\wwwroot\\js\\site.js",
+              "RelativeDocumentMoniker": "jQueryAjaxCRUDInASPNETCore\\wwwroot\\js\\site.js",
+              "ToolTip": "E:\\aniket\\c#\\jQueryAjaxCRUDInASPNETCore\\jQueryAjaxCRUDInASPNETCore\\wwwroot\\js\\site.js",
+              "RelativeToolTip": "jQueryAjaxCRUDInASPNETCore\\wwwroot\\js\\site.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAE8AAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-03-19T07:28:45.142Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "E:\\aniket\\c#\\jQueryAjaxCRUDInASPNETCore\\jQueryAjaxCRUDInASPNETCore\\Views\\Transaction\\Index.cshtml",
+              "RelativeDocumentMoniker": "jQueryAjaxCRUDInASPNETCore\\Views\\Transaction\\Index.cshtml",
+              "ToolTip": "E:\\aniket\\c#\\jQueryAjaxCRUDInASPNETCore\\jQueryAjaxCRUDInASPNETCore\\Views\\Transaction\\Index.cshtml",
+              "RelativeToolTip": "jQueryAjaxCRUDInASPNETCore\\Views\\Transaction\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-18T11:52:21.785Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Transaction.cs",
+              "DocumentMoniker": "E:\\aniket\\c#\\jQueryAjaxCRUDInASPNETCore\\jQueryAjaxCRUDInASPNETCore\\Models\\Transaction.cs",
+              "RelativeDocumentMoniker": "jQueryAjaxCRUDInASPNETCore\\Models\\Transaction.cs",
+              "ToolTip": "E:\\aniket\\c#\\jQueryAjaxCRUDInASPNETCore\\jQueryAjaxCRUDInASPNETCore\\Models\\Transaction.cs",
+              "RelativeToolTip": "jQueryAjaxCRUDInASPNETCore\\Models\\Transaction.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T06:58:57.472Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

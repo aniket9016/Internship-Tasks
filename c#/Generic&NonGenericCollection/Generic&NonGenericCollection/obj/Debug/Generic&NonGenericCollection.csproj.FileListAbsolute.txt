@@ -1,0 +1,7 @@
+E:\aniket\c#\Generic&NonGenericCollection\Generic&NonGenericCollection\bin\Debug\Generic&NonGenericCollection.exe.config
+E:\aniket\c#\Generic&NonGenericCollection\Generic&NonGenericCollection\bin\Debug\Generic&NonGenericCollection.exe
+E:\aniket\c#\Generic&NonGenericCollection\Generic&NonGenericCollection\bin\Debug\Generic&NonGenericCollection.pdb
+E:\aniket\c#\Generic&NonGenericCollection\Generic&NonGenericCollection\obj\Debug\Generic&NonGenericCollection.csproj.AssemblyReference.cache
+E:\aniket\c#\Generic&NonGenericCollection\Generic&NonGenericCollection\obj\Debug\Generic&NonGenericCollection.csproj.CoreCompileInputs.cache
+E:\aniket\c#\Generic&NonGenericCollection\Generic&NonGenericCollection\obj\Debug\Generic&NonGenericCollection.exe
+E:\aniket\c#\Generic&NonGenericCollection\Generic&NonGenericCollection\obj\Debug\Generic&NonGenericCollection.pdb

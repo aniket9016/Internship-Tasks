@@ -1,0 +1,1 @@
+use DB_SOCCER_GAME create table soccer_country (country_id  numeric(10) primary key identity(1001,1),country_abbr varchar(24),country_name varchar(40));

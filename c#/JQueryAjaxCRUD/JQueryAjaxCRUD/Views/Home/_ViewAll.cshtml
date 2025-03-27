@@ -1,0 +1,32 @@
+﻿@model IEnumerable<JQueryAjaxCRUD.Models.Transaction>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Account Number</th>
+            <th>Beneficiary Name</th>
+            <th>Bank Name</th>
+            <th>SWIFT Code</th>
+            <th>Amount</th>
+            <th>Date</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.AccountNumber</td>
+                <td>@item.BeneficiaryName</td>
+                <td>@item.BankName</td>
+                <td>@item.SWIFTCode</td>
+                <td>@item.Amount</td>
+                <td>@item.Date.ToShortDateString()</td>
+                <td>
+                    <button class="btn btn-primary" onclick="showAddOrEditModal(@item.TransactionId)">Edit</button>
+                    <button class="btn btn-danger" onclick="deleteTransaction(@item.TransactionId)">Delete</button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

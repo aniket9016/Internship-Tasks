@@ -1,0 +1,218 @@
+﻿@model IEnumerable<BankTransactions.Models.Transaction>
+
+@{
+    ViewData["Title"] = "Transactions";
+}
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<div class="container mt-4">
+    <h2 class="mb-3">Transactions</h2>
+
+    <!-- Success & Error Messages -->
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            @TempData["SuccessMessage"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+    }
+
+    @if (TempData["ErrorMessage"] != null)
+    {
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            @TempData["ErrorMessage"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+    }
+
+    <!-- Add Button -->
+    <button class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#transactionModal" onclick="openModal(0)">
+        <i class="fa fa-plus"></i> Add Transaction
+    </button>
+
+    <!-- Transactions Table -->
+    <table class="table table-striped">
+        <thead class="table-dark">
+            <tr>
+                <th>Account Number</th>
+                <th>Beneficiary</th>
+                <th>Bank</th>
+                <th>SWIFT Code</th>
+                <th>Amount</th>
+                <th>Date</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var transaction in Model)
+            {
+                <tr>
+                    <td>@transaction.AccountNumber</td>
+                    <td>@transaction.BeneficiaryName</td>
+                    <td>@transaction.BankName</td>
+                    <td>@transaction.SWIFTCode</td>
+                    <td>@transaction.Amount</td>
+                    <td>@transaction.Date.ToString("yyyy-MM-dd")</td>
+                    <td>
+                        <button class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#transactionModal"
+                                onclick="openModal(@transaction.TransactionId, '@transaction.AccountNumber',
+                                                   '@transaction.BeneficiaryName', '@transaction.BankName',
+                                                   '@transaction.SWIFTCode', @transaction.Amount,
+                                                   '@transaction.Date.ToString("yyyy-MM-dd")')">
+                            <i class="fa fa-edit"></i> Edit
+                        </button>
+                        <button class="btn btn-danger btn-sm" onclick="confirmDelete(@transaction.TransactionId)">
+                            <i class="fa fa-trash"></i> Delete
+                        </button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<!-- Transaction Modal -->
+<div class="modal fade" id="transactionModal" tabindex="-1" aria-labelledby="transactionModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="transactionModalLabel">Transaction</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form id="transactionForm" method="post" asp-action="CreateOrUpdate" asp-controller="Transaction">
+                    <input type="hidden" id="TransactionId" name="TransactionId">
+
+                    <div class="mb-3">
+                        <label class="form-label">Account Number</label>
+                        <input type="text" class="form-control" id="AccountNumber" name="AccountNumber" required maxlength="12">
+                        <div class="text-danger validation-error" data-for="AccountNumber"></div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Beneficiary Name</label>
+                        <input type="text" class="form-control" id="BeneficiaryName" name="BeneficiaryName" required>
+                        <div class="text-danger validation-error" data-for="BeneficiaryName"></div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Bank Name</label>
+                        <input type="text" class="form-control" id="BankName" name="BankName" required>
+                        <div class="text-danger validation-error" data-for="BankName"></div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">SWIFT Code</label>
+                        <input type="text" class="form-control" id="SWIFTCode" name="SWIFTCode" required maxlength="11">
+                        <div class="text-danger validation-error" data-for="SWIFTCode"></div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Amount</label>
+                        <input type="number" class="form-control" id="Amount" name="Amount" required min="1">
+                        <div class="text-danger validation-error" data-for="Amount"></div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Date</label>
+                        <input type="date" class="form-control" id="Date" name="Date" required>
+                        <div class="text-danger validation-error" data-for="Date"></div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-success"><i class="fa fa-save"></i> Save</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Scripts -->
+<script>
+    // Set max date to today to prevent selecting future dates
+    document.addEventListener("DOMContentLoaded", function () {
+        var today = new Date().toISOString().split("T")[0];
+        document.getElementById("Date").setAttribute("max", today);
+
+        // Set up the form to use AJAX submission
+        setupFormSubmission();
+    });
+
+    function confirmDelete(transactionId) {
+        if (confirm("Are you sure you want to delete this transaction?")) {
+            window.location.href = "/Transaction/Delete/" + transactionId;
+        }
+    }
+
+    function openModal(id, accountNumber = '', beneficiaryName = '', bankName = '', swiftCode = '', amount = '', date = '') {
+        // Clear any previous validation errors
+        clearValidationErrors();
+
+        document.getElementById("TransactionId").value = id || 0;
+        document.getElementById("AccountNumber").value = accountNumber;
+        document.getElementById("BeneficiaryName").value = beneficiaryName;
+        document.getElementById("BankName").value = bankName;
+        document.getElementById("SWIFTCode").value = swiftCode;
+        document.getElementById("Amount").value = amount;
+        document.getElementById("Date").value = date || new Date().toISOString().split("T")[0];
+    }
+
+    function clearValidationErrors() {
+        const errorElements = document.querySelectorAll('.validation-error');
+        errorElements.forEach(element => {
+            element.innerHTML = '';
+        });
+    }
+
+    function setupFormSubmission() {
+        const form = document.getElementById('transactionForm');
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // Clear previous validation errors
+            clearValidationErrors();
+
+            // Collect form data
+            const formData = new FormData(form);
+
+            // Send form data via AJAX
+            fetch(form.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'X-Requested-With': 'XMLHttpRequest'
+                }
+            })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        // Successful form submission
+                        window.location.reload();
+                    } else {
+                        // Display validation errors
+                        if (data.errors) {
+                            for (const [key, messages] of Object.entries(data.errors)) {
+                                const errorElement = document.querySelector(`.validation-error[data-for="${key}"]`);
+                                if (errorElement && messages.length > 0) {
+                                    errorElement.textContent = messages[0];
+                                }
+                            }
+                        } else if (data.message) {
+                            alert(data.message);
+                        }
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('An error occurred while submitting the form.');
+                });
+        });
+    }
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

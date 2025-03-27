@@ -1,0 +1,17 @@
+E:\aniket\consoleapp\MyConsoleApp\bin\Debug\net8.0\MyConsoleApp.exe
+E:\aniket\consoleapp\MyConsoleApp\bin\Debug\net8.0\MyConsoleApp.deps.json
+E:\aniket\consoleapp\MyConsoleApp\bin\Debug\net8.0\MyConsoleApp.runtimeconfig.json
+E:\aniket\consoleapp\MyConsoleApp\bin\Debug\net8.0\MyConsoleApp.dll
+E:\aniket\consoleapp\MyConsoleApp\bin\Debug\net8.0\MyConsoleApp.pdb
+E:\aniket\consoleapp\MyConsoleApp\bin\Debug\net8.0\Newtonsoft.Json.dll
+E:\aniket\consoleapp\MyConsoleApp\obj\Debug\net8.0\MyConsoleApp.csproj.AssemblyReference.cache
+E:\aniket\consoleapp\MyConsoleApp\obj\Debug\net8.0\MyConsoleApp.GeneratedMSBuildEditorConfig.editorconfig
+E:\aniket\consoleapp\MyConsoleApp\obj\Debug\net8.0\MyConsoleApp.AssemblyInfoInputs.cache
+E:\aniket\consoleapp\MyConsoleApp\obj\Debug\net8.0\MyConsoleApp.AssemblyInfo.cs
+E:\aniket\consoleapp\MyConsoleApp\obj\Debug\net8.0\MyConsoleApp.csproj.CoreCompileInputs.cache
+E:\aniket\consoleapp\MyConsoleApp\obj\Debug\net8.0\MyConsol.4CA403AE.Up2Date
+E:\aniket\consoleapp\MyConsoleApp\obj\Debug\net8.0\MyConsoleApp.dll
+E:\aniket\consoleapp\MyConsoleApp\obj\Debug\net8.0\refint\MyConsoleApp.dll
+E:\aniket\consoleapp\MyConsoleApp\obj\Debug\net8.0\MyConsoleApp.pdb
+E:\aniket\consoleapp\MyConsoleApp\obj\Debug\net8.0\MyConsoleApp.genruntimeconfig.cache
+E:\aniket\consoleapp\MyConsoleApp\obj\Debug\net8.0\ref\MyConsoleApp.dll

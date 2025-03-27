@@ -1,0 +1,27 @@
+#include <stdio.h>
+int main() {
+    printf("Enter n:-");
+    int n;
+    scanf("%d",&n);
+    if(n>=70)
+    {
+        if(n>=90)
+        {
+            printf("A");
+        }else{
+            printf("B");
+        }
+    }else if(n>=50)
+    {
+        if(n>=70)
+        {
+            printf("B");
+        }else{
+            printf("C");
+        }
+    }else{
+        printf("D");
+    }
+
+    return 0;
+}

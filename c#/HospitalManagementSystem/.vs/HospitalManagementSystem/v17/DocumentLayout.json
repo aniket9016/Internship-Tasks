@@ -1,0 +1,223 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\aniket\\c#\\HospitalManagementSystem\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{44E0285B-A6AA-4403-A738-2C6977C3D787}|HospitalManagementSystem\\HospitalManagementSystem.csproj|e:\\aniket\\c#\\hospitalmanagementsystem\\hospitalmanagementsystem\\controllers\\appointmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44E0285B-A6AA-4403-A738-2C6977C3D787}|HospitalManagementSystem\\HospitalManagementSystem.csproj|solutionrelative:hospitalmanagementsystem\\controllers\\appointmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44E0285B-A6AA-4403-A738-2C6977C3D787}|HospitalManagementSystem\\HospitalManagementSystem.csproj|e:\\aniket\\c#\\hospitalmanagementsystem\\hospitalmanagementsystem\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{44E0285B-A6AA-4403-A738-2C6977C3D787}|HospitalManagementSystem\\HospitalManagementSystem.csproj|solutionrelative:hospitalmanagementsystem\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44E0285B-A6AA-4403-A738-2C6977C3D787}|HospitalManagementSystem\\HospitalManagementSystem.csproj|e:\\aniket\\c#\\hospitalmanagementsystem\\hospitalmanagementsystem\\views\\doctors\\_doctorform.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{44E0285B-A6AA-4403-A738-2C6977C3D787}|HospitalManagementSystem\\HospitalManagementSystem.csproj|solutionrelative:hospitalmanagementsystem\\views\\doctors\\_doctorform.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44E0285B-A6AA-4403-A738-2C6977C3D787}|HospitalManagementSystem\\HospitalManagementSystem.csproj|e:\\aniket\\c#\\hospitalmanagementsystem\\hospitalmanagementsystem\\controllers\\doctorscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44E0285B-A6AA-4403-A738-2C6977C3D787}|HospitalManagementSystem\\HospitalManagementSystem.csproj|solutionrelative:hospitalmanagementsystem\\controllers\\doctorscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44E0285B-A6AA-4403-A738-2C6977C3D787}|HospitalManagementSystem\\HospitalManagementSystem.csproj|e:\\aniket\\c#\\hospitalmanagementsystem\\hospitalmanagementsystem\\models\\doctor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44E0285B-A6AA-4403-A738-2C6977C3D787}|HospitalManagementSystem\\HospitalManagementSystem.csproj|solutionrelative:hospitalmanagementsystem\\models\\doctor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44E0285B-A6AA-4403-A738-2C6977C3D787}|HospitalManagementSystem\\HospitalManagementSystem.csproj|e:\\aniket\\c#\\hospitalmanagementsystem\\hospitalmanagementsystem\\views\\doctors\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{44E0285B-A6AA-4403-A738-2C6977C3D787}|HospitalManagementSystem\\HospitalManagementSystem.csproj|solutionrelative:hospitalmanagementsystem\\views\\doctors\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44E0285B-A6AA-4403-A738-2C6977C3D787}|HospitalManagementSystem\\HospitalManagementSystem.csproj|e:\\aniket\\c#\\hospitalmanagementsystem\\hospitalmanagementsystem\\controllers\\patientscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44E0285B-A6AA-4403-A738-2C6977C3D787}|HospitalManagementSystem\\HospitalManagementSystem.csproj|solutionrelative:hospitalmanagementsystem\\controllers\\patientscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44E0285B-A6AA-4403-A738-2C6977C3D787}|HospitalManagementSystem\\HospitalManagementSystem.csproj|e:\\aniket\\c#\\hospitalmanagementsystem\\hospitalmanagementsystem\\views\\appointments\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{44E0285B-A6AA-4403-A738-2C6977C3D787}|HospitalManagementSystem\\HospitalManagementSystem.csproj|solutionrelative:hospitalmanagementsystem\\views\\appointments\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44E0285B-A6AA-4403-A738-2C6977C3D787}|HospitalManagementSystem\\HospitalManagementSystem.csproj|e:\\aniket\\c#\\hospitalmanagementsystem\\hospitalmanagementsystem\\models\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44E0285B-A6AA-4403-A738-2C6977C3D787}|HospitalManagementSystem\\HospitalManagementSystem.csproj|solutionrelative:hospitalmanagementsystem\\models\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44E0285B-A6AA-4403-A738-2C6977C3D787}|HospitalManagementSystem\\HospitalManagementSystem.csproj|e:\\aniket\\c#\\hospitalmanagementsystem\\hospitalmanagementsystem\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{44E0285B-A6AA-4403-A738-2C6977C3D787}|HospitalManagementSystem\\HospitalManagementSystem.csproj|solutionrelative:hospitalmanagementsystem\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44E0285B-A6AA-4403-A738-2C6977C3D787}|HospitalManagementSystem\\HospitalManagementSystem.csproj|e:\\aniket\\c#\\hospitalmanagementsystem\\hospitalmanagementsystem\\views\\patients\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{44E0285B-A6AA-4403-A738-2C6977C3D787}|HospitalManagementSystem\\HospitalManagementSystem.csproj|solutionrelative:hospitalmanagementsystem\\views\\patients\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44E0285B-A6AA-4403-A738-2C6977C3D787}|HospitalManagementSystem\\HospitalManagementSystem.csproj|e:\\aniket\\c#\\hospitalmanagementsystem\\hospitalmanagementsystem\\views\\patients\\_patientform.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{44E0285B-A6AA-4403-A738-2C6977C3D787}|HospitalManagementSystem\\HospitalManagementSystem.csproj|solutionrelative:hospitalmanagementsystem\\views\\patients\\_patientform.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AppointmentsController.cs",
+              "DocumentMoniker": "E:\\aniket\\c#\\HospitalManagementSystem\\HospitalManagementSystem\\Controllers\\AppointmentsController.cs",
+              "RelativeDocumentMoniker": "HospitalManagementSystem\\Controllers\\AppointmentsController.cs",
+              "ToolTip": "E:\\aniket\\c#\\HospitalManagementSystem\\HospitalManagementSystem\\Controllers\\AppointmentsController.cs",
+              "RelativeToolTip": "HospitalManagementSystem\\Controllers\\AppointmentsController.cs",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAuwBIAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T06:21:58.052Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "_DoctorForm.cshtml",
+              "DocumentMoniker": "E:\\aniket\\c#\\HospitalManagementSystem\\HospitalManagementSystem\\Views\\Doctors\\_DoctorForm.cshtml",
+              "RelativeDocumentMoniker": "HospitalManagementSystem\\Views\\Doctors\\_DoctorForm.cshtml",
+              "ToolTip": "E:\\aniket\\c#\\HospitalManagementSystem\\HospitalManagementSystem\\Views\\Doctors\\_DoctorForm.cshtml",
+              "RelativeToolTip": "HospitalManagementSystem\\Views\\Doctors\\_DoctorForm.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAQwBgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-20T06:30:29.175Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "site.js",
+              "DocumentMoniker": "E:\\aniket\\c#\\HospitalManagementSystem\\HospitalManagementSystem\\wwwroot\\js\\site.js",
+              "RelativeDocumentMoniker": "HospitalManagementSystem\\wwwroot\\js\\site.js",
+              "ToolTip": "E:\\aniket\\c#\\HospitalManagementSystem\\HospitalManagementSystem\\wwwroot\\js\\site.js",
+              "RelativeToolTip": "HospitalManagementSystem\\wwwroot\\js\\site.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-03-20T06:22:46.639Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DoctorsController.cs",
+              "DocumentMoniker": "E:\\aniket\\c#\\HospitalManagementSystem\\HospitalManagementSystem\\Controllers\\DoctorsController.cs",
+              "RelativeDocumentMoniker": "HospitalManagementSystem\\Controllers\\DoctorsController.cs",
+              "ToolTip": "E:\\aniket\\c#\\HospitalManagementSystem\\HospitalManagementSystem\\Controllers\\DoctorsController.cs",
+              "RelativeToolTip": "HospitalManagementSystem\\Controllers\\DoctorsController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAD4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T06:21:37.309Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "E:\\aniket\\c#\\HospitalManagementSystem\\HospitalManagementSystem\\Views\\Doctors\\Index.cshtml",
+              "RelativeDocumentMoniker": "HospitalManagementSystem\\Views\\Doctors\\Index.cshtml",
+              "ToolTip": "E:\\aniket\\c#\\HospitalManagementSystem\\HospitalManagementSystem\\Views\\Doctors\\Index.cshtml",
+              "RelativeToolTip": "HospitalManagementSystem\\Views\\Doctors\\Index.cshtml",
+              "ViewState": "AQIAAEQAAAAAAAAAAAAQwF0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-20T06:22:20.407Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Doctor.cs",
+              "DocumentMoniker": "E:\\aniket\\c#\\HospitalManagementSystem\\HospitalManagementSystem\\Models\\Doctor.cs",
+              "RelativeDocumentMoniker": "HospitalManagementSystem\\Models\\Doctor.cs",
+              "ToolTip": "E:\\aniket\\c#\\HospitalManagementSystem\\HospitalManagementSystem\\Models\\Doctor.cs",
+              "RelativeToolTip": "HospitalManagementSystem\\Models\\Doctor.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAADwvx4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T06:32:11.362Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "E:\\aniket\\c#\\HospitalManagementSystem\\HospitalManagementSystem\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "HospitalManagementSystem\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "E:\\aniket\\c#\\HospitalManagementSystem\\HospitalManagementSystem\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "HospitalManagementSystem\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAADkAAAAAAAAAAAAAAFQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-20T06:16:04.907Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "E:\\aniket\\c#\\HospitalManagementSystem\\HospitalManagementSystem\\Views\\Appointments\\Index.cshtml",
+              "RelativeDocumentMoniker": "HospitalManagementSystem\\Views\\Appointments\\Index.cshtml",
+              "ToolTip": "E:\\aniket\\c#\\HospitalManagementSystem\\HospitalManagementSystem\\Views\\Appointments\\Index.cshtml",
+              "RelativeToolTip": "HospitalManagementSystem\\Views\\Appointments\\Index.cshtml",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAQwCQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-20T06:22:31.795Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PatientsController.cs",
+              "DocumentMoniker": "E:\\aniket\\c#\\HospitalManagementSystem\\HospitalManagementSystem\\Controllers\\PatientsController.cs",
+              "RelativeDocumentMoniker": "HospitalManagementSystem\\Controllers\\PatientsController.cs",
+              "ToolTip": "E:\\aniket\\c#\\HospitalManagementSystem\\HospitalManagementSystem\\Controllers\\PatientsController.cs",
+              "RelativeToolTip": "HospitalManagementSystem\\Controllers\\PatientsController.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAowCUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T06:17:38.129Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Appointment.cs",
+              "DocumentMoniker": "E:\\aniket\\c#\\HospitalManagementSystem\\HospitalManagementSystem\\Models\\Appointment.cs",
+              "RelativeDocumentMoniker": "HospitalManagementSystem\\Models\\Appointment.cs",
+              "ToolTip": "E:\\aniket\\c#\\HospitalManagementSystem\\HospitalManagementSystem\\Models\\Appointment.cs",
+              "RelativeToolTip": "HospitalManagementSystem\\Models\\Appointment.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAswB0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T06:24:56.219Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "_PatientForm.cshtml",
+              "DocumentMoniker": "E:\\aniket\\c#\\HospitalManagementSystem\\HospitalManagementSystem\\Views\\Patients\\_PatientForm.cshtml",
+              "RelativeDocumentMoniker": "HospitalManagementSystem\\Views\\Patients\\_PatientForm.cshtml",
+              "ToolTip": "E:\\aniket\\c#\\HospitalManagementSystem\\HospitalManagementSystem\\Views\\Patients\\_PatientForm.cshtml",
+              "RelativeToolTip": "HospitalManagementSystem\\Views\\Patients\\_PatientForm.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-20T06:12:54.868Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "E:\\aniket\\c#\\HospitalManagementSystem\\HospitalManagementSystem\\Views\\Patients\\Index.cshtml",
+              "RelativeDocumentMoniker": "HospitalManagementSystem\\Views\\Patients\\Index.cshtml",
+              "ToolTip": "E:\\aniket\\c#\\HospitalManagementSystem\\HospitalManagementSystem\\Views\\Patients\\Index.cshtml",
+              "RelativeToolTip": "HospitalManagementSystem\\Views\\Patients\\Index.cshtml",
+              "ViewState": "AQIAAC0AAAAAAAAAAAAjwFgAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-20T06:11:58.812Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

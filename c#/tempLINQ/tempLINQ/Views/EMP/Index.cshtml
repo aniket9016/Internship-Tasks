@@ -1,0 +1,27 @@
+﻿@model IEnumerable<tempLINQ.Models.EmpModel>
+<p>
+    @Html.ActionLink("Create new","Create")
+</p>
+<table class="table">
+    <tr>
+        <th>Employee Name</th>
+        <th>Employee Salary</th>
+        <th>Employee City</th>
+        <th>Employee Gender</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(m=>item.name)</td>
+            <td>@Html.DisplayFor(m=>item.sal)</td>
+            <td>@Html.DisplayFor(m=>item.ct)</td>
+            <td>@Html.DisplayFor(m=>item.gen)</td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new {id=item.id})|
+                @Html.ActionLink("Details", "Details", new {id=item.id})|
+                @Html.ActionLink("Delete", "Delete", new {id=item.id})
+
+            </td>
+        </tr>
+    }
+</table>

@@ -1,0 +1,83 @@
+﻿@model StudentCourseSubscriptionMVCCRUD.Models.Student
+
+@{
+    ViewBag.Title = "Create Student";
+}
+
+<div class="container mt-4">
+    <div class="card shadow-lg p-4">
+        <h2 class="text-center text-primary mb-4">Create Student</h2>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        @Html.LabelFor(model => model.StudentName, new { @class = "form-label fw-bold" })
+                        @Html.TextBoxFor(model => model.StudentName, new { @class = "form-control", placeholder = "Enter Full Name" })
+                        @Html.ValidationMessageFor(model => model.StudentName, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="mb-3">
+                        @Html.LabelFor(model => model.Address, new { @class = "form-label fw-bold" })
+                        @Html.TextAreaFor(model => model.Address, new { @class = "form-control", rows = "2", placeholder = "Enter Address" })
+                        @Html.ValidationMessageFor(model => model.Address, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="mb-3">
+                        @Html.LabelFor(model => model.Phone, new { @class = "form-label fw-bold" })
+                        @Html.TextBoxFor(model => model.Phone, new { @class = "form-control", type = "tel", placeholder = "Enter Phone Number" })
+                        @Html.ValidationMessageFor(model => model.Phone, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="mb-3">
+                        @Html.LabelFor(model => model.Email, new { @class = "form-label fw-bold" })
+                        @Html.TextBoxFor(model => model.Email, new { @class = "form-control", type = "email", placeholder = "Enter Email Address" })
+                        @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        @Html.LabelFor(model => model.Gender, new { @class = "form-label fw-bold" })
+                        <div class="form-check">
+                            @Html.RadioButtonFor(model => model.Gender, "Male", new { @class = "form-check-input", @checked = "checked" })
+                            <label class="form-check-label">Male</label>
+                        </div>
+                        <div class="form-check">
+                            @Html.RadioButtonFor(model => model.Gender, "Female", new { @class = "form-check-input" })
+                            <label class="form-check-label">Female</label>
+                        </div>
+                        <div class="form-check">
+                            @Html.RadioButtonFor(model => model.Gender, "Other", new { @class = "form-check-input" })
+                            <label class="form-check-label">Other</label>
+                        </div>
+                        @Html.ValidationMessageFor(model => model.Gender, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="mb-3">
+                        @Html.LabelFor(model => model.City, new { @class = "form-label fw-bold" })
+                        @Html.DropDownListFor(model => model.City, new SelectList(new[]
+                        {
+                            "Surat", "Mumbai", "Bangalore", "Delhi", "Pune", "Ahmedabad"
+                        }), "-- Select City --", new { @class = "form-select" })
+                        @Html.ValidationMessageFor(model => model.City, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="mb-3">
+                        @Html.LabelFor(model => model.EnrollmentNo, new { @class = "form-label fw-bold" })
+                        @Html.TextBoxFor(model => model.EnrollmentNo, new { @class = "form-control", placeholder = "Enter Enrollment No." })
+                        @Html.ValidationMessageFor(model => model.EnrollmentNo, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-4">
+                <button type="submit" class="btn btn-primary btn-lg px-4">Submit</button>
+                <a href="@Url.Action("Index")" class="btn btn-secondary btn-lg px-4">Back</a>
+            </div>
+        }
+    </div>
+</div>

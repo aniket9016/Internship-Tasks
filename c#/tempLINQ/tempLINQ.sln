@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35013.160
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tempLINQ", "tempLINQ\tempLINQ.csproj", "{2F1E34DC-F0CC-4035-82D6-351261D5DBF1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2F1E34DC-F0CC-4035-82D6-351261D5DBF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F1E34DC-F0CC-4035-82D6-351261D5DBF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F1E34DC-F0CC-4035-82D6-351261D5DBF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F1E34DC-F0CC-4035-82D6-351261D5DBF1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {28BA623E-2028-4F51-94D1-A372B04531B2}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,50 @@
+﻿@model IEnumerable<ProCatCrud.Models.Category>
+
+@{
+    ViewData["Title"] = "Category List";
+}
+
+<div class="container mt-4">
+    <h2 class="mb-3">Category List</h2>
+
+    @if (!string.IsNullOrEmpty(ViewBag.SuccessMessage))
+    {
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            @ViewBag.SuccessMessage
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    }
+
+    <a asp-action="CreateOrUpdate" class="btn btn-success mb-3">Add New Category</a>
+
+    <table class="table table-bordered table-striped">
+        <thead class="table-dark">
+            <tr>
+                <th>ID</th>
+                <th>Type</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var category in Model)
+            {
+                <tr>
+                    <td>@category.CategoryId</td>
+                    <td>@category.CategoryType</td>
+                    <td>
+                        <a asp-action="CreateOrUpdate" asp-route-id="@category.CategoryId" class="btn btn-primary btn-sm">Edit</a>
+                        <button class="btn btn-danger btn-sm" onclick="confirmDelete(@category.CategoryId)">Delete</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<script>
+    function confirmDelete(id) {
+        if (confirm("Are you sure you want to delete this category?")) {
+            window.location.href = '/Category/Delete/' + id;
+        }
+    }
+</script>

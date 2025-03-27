@@ -1,0 +1,3 @@
+USE assignment1
+SELECT FIRST_NAME as WORKER_NAME
+FROM Tbl_Worker;

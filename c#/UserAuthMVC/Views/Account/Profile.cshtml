@@ -1,0 +1,33 @@
+﻿@model Dictionary<string, string>
+
+@{
+    ViewData["Title"] = "Profile";
+}
+
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <h2 class="text-center">User Profile</h2>
+            </div>
+            <div class="card-body">
+                <div class="mb-3">
+                    <strong>Name:</strong> @Model[System.Security.Claims.ClaimTypes.Name]
+                </div>
+                <div class="mb-3">
+                    <strong>Email:</strong> @Model[System.Security.Claims.ClaimTypes.Email]
+                </div>
+                <div class="mb-3">
+                    <strong>User ID:</strong> @Model[System.Security.Claims.ClaimTypes.NameIdentifier]
+                </div>
+
+                <a class="nav-link text-dark" href="#" onclick="document.getElementById('logoutForm').submit();">Logout</a>
+
+                <form id="logoutForm" asp-controller="Account" asp-action="Logout" method="post" style="display: none;">
+                    <input type="hidden" />
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,109 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\aniket\\c#\\filters\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0BF9F7FF-A4D4-4DBB-BFCB-386FE87DF2E3}|filters\\filters.csproj|e:\\aniket\\c#\\filters\\filters\\app_start\\bundleconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0BF9F7FF-A4D4-4DBB-BFCB-386FE87DF2E3}|filters\\filters.csproj|solutionrelative:filters\\app_start\\bundleconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0BF9F7FF-A4D4-4DBB-BFCB-386FE87DF2E3}|filters\\filters.csproj|e:\\aniket\\c#\\filters\\filters\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0BF9F7FF-A4D4-4DBB-BFCB-386FE87DF2E3}|filters\\filters.csproj|solutionrelative:filters\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0BF9F7FF-A4D4-4DBB-BFCB-386FE87DF2E3}|filters\\filters.csproj|e:\\aniket\\c#\\filters\\filters\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0BF9F7FF-A4D4-4DBB-BFCB-386FE87DF2E3}|filters\\filters.csproj|solutionrelative:filters\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0BF9F7FF-A4D4-4DBB-BFCB-386FE87DF2E3}|filters\\filters.csproj|e:\\aniket\\c#\\filters\\filters\\controllers\\logattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0BF9F7FF-A4D4-4DBB-BFCB-386FE87DF2E3}|filters\\filters.csproj|solutionrelative:filters\\controllers\\logattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0BF9F7FF-A4D4-4DBB-BFCB-386FE87DF2E3}|filters\\filters.csproj|e:\\aniket\\c#\\filters\\filters\\views\\home\\about.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0BF9F7FF-A4D4-4DBB-BFCB-386FE87DF2E3}|filters\\filters.csproj|solutionrelative:filters\\views\\home\\about.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BundleConfig.cs",
+              "DocumentMoniker": "E:\\aniket\\c#\\filters\\filters\\App_Start\\BundleConfig.cs",
+              "RelativeDocumentMoniker": "filters\\App_Start\\BundleConfig.cs",
+              "ToolTip": "E:\\aniket\\c#\\filters\\filters\\App_Start\\BundleConfig.cs",
+              "RelativeToolTip": "filters\\App_Start\\BundleConfig.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-27T04:43:23.388Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "E:\\aniket\\c#\\filters\\filters\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "filters\\Controllers\\HomeController.cs",
+              "ToolTip": "E:\\aniket\\c#\\filters\\filters\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "filters\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-27T04:33:58.444Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LogAttribute.cs",
+              "DocumentMoniker": "E:\\aniket\\c#\\filters\\filters\\Controllers\\LogAttribute.cs",
+              "RelativeDocumentMoniker": "filters\\Controllers\\LogAttribute.cs",
+              "ToolTip": "E:\\aniket\\c#\\filters\\filters\\Controllers\\LogAttribute.cs",
+              "RelativeToolTip": "filters\\Controllers\\LogAttribute.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAowAoAAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-27T04:33:30.882Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "E:\\aniket\\c#\\filters\\filters\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "filters\\Views\\Home\\Index.cshtml",
+              "ToolTip": "E:\\aniket\\c#\\filters\\filters\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "filters\\Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-27T04:24:57.621Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "About.cshtml",
+              "DocumentMoniker": "E:\\aniket\\c#\\filters\\filters\\Views\\Home\\About.cshtml",
+              "RelativeDocumentMoniker": "filters\\Views\\Home\\About.cshtml",
+              "ToolTip": "E:\\aniket\\c#\\filters\\filters\\Views\\Home\\About.cshtml",
+              "RelativeToolTip": "filters\\Views\\Home\\About.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-27T04:24:54.061Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,170 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\aniket\\c#\\JQueryAjaxCRUD\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F769A65A-1A9B-4AD7-A823-E0FA79BA2E5D}|JQueryAjaxCRUD\\JQueryAjaxCRUD.csproj|e:\\aniket\\c#\\jqueryajaxcrud\\jqueryajaxcrud\\views\\home\\_viewall.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F769A65A-1A9B-4AD7-A823-E0FA79BA2E5D}|JQueryAjaxCRUD\\JQueryAjaxCRUD.csproj|solutionrelative:jqueryajaxcrud\\views\\home\\_viewall.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F769A65A-1A9B-4AD7-A823-E0FA79BA2E5D}|JQueryAjaxCRUD\\JQueryAjaxCRUD.csproj|e:\\aniket\\c#\\jqueryajaxcrud\\jqueryajaxcrud\\views\\transaction\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F769A65A-1A9B-4AD7-A823-E0FA79BA2E5D}|JQueryAjaxCRUD\\JQueryAjaxCRUD.csproj|solutionrelative:jqueryajaxcrud\\views\\transaction\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F769A65A-1A9B-4AD7-A823-E0FA79BA2E5D}|JQueryAjaxCRUD\\JQueryAjaxCRUD.csproj|e:\\aniket\\c#\\jqueryajaxcrud\\jqueryajaxcrud\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F769A65A-1A9B-4AD7-A823-E0FA79BA2E5D}|JQueryAjaxCRUD\\JQueryAjaxCRUD.csproj|solutionrelative:jqueryajaxcrud\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F769A65A-1A9B-4AD7-A823-E0FA79BA2E5D}|JQueryAjaxCRUD\\JQueryAjaxCRUD.csproj|e:\\aniket\\c#\\jqueryajaxcrud\\jqueryajaxcrud\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F769A65A-1A9B-4AD7-A823-E0FA79BA2E5D}|JQueryAjaxCRUD\\JQueryAjaxCRUD.csproj|solutionrelative:jqueryajaxcrud\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F769A65A-1A9B-4AD7-A823-E0FA79BA2E5D}|JQueryAjaxCRUD\\JQueryAjaxCRUD.csproj|e:\\aniket\\c#\\jqueryajaxcrud\\jqueryajaxcrud\\transactiondbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F769A65A-1A9B-4AD7-A823-E0FA79BA2E5D}|JQueryAjaxCRUD\\JQueryAjaxCRUD.csproj|solutionrelative:jqueryajaxcrud\\transactiondbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F769A65A-1A9B-4AD7-A823-E0FA79BA2E5D}|JQueryAjaxCRUD\\JQueryAjaxCRUD.csproj|e:\\aniket\\c#\\jqueryajaxcrud\\jqueryajaxcrud\\models\\transaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F769A65A-1A9B-4AD7-A823-E0FA79BA2E5D}|JQueryAjaxCRUD\\JQueryAjaxCRUD.csproj|solutionrelative:jqueryajaxcrud\\models\\transaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F769A65A-1A9B-4AD7-A823-E0FA79BA2E5D}|JQueryAjaxCRUD\\JQueryAjaxCRUD.csproj|e:\\aniket\\c#\\jqueryajaxcrud\\jqueryajaxcrud\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{F769A65A-1A9B-4AD7-A823-E0FA79BA2E5D}|JQueryAjaxCRUD\\JQueryAjaxCRUD.csproj|solutionrelative:jqueryajaxcrud\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F769A65A-1A9B-4AD7-A823-E0FA79BA2E5D}|JQueryAjaxCRUD\\JQueryAjaxCRUD.csproj|e:\\aniket\\c#\\jqueryajaxcrud\\jqueryajaxcrud\\controllers\\transactioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F769A65A-1A9B-4AD7-A823-E0FA79BA2E5D}|JQueryAjaxCRUD\\JQueryAjaxCRUD.csproj|solutionrelative:jqueryajaxcrud\\controllers\\transactioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F769A65A-1A9B-4AD7-A823-E0FA79BA2E5D}|JQueryAjaxCRUD\\JQueryAjaxCRUD.csproj|e:\\aniket\\c#\\jqueryajaxcrud\\jqueryajaxcrud\\helper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F769A65A-1A9B-4AD7-A823-E0FA79BA2E5D}|JQueryAjaxCRUD\\JQueryAjaxCRUD.csproj|solutionrelative:jqueryajaxcrud\\helper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_ViewAll.cshtml",
+              "DocumentMoniker": "E:\\aniket\\c#\\JQueryAjaxCRUD\\JQueryAjaxCRUD\\Views\\Home\\_ViewAll.cshtml",
+              "RelativeDocumentMoniker": "JQueryAjaxCRUD\\Views\\Home\\_ViewAll.cshtml",
+              "ToolTip": "E:\\aniket\\c#\\JQueryAjaxCRUD\\JQueryAjaxCRUD\\Views\\Home\\_ViewAll.cshtml",
+              "RelativeToolTip": "JQueryAjaxCRUD\\Views\\Home\\_ViewAll.cshtml",
+              "ViewState": "AQIAABMAAAAAAAAAAAAkwCAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-17T11:52:17.637Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\aniket\\c#\\JQueryAjaxCRUD\\JQueryAjaxCRUD\\Program.cs",
+              "RelativeDocumentMoniker": "JQueryAjaxCRUD\\Program.cs",
+              "ToolTip": "E:\\aniket\\c#\\JQueryAjaxCRUD\\JQueryAjaxCRUD\\Program.cs",
+              "RelativeToolTip": "JQueryAjaxCRUD\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T11:40:37.575Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "TransactionController.cs",
+              "DocumentMoniker": "E:\\aniket\\c#\\JQueryAjaxCRUD\\JQueryAjaxCRUD\\Controllers\\TransactionController.cs",
+              "RelativeDocumentMoniker": "JQueryAjaxCRUD\\Controllers\\TransactionController.cs",
+              "ToolTip": "E:\\aniket\\c#\\JQueryAjaxCRUD\\JQueryAjaxCRUD\\Controllers\\TransactionController.cs",
+              "RelativeToolTip": "JQueryAjaxCRUD\\Controllers\\TransactionController.cs",
+              "ViewState": "AQIAAC0AAAAAAAAAAAAtwDkAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T11:35:19.714Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TransactionDbContext.cs",
+              "DocumentMoniker": "E:\\aniket\\c#\\JQueryAjaxCRUD\\JQueryAjaxCRUD\\TransactionDbContext.cs",
+              "RelativeDocumentMoniker": "JQueryAjaxCRUD\\TransactionDbContext.cs",
+              "ToolTip": "E:\\aniket\\c#\\JQueryAjaxCRUD\\JQueryAjaxCRUD\\TransactionDbContext.cs",
+              "RelativeToolTip": "JQueryAjaxCRUD\\TransactionDbContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T11:32:16.256Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Transaction.cs",
+              "DocumentMoniker": "E:\\aniket\\c#\\JQueryAjaxCRUD\\JQueryAjaxCRUD\\Models\\Transaction.cs",
+              "RelativeDocumentMoniker": "JQueryAjaxCRUD\\Models\\Transaction.cs",
+              "ToolTip": "E:\\aniket\\c#\\JQueryAjaxCRUD\\JQueryAjaxCRUD\\Models\\Transaction.cs",
+              "RelativeToolTip": "JQueryAjaxCRUD\\Models\\Transaction.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACAAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T11:30:06.917Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Helper.cs",
+              "DocumentMoniker": "E:\\aniket\\c#\\JQueryAjaxCRUD\\JQueryAjaxCRUD\\Helper.cs",
+              "RelativeDocumentMoniker": "JQueryAjaxCRUD\\Helper.cs",
+              "ToolTip": "E:\\aniket\\c#\\JQueryAjaxCRUD\\JQueryAjaxCRUD\\Helper.cs",
+              "RelativeToolTip": "JQueryAjaxCRUD\\Helper.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAACUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T11:39:31.738Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "E:\\aniket\\c#\\JQueryAjaxCRUD\\JQueryAjaxCRUD\\appsettings.json",
+              "RelativeDocumentMoniker": "JQueryAjaxCRUD\\appsettings.json",
+              "ToolTip": "E:\\aniket\\c#\\JQueryAjaxCRUD\\JQueryAjaxCRUD\\appsettings.json",
+              "RelativeToolTip": "JQueryAjaxCRUD\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAABDAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-17T11:41:00.544Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "E:\\aniket\\c#\\JQueryAjaxCRUD\\JQueryAjaxCRUD\\Views\\Transaction\\Index.cshtml",
+              "RelativeDocumentMoniker": "JQueryAjaxCRUD\\Views\\Transaction\\Index.cshtml",
+              "ToolTip": "E:\\aniket\\c#\\JQueryAjaxCRUD\\JQueryAjaxCRUD\\Views\\Transaction\\Index.cshtml",
+              "RelativeToolTip": "JQueryAjaxCRUD\\Views\\Transaction\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-17T11:37:27.811Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "E:\\aniket\\c#\\JQueryAjaxCRUD\\JQueryAjaxCRUD\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "JQueryAjaxCRUD\\Views\\Home\\Index.cshtml",
+              "ToolTip": "E:\\aniket\\c#\\JQueryAjaxCRUD\\JQueryAjaxCRUD\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "JQueryAjaxCRUD\\Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-17T11:47:34.76Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

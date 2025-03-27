@@ -1,0 +1,103 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\aniket\\c#\\arrayexample\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3278EB22-6DE3-4C3F-9354-CB1BC34C24B8}|arrayexample\\arrayexample.csproj|e:\\aniket\\c#\\arrayexample\\arrayexample\\linqex.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3278EB22-6DE3-4C3F-9354-CB1BC34C24B8}|arrayexample\\arrayexample.csproj|solutionrelative:arrayexample\\linqex.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|arrayexample||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3278EB22-6DE3-4C3F-9354-CB1BC34C24B8}|arrayexample\\arrayexample.csproj|E:\\aniket\\c#\\arrayexample\\arrayexample\\event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3278EB22-6DE3-4C3F-9354-CB1BC34C24B8}|arrayexample\\arrayexample.csproj|solutionrelative:arrayexample\\event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3278EB22-6DE3-4C3F-9354-CB1BC34C24B8}|arrayexample\\arrayexample.csproj|E:\\aniket\\c#\\arrayexample\\arrayexample\\mylinqquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3278EB22-6DE3-4C3F-9354-CB1BC34C24B8}|arrayexample\\arrayexample.csproj|solutionrelative:arrayexample\\mylinqquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3278EB22-6DE3-4C3F-9354-CB1BC34C24B8}|arrayexample\\arrayexample.csproj|E:\\aniket\\c#\\arrayexample\\arrayexample\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3278EB22-6DE3-4C3F-9354-CB1BC34C24B8}|arrayexample\\arrayexample.csproj|solutionrelative:arrayexample\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LINQEx.cs",
+              "DocumentMoniker": "E:\\aniket\\c#\\arrayexample\\arrayexample\\LINQEx.cs",
+              "RelativeDocumentMoniker": "arrayexample\\LINQEx.cs",
+              "ToolTip": "E:\\aniket\\c#\\arrayexample\\arrayexample\\LINQEx.cs*",
+              "RelativeToolTip": "arrayexample\\LINQEx.cs*",
+              "ViewState": "AQIAAFwAAAAAAAAAAAAYwGMAAAA/AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-19T04:22:06.36Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Event.cs",
+              "DocumentMoniker": "E:\\aniket\\c#\\arrayexample\\arrayexample\\Event.cs",
+              "RelativeDocumentMoniker": "arrayexample\\Event.cs",
+              "ToolTip": "E:\\aniket\\c#\\arrayexample\\arrayexample\\Event.cs",
+              "RelativeToolTip": "arrayexample\\Event.cs",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAowC4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-18T10:53:00.578Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MyLinqQuery.cs",
+              "DocumentMoniker": "E:\\aniket\\c#\\arrayexample\\arrayexample\\MyLinqQuery.cs",
+              "RelativeDocumentMoniker": "arrayexample\\MyLinqQuery.cs",
+              "ToolTip": "E:\\aniket\\c#\\arrayexample\\arrayexample\\MyLinqQuery.cs",
+              "RelativeToolTip": "arrayexample\\MyLinqQuery.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAgwB8AAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-18T08:34:42.572Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "arrayexample",
+              "DocumentMoniker": "E:\\aniket\\c#\\arrayexample\\arrayexample\\arrayexample.csproj",
+              "RelativeDocumentMoniker": "arrayexample\\arrayexample.csproj",
+              "ToolTip": "E:\\aniket\\c#\\arrayexample\\arrayexample\\arrayexample.csproj",
+              "RelativeToolTip": "arrayexample\\arrayexample.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-02-18T08:33:51.453Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\aniket\\c#\\arrayexample\\arrayexample\\Program.cs",
+              "RelativeDocumentMoniker": "arrayexample\\Program.cs",
+              "ToolTip": "E:\\aniket\\c#\\arrayexample\\arrayexample\\Program.cs",
+              "RelativeToolTip": "arrayexample\\Program.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAgwCoAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-18T04:11:41.966Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

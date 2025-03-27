@@ -1,0 +1,40 @@
+﻿@{
+    ViewBag.Title = "Admin Dashboard";
+}
+
+<h2>Admin Dashboard</h2>
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="card text-white bg-primary mb-3">
+            <div class="card-header">Total Users</div>
+            <div class="card-body">
+                <h3>@ViewBag.TotalUsers</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card text-white bg-success mb-3">
+            <div class="card-header">Total Jobs</div>
+            <div class="card-body">
+                <h3>@ViewBag.TotalJobs</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card text-white bg-warning mb-3">
+            <div class="card-header">Total Applications</div>
+            <div class="card-body">
+                <h3>@ViewBag.TotalApplications</h3>
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr>
+
+<a href="/Admin/ManageUsers" class="btn btn-primary">Manage Users</a>
+<a href="/Admin/ManageApplications" class="btn btn-success">Manage Applications</a>
+<a href="/Job/Index" class="btn btn-warning">Manage Jobs</a>

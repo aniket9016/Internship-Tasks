@@ -1,0 +1,20 @@
+﻿@model IEnumerable<JobPortal.Models.JobApplication>
+
+<h2>My Applications</h2>
+
+<table class="table">
+    <tr>
+        <th>Job Title</th>
+        <th>Applied On</th>
+        <th>Status</th>
+    </tr>
+
+    @foreach (var app in Model)
+    {
+        <tr>
+            <td>@app.Job.Title</td>
+            <td>@app.AppliedOn.ToShortDateString()</td>
+            <td>@app.Status</td>
+        </tr>
+    }
+</table>

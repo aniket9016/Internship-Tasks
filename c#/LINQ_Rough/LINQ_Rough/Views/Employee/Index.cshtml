@@ -1,0 +1,40 @@
+﻿@model IEnumerable<LINQ_Rough.Models.EMPModel>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<h2>Employee Details</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.EMPName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EMPAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EMPEmailID)
+        </th>
+    </tr>
+    @foreach(var item in Model)
+     {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelitem => item.EMPName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelitem => item.EMPAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelitem => item.EMPEmailID)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.ID })
+                @Html.ActionLink("Details", "Details", new { id = item.ID })
+                @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+
+            </td>
+        </tr>
+     }
+</table>

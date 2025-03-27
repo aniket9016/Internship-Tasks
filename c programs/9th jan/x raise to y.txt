@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+void raisefun();
+int main() {
+    raisefun();
+    return 0;
+}
+ void raisefun(){
+    int x,y,ans=1;
+    printf("Enter x:-");
+    scanf("%d",&x);
+    
+    printf("Enter y:-");
+    scanf("%d",&y);
+    for(int i=1;i<=y;i++)
+    {
+        ans*=x;
+    }
+    printf("%d raise to %d is %d",x,y,ans);
+    
+}

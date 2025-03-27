@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main() {
+    printf("Enter radius:- ");
+    float r,pie=3.14;
+    scanf("%f",&r);
+    float diameter=2*r;
+    float circumference=2*pie*r;
+    float area=pie*r*r;
+    float volume=(4*(pie*r*r*r))/3;
+    printf("Diameter of circle with radius %f is : %f",r,diameter);
+    printf("\nCircumference of circle with radius %f is : %f",r,circumference);
+    printf("\nArea of circle with radius %f is : %f",r,area);
+    printf("\nVolume of Sphere with radius %f is : %f",r,volume);
+    return 0;
+}

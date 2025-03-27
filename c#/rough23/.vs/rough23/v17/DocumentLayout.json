@@ -1,0 +1,122 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\aniket\\c#\\rough23\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{EC375399-805D-45F6-9286-7C7F1539E3E1}|rough23\\rough23.csproj|e:\\aniket\\c#\\rough23\\rough23\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC375399-805D-45F6-9286-7C7F1539E3E1}|rough23\\rough23.csproj|solutionrelative:rough23\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC375399-805D-45F6-9286-7C7F1539E3E1}|rough23\\rough23.csproj|e:\\aniket\\c#\\rough23\\rough23\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC375399-805D-45F6-9286-7C7F1539E3E1}|rough23\\rough23.csproj|solutionrelative:rough23\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC375399-805D-45F6-9286-7C7F1539E3E1}|rough23\\rough23.csproj|e:\\aniket\\c#\\rough23\\rough23\\schoolcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC375399-805D-45F6-9286-7C7F1539E3E1}|rough23\\rough23.csproj|solutionrelative:rough23\\schoolcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC375399-805D-45F6-9286-7C7F1539E3E1}|rough23\\rough23.csproj|e:\\aniket\\c#\\rough23\\rough23\\grade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC375399-805D-45F6-9286-7C7F1539E3E1}|rough23\\rough23.csproj|solutionrelative:rough23\\grade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC375399-805D-45F6-9286-7C7F1539E3E1}|rough23\\rough23.csproj|e:\\aniket\\c#\\rough23\\rough23\\migrations\\20250226061035_updatestudenttable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC375399-805D-45F6-9286-7C7F1539E3E1}|rough23\\rough23.csproj|solutionrelative:rough23\\migrations\\20250226061035_updatestudenttable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC375399-805D-45F6-9286-7C7F1539E3E1}|rough23\\rough23.csproj|e:\\aniket\\c#\\rough23\\rough23\\migrations\\20250226062016_makephotonullable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC375399-805D-45F6-9286-7C7F1539E3E1}|rough23\\rough23.csproj|solutionrelative:rough23\\migrations\\20250226062016_makephotonullable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "20250226062016_MakePhotoNullable.cs",
+              "DocumentMoniker": "E:\\aniket\\c#\\rough23\\rough23\\Migrations\\20250226062016_MakePhotoNullable.cs",
+              "RelativeDocumentMoniker": "rough23\\Migrations\\20250226062016_MakePhotoNullable.cs",
+              "ToolTip": "E:\\aniket\\c#\\rough23\\rough23\\Migrations\\20250226062016_MakePhotoNullable.cs",
+              "RelativeToolTip": "rough23\\Migrations\\20250226062016_MakePhotoNullable.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAA1wAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T06:20:16.743Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "20250226061035_UpdateStudentTable.cs",
+              "DocumentMoniker": "E:\\aniket\\c#\\rough23\\rough23\\Migrations\\20250226061035_UpdateStudentTable.cs",
+              "RelativeDocumentMoniker": "rough23\\Migrations\\20250226061035_UpdateStudentTable.cs",
+              "ToolTip": "E:\\aniket\\c#\\rough23\\rough23\\Migrations\\20250226061035_UpdateStudentTable.cs",
+              "RelativeToolTip": "rough23\\Migrations\\20250226061035_UpdateStudentTable.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAgwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T06:10:35.695Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Grade.cs",
+              "DocumentMoniker": "E:\\aniket\\c#\\rough23\\rough23\\Grade.cs",
+              "RelativeDocumentMoniker": "rough23\\Grade.cs",
+              "ToolTip": "E:\\aniket\\c#\\rough23\\rough23\\Grade.cs",
+              "RelativeToolTip": "rough23\\Grade.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAkwBIAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T06:06:45.784Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SchoolContext.cs",
+              "DocumentMoniker": "E:\\aniket\\c#\\rough23\\rough23\\SchoolContext.cs",
+              "RelativeDocumentMoniker": "rough23\\SchoolContext.cs",
+              "ToolTip": "E:\\aniket\\c#\\rough23\\rough23\\SchoolContext.cs",
+              "RelativeToolTip": "rough23\\SchoolContext.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAswA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T06:05:44.295Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Student.cs",
+              "DocumentMoniker": "E:\\aniket\\c#\\rough23\\rough23\\Student.cs",
+              "RelativeDocumentMoniker": "rough23\\Student.cs",
+              "ToolTip": "E:\\aniket\\c#\\rough23\\rough23\\Student.cs",
+              "RelativeToolTip": "rough23\\Student.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T06:00:10.031Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\aniket\\c#\\rough23\\rough23\\Program.cs",
+              "RelativeDocumentMoniker": "rough23\\Program.cs",
+              "ToolTip": "E:\\aniket\\c#\\rough23\\rough23\\Program.cs",
+              "RelativeToolTip": "rough23\\Program.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAswA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-25T10:28:33.569Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

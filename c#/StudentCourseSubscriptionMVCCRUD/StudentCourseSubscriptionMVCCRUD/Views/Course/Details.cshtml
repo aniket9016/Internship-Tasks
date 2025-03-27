@@ -1,0 +1,36 @@
+﻿@model StudentCourseSubscriptionMVCCRUD.Models.Course
+
+@{
+    ViewBag.Title = "Course Details";
+}
+
+<div class="container mt-4">
+    <div class="card shadow-lg p-4">
+        <h2 class="text-center text-primary mb-4">Course Details</h2>
+        <hr />
+
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <strong>@Html.DisplayNameFor(model => model.CourseName):</strong>
+                        <span class="text-muted">@Html.DisplayFor(model => model.CourseName)</span>
+                    </li>
+                    <li class="list-group-item">
+                        <strong>@Html.DisplayNameFor(model => model.Duration):</strong>
+                        <span class="text-muted">@Html.DisplayFor(model => model.Duration)</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="text-center mt-4">
+            <a href="@Url.Action("Edit", new { id = Model.CourseID })" class="btn btn-warning">
+                <i class="fas fa-edit"></i> Edit
+            </a>
+            <a href="@Url.Action("Index")" class="btn btn-secondary">
+                <i class="fas fa-arrow-left"></i> Back to List
+            </a>
+        </div>
+    </div>
+</div>

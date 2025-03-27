@@ -1,0 +1,2 @@
+use DB_SOCCER_GAME create table penalty_gk (match_no numeric(10) foreign key references match_mast(match_no),team_id numeric(10)
+foreign key references soccer_team(team_id),player_gk numeric(10) foreign key references player_mast(player_id));

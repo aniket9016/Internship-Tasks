@@ -1,0 +1,7 @@
+E:\aniket\c#\collectionexample2\collectionexample2\bin\Debug\collectionexample2.exe.config
+E:\aniket\c#\collectionexample2\collectionexample2\bin\Debug\collectionexample2.exe
+E:\aniket\c#\collectionexample2\collectionexample2\bin\Debug\collectionexample2.pdb
+E:\aniket\c#\collectionexample2\collectionexample2\obj\Debug\collectionexample2.csproj.AssemblyReference.cache
+E:\aniket\c#\collectionexample2\collectionexample2\obj\Debug\collectionexample2.csproj.CoreCompileInputs.cache
+E:\aniket\c#\collectionexample2\collectionexample2\obj\Debug\collectionexample2.exe
+E:\aniket\c#\collectionexample2\collectionexample2\obj\Debug\collectionexample2.pdb

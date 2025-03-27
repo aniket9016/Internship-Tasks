@@ -1,0 +1,7 @@
+E:\aniket\c#\exceptionhandling\exceptionhandling\obj\Debug\exceptionhandling.csproj.AssemblyReference.cache
+E:\aniket\c#\exceptionhandling\exceptionhandling\obj\Debug\exceptionhandling.csproj.CoreCompileInputs.cache
+E:\aniket\c#\exceptionhandling\exceptionhandling\bin\Debug\exceptionhandling.exe.config
+E:\aniket\c#\exceptionhandling\exceptionhandling\bin\Debug\exceptionhandling.exe
+E:\aniket\c#\exceptionhandling\exceptionhandling\bin\Debug\exceptionhandling.pdb
+E:\aniket\c#\exceptionhandling\exceptionhandling\obj\Debug\exceptionhandling.exe
+E:\aniket\c#\exceptionhandling\exceptionhandling\obj\Debug\exceptionhandling.pdb

@@ -1,0 +1,36 @@
+﻿@model IEnumerable<HospitalManagementSystem.Models.Appointment>
+
+<div class="container mt-4">
+    <h2>Appointments</h2>
+    <button class="btn btn-primary" onclick="openModal(0)">Add New Appointment</button>
+    <br /><br />
+
+    <table class="table table-bordered table-hover">
+        <thead class="table-dark">
+            <tr>
+                <th>Patient</th>
+                <th>Doctor</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var appointment in Model)
+            {
+                <tr>
+                    <td>@appointment.Patient?.Name</td>
+                    <td>@appointment.Doctor?.Name</td>
+                    <td>@appointment.Date.ToString("yyyy-MM-dd")</td>
+                    <td>@appointment.Time</td>
+                    <td>@appointment.Status</td>
+                    <td>
+                        <button class="btn btn-warning btn-sm" onclick="openModal(@appointment.Id)">Edit</button>
+                        <button class="btn btn-danger btn-sm" onclick="deleteAppointment(@appointment.Id)">Delete</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

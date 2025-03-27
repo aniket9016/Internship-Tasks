@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\aniket\\c#\\SessionbasedAuthenticationDemo\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{095E66D4-8761-4CCC-9D78-83B2BF84CF71}|SessionbasedAuthenticationDemo\\SessionbasedAuthenticationDemo.csproj|e:\\aniket\\c#\\sessionbasedauthenticationdemo\\sessionbasedauthenticationdemo\\repository\\useritem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{095E66D4-8761-4CCC-9D78-83B2BF84CF71}|SessionbasedAuthenticationDemo\\SessionbasedAuthenticationDemo.csproj|solutionrelative:sessionbasedauthenticationdemo\\repository\\useritem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{095E66D4-8761-4CCC-9D78-83B2BF84CF71}|SessionbasedAuthenticationDemo\\SessionbasedAuthenticationDemo.csproj|e:\\aniket\\c#\\sessionbasedauthenticationdemo\\sessionbasedauthenticationdemo\\helper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{095E66D4-8761-4CCC-9D78-83B2BF84CF71}|SessionbasedAuthenticationDemo\\SessionbasedAuthenticationDemo.csproj|solutionrelative:sessionbasedauthenticationdemo\\helper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Helper.cs",
+              "DocumentMoniker": "E:\\aniket\\c#\\SessionbasedAuthenticationDemo\\SessionbasedAuthenticationDemo\\Helper.cs",
+              "RelativeDocumentMoniker": "SessionbasedAuthenticationDemo\\Helper.cs",
+              "ToolTip": "E:\\aniket\\c#\\SessionbasedAuthenticationDemo\\SessionbasedAuthenticationDemo\\Helper.cs",
+              "RelativeToolTip": "SessionbasedAuthenticationDemo\\Helper.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABEAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T05:08:36.679Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserItem.cs",
+              "DocumentMoniker": "E:\\aniket\\c#\\SessionbasedAuthenticationDemo\\SessionbasedAuthenticationDemo\\Repository\\UserItem.cs",
+              "RelativeDocumentMoniker": "SessionbasedAuthenticationDemo\\Repository\\UserItem.cs",
+              "ToolTip": "E:\\aniket\\c#\\SessionbasedAuthenticationDemo\\SessionbasedAuthenticationDemo\\Repository\\UserItem.cs",
+              "RelativeToolTip": "SessionbasedAuthenticationDemo\\Repository\\UserItem.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACkAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T04:02:32.352Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

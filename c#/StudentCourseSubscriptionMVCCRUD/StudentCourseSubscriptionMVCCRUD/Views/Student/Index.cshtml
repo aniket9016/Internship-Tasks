@@ -1,0 +1,70 @@
+﻿@model IEnumerable<StudentCourseSubscriptionMVCCRUD.Models.Student>
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        @TempData["SuccessMessage"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+
+<div class="container mt-4">
+    <div class="card shadow-lg p-4">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h2 class="text-primary">Student List</h2>
+            <a href="@Url.Action("Create")" class="btn btn-success btn-lg">
+                <i class="fas fa-user-plus"></i> Add New Student
+            </a>
+        </div>
+
+        <div class="table-responsive">
+            <table class="table table-striped table-hover table-bordered text-center">
+                <thead class="table-dark">
+                    <tr>
+                        <th>@Html.DisplayNameFor(m => m.StudentID)</th>
+                        <th>@Html.DisplayNameFor(m => m.StudentName)</th>
+                        <th>@Html.DisplayNameFor(m => m.Address)</th>
+                        <th>@Html.DisplayNameFor(m => m.Phone)</th>
+                        <th>@Html.DisplayNameFor(m => m.Email)</th>
+                        <th>@Html.DisplayNameFor(m => m.Gender)</th>
+                        <th>@Html.DisplayNameFor(m => m.City)</th>
+                        <th>@Html.DisplayNameFor(m => m.EnrollmentNo)</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@Html.DisplayFor(m => item.StudentID)</td>
+                            <td>@Html.DisplayFor(m => item.StudentName)</td>
+                            <td>@Html.DisplayFor(m => item.Address)</td>
+                            <td>@Html.DisplayFor(m => item.Phone)</td>
+                            <td>@Html.DisplayFor(m => item.Email)</td>
+                            <td>@Html.DisplayFor(m => item.Gender)</td>
+                            <td>@Html.DisplayFor(m => item.City)</td>
+                            <td>@Html.DisplayFor(m => item.EnrollmentNo)</td>
+                            <td>
+                                <div class="btn-group">
+                                    <a href="@Url.Action("Edit", new { id = item.StudentID })" class="btn btn-warning btn-sm">
+                                        <i class="fas fa-edit"></i> Edit
+                                    </a>
+                                    <a href="@Url.Action("Details", new { id = item.StudentID })" class="btn btn-info btn-sm text-white">
+                                        <i class="fas fa-info-circle"></i> Details
+                                    </a>
+                                    @using (Html.BeginForm("Delete", "Student", new { id = item.StudentID }, FormMethod.Post, new { onsubmit = "return confirm('Are you sure you want to delete this student?');" }))
+                                    {
+                                        <button type="submit" class="btn btn-danger btn-sm">
+                                            <i class="fas fa-trash"></i> Delete
+                                        </button>
+                                    }
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+

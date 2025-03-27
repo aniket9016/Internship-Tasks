@@ -1,0 +1,18 @@
+﻿@model IEnumerable<JobPortal.Models.ApplicationUser>
+
+<h2>Manage Users</h2>
+
+<table class="table">
+    <tr>
+        <th>Email</th>
+        <th>Role</th>
+    </tr>
+
+    @foreach (var user in Model)
+    {
+        <tr>
+            <td>@user.Email</td>
+            <td>@(user.Roles.Any() ? "Admin" : "User")</td>
+        </tr>
+    }
+</table>

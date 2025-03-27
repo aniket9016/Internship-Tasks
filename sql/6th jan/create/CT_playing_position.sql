@@ -1,0 +1,1 @@
+use DB_SOCCER_GAME create TABLE playing_position(position_id int identity(1,1) PRIMARY KEY,position_desc VARCHAR(50) unique);

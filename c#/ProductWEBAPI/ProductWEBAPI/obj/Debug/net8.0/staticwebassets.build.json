@@ -1,0 +1,39 @@
+{
+  "Version": 1,
+  "Hash": "/LYhftd1TyGN3ftkYtWiWoYfJJAutW78OTMmsMrLq4Q=",
+  "Source": "EmployeeWEBAPI",
+  "BasePath": "_content/EmployeeWEBAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "EmployeeWEBAPI\\wwwroot",
+      "Source": "EmployeeWEBAPI",
+      "ContentRoot": "E:\\aniket\\c#\\ProductWEBAPI\\ProductWEBAPI\\wwwroot\\",
+      "BasePath": "_content/EmployeeWEBAPI",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "E:\\aniket\\c#\\ProductWEBAPI\\ProductWEBAPI\\wwwroot\\uploads\\profile.png",
+      "SourceId": "EmployeeWEBAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\aniket\\c#\\ProductWEBAPI\\ProductWEBAPI\\wwwroot\\",
+      "BasePath": "_content/EmployeeWEBAPI",
+      "RelativePath": "uploads/profile.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\profile.png"
+    }
+  ]
+}

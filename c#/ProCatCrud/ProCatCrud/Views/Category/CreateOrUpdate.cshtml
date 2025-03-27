@@ -1,0 +1,26 @@
+﻿@model ProCatCrud.Models.Category
+
+@{
+    ViewData["Title"] = Model.CategoryId == 0 ? "Create Category" : "Update Category";
+}
+
+<div class="container mt-4">
+    <h2>@ViewData["Title"]</h2>
+
+    <div class="card shadow p-4">
+        <form asp-action="CreateOrUpdate" method="post">
+            <input type="hidden" asp-for="CategoryId" />
+
+            <div class="mb-3">
+                <label asp-for="CategoryType" class="form-label">Category Type</label>
+                <input asp-for="CategoryType" class="form-control" required />
+                <span asp-validation-for="CategoryType" class="text-danger"></span>
+            </div>
+
+            <button type="submit" class="btn btn-success">
+                @(Model.CategoryId == 0 ? "Create" : "Update")
+            </button>
+            <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+        </form>
+    </div>
+</div>

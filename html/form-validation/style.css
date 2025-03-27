@@ -1,0 +1,10 @@
+body{
+    align-items: center;
+    justify-self: center;
+    justify-content: center;
+    width: 60%;
+    border: 1px solid black;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 10px 10px 10px 10px ;
+}

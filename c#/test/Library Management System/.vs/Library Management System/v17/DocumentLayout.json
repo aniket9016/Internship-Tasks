@@ -1,0 +1,103 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\aniket\\c#\\test\\Library Management System\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A008DE97-D52C-42AC-9BB2-1E77DD56730E}|Library Management System\\Library Management System.csproj|e:\\aniket\\c#\\test\\library management system\\library management system\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A008DE97-D52C-42AC-9BB2-1E77DD56730E}|Library Management System\\Library Management System.csproj|solutionrelative:library management system\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A008DE97-D52C-42AC-9BB2-1E77DD56730E}|Library Management System\\Library Management System.csproj|E:\\aniket\\c#\\test\\Library Management System\\library management system\\dictionaryex.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A008DE97-D52C-42AC-9BB2-1E77DD56730E}|Library Management System\\Library Management System.csproj|solutionrelative:library management system\\dictionaryex.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A008DE97-D52C-42AC-9BB2-1E77DD56730E}|Library Management System\\Library Management System.csproj|E:\\aniket\\c#\\test\\Library Management System\\library management system\\jaggedarrayex.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A008DE97-D52C-42AC-9BB2-1E77DD56730E}|Library Management System\\Library Management System.csproj|solutionrelative:library management system\\jaggedarrayex.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A008DE97-D52C-42AC-9BB2-1E77DD56730E}|Library Management System\\Library Management System.csproj|E:\\aniket\\c#\\test\\Library Management System\\library management system\\employeeex.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A008DE97-D52C-42AC-9BB2-1E77DD56730E}|Library Management System\\Library Management System.csproj|solutionrelative:library management system\\employeeex.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|Library Management System||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "EmployeeEx.cs",
+              "DocumentMoniker": "E:\\aniket\\c#\\test\\Library Management System\\Library Management System\\EmployeeEx.cs",
+              "RelativeDocumentMoniker": "Library Management System\\EmployeeEx.cs",
+              "ToolTip": "E:\\aniket\\c#\\test\\Library Management System\\Library Management System\\EmployeeEx.cs",
+              "RelativeToolTip": "Library Management System\\EmployeeEx.cs",
+              "ViewState": "AQIAAFYAAAAAAAAAAAAowDIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T08:38:07.721Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Library Management System",
+              "DocumentMoniker": "E:\\aniket\\c#\\test\\Library Management System\\Library Management System\\Library Management System.csproj",
+              "RelativeDocumentMoniker": "Library Management System\\Library Management System.csproj",
+              "ToolTip": "E:\\aniket\\c#\\test\\Library Management System\\Library Management System\\Library Management System.csproj",
+              "RelativeToolTip": "Library Management System\\Library Management System.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-02-12T06:23:07.813Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DictionaryEx.cs",
+              "DocumentMoniker": "E:\\aniket\\c#\\test\\Library Management System\\Library Management System\\DictionaryEx.cs",
+              "RelativeDocumentMoniker": "Library Management System\\DictionaryEx.cs",
+              "ToolTip": "E:\\aniket\\c#\\test\\Library Management System\\Library Management System\\DictionaryEx.cs",
+              "RelativeToolTip": "Library Management System\\DictionaryEx.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAgwBYAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T06:22:12.956Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "JaggedArrayEx.cs",
+              "DocumentMoniker": "E:\\aniket\\c#\\test\\Library Management System\\Library Management System\\JaggedArrayEx.cs",
+              "RelativeDocumentMoniker": "Library Management System\\JaggedArrayEx.cs",
+              "ToolTip": "E:\\aniket\\c#\\test\\Library Management System\\Library Management System\\JaggedArrayEx.cs",
+              "RelativeToolTip": "Library Management System\\JaggedArrayEx.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA4AAAA7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T06:59:51.853Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Book.cs",
+              "DocumentMoniker": "E:\\aniket\\c#\\test\\Library Management System\\Library Management System\\Book.cs",
+              "RelativeDocumentMoniker": "Library Management System\\Book.cs",
+              "ToolTip": "E:\\aniket\\c#\\test\\Library Management System\\Library Management System\\Book.cs",
+              "RelativeToolTip": "Library Management System\\Book.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAIwBwAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T05:28:28.449Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

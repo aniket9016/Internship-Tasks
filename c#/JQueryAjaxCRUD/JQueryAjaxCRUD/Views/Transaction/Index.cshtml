@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "Transaction List";
+}
+
+<div class="container">
+    <h2>Transaction List</h2>
+    <button class="btn btn-success" onclick="showAddOrEditModal()">Add Transaction</button>
+    <div id="transactionList">
+        @await Html.PartialAsync("_ViewAll")
+    </div>
+</div>
+
+<div id="modalContainer"></div>
+
+@section Scripts {
+    <script src="~/js/site.js"></script>
+}

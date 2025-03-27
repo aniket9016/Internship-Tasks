@@ -1,0 +1,1 @@
+--12. SQL Query to fetch the top 5 athletes who have won the most medals --(include gold, silver and bronze).use assignment2select *from athlete_eventswhere Medal in('Gold','Silver','Bronze')

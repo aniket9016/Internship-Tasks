@@ -1,0 +1,2 @@
+use DB_SOCCER_GAME create table soccer_venue (venue_id numeric(10) primary key identity(7001,1),
+venue_name varchar(25),city_id numeric(10) foreign key references soccer_city(city_id),aud_capacity numeric(10));

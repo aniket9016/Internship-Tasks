@@ -1,0 +1,4 @@
+USE assignment1
+SELECT *
+FROM Tbl_Worker
+ORDER BY FIRST_NAME;

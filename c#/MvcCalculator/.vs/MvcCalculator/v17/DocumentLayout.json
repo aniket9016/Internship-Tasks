@@ -1,0 +1,75 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\aniket\\c#\\MvcCalculator\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C7C1FD6E-D892-44F5-B8EE-E9B6E78959B9}|MvcCalculator\\MvcCalculator.csproj|e:\\aniket\\c#\\mvccalculator\\mvccalculator\\views\\calculator\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C7C1FD6E-D892-44F5-B8EE-E9B6E78959B9}|MvcCalculator\\MvcCalculator.csproj|solutionrelative:mvccalculator\\views\\calculator\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7C1FD6E-D892-44F5-B8EE-E9B6E78959B9}|MvcCalculator\\MvcCalculator.csproj|E:\\aniket\\c#\\MvcCalculator\\mvccalculator\\controllers\\calculatorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C7C1FD6E-D892-44F5-B8EE-E9B6E78959B9}|MvcCalculator\\MvcCalculator.csproj|solutionrelative:mvccalculator\\controllers\\calculatorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7C1FD6E-D892-44F5-B8EE-E9B6E78959B9}|MvcCalculator\\MvcCalculator.csproj|E:\\aniket\\c#\\MvcCalculator\\mvccalculator\\models\\calculatormodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C7C1FD6E-D892-44F5-B8EE-E9B6E78959B9}|MvcCalculator\\MvcCalculator.csproj|solutionrelative:mvccalculator\\models\\calculatormodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "E:\\aniket\\c#\\MvcCalculator\\MvcCalculator\\Views\\Calculator\\Index.cshtml",
+              "RelativeDocumentMoniker": "MvcCalculator\\Views\\Calculator\\Index.cshtml",
+              "ToolTip": "E:\\aniket\\c#\\MvcCalculator\\MvcCalculator\\Views\\Calculator\\Index.cshtml",
+              "RelativeToolTip": "MvcCalculator\\Views\\Calculator\\Index.cshtml",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAACEAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-19T11:43:38.306Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CalculatorController.cs",
+              "DocumentMoniker": "E:\\aniket\\c#\\MvcCalculator\\MvcCalculator\\Controllers\\CalculatorController.cs",
+              "RelativeDocumentMoniker": "MvcCalculator\\Controllers\\CalculatorController.cs",
+              "ToolTip": "E:\\aniket\\c#\\MvcCalculator\\MvcCalculator\\Controllers\\CalculatorController.cs",
+              "RelativeToolTip": "MvcCalculator\\Controllers\\CalculatorController.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAhwA8AAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-19T11:05:52.543Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CalculatorModel.cs",
+              "DocumentMoniker": "E:\\aniket\\c#\\MvcCalculator\\MvcCalculator\\Models\\CalculatorModel.cs",
+              "RelativeDocumentMoniker": "MvcCalculator\\Models\\CalculatorModel.cs",
+              "ToolTip": "E:\\aniket\\c#\\MvcCalculator\\MvcCalculator\\Models\\CalculatorModel.cs",
+              "RelativeToolTip": "MvcCalculator\\Models\\CalculatorModel.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAjwA4AAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-19T11:04:22.76Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

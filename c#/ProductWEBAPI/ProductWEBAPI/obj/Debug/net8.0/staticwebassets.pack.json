@@ -1,0 +1,25 @@
+{
+  "Files": [
+    {
+      "Id": "E:\\aniket\\c#\\ProductWEBAPI\\ProductWEBAPI\\wwwroot\\uploads\\profile.png",
+      "PackagePath": "staticwebassets\\uploads\\profile.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.EmployeeWEBAPI.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.EmployeeWEBAPI.props",
+      "PackagePath": "build\\EmployeeWEBAPI.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.EmployeeWEBAPI.props",
+      "PackagePath": "buildMultiTargeting\\EmployeeWEBAPI.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.EmployeeWEBAPI.props",
+      "PackagePath": "buildTransitive\\EmployeeWEBAPI.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

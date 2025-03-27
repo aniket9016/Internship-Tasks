@@ -1,0 +1,28 @@
+.mainsection{
+    display: flex;
+    margin: 2px;
+    padding: 2px;
+    
+}
+.firstside{
+    margin-right : 2px;
+    height: 1500px;
+    width: 30%;
+    border: 1px solid black;
+    overflow-y: scroll;
+    align-items: center;
+    justify-content: center;
+    display: list-item;
+}
+.secondside{
+    display: flex;
+    width: 70%;
+    height:1000px;
+    border: 1px solid black;
+    overflow-y: scroll;
+}
+.profilephoto{
+    height: 200px;
+    width: 200px;
+    border-radius: 100px;
+}

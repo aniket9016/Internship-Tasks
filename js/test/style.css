@@ -1,0 +1,33 @@
+
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.list-group-item {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+  background-color: #f8f9fa;
+}
+
+.completed span {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.list-group-item div {
+  margin-left: auto;
+}
+
+.btn {
+  margin-right: 5px;
+}
+
+.completed {
+  background-color: #e9f7ef;
+}

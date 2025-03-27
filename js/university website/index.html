@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demmed to be university</title>
+    <link rel="icon" href="./img/img2.png" type="image/icon type">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Eater&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Festive&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Orbitron:wght@400..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- <div id="preloader"></div> -->
+    <!-- header -->
+    <header style="position: fixed;z-index: 1; width: 100%;" class="p-3 text-bg-dark">
+        <div class="container">
+
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                    <img height="40px" style="border-radius: 20px;" src="img/img2.png" alt="">
+                </a>
+
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                    <li><a href="#home" class="nav-link px-2 text-white">Home</a></li>
+                    <li><a href="#material" class="nav-link px-2 text-white">Material</a></li>
+                    <li><a href="#quiz" class="nav-link px-2 text-white">Quiz</a></li>
+                    <li><a href="#tutorials" class="nav-link px-2 text-white">Tutorial</a></li>
+                    <li><a href="#notes" class="nav-link px-2 text-white">Notes</a></li>
+                    <li><a href="#about" class="nav-link px-2 text-white">About</a></li>
+                </ul>
+
+                <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+                    <input type="search" class="form-control form-control-dark text-bg-dark" placeholder="Search..."
+                        aria-label="Search">
+                </form>
+
+                <div class="text-end">
+                    <button type="button" class="btn btn-outline-light me-2" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal" id="btnlogin">Login</button>
+
+                    <button type="button" id="btnSubmit" class="btn btn-warning" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal2">Sign-up</button>
+
+                </div>
+                <div id="profilepic"
+                    style="height: 40px;text-align: center; justify-content: center; align-items: center; display: none; padding-left: 50px;">
+                    <h5>Welcome!!</h5>
+                    <img style="border-radius: 50%" width="40px" height="40px" src="./img/pp2.jpg" alt="">
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+    <!-- modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+        style="color: black;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body" style=" align-items: center; justify-content: center; padding-left: 80px;">
+                    <div style="padding-left: 350px;">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="form-container">
+                        <p class="title">Login</p>
+                        <form class="form" onsubmit="">
+                            <div class="input-group">
+                                <label for="username">Username</label>
+                                <input type="text" id="username" placeholder="">
+                            </div>
+                            <div class="input-group">
+                                <label for="password">Password</label>
+                                <input type="password" id="password" placeholder="">
+                                <div class="forgot">
+                                    <a rel="noopener noreferrer" href="#">Forgot Password ?</a>
+                                </div>
+                            </div>
+                            <button type="button" onclick="checkbtnsignin()" class="sign">Sign
+                                in</button>
+                        </form>
+                        <div class="social-message">
+                            <div class="line"></div>
+                            <p class="message">Login with social accounts</p>
+                            <div class="line"></div>
+                        </div>
+                        <div class="social-icons">
+                            <button aria-label="Log in with Google" class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"
+                                    class="w-5 h-5 fill-current">
+                                    <path
+                                        d="M16.318 13.714v5.484h9.078c-0.37 2.354-2.745 6.901-9.078 6.901-5.458 0-9.917-4.521-9.917-10.099s4.458-10.099 9.917-10.099c3.109 0 5.193 1.318 6.38 2.464l4.339-4.182c-2.786-2.599-6.396-4.182-10.719-4.182-8.844 0-16 7.151-16 16s7.156 16 16 16c9.234 0 15.365-6.49 15.365-15.635 0-1.052-0.115-1.854-0.255-2.651z">
+                                    </path>
+                                </svg>
+                            </button>
+                            <button aria-label="Log in with Twitter" class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"
+                                    class="w-5 h-5 fill-current">
+                                    <path
+                                        d="M31.937 6.093c-1.177 0.516-2.437 0.871-3.765 1.032 1.355-0.813 2.391-2.099 2.885-3.631-1.271 0.74-2.677 1.276-4.172 1.579-1.192-1.276-2.896-2.079-4.787-2.079-3.625 0-6.563 2.937-6.563 6.557 0 0.521 0.063 1.021 0.172 1.495-5.453-0.255-10.287-2.875-13.52-6.833-0.568 0.964-0.891 2.084-0.891 3.303 0 2.281 1.161 4.281 2.916 5.457-1.073-0.031-2.083-0.328-2.968-0.817v0.079c0 3.181 2.26 5.833 5.26 6.437-0.547 0.145-1.131 0.229-1.724 0.229-0.421 0-0.823-0.041-1.224-0.115 0.844 2.604 3.26 4.5 6.14 4.557-2.239 1.755-5.077 2.801-8.135 2.801-0.521 0-1.041-0.025-1.563-0.088 2.917 1.86 6.36 2.948 10.079 2.948 12.067 0 18.661-9.995 18.661-18.651 0-0.276 0-0.557-0.021-0.839 1.287-0.917 2.401-2.079 3.281-3.396z">
+                                    </path>
+                                </svg>
+                            </button>
+                            <button aria-label="Log in with GitHub" class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"
+                                    class="w-5 h-5 fill-current">
+                                    <path
+                                        d="M16 0.396c-8.839 0-16 7.167-16 16 0 7.073 4.584 13.068 10.937 15.183 0.803 0.151 1.093-0.344 1.093-0.772 0-0.38-0.009-1.385-0.015-2.719-4.453 0.964-5.391-2.151-5.391-2.151-0.729-1.844-1.781-2.339-1.781-2.339-1.448-0.989 0.115-0.968 0.115-0.968 1.604 0.109 2.448 1.645 2.448 1.645 1.427 2.448 3.744 1.74 4.661 1.328 0.14-1.031 0.557-1.74 1.011-2.135-3.552-0.401-7.287-1.776-7.287-7.907 0-1.751 0.62-3.177 1.645-4.297-0.177-0.401-0.719-2.031 0.141-4.235 0 0 1.339-0.427 4.4 1.641 1.281-0.355 2.641-0.532 4-0.541 1.36 0.009 2.719 0.187 4 0.541 3.043-2.068 4.381-1.641 4.381-1.641 0.859 2.204 0.317 3.833 0.161 4.235 1.015 1.12 1.635 2.547 1.635 4.297 0 6.145-3.74 7.5-7.296 7.891 0.556 0.479 1.077 1.464 1.077 2.959 0 2.14-0.020 3.864-0.020 4.385 0 0.416 0.28 0.916 1.104 0.755 6.4-2.093 10.979-8.093 10.979-15.156 0-8.833-7.161-16-16-16z">
+                                    </path>
+                                </svg>
+                            </button>
+                        </div>
+                        <p class="signup">Don't have an account?
+                            <a rel="noopener noreferrer" href="#" class="">Sign up</a>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+        style="color: black;">
+        <div class="modal-dialog">
+            <div class="modal-content" style="padding-left: 55px;">
+                <div class="modal-body">
+                    <div style="padding-left: 350px;">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <form class="form1">
+                        <p class="title1">Register </p>
+                        <p class="message1">Signup now and get full access to our app. </p>
+                        <div class="flex1">
+                            <label>
+                                <input id="firstnamecheck" class="input1" type="text" placeholder="" required>
+                                <span>Firstname</span>
+                            </label>
+
+                            <label>
+                                <input id="lastnamecheck" class="input1" type="text" placeholder="" required>
+                                <span>Lastname</span>
+                            </label>
+                        </div>
+
+                        <label>
+                            <input id="emailcheck" class="input1" type="email" placeholder="" required>
+                            <span>Email</span>
+                        </label>
+
+                        <label>
+                            <input id="passwordcheck" class="input1" type="password" placeholder="" required>
+                            <span>Password</span>
+                        </label>
+                        <label>
+                            <input id="cpwdcheck" class="input1" type="password" placeholder="" required>
+                            <span>Confirm password</span>
+                        </label>
+                        <button id="btnSubmit" onclick="checkbtnsubmit()" class="submit1">Submit</button>
+                        <p class="signin">Already have an acount ? <a href="#">Signin</a> </p>
+                    </form>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div id="home" style="padding-top: 100px; text-align: center;font-family: Orbitron;">
+        <h1>Welcome to Southern University</h1>
+    </div>
+    <!-- header end -->
+    <!-- couses -->
+    <div id="divconatiner" class="container" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+        <!-- Campus -->
+        <div class="container">
+            <div class="d-flex">
+                <div class="card" style="width: 18rem;">
+                    <img src="./img/student.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Campus</h5>
+                        <p style="font-family:Easter;" class="card-text"> There are about 10,400 students on campus and
+                            17,000 students in the
+                            distance learning program.</p>
+                        <a href="#" class="btn btn-primary">Visit Campus</a>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="./img/img2.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">State Center at MIT</h5>
+                        <p style="font-family:Easter;" class="card-text">This building is known an example of the
+                            distinctive campus environment at
+                            MIT. </p>
+                        <a href="#" class="btn btn-primary">Look For Centers</a>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="./img/img3.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">John B. Cade Library</h5>
+                        <p style="font-family:Easter;" class="card-text"> The library offers access to online databases,
+                            e-journals, and other
+                            electronic information services </p>
+                        <a href="#" class="btn btn-primary">Online Visit Library</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <img data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" src="./img/u1.jpg"
+        style="position: absolute; width: 100%; " alt="">
+    <div
+        style="padding-top: 50px;padding-bottom: 750px; position: relative; align-items: center; justify-content: center; text-align: center;">
+        <h1 style="font-family: Festive;"> Southern University</h1>
+        <h2 style="font-family: Georgia, 'Times New Roman', Times, serif;">Learning begins here</h2>
+    </div>
+    <!--  blog section-->
+    <h1 style="text-align: center;font-family: Georgia, 'Times New Roman', Times, serif;">Read Blogs By Our Proffesors
+    </h1>
+    <div style=" text-align: center; justify-content: center; align-items: center; padding-left: 400px;">
+        <hr style="width: 60%;">
+    </div>
+    <div class="container" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+        <div class="row mb-2">
+            <div class="col-md-6">
+                <div
+                    class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-primary-emphasis">Web3</strong>
+                        <h3 class="mb-0">Evoltion of the it over web3</h3>
+                        <div class="mb-1 text-body-secondary">Nov 12</div>
+                        <p class="card-text mb-auto">The web3 is getting bigger and better day by day. Evoltion of
+                            technology. </p>
+                        <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+                            Continue reading
+                            <svg class="bi">
+                                <use xlink:href="#chevron-right"></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <img class="bd-placeholder-img" role="img" aria-label="Placeholder: Thumbnail"
+                            preserveAspectRatio="xMidYMid slice" focusable="false" width="200" height="250"
+                            src="./img/p1.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div
+                    class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-success-emphasis">AI?Job taker</strong>
+                        <h3 class="mb-0">AI Impact Over Humans</h3>
+                        <div class="mb-1 text-body-secondary">Nov 11</div>
+                        <p class="mb-auto">The demand of ai is getting high day by day. Adaptation is necessary</p>
+                        <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+                            Continue reading
+                            <svg class="bi">
+                                <use xlink:href="#chevron-right"></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <img class="bd-placeholder-img" role="img" aria-label="Placeholder: Thumbnail"
+                            preserveAspectRatio="xMidYMid slice" focusable="false" width="200" height="250"
+                            src="./img/p2.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mb-2">
+            <div class="col-md-6">
+                <div
+                    class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-primary-emphasis">Generative AI</strong>
+                        <h3 class="mb-0">Evoltion of the it over web3</h3>
+                        <div class="mb-1 text-body-secondary">Nov 12</div>
+                        <p class="card-text mb-auto">The web3 is getting bigger and better day by day. Evoltion of
+                            technology. </p>
+                        <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+                            Continue reading
+                            <svg class="bi">
+                                <use xlink:href="#chevron-right"></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <img class="bd-placeholder-img" role="img" aria-label="Placeholder: Thumbnail"
+                            preserveAspectRatio="xMidYMid slice" focusable="false" width="200" height="250"
+                            src="./img/p3.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div
+                    class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-success-emphasis">Work life balance</strong>
+                        <h3 class="mb-0">AI Impact Over Humans</h3>
+                        <div class="mb-1 text-body-secondary">Nov 11</div>
+                        <p class="mb-auto">The demand of ai is getting high day by day. Adaptation is necessary</p>
+                        <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+                            Continue reading
+                            <svg class="bi">
+                                <use xlink:href="#chevron-right"></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <img class="bd-placeholder-img" role="img" aria-label="Placeholder: Thumbnail"
+                            preserveAspectRatio="xMidYMid slice" focusable="false" width="200" height="250"
+                            src="./img/p4.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <!-- material -->
+    <div id="material" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+        <h1 style="text-align: center; font-family: Orbitron;">Here you can find material to study for academics</h1>
+        <div class="container" style="justify-content: center; align-items: center;">
+            <hr>
+            <h3 style="font-family: Kaushan Script; font-weight: bold;">MCA</h3>
+            <div class="d-flex">
+                <div class="card" style="width: 18rem;">
+                    <img src="./img/book2.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">C language</h5>
+                        <p class="card-text">“C Programming Absolute Beginner's Guide”</p>
+                        <div>
+                            <a href="https://www.lpude.in/SLMs/Master%20of%20Computer%20Applications/Sem_1/DECAP010_PROGRAMMING_IN_C.pdf"
+                                style="width: 43%;" target="_blank" class="btn btn-success">View</a>
+
+                            <a download="https://www.lpude.in/SLMs/Master%20of%20Computer%20Applications/Sem_1/DECAP010_PROGRAMMING_IN_C.pdf"
+                                style="width: 55%;" href="#" class="btn btn-dark">Download</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" style="width: 18rem;">
+                    <img src="./img/book3.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Python</h5>
+                        <p class="card-text">“Python is a popular programming language.”</p>
+                        <div>
+                            <a href="https://www.iimchyderabad.com/Material/introduction-to-python-programming.pdf"
+                                style="width: 43%;" target="_blank" class="btn btn-success">View</a>
+                            <a download="https://www.iimchyderabad.com/Material/introduction-to-python-programming.pdf"
+                                style="width: 55%;" href="#" class="btn btn-dark">Download</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="./img/book5.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Web Development</h5>
+                        <p class="card-text">"How to Do Everything with HTML, CSS and JS"</p>
+                        <div>
+                            <a href="https://www.dcpehvpm.org/E-Content/BCA/BCA-II/Web%20Technology/the-complete-reference-html-css-fifth-edition.pdf"
+                                style="width: 43%;" target="_blank" class="btn btn-success">View</a>
+                            <a download="https://www.dcpehvpm.org/E-Content/BCA/BCA-II/Web%20Technology/the-complete-reference-html-css-fifth-edition.pdf"
+                                style="width: 55%;" href="#" class="btn btn-dark">Download</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <hr>
+            <h3 style="font-family: Kaushan Script; font-weight: bold;">BTECH</h3>
+            <div class="d-flex">
+                <div class="card" style="width: 18rem;">
+                    <img src="./img/img5.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Computer Science</h5>
+                        <p class="card-text">“A popular field that involves designing, developing, and implementing
+                            computer
+                            systems and software ”</p>
+                        <div>
+                            <a href="https://computingbook.org/FullText.pdf" style="width: 43%;" target="_blank"
+                                class="btn btn-success">View</a>
+                            <a download="https://computingbook.org/FullText.pdf" style="width: 55%;" href="#"
+                                class="btn btn-dark">Download</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="./img/img6.avif" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Aeronautical</h5>
+                        <p class="card-text">“The study of designing and manufacturing flight-capable machines, and how
+                            to
+                            operate aircraft ”</p>
+                        <div>
+                            <a href="https://www.iimchyderabad.com/Material/introduction-to-python-programming.pdf"
+                                style="width: 43%;" target="_blank" class="btn btn-success">View</a>
+                            <a download="https://www.iimchyderabad.com/Material/introduction-to-python-programming.pdf"
+                                style="width: 55%;" href="#" class="btn btn-dark">Download</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="./img/img7.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Information Technology</h5>
+                        <p class="card-text">"A BTech course that can lead to a career in information technology The
+                            average
+                            salary for B.Tech IT is 3-6 LPA"</p>
+                        <div>
+                            <a href="https://www.dcpehvpm.org/E-Content/BCA/BCA-II/Web%20Technology/the-complete-reference-html-css-fifth-edition.pdf"
+                                style="width: 43%;" target="_blank" class="btn btn-success">View</a>
+                            <a download="https://www.dcpehvpm.org/E-Content/BCA/BCA-II/Web%20Technology/the-complete-reference-html-css-fifth-edition.pdf"
+                                style="width: 55%;" href="#" class="btn btn-dark">Download</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <hr class="container">
+    <!-- quiz -->
+    <div id="quiz" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"
+        style="align-items: center; justify-content: center; text-align: center; padding-top: 20px; padding-bottom: 20px;">
+        <button id="btnstart" onclick="funtimer()" class="btn btn-success">
+            Start Quiz
+        </button>
+    </div>
+    <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" id="divQuemain" class="container"
+        style="display: none; border-radius: 5px; padding-top: 50px; font-family: Orbitron; justify-content: center; align-items: center; height: 450px; width: 700px; box-shadow: 10px 10px 10px 10px;">
+        <div id="divtm">
+            Timer: &nbsp;<div id="timert">00 </div>&nbsp;Sec left
+        </div>
+        <h5 id="question">
+        </h5>
+        <hr>
+        <div style="padding: 50px;" id="answer-buttons">
+            <button id="answer1" class="btn btn-outline-success">Answer1</button>
+            <button id="answer2" class="btn btn-outline-success">Answer2</button>
+            <button id="answer3" class="btn btn-outline-success">Answer3</button>
+            <button id="answer4" class="btn btn-outline-success">Answer4</button>
+        </div>
+        <button style="width: 100%;" class="btn btn-primary" id="next-btn">Next</button>
+    </div>
+    <hr class="container">
+    <!-- tutorials -->
+    <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" id="tutorials">
+        <div class="container" style="align-items: center; justify-content: center;">
+            <h3 style="font-family: Kaushan Script; font-weight: bold;">C Language</h3>
+            <div class="d-flex">
+                <div class="card" style="padding: 5px; box-shadow:10px 10px 10px 10px;">
+                    <iframe width="460" height="300" src="https://www.youtube.com/embed/YXcgD8hRHYY?si=fmafHXCTHwnv50SB"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <h4>
+                        <li>Learn C language from code with harry</li>
+                    </h4>
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop" type="button"
+                        class="btn btn-dark">Open</button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">C language from code with
+                                        harry
+                                    </h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <iframe width="460" height="300"
+                                        src="https://www.youtube.com/embed/YXcgD8hRHYY?si=fmafHXCTHwnv50SB"
+                                        title="YouTube video player" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                    <a href="https://www.youtube.com/watch?v=YXcgD8hRHYY" target="_blank"><button
+                                            type="button" class="btn btn-primary">Visit</button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" style="padding: 5px; box-shadow:10px 10px 10px 10px;">
+                    <iframe width="460" height="300" src="https://www.youtube.com/embed/irqbmMNs2Bo?si=erf0AOw-hYNMwFsG"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <h4>
+                        <li>Learn C language from Apna College</li>
+                    </h4>
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop2" type="button"
+                        class="btn btn-dark">Open</button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false"
+                        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">C language from Apna College
+                                    </h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <iframe width="460" height="300"
+                                        src="https://www.youtube.com/embed/irqbmMNs2Bo?si=erf0AOw-hYNMwFsG"
+                                        title="YouTube video player" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                    <a href="https://www.youtube.com/watch?v=irqbmMNs2Bo" target="_blank"><button
+                                            type="button" class="btn btn-primary">Visit</button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h3 style="font-family: Kaushan Script; font-weight: bold;">Python</h3>
+            <div class="d-flex">
+                <div class="card" style="padding: 5px; box-shadow:10px 10px 10px 10px;">
+                    <iframe width="460" height="300" src="https://www.youtube.com/embed/_uQrJ0TkZlc?si=8pUg6nA6RNaD3QVM"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <h4>
+                        <li>Learn Python from Mosh</li>
+                    </h4>
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop3" type="button"
+                        class="btn btn-dark">Open</button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="staticBackdrop3" data-bs-backdrop="static" data-bs-keyboard="false"
+                        tabindex="-1" aria-labelledby="staticBackdropLabel3" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Python from mosh programming
+                                    </h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <iframe width="460" height="300"
+                                        src="https://www.youtube.com/embed/_uQrJ0TkZlc?si=8pUg6nA6RNaD3QVM"
+                                        title="YouTube video player" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                    <a href="https://www.youtube.com/watch?v=_uQrJ0TkZlc" target="_blank"><button
+                                            type="button" class="btn btn-primary">Visit</button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" style="padding: 5px; box-shadow:10px 10px 10px 10px;">
+                    <iframe width="460" height="300" src="https://www.youtube.com/embed/UrsmFxEIp5k?si=7K_w6rHcERAzVYl8"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <h4>
+                        <li>Learn Python from Code with harry</li>
+                    </h4>
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop4" type="button"
+                        class="btn btn-dark">Open</button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="staticBackdrop4" data-bs-backdrop="static" data-bs-keyboard="false"
+                        tabindex="-1" aria-labelledby="staticBackdropLabel4" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Python from mosh programming
+                                    </h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <iframe width="460" height="300"
+                                        src="https://www.youtube.com/embed/UrsmFxEIp5k?si=7K_w6rHcERAzVYl8"
+                                        title="YouTube video player" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                    <a href="https://www.youtube.com/watch?v=UrsmFxEIp5k" target="_blank"><button
+                                            type="button" class="btn btn-primary">Visit</button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr class="container">
+    <div class="b-example-divider"></div>
+    <!--  -->
+    <hr class="container">
+
+    <!-- Notes -->
+    <div id="notes" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" style="box-sizing: border-box; font-family: 'Arial', sans-serif;background: #f0f5f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0; ">
+
+        <div class="app-container">
+            <div class="header">
+                <h1>My Notes</h1>
+            </div>
+            <div class="note-input-container">
+                <input type="text" id="noteTitle" placeholder="Enter note title" class="input-field" />
+                <textarea id="noteDescription" placeholder="Write your note description..." rows="5"
+                    class="input-field"></textarea>
+                <button onclick="addNote()" class="add-note-btn">Add Note</button>
+            </div>
+            <div class="actions">
+                <button onclick="deleteAllNotes()" class="delete-all-btn">
+                    <i class="fas fa-trash-alt"></i> Delete All Notes
+                </button>
+            </div>
+            <div id="notesContainer" class="notes-container"></div>
+        </div>
+    </div>
+    <!-- footer  -->
+    <div data-aos-duration="1000" data-aos-delay="200" id="about" class="container">
+        <footer class="py-5">
+            <div class="row">
+                <div class="col-6 col-md-2 mb-3">
+                    <h5>Southern </h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#home" class="nav-link p-0 text-body-secondary">Home</a></li>
+                        <li class="nav-item mb-2"><a href="#material"
+                                class="nav-link p-0 text-body-secondary">Material</a></li>
+                        <li class="nav-item mb-2"><a href="#quiz" class="nav-link p-0 text-body-secondary">Quiz</a></li>
+                        <li class="nav-item mb-2"><a href="#tutorial"
+                                class="nav-link p-0 text-body-secondary">Tutorial</a></li>
+                        <li class="nav-item mb-2"><a href="#about" class="nav-link p-0 text-body-secondary">About</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-md-2 mb-3">
+                    <h5>University</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#home" class="nav-link p-0 text-body-secondary">Home</a></li>
+                        <li class="nav-item mb-2"><a href="#material"
+                                class="nav-link p-0 text-body-secondary">Material</a></li>
+                        <li class="nav-item mb-2"><a href="#quiz" class="nav-link p-0 text-body-secondary">Quiz</a></li>
+                        <li class="nav-item mb-2"><a href="#tutorial"
+                                class="nav-link p-0 text-body-secondary">Tutorial</a></li>
+                        <li class="nav-item mb-2"><a href="#about" class="nav-link p-0 text-body-secondary">About</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-md-2 mb-3">
+                    <h5>Surat</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#home" class="nav-link p-0 text-body-secondary">Home</a></li>
+                        <li class="nav-item mb-2"><a href="#material"
+                                class="nav-link p-0 text-body-secondary">Material</a></li>
+                        <li class="nav-item mb-2"><a href="#quiz" class="nav-link p-0 text-body-secondary">Quiz</a></li>
+                        <li class="nav-item mb-2"><a href="#tutorial"
+                                class="nav-link p-0 text-body-secondary">Tutorial</a></li>
+                        <li class="nav-item mb-2"><a href="#about" class="nav-link p-0 text-body-secondary">About</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-md-5 offset-md-1 mb-3">
+                    <form>
+                        <h5>Subscribe to our newsletter</h5>
+                        <p>Monthly digest of what's new and exciting from us.</p>
+                        <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                            <label for="newsletter1" class="visually-hidden">Email address</label>
+                            <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+                            <button class="btn btn-primary" type="button">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div style="color: black;"
+                class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+                <p>© 2024 Southern University, Inc. All rights reserved.</p>
+                <ul class="list-unstyled d-flex">
+                    <img src="./img/f1.png" alt="">
+                </ul>
+            </div>
+            <a href="#home" class="btn btn-dark">
+                Back to top
+            </a>
+        </footer>
+    </div>
+
+    <!-- script links -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+    <script>
+        AOS.init();
+        AOS.refresh();
+    </script>
+
+</body>
+
+</html>

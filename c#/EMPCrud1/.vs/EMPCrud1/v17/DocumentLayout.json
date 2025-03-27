@@ -1,0 +1,87 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\aniket\\c#\\EMPCrud1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F453592D-02C8-46F3-854F-DEAA60698A48}|EMPCrud1\\EMPCrud1.csproj|e:\\aniket\\c#\\empcrud1\\empcrud1\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F453592D-02C8-46F3-854F-DEAA60698A48}|EMPCrud1\\EMPCrud1.csproj|solutionrelative:empcrud1\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F453592D-02C8-46F3-854F-DEAA60698A48}|EMPCrud1\\EMPCrud1.csproj|e:\\aniket\\c#\\empcrud1\\empcrud1\\models\\employeedb.dbml||{B465B5AD-8799-4507-B90A-EE29ACF36AF9}|",
+      "RelativeMoniker": "D:0:0:{F453592D-02C8-46F3-854F-DEAA60698A48}|EMPCrud1\\EMPCrud1.csproj|solutionrelative:empcrud1\\models\\employeedb.dbml||{B465B5AD-8799-4507-B90A-EE29ACF36AF9}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F453592D-02C8-46F3-854F-DEAA60698A48}|EMPCrud1\\EMPCrud1.csproj|e:\\aniket\\c#\\empcrud1\\empcrud1\\models\\empmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F453592D-02C8-46F3-854F-DEAA60698A48}|EMPCrud1\\EMPCrud1.csproj|solutionrelative:empcrud1\\models\\empmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F453592D-02C8-46F3-854F-DEAA60698A48}|EMPCrud1\\EMPCrud1.csproj|e:\\aniket\\c#\\empcrud1\\empcrud1\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{F453592D-02C8-46F3-854F-DEAA60698A48}|EMPCrud1\\EMPCrud1.csproj|solutionrelative:empcrud1\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Web.config",
+              "DocumentMoniker": "E:\\aniket\\c#\\EMPCrud1\\EMPCrud1\\Web.config",
+              "RelativeDocumentMoniker": "EMPCrud1\\Web.config",
+              "ToolTip": "E:\\aniket\\c#\\EMPCrud1\\EMPCrud1\\Web.config",
+              "RelativeToolTip": "EMPCrud1\\Web.config",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAACFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-02-20T12:29:41.114Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EmployeeController.cs",
+              "DocumentMoniker": "E:\\aniket\\c#\\EMPCrud1\\EMPCrud1\\Controllers\\EmployeeController.cs",
+              "RelativeDocumentMoniker": "EMPCrud1\\Controllers\\EmployeeController.cs",
+              "ToolTip": "E:\\aniket\\c#\\EMPCrud1\\EMPCrud1\\Controllers\\EmployeeController.cs",
+              "RelativeToolTip": "EMPCrud1\\Controllers\\EmployeeController.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAiwB4AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-20T12:15:02.869Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EMPModel.cs",
+              "DocumentMoniker": "E:\\aniket\\c#\\EMPCrud1\\EMPCrud1\\Models\\EMPModel.cs",
+              "RelativeDocumentMoniker": "EMPCrud1\\Models\\EMPModel.cs",
+              "ToolTip": "E:\\aniket\\c#\\EMPCrud1\\EMPCrud1\\Models\\EMPModel.cs",
+              "RelativeToolTip": "EMPCrud1\\Models\\EMPModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-20T12:12:31.112Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EmployeeDB.dbml",
+              "DocumentMoniker": "E:\\aniket\\c#\\EMPCrud1\\EMPCrud1\\Models\\EmployeeDB.dbml",
+              "RelativeDocumentMoniker": "EMPCrud1\\Models\\EmployeeDB.dbml",
+              "ToolTip": "E:\\aniket\\c#\\EMPCrud1\\EMPCrud1\\Models\\EmployeeDB.dbml",
+              "RelativeToolTip": "EMPCrud1\\Models\\EmployeeDB.dbml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001722|",
+              "WhenOpened": "2025-02-20T12:11:15.969Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

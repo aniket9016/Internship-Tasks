@@ -1,0 +1,7 @@
+E:\aniket\c#\solidexample\solidexample\bin\Debug\solidexample.exe.config
+E:\aniket\c#\solidexample\solidexample\bin\Debug\solidexample.exe
+E:\aniket\c#\solidexample\solidexample\bin\Debug\solidexample.pdb
+E:\aniket\c#\solidexample\solidexample\obj\Debug\solidexample.csproj.AssemblyReference.cache
+E:\aniket\c#\solidexample\solidexample\obj\Debug\solidexample.csproj.CoreCompileInputs.cache
+E:\aniket\c#\solidexample\solidexample\obj\Debug\solidexample.exe
+E:\aniket\c#\solidexample\solidexample\obj\Debug\solidexample.pdb

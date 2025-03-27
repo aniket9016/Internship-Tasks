@@ -1,0 +1,41 @@
+﻿@model IEnumerable<EmpMan.Models.Employee>
+
+@{
+    ViewData["Title"] = "Employee List";
+}
+
+<h2 class="text-center">Employee List</h2>
+<a asp-action="CreateOrEdit" class="btn btn-primary mb-3">Add New Employee</a>
+
+<table class="table table-bordered">
+    <thead class="thead-dark">
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Gender</th>
+            <th>Date of Birth</th>
+            <th>Department</th>
+            <th>City</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var emp in Model)
+        {
+            <tr>
+                <td>@emp.EmpName</td>
+                <td>@emp.Email</td>
+                <td>@emp.Phone</td>
+                <td>@emp.Gender</td>
+                <td>@emp.DOB.ToString("yyyy-MM-dd")</td>
+                <td>@emp.Department?.DeptName</td>
+                <td>@emp.City?.CityName</td>
+                <td>
+                    <a asp-action="CreateOrEdit" asp-route-id="@emp.EmpId" class="btn btn-warning btn-sm">Edit</a>
+                    <a asp-action="Delete" asp-route-id="@emp.EmpId" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure?');">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,134 @@
+html {
+    scroll-behavior: smooth;
+}
+
+.mainsection {
+    display: flex;
+    margin: 2px;
+    padding: 2px;
+}
+
+.firstside {
+    margin-right: 2px;
+    height: 800px;
+    padding: 50px;
+    display: grid;
+    border: 1px solid black;
+    overflow-y: scroll;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* display: list-item; */
+    font-size: 12px;
+    width: 20%;
+
+}
+
+.secondside {
+    width: 80%;
+    height: 1000px;
+    border: 1px solid black;
+    overflow-y: scroll;
+    display: grid;
+    padding: 20px;
+}
+
+.profilephoto {
+    height: 180px;
+    width: 180px;
+    border-radius: 50%;
+    border: 3ch solid rgb(204, 204, 199);
+}
+
+.nameclass {
+    font-family: cursive;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.pclass {
+    font-weight: lighter;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.p {
+    color: #2c98f0;
+    font-size: small;
+    padding: 0;
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.a {
+    color: black;
+    font-weight: lighter;
+    text-decoration: none;
+    word-spacing: 1;
+}
+
+.a:hover {
+    font-weight: bolder;
+    text-decoration: underline;
+    text-transform: unset;
+    text-shadow: 1cap;
+    text-decoration-color: #2c98f0;
+    cursor: pointer;
+}
+
+.footerp {
+    color: black;
+    font-size: small;
+}
+
+.footerp>a {
+    color: #2c98f0;
+}
+
+.imghide {
+    /* display: none; */
+    border-radius: 200;
+}
+
+.imghide:hover {
+    /* display: block; */
+    transform: scale(1.2);
+}
+
+.hsecond {
+    font-size: 4.5rem;
+    font-family: "Playfair Display", Georgia, serif;
+}
+
+.btnTranparent {
+    height: 40px;
+    width: 150px;
+}
+hr.new1{
+   border: 1.5px solid #2c98f0;
+}
+hr.new2{
+   border: 1.5px solid red;
+}
+hr.new3{
+   border: 1.5px solid yellow;
+}
+hr.new4{
+   border: 1.5px solid purple;
+}
+.tempcolory{
+    padding: 50PX;
+    background-color: #f9bf3f;;
+    height: 200px;
+    color: black;
+    font-size: 2.5rem;
+}
+.serviceimg img{
+    height: 200px;
+    width: 180px;
+}
+.customimage img{
+    padding: 10px;
+    height: 700px;
+    width: 100%;
+}
+

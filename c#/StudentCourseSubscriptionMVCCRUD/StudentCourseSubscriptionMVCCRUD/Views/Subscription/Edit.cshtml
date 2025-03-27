@@ -1,0 +1,49 @@
+﻿@model StudentCourseSubscriptionMVCCRUD.Models.Subscription
+
+@{
+    ViewBag.Title = "Edit Subscription";
+    bool isActive = Model.Status == "Active"; 
+}
+
+<div class="container mt-4">
+    <div class="card shadow-lg p-4">
+        <h2 class="text-primary text-center mb-4">Edit Subscription</h2>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            @Html.HiddenFor(model => model.SubscriptionID) 
+            @Html.HiddenFor(model => model.Status) 
+
+            <div class="row mb-3">
+                @Html.LabelFor(model => model.StudentID, "Select Student", new { @class = "form-label fw-bold" })
+                @Html.DropDownList("StudentID", null, htmlAttributes: new { @class = "form-select" })
+                @Html.ValidationMessageFor(model => model.StudentID, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="row mb-3">
+                @Html.LabelFor(model => model.CourseID, "Select Course", new { @class = "form-label fw-bold" })
+                @Html.DropDownList("CourseID", null, htmlAttributes: new { @class = "form-select" })
+                @Html.ValidationMessageFor(model => model.CourseID, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="row mb-3 form-check">
+                <label class="form-check-label fw-bold">
+                    @Html.CheckBox("IsActive", isActive, new { @class = "form-check-input" }) Active
+                </label>
+            </div>
+
+            <div class="row mt-4">
+                <button type="submit" value="Save" class="btn btn-success btn-lg w-100">
+                    <i class="fas fa-save"></i> Save Changes
+                </button>
+            </div>
+        }
+
+        <div class="row mt-3">
+            <a href="@Url.Action("Index")" class="btn btn-secondary w-100">
+                <i class="fas fa-arrow-left"></i> Back to List
+            </a>
+        </div>
+    </div>
+</div>

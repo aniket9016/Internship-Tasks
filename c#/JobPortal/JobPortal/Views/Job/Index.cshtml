@@ -1,0 +1,35 @@
+﻿@model IEnumerable<JobPortal.Models.Job>
+
+<h2>Available Jobs</h2>
+
+<table class="table">
+    <tr>
+        <th>Title</th>
+        <th>Company</th>
+        <th>Location</th>
+        <th>Salary</th>
+        <th>Actions</th>
+    </tr>
+
+    @foreach (var job in Model)
+    {
+        <tr>
+            <td>@job.Title</td>
+            <td>@job.Company</td>
+            <td>@job.Location</td>
+            <td>@job.Salary</td>
+            <td>
+                <a href="/Job/Details/@job.Id" class="btn btn-info">Details</a>
+                @if (User.IsInRole("Admin"))
+                {
+                    <a href="/Job/Edit/@job.Id" class="btn btn-warning">Edit</a>
+                    <a href="/Job/Delete/@job.Id" class="btn btn-danger">Delete</a>
+                }
+                else
+                {
+                    <a href="/JobApplication/Apply/@job.Id" class="btn btn-success">Apply</a>
+                }
+            </td>
+        </tr>
+    }
+</table>
