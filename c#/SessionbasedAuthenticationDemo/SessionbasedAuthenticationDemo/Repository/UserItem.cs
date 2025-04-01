@@ -6,11 +6,11 @@ using SessionBasedAuthenticationDemo;
 
 namespace SessionbasedAuthenticationDemo.Repository
 {
-    public class UserRepository : ICookieUserItem
+    public class UserItem : ICookieUserItem
     {
         private readonly AppDbContext _db;
 
-        public UserRepository(AppDbContext db)
+        public UserItem(AppDbContext db)
         {
             _db = db;
         }
@@ -37,13 +37,13 @@ namespace SessionbasedAuthenticationDemo.Repository
             var salt = Helper.GenerateSalt();
             var hashedPassword = Helper.GenerateHash(model.Password, salt);
 
-            var user = new User
+            User user = new User
             {
                 UserId = Guid.NewGuid(),
                 Email = model.Email,
                 PasswordHash = hashedPassword,
                 PasswordSalt = salt,
-                Name = model.Name,
+                Name = "admin",
                 DateTimeUtc = DateTime.UtcNow
             };
 

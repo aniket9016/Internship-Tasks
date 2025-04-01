@@ -9,6 +9,9 @@ E:\aniket\c#\BankTransactions\BankTransactions\bin\Debug\net8.0\BankTransactions
 E:\aniket\c#\BankTransactions\BankTransactions\bin\Debug\net8.0\Azure.Core.dll
 E:\aniket\c#\BankTransactions\BankTransactions\bin\Debug\net8.0\Azure.Identity.dll
 E:\aniket\c#\BankTransactions\BankTransactions\bin\Debug\net8.0\Humanizer.dll
+E:\aniket\c#\BankTransactions\BankTransactions\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+E:\aniket\c#\BankTransactions\BankTransactions\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+E:\aniket\c#\BankTransactions\BankTransactions\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 E:\aniket\c#\BankTransactions\BankTransactions\bin\Debug\net8.0\Microsoft.AspNetCore.Razor.Language.dll
 E:\aniket\c#\BankTransactions\BankTransactions\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
 E:\aniket\c#\BankTransactions\BankTransactions\bin\Debug\net8.0\Microsoft.Build.dll
@@ -32,6 +35,9 @@ E:\aniket\c#\BankTransactions\BankTransactions\bin\Debug\net8.0\Microsoft.Entity
 E:\aniket\c#\BankTransactions\BankTransactions\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
 E:\aniket\c#\BankTransactions\BankTransactions\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.dll
 E:\aniket\c#\BankTransactions\BankTransactions\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
+E:\aniket\c#\BankTransactions\BankTransactions\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
+E:\aniket\c#\BankTransactions\BankTransactions\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
+E:\aniket\c#\BankTransactions\BankTransactions\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
 E:\aniket\c#\BankTransactions\BankTransactions\bin\Debug\net8.0\Microsoft.Identity.Client.dll
 E:\aniket\c#\BankTransactions\BankTransactions\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
 E:\aniket\c#\BankTransactions\BankTransactions\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
@@ -234,6 +240,7 @@ E:\aniket\c#\BankTransactions\BankTransactions\obj\Debug\net8.0\BankTransactions
 E:\aniket\c#\BankTransactions\BankTransactions\obj\Debug\net8.0\BankTransactions.MvcApplicationPartsAssemblyInfo.cache
 E:\aniket\c#\BankTransactions\BankTransactions\obj\Debug\net8.0\BankTransactions.RazorAssemblyInfo.cache
 E:\aniket\c#\BankTransactions\BankTransactions\obj\Debug\net8.0\BankTransactions.RazorAssemblyInfo.cs
+E:\aniket\c#\BankTransactions\BankTransactions\obj\Debug\net8.0\BankTransactions.sourcelink.json
 E:\aniket\c#\BankTransactions\BankTransactions\obj\Debug\net8.0\staticwebassets.build.json
 E:\aniket\c#\BankTransactions\BankTransactions\obj\Debug\net8.0\staticwebassets.development.json
 E:\aniket\c#\BankTransactions\BankTransactions\obj\Debug\net8.0\staticwebassets\msbuild.BankTransactions.Microsoft.AspNetCore.StaticWebAssets.props

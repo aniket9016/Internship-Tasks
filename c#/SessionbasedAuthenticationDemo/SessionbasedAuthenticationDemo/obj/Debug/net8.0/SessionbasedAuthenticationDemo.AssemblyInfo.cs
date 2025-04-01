@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SessionbasedAuthenticationDemo")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d008a993fed8c79cbc163442d29a02fb3908c0cc")]
 [assembly: System.Reflection.AssemblyProductAttribute("SessionbasedAuthenticationDemo")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SessionbasedAuthenticationDemo")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

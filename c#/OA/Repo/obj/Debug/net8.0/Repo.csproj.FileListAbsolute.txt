@@ -1,0 +1,17 @@
+D:\C#Training\shubham_Training\OA\Repo\bin\Debug\net8.0\Repo.deps.json
+D:\C#Training\shubham_Training\OA\Repo\bin\Debug\net8.0\Repo.runtimeconfig.json
+D:\C#Training\shubham_Training\OA\Repo\bin\Debug\net8.0\Repo.dll
+D:\C#Training\shubham_Training\OA\Repo\bin\Debug\net8.0\Repo.pdb
+D:\C#Training\shubham_Training\OA\Repo\bin\Debug\net8.0\Data.dll
+D:\C#Training\shubham_Training\OA\Repo\bin\Debug\net8.0\Data.pdb
+D:\C#Training\shubham_Training\OA\Repo\obj\Debug\net8.0\Repo.csproj.AssemblyReference.cache
+D:\C#Training\shubham_Training\OA\Repo\obj\Debug\net8.0\Repo.GeneratedMSBuildEditorConfig.editorconfig
+D:\C#Training\shubham_Training\OA\Repo\obj\Debug\net8.0\Repo.AssemblyInfoInputs.cache
+D:\C#Training\shubham_Training\OA\Repo\obj\Debug\net8.0\Repo.AssemblyInfo.cs
+D:\C#Training\shubham_Training\OA\Repo\obj\Debug\net8.0\Repo.csproj.CoreCompileInputs.cache
+D:\C#Training\shubham_Training\OA\Repo\obj\Debug\net8.0\Repo.csproj.Up2Date
+D:\C#Training\shubham_Training\OA\Repo\obj\Debug\net8.0\Repo.dll
+D:\C#Training\shubham_Training\OA\Repo\obj\Debug\net8.0\refint\Repo.dll
+D:\C#Training\shubham_Training\OA\Repo\obj\Debug\net8.0\Repo.pdb
+D:\C#Training\shubham_Training\OA\Repo\obj\Debug\net8.0\Repo.genruntimeconfig.cache
+D:\C#Training\shubham_Training\OA\Repo\obj\Debug\net8.0\ref\Repo.dll

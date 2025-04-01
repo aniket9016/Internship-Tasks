@@ -2,10 +2,13 @@
 using Microsoft.EntityFrameworkCore;
 using BankTransactions.Models;
 using System;
+using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 
 namespace BankTransactions.Controllers
 {
+    [Authorize]
     public class TransactionController : Controller
     {
         private readonly TransactionDBContext _context;
@@ -18,6 +21,7 @@ namespace BankTransactions.Controllers
         public async Task<IActionResult> Index()
         {
             ViewBag.SuccessMessage = TempData["SuccessMessage"];
+            ViewBag.ErrorMessage = TempData["ErrorMessage"];
             var transactions = await _context.Transactions.ToListAsync();
             return View(transactions);
         }
@@ -27,16 +31,14 @@ namespace BankTransactions.Controllers
         {
             if (!ModelState.IsValid)
             {
-                // If we're using AJAX
                 if (Request.Headers["X-Requested-With"] == "XMLHttpRequest")
                 {
                     var errors = ModelState.ToDictionary(
                         kvp => kvp.Key,
                         kvp => kvp.Value.Errors.Select(e => e.ErrorMessage).ToArray()
                     );
-                    return Json(new { success = false, errors = errors });
+                    return Json(new { success = false, errors });
                 }
-                // For regular form submission
                 return View("Index", await _context.Transactions.ToListAsync());
             }
 
@@ -50,31 +52,31 @@ namespace BankTransactions.Controllers
                 if (transaction.TransactionId == 0)
                 {
                     _context.Transactions.Add(transaction);
-                    TempData["SuccessMessage"] = "Transaction added successfully!";
+                    TempData["SuccessMessage"] = "✅ Transaction added successfully!";
                 }
                 else
                 {
                     var existingTransaction = await _context.Transactions.FindAsync(transaction.TransactionId);
-                    if (existingTransaction == null) return NotFound();
+                    if (existingTransaction == null)
+                        return NotFound();
+
                     _context.Entry(existingTransaction).CurrentValues.SetValues(transaction);
-                    TempData["SuccessMessage"] = "Transaction updated successfully!";
+                    TempData["SuccessMessage"] = "✅ Transaction updated successfully!";
                 }
 
                 await _context.SaveChangesAsync();
 
-                // If AJAX request
                 if (Request.Headers["X-Requested-With"] == "XMLHttpRequest")
                 {
-                    return Json(new { success = true });
+                    return Json(new { success = true, message = "Transaction saved successfully!" });
                 }
 
                 return RedirectToAction("Index");
             }
             catch (Exception ex)
             {
-                TempData["ErrorMessage"] = "An error occurred while processing your request.";
+                TempData["ErrorMessage"] = "⚠️ An error occurred while processing your request.";
 
-                // If AJAX request
                 if (Request.Headers["X-Requested-With"] == "XMLHttpRequest")
                 {
                     return Json(new { success = false, message = "An error occurred while processing your request." });
@@ -84,23 +86,26 @@ namespace BankTransactions.Controllers
             }
         }
 
+        [HttpPost]
         public async Task<IActionResult> Delete(int id)
         {
             try
             {
                 var transaction = await _context.Transactions.FindAsync(id);
-                if (transaction == null) return NotFound();
+                if (transaction == null)
+                    return Json(new { success = false, message = "Transaction not found!" });
 
                 _context.Transactions.Remove(transaction);
                 await _context.SaveChangesAsync();
-                TempData["SuccessMessage"] = "Transaction deleted successfully!";
+                TempData["SuccessMessage"] = "✅ Transaction deleted successfully!";
+
+                return Json(new { success = true, message = "Transaction deleted successfully!" });
             }
             catch (Exception)
             {
-                TempData["ErrorMessage"] = "Error deleting transaction.";
+                TempData["ErrorMessage"] = "⚠️ Error deleting transaction.";
+                return Json(new { success = false, message = "Error deleting transaction." });
             }
-
-            return RedirectToAction("Index");
         }
     }
 }

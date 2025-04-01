@@ -142,3 +142,4 @@ E:\aniket\c#\SessionbasedAuthenticationDemo\SessionbasedAuthenticationDemo\obj\D
 E:\aniket\c#\SessionbasedAuthenticationDemo\SessionbasedAuthenticationDemo\obj\Debug\net8.0\SessionbasedAuthenticationDemo.pdb
 E:\aniket\c#\SessionbasedAuthenticationDemo\SessionbasedAuthenticationDemo\obj\Debug\net8.0\SessionbasedAuthenticationDemo.genruntimeconfig.cache
 E:\aniket\c#\SessionbasedAuthenticationDemo\SessionbasedAuthenticationDemo\obj\Debug\net8.0\ref\SessionbasedAuthenticationDemo.dll
+E:\aniket\c#\SessionbasedAuthenticationDemo\SessionbasedAuthenticationDemo\obj\Debug\net8.0\SessionbasedAuthenticationDemo.sourcelink.json

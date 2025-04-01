@@ -1,0 +1,499 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\C#Training\\shubham_Training\\OA\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{978910B8-9CB4-4409-972E-7987A24D7F17}|Service\\Service.csproj|d:\\c#training\\shubham_training\\oa\\service\\services\\iuserprofileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{978910B8-9CB4-4409-972E-7987A24D7F17}|Service\\Service.csproj|solutionrelative:service\\services\\iuserprofileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{978910B8-9CB4-4409-972E-7987A24D7F17}|Service\\Service.csproj|d:\\c#training\\shubham_training\\oa\\service\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{978910B8-9CB4-4409-972E-7987A24D7F17}|Service\\Service.csproj|solutionrelative:service\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{978910B8-9CB4-4409-972E-7987A24D7F17}|Service\\Service.csproj|d:\\c#training\\shubham_training\\oa\\service\\services\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{978910B8-9CB4-4409-972E-7987A24D7F17}|Service\\Service.csproj|solutionrelative:service\\services\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D173B710-96D6-4FC0-BEC2-B3E9601CD87C}|Data\\Data.csproj|d:\\c#training\\shubham_training\\oa\\data\\models\\userprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D173B710-96D6-4FC0-BEC2-B3E9601CD87C}|Data\\Data.csproj|solutionrelative:data\\models\\userprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D173B710-96D6-4FC0-BEC2-B3E9601CD87C}|Data\\Data.csproj|d:\\c#training\\shubham_training\\oa\\data\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D173B710-96D6-4FC0-BEC2-B3E9601CD87C}|Data\\Data.csproj|solutionrelative:data\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B181376F-AFC9-42D1-B286-D5949D151EEF}|Web\\Web.csproj|d:\\c#training\\shubham_training\\oa\\web\\views\\user\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B181376F-AFC9-42D1-B286-D5949D151EEF}|Web\\Web.csproj|solutionrelative:web\\views\\user\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B181376F-AFC9-42D1-B286-D5949D151EEF}|Web\\Web.csproj|d:\\c#training\\shubham_training\\oa\\web\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B181376F-AFC9-42D1-B286-D5949D151EEF}|Web\\Web.csproj|solutionrelative:web\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B181376F-AFC9-42D1-B286-D5949D151EEF}|Web\\Web.csproj|d:\\c#training\\shubham_training\\oa\\web\\views\\shared\\_deleteuser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B181376F-AFC9-42D1-B286-D5949D151EEF}|Web\\Web.csproj|solutionrelative:web\\views\\shared\\_deleteuser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B181376F-AFC9-42D1-B286-D5949D151EEF}|Web\\Web.csproj|d:\\c#training\\shubham_training\\oa\\web\\views\\shared\\_adduser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B181376F-AFC9-42D1-B286-D5949D151EEF}|Web\\Web.csproj|solutionrelative:web\\views\\shared\\_adduser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B181376F-AFC9-42D1-B286-D5949D151EEF}|Web\\Web.csproj|d:\\c#training\\shubham_training\\oa\\web\\views\\shared\\_edituser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B181376F-AFC9-42D1-B286-D5949D151EEF}|Web\\Web.csproj|solutionrelative:web\\views\\shared\\_edituser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B181376F-AFC9-42D1-B286-D5949D151EEF}|Web\\Web.csproj|d:\\c#training\\shubham_training\\oa\\web\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B181376F-AFC9-42D1-B286-D5949D151EEF}|Web\\Web.csproj|solutionrelative:web\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B181376F-AFC9-42D1-B286-D5949D151EEF}|Web\\Web.csproj|d:\\c#training\\shubham_training\\oa\\web\\models\\userviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B181376F-AFC9-42D1-B286-D5949D151EEF}|Web\\Web.csproj|solutionrelative:web\\models\\userviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B181376F-AFC9-42D1-B286-D5949D151EEF}|Web\\Web.csproj|d:\\c#training\\shubham_training\\oa\\web\\models\\firstname.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B181376F-AFC9-42D1-B286-D5949D151EEF}|Web\\Web.csproj|solutionrelative:web\\models\\firstname.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{978910B8-9CB4-4409-972E-7987A24D7F17}|Service\\Service.csproj|d:\\c#training\\shubham_training\\oa\\service\\services\\userprofileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{978910B8-9CB4-4409-972E-7987A24D7F17}|Service\\Service.csproj|solutionrelative:service\\services\\userprofileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B181376F-AFC9-42D1-B286-D5949D151EEF}|Web\\Web.csproj|d:\\c#training\\shubham_training\\oa\\web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B181376F-AFC9-42D1-B286-D5949D151EEF}|Web\\Web.csproj|solutionrelative:web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A37785A-2809-4C98-AC0E-D64B175D47C4}|Repo\\Repo.csproj|d:\\c#training\\shubham_training\\oa\\repo\\applicationcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A37785A-2809-4C98-AC0E-D64B175D47C4}|Repo\\Repo.csproj|solutionrelative:repo\\applicationcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A37785A-2809-4C98-AC0E-D64B175D47C4}|Repo\\Repo.csproj|d:\\c#training\\shubham_training\\oa\\repo\\repository\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A37785A-2809-4C98-AC0E-D64B175D47C4}|Repo\\Repo.csproj|solutionrelative:repo\\repository\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A37785A-2809-4C98-AC0E-D64B175D47C4}|Repo\\Repo.csproj|d:\\c#training\\shubham_training\\oa\\repo\\repository\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A37785A-2809-4C98-AC0E-D64B175D47C4}|Repo\\Repo.csproj|solutionrelative:repo\\repository\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B181376F-AFC9-42D1-B286-D5949D151EEF}|Web\\Web.csproj|d:\\c#training\\shubham_training\\oa\\web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B181376F-AFC9-42D1-B286-D5949D151EEF}|Web\\Web.csproj|solutionrelative:web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D173B710-96D6-4FC0-BEC2-B3E9601CD87C}|Data\\Data.csproj|d:\\c#training\\shubham_training\\oa\\data\\mappers\\userprofilemap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D173B710-96D6-4FC0-BEC2-B3E9601CD87C}|Data\\Data.csproj|solutionrelative:data\\mappers\\userprofilemap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D173B710-96D6-4FC0-BEC2-B3E9601CD87C}|Data\\Data.csproj|d:\\c#training\\shubham_training\\oa\\data\\mappers\\usermap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D173B710-96D6-4FC0-BEC2-B3E9601CD87C}|Data\\Data.csproj|solutionrelative:data\\mappers\\usermap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D173B710-96D6-4FC0-BEC2-B3E9601CD87C}|Data\\Data.csproj|d:\\c#training\\shubham_training\\oa\\data\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D173B710-96D6-4FC0-BEC2-B3E9601CD87C}|Data\\Data.csproj|solutionrelative:data\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A37785A-2809-4C98-AC0E-D64B175D47C4}|Repo\\Repo.csproj|d:\\c#training\\shubham_training\\oa\\repo\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A37785A-2809-4C98-AC0E-D64B175D47C4}|Repo\\Repo.csproj|solutionrelative:repo\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B181376F-AFC9-42D1-B286-D5949D151EEF}|Web\\Web.csproj|d:\\c#training\\shubham_training\\oa\\web\\wwwroot\\js\\user - index.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{B181376F-AFC9-42D1-B286-D5949D151EEF}|Web\\Web.csproj|solutionrelative:web\\wwwroot\\js\\user - index.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{978910B8-9CB4-4409-972E-7987A24D7F17}|Service\\Service.csproj|d:\\c#training\\shubham_training\\oa\\service\\service.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{978910B8-9CB4-4409-972E-7987A24D7F17}|Service\\Service.csproj|solutionrelative:service\\service.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D173B710-96D6-4FC0-BEC2-B3E9601CD87C}|Data\\Data.csproj|d:\\c#training\\shubham_training\\oa\\data\\data.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{D173B710-96D6-4FC0-BEC2-B3E9601CD87C}|Data\\Data.csproj|solutionrelative:data\\data.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{978910B8-9CB4-4409-972E-7987A24D7F17}|Service\\Service.csproj|d:\\c#training\\shubham_training\\oa\\service\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{978910B8-9CB4-4409-972E-7987A24D7F17}|Service\\Service.csproj|solutionrelative:service\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D173B710-96D6-4FC0-BEC2-B3E9601CD87C}|Data\\Data.csproj|d:\\c#training\\shubham_training\\oa\\data\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D173B710-96D6-4FC0-BEC2-B3E9601CD87C}|Data\\Data.csproj|solutionrelative:data\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A37785A-2809-4C98-AC0E-D64B175D47C4}|Repo\\Repo.csproj|d:\\c#training\\shubham_training\\oa\\repo\\migrations\\20240821073453_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A37785A-2809-4C98-AC0E-D64B175D47C4}|Repo\\Repo.csproj|solutionrelative:repo\\migrations\\20240821073453_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 9,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "D:\\C#Training\\shubham_Training\\OA\\Web\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "Web\\Controllers\\UserController.cs",
+              "ToolTip": "D:\\C#Training\\shubham_Training\\OA\\Web\\Controllers\\UserController.cs",
+              "RelativeToolTip": "Web\\Controllers\\UserController.cs",
+              "ViewState": "AgIAAEkAAAAAAAAAAADwvxkAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-23T05:48:50.446Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UserProfile.cs",
+              "DocumentMoniker": "D:\\C#Training\\shubham_Training\\OA\\Data\\Models\\UserProfile.cs",
+              "RelativeDocumentMoniker": "Data\\Models\\UserProfile.cs",
+              "ToolTip": "D:\\C#Training\\shubham_Training\\OA\\Data\\Models\\UserProfile.cs",
+              "RelativeToolTip": "Data\\Models\\UserProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-21T07:12:52.609Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "_AddUser.cshtml",
+              "DocumentMoniker": "D:\\C#Training\\shubham_Training\\OA\\Web\\Views\\Shared\\_AddUser.cshtml",
+              "RelativeDocumentMoniker": "Web\\Views\\Shared\\_AddUser.cshtml",
+              "ToolTip": "D:\\C#Training\\shubham_Training\\OA\\Web\\Views\\Shared\\_AddUser.cshtml",
+              "RelativeToolTip": "Web\\Views\\Shared\\_AddUser.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-23T05:58:45.287Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "_EditUser.cshtml",
+              "DocumentMoniker": "D:\\C#Training\\shubham_Training\\OA\\Web\\Views\\Shared\\_EditUser.cshtml",
+              "RelativeDocumentMoniker": "Web\\Views\\Shared\\_EditUser.cshtml",
+              "ToolTip": "D:\\C#Training\\shubham_Training\\OA\\Web\\Views\\Shared\\_EditUser.cshtml",
+              "RelativeToolTip": "Web\\Views\\Shared\\_EditUser.cshtml",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAAAMAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-23T05:59:13.747Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "_DeleteUser.cshtml",
+              "DocumentMoniker": "D:\\C#Training\\shubham_Training\\OA\\Web\\Views\\Shared\\_DeleteUser.cshtml",
+              "RelativeDocumentMoniker": "Web\\Views\\Shared\\_DeleteUser.cshtml",
+              "ToolTip": "D:\\C#Training\\shubham_Training\\OA\\Web\\Views\\Shared\\_DeleteUser.cshtml",
+              "RelativeToolTip": "Web\\Views\\Shared\\_DeleteUser.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-23T05:59:50.067Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\C#Training\\shubham_Training\\OA\\Web\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Web\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\C#Training\\shubham_Training\\OA\\Web\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Web\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAgAAABPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-22T04:15:47.444Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\C#Training\\shubham_Training\\OA\\Web\\Views\\User\\Index.cshtml",
+              "RelativeDocumentMoniker": "Web\\Views\\User\\Index.cshtml",
+              "ToolTip": "D:\\C#Training\\shubham_Training\\OA\\Web\\Views\\User\\Index.cshtml",
+              "RelativeToolTip": "Web\\Views\\User\\Index.cshtml",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAAE4AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-23T05:57:31.902Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\C#Training\\shubham_Training\\OA\\Data\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Data\\Models\\User.cs",
+              "ToolTip": "D:\\C#Training\\shubham_Training\\OA\\Data\\Models\\User.cs",
+              "RelativeToolTip": "Data\\Models\\User.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-21T07:12:12.068Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "D:\\C#Training\\shubham_Training\\OA\\Service\\Services\\IUserService.cs",
+              "RelativeDocumentMoniker": "Service\\Services\\IUserService.cs",
+              "ToolTip": "D:\\C#Training\\shubham_Training\\OA\\Service\\Services\\IUserService.cs",
+              "RelativeToolTip": "Service\\Services\\IUserService.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA8AAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-21T07:27:28.888Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "IUserProfileService.cs",
+              "DocumentMoniker": "D:\\C#Training\\shubham_Training\\OA\\Service\\Services\\IUserProfileService.cs",
+              "RelativeDocumentMoniker": "Service\\Services\\IUserProfileService.cs",
+              "ToolTip": "D:\\C#Training\\shubham_Training\\OA\\Service\\Services\\IUserProfileService.cs",
+              "RelativeToolTip": "Service\\Services\\IUserProfileService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-21T07:29:34.327Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "D:\\C#Training\\shubham_Training\\OA\\Service\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "Service\\Services\\UserService.cs",
+              "ToolTip": "D:\\C#Training\\shubham_Training\\OA\\Service\\Services\\UserService.cs",
+              "RelativeToolTip": "Service\\Services\\UserService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-21T07:28:27.342Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "UserViewModel.cs",
+              "DocumentMoniker": "D:\\C#Training\\shubham_Training\\OA\\Web\\Models\\UserViewModel.cs",
+              "RelativeDocumentMoniker": "Web\\Models\\UserViewModel.cs",
+              "ToolTip": "D:\\C#Training\\shubham_Training\\OA\\Web\\Models\\UserViewModel.cs",
+              "RelativeToolTip": "Web\\Models\\UserViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-01T04:23:56.304Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "FirstName.cs",
+              "DocumentMoniker": "D:\\C#Training\\shubham_Training\\OA\\Web\\Models\\FirstName.cs",
+              "RelativeDocumentMoniker": "Web\\Models\\FirstName.cs",
+              "ToolTip": "D:\\C#Training\\shubham_Training\\OA\\Web\\Models\\FirstName.cs",
+              "RelativeToolTip": "Web\\Models\\FirstName.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-23T06:09:35.57Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "UserProfileService.cs",
+              "DocumentMoniker": "D:\\C#Training\\shubham_Training\\OA\\Service\\Services\\UserProfileService.cs",
+              "RelativeDocumentMoniker": "Service\\Services\\UserProfileService.cs",
+              "ToolTip": "D:\\C#Training\\shubham_Training\\OA\\Service\\Services\\UserProfileService.cs",
+              "RelativeToolTip": "Service\\Services\\UserProfileService.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAcwBYAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-21T07:30:29.325Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\C#Training\\shubham_Training\\OA\\Web\\Program.cs",
+              "RelativeDocumentMoniker": "Web\\Program.cs",
+              "ToolTip": "D:\\C#Training\\shubham_Training\\OA\\Web\\Program.cs",
+              "RelativeToolTip": "Web\\Program.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAABUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-21T07:32:10.223Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "IRepository.cs",
+              "DocumentMoniker": "D:\\C#Training\\shubham_Training\\OA\\Repo\\Repository\\IRepository.cs",
+              "RelativeDocumentMoniker": "Repo\\Repository\\IRepository.cs",
+              "ToolTip": "D:\\C#Training\\shubham_Training\\OA\\Repo\\Repository\\IRepository.cs",
+              "RelativeToolTip": "Repo\\Repository\\IRepository.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABEAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-21T07:21:01.755Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\C#Training\\shubham_Training\\OA\\Web\\appsettings.json",
+              "RelativeDocumentMoniker": "Web\\appsettings.json",
+              "ToolTip": "D:\\C#Training\\shubham_Training\\OA\\Web\\appsettings.json",
+              "RelativeToolTip": "Web\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-08-21T07:31:05.271Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ApplicationContext.cs",
+              "DocumentMoniker": "D:\\C#Training\\shubham_Training\\OA\\Repo\\ApplicationContext.cs",
+              "RelativeDocumentMoniker": "Repo\\ApplicationContext.cs",
+              "ToolTip": "D:\\C#Training\\shubham_Training\\OA\\Repo\\ApplicationContext.cs",
+              "RelativeToolTip": "Repo\\ApplicationContext.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABQAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-21T07:18:40.196Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "UserProfileMap.cs",
+              "DocumentMoniker": "D:\\C#Training\\shubham_Training\\OA\\Data\\Mappers\\UserProfileMap.cs",
+              "RelativeDocumentMoniker": "Data\\Mappers\\UserProfileMap.cs",
+              "ToolTip": "D:\\C#Training\\shubham_Training\\OA\\Data\\Mappers\\UserProfileMap.cs",
+              "RelativeToolTip": "Data\\Mappers\\UserProfileMap.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABEAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-21T07:17:26.47Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "UserMap.cs",
+              "DocumentMoniker": "D:\\C#Training\\shubham_Training\\OA\\Data\\Mappers\\UserMap.cs",
+              "RelativeDocumentMoniker": "Data\\Mappers\\UserMap.cs",
+              "ToolTip": "D:\\C#Training\\shubham_Training\\OA\\Data\\Mappers\\UserMap.cs",
+              "RelativeToolTip": "Data\\Mappers\\UserMap.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABIAAABwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-21T07:16:01.65Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "BaseEntity.cs",
+              "DocumentMoniker": "D:\\C#Training\\shubham_Training\\OA\\Data\\BaseEntity.cs",
+              "RelativeDocumentMoniker": "Data\\BaseEntity.cs",
+              "ToolTip": "D:\\C#Training\\shubham_Training\\OA\\Data\\BaseEntity.cs",
+              "RelativeToolTip": "Data\\BaseEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-21T07:11:18.986Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Repository.cs",
+              "DocumentMoniker": "D:\\C#Training\\shubham_Training\\OA\\Repo\\Repository\\Repository.cs",
+              "RelativeDocumentMoniker": "Repo\\Repository\\Repository.cs",
+              "ToolTip": "D:\\C#Training\\shubham_Training\\OA\\Repo\\Repository\\Repository.cs",
+              "RelativeToolTip": "Repo\\Repository\\Repository.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAC4AAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-21T07:25:07.004Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "D:\\C#Training\\shubham_Training\\OA\\Repo\\Class1.cs",
+              "RelativeDocumentMoniker": "Repo\\Class1.cs",
+              "ToolTip": "D:\\C#Training\\shubham_Training\\OA\\Repo\\Class1.cs",
+              "RelativeToolTip": "Repo\\Class1.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-21T07:08:59.309Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "user - index.js",
+              "DocumentMoniker": "D:\\C#Training\\shubham_Training\\OA\\Web\\wwwroot\\js\\user - index.js",
+              "RelativeDocumentMoniker": "Web\\wwwroot\\js\\user - index.js",
+              "ToolTip": "D:\\C#Training\\shubham_Training\\OA\\Web\\wwwroot\\js\\user - index.js",
+              "RelativeToolTip": "Web\\wwwroot\\js\\user - index.js",
+              "ViewState": "AQIAABkAAAAAAAAAAAA2wDMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-08-22T04:10:20.436Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "20240821073453_Initial.cs",
+              "DocumentMoniker": "D:\\C#Training\\shubham_Training\\OA\\Repo\\Migrations\\20240821073453_Initial.cs",
+              "RelativeDocumentMoniker": "Repo\\Migrations\\20240821073453_Initial.cs",
+              "ToolTip": "D:\\C#Training\\shubham_Training\\OA\\Repo\\Migrations\\20240821073453_Initial.cs",
+              "RelativeToolTip": "Repo\\Migrations\\20240821073453_Initial.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-21T07:34:53.729Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Service.csproj",
+              "DocumentMoniker": "D:\\C#Training\\shubham_Training\\OA\\Service\\Service.csproj",
+              "RelativeDocumentMoniker": "Service\\Service.csproj",
+              "ToolTip": "D:\\C#Training\\shubham_Training\\OA\\Service\\Service.csproj",
+              "RelativeToolTip": "Service\\Service.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-08-21T07:27:06.154Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Data.csproj",
+              "DocumentMoniker": "D:\\C#Training\\shubham_Training\\OA\\Data\\Data.csproj",
+              "RelativeDocumentMoniker": "Data\\Data.csproj",
+              "ToolTip": "D:\\C#Training\\shubham_Training\\OA\\Data\\Data.csproj",
+              "RelativeToolTip": "Data\\Data.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-08-21T07:11:02.893Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "D:\\C#Training\\shubham_Training\\OA\\Service\\Class1.cs",
+              "RelativeDocumentMoniker": "Service\\Class1.cs",
+              "ToolTip": "D:\\C#Training\\shubham_Training\\OA\\Service\\Class1.cs",
+              "RelativeToolTip": "Service\\Class1.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-21T07:09:21.247Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "D:\\C#Training\\shubham_Training\\OA\\Data\\Class1.cs",
+              "RelativeDocumentMoniker": "Data\\Class1.cs",
+              "ToolTip": "D:\\C#Training\\shubham_Training\\OA\\Data\\Class1.cs",
+              "RelativeToolTip": "Data\\Class1.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-21T07:08:44.808Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using SessionbasedAuthenticationDemo.Models;
 using System.Diagnostics;
@@ -12,11 +13,12 @@ namespace SessionbasedAuthenticationDemo.Controllers
         {
             _logger = logger;
         }
-
         public IActionResult Index()
         {
             return View();
         }
+        [Authorize]
+
 
         public IActionResult Privacy()
         {

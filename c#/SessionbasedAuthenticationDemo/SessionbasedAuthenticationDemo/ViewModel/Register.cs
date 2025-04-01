@@ -6,7 +6,6 @@ namespace SessionbasedAuthenticationDemo.ViewModel
     {
         [Required,Compare("Password",ErrorMessage = "Password and Confirm Password do not match")]
         public string ConfirmPassword { get; set; }
-        public string Name { get; set; }
 
     }
 }
