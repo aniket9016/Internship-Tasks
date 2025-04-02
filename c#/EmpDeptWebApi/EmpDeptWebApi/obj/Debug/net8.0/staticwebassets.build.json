@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "iBU74q1e6EjK9ruxtotKoY/UjXqwbd1h3Bs48x/yCiQ=",
+  "Source": "EmpDeptWebApi",
+  "BasePath": "_content/EmpDeptWebApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
