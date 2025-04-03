@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\Images\\2cea9a1b-12c7-4cb9-a065-c3f9a594d493.png"
     },
     {
+      "Id": "E:\\aniket\\c#\\OAEmployeeDepartmentWEBAPI\\CRUD\\wwwroot\\Images\\2dbb3537-f880-4c2c-8610-0d2372f75c8b.jpg",
+      "PackagePath": "staticwebassets\\Images\\2dbb3537-f880-4c2c-8610-0d2372f75c8b.jpg"
+    },
+    {
       "Id": "E:\\aniket\\c#\\OAEmployeeDepartmentWEBAPI\\CRUD\\wwwroot\\Images\\30ff0ffc-c97c-4380-97c9-ab81e3a3a4b9.jpg",
       "PackagePath": "staticwebassets\\Images\\30ff0ffc-c97c-4380-97c9-ab81e3a3a4b9.jpg"
     },
@@ -13,12 +17,20 @@
       "PackagePath": "staticwebassets\\Images\\393abf82-1ec5-40f3-9f1a-f2665098cf40.jpg"
     },
     {
+      "Id": "E:\\aniket\\c#\\OAEmployeeDepartmentWEBAPI\\CRUD\\wwwroot\\Images\\415205cd-8b4d-4a14-8147-1e45a6d2886d.jpg",
+      "PackagePath": "staticwebassets\\Images\\415205cd-8b4d-4a14-8147-1e45a6d2886d.jpg"
+    },
+    {
       "Id": "E:\\aniket\\c#\\OAEmployeeDepartmentWEBAPI\\CRUD\\wwwroot\\Images\\5904ce68-47c1-48ae-9909-22ad3c404c7e.png",
       "PackagePath": "staticwebassets\\Images\\5904ce68-47c1-48ae-9909-22ad3c404c7e.png"
     },
     {
       "Id": "E:\\aniket\\c#\\OAEmployeeDepartmentWEBAPI\\CRUD\\wwwroot\\Images\\6d3a9410-9c83-43e9-92c9-cd02a6bd1124.png",
       "PackagePath": "staticwebassets\\Images\\6d3a9410-9c83-43e9-92c9-cd02a6bd1124.png"
+    },
+    {
+      "Id": "E:\\aniket\\c#\\OAEmployeeDepartmentWEBAPI\\CRUD\\wwwroot\\Images\\7a1e431b-5490-4258-a7d9-ace180f35724.jpg",
+      "PackagePath": "staticwebassets\\Images\\7a1e431b-5490-4258-a7d9-ace180f35724.jpg"
     },
     {
       "Id": "E:\\aniket\\c#\\OAEmployeeDepartmentWEBAPI\\CRUD\\wwwroot\\Images\\8386de77-758d-4007-a574-9e4262a87d5c.jpg",
@@ -33,12 +45,32 @@
       "PackagePath": "staticwebassets\\Images\\ca289942-8ba0-4ced-955c-922879e87773.jpg"
     },
     {
+      "Id": "E:\\aniket\\c#\\OAEmployeeDepartmentWEBAPI\\CRUD\\wwwroot\\Images\\counselor-4305394.jpg",
+      "PackagePath": "staticwebassets\\Images\\counselor-4305394.jpg"
+    },
+    {
       "Id": "E:\\aniket\\c#\\OAEmployeeDepartmentWEBAPI\\CRUD\\wwwroot\\Images\\d1d6cf6f-cf6e-4694-a2c1-2f523b6b654b.jpg",
       "PackagePath": "staticwebassets\\Images\\d1d6cf6f-cf6e-4694-a2c1-2f523b6b654b.jpg"
     },
     {
       "Id": "E:\\aniket\\c#\\OAEmployeeDepartmentWEBAPI\\CRUD\\wwwroot\\Images\\f8088b9a-a0ee-4fd0-bc51-08d691a12882.jpg",
       "PackagePath": "staticwebassets\\Images\\f8088b9a-a0ee-4fd0-bc51-08d691a12882.jpg"
+    },
+    {
+      "Id": "E:\\aniket\\c#\\OAEmployeeDepartmentWEBAPI\\CRUD\\wwwroot\\Images\\t2_1qpkj4dx.kix.jpg",
+      "PackagePath": "staticwebassets\\Images\\t2_1qpkj4dx.kix.jpg"
+    },
+    {
+      "Id": "E:\\aniket\\c#\\OAEmployeeDepartmentWEBAPI\\CRUD\\wwwroot\\Images\\t2_4lt55nvi.0sg.jpg",
+      "PackagePath": "staticwebassets\\Images\\t2_4lt55nvi.0sg.jpg"
+    },
+    {
+      "Id": "E:\\aniket\\c#\\OAEmployeeDepartmentWEBAPI\\CRUD\\wwwroot\\Images\\t2_en3mdo5f.kwe.jpg",
+      "PackagePath": "staticwebassets\\Images\\t2_en3mdo5f.kwe.jpg"
+    },
+    {
+      "Id": "E:\\aniket\\c#\\OAEmployeeDepartmentWEBAPI\\CRUD\\wwwroot\\Images\\t2_xqz4knhc.yho.jpg",
+      "PackagePath": "staticwebassets\\Images\\t2_xqz4knhc.yho.jpg"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.CRUD.Microsoft.AspNetCore.StaticWebAssets.props",

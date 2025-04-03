@@ -34,17 +34,31 @@ namespace Repo
 
         public bool UpdateEmployee(Employee employee)
         {
-            _context.Set<Employee>().Update(employee);
+            var existingEmployee = _context.Employees.Find(employee.Id);
+
+            if (existingEmployee == null)
+                return false;
+
+            _context.Entry(existingEmployee).CurrentValues.SetValues(employee);
             _context.SaveChanges();
-            return true;
+
+            return true; 
         }
 
         public bool DeleteEmployee(int id)
         {
-            var employee = new Employee { Id = id };
-            _context.Set<Employee>().Remove(employee);
+            var employee = _context.Set<Employee>().Find(id); 
+
+            if (employee == null)
+            {
+                return false; 
+            }
+
+            _context.Set<Employee>().Remove(employee); 
             _context.SaveChanges();
-            return true;
+
+            return true; 
         }
+
     }
 }

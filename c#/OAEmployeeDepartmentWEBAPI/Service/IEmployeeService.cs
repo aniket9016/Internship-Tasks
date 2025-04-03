@@ -12,7 +12,7 @@ namespace Service
         IEnumerable<Employee> GetEmployees();
         Employee GetEmployee(long id);
         void InsertEmployee(Employee employee);
-        void UpdateEmployee(Employee employee);
+        bool UpdateEmployee(Employee employee);
         void DeleteEmployee(long id);
     }
 }

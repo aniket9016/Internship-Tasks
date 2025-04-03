@@ -29,9 +29,9 @@ namespace Service
             _employeeRepository.AddEmployee(employee);
         }
 
-        public void UpdateEmployee(Employee employee)
+        public bool UpdateEmployee(Employee employee)
         {
-            _employeeRepository.UpdateEmployee(employee);
+            return _employeeRepository.UpdateEmployee(employee);
         }
 
         public void DeleteEmployee(long id)
