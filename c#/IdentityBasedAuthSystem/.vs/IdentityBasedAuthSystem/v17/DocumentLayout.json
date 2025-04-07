@@ -1,37 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "E:\\aniket\\c#\\IdentityBasedAuthSystem\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{887861CD-7835-4904-AA46-41119A84EB9C}|IdentityBasedAuthSystem\\IdentityBasedAuthSystem.csproj|e:\\aniket\\c#\\identitybasedauthsystem\\identitybasedauthsystem\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{887861CD-7835-4904-AA46-41119A84EB9C}|IdentityBasedAuthSystem\\IdentityBasedAuthSystem.csproj|solutionrelative:identitybasedauthsystem\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "site.css",
-              "DocumentMoniker": "E:\\aniket\\c#\\IdentityBasedAuthSystem\\IdentityBasedAuthSystem\\wwwroot\\css\\site.css",
-              "RelativeDocumentMoniker": "IdentityBasedAuthSystem\\wwwroot\\css\\site.css",
-              "ToolTip": "E:\\aniket\\c#\\IdentityBasedAuthSystem\\IdentityBasedAuthSystem\\wwwroot\\css\\site.css",
-              "RelativeToolTip": "IdentityBasedAuthSystem\\wwwroot\\css\\site.css",
-              "ViewState": "AQIAAAcAAAAAAAAAAAAUwCIAAAASAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-03-28T10:24:56.201Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
+      "DocumentGroups": []
     }
   ]
 }

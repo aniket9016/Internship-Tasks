@@ -1,0 +1,8 @@
+E:\aniket\c#\c#test\OAStudentCourseManagement\StudentCourseCRUD\obj\Debug\net8.0\StudentCourseCRUD.csproj.AssemblyReference.cache
+E:\aniket\c#\c#test\OAStudentCourseManagement\StudentCourseCRUD\obj\Debug\net8.0\StudentCourseCRUD.GeneratedMSBuildEditorConfig.editorconfig
+E:\aniket\c#\c#test\OAStudentCourseManagement\StudentCourseCRUD\obj\Debug\net8.0\StudentCourseCRUD.AssemblyInfoInputs.cache
+E:\aniket\c#\c#test\OAStudentCourseManagement\StudentCourseCRUD\obj\Debug\net8.0\StudentCourseCRUD.AssemblyInfo.cs
+E:\aniket\c#\c#test\OAStudentCourseManagement\StudentCourseCRUD\obj\Debug\net8.0\StudentCourseCRUD.csproj.CoreCompileInputs.cache
+E:\aniket\c#\c#test\OAStudentCourseManagement\StudentCourseCRUD\obj\Debug\net8.0\StudentCourseCRUD.MvcApplicationPartsAssemblyInfo.cs
+E:\aniket\c#\c#test\OAStudentCourseManagement\StudentCourseCRUD\obj\Debug\net8.0\StudentCourseCRUD.MvcApplicationPartsAssemblyInfo.cache
+E:\aniket\c#\c#test\OAStudentCourseManagement\StudentCourseCRUD\obj\Debug\net8.0\StudentCourseCRUD.sourcelink.json
