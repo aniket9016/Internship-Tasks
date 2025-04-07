@@ -172,3 +172,17 @@ E:\aniket\c#\c#test\OAStudentCourseManagement\StuCourCRUD\obj\Debug\net8.0\StuCo
 E:\aniket\c#\c#test\OAStudentCourseManagement\StuCourCRUD\obj\Debug\net8.0\ref\StuCourCRUD.dll
 E:\aniket\c#\c#test\OAStudentCourseManagement\StuCourCRUD\bin\Debug\net8.0\Services.dll
 E:\aniket\c#\c#test\OAStudentCourseManagement\StuCourCRUD\bin\Debug\net8.0\Services.pdb
+E:\aniket\c#\c#test\OAStudentCourseManagement\StuCourCRUD\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Binder.dll
+E:\aniket\c#\c#test\OAStudentCourseManagement\StuCourCRUD\bin\Debug\net8.0\Microsoft.Extensions.Diagnostics.Abstractions.dll
+E:\aniket\c#\c#test\OAStudentCourseManagement\StuCourCRUD\bin\Debug\net8.0\Microsoft.Extensions.FileProviders.Abstractions.dll
+E:\aniket\c#\c#test\OAStudentCourseManagement\StuCourCRUD\bin\Debug\net8.0\Microsoft.Extensions.Hosting.Abstractions.dll
+E:\aniket\c#\c#test\OAStudentCourseManagement\StuCourCRUD\bin\Debug\net8.0\Serilog.dll
+E:\aniket\c#\c#test\OAStudentCourseManagement\StuCourCRUD\bin\Debug\net8.0\Serilog.AspNetCore.dll
+E:\aniket\c#\c#test\OAStudentCourseManagement\StuCourCRUD\bin\Debug\net8.0\Serilog.Extensions.Hosting.dll
+E:\aniket\c#\c#test\OAStudentCourseManagement\StuCourCRUD\bin\Debug\net8.0\Serilog.Extensions.Logging.dll
+E:\aniket\c#\c#test\OAStudentCourseManagement\StuCourCRUD\bin\Debug\net8.0\Serilog.Formatting.Compact.dll
+E:\aniket\c#\c#test\OAStudentCourseManagement\StuCourCRUD\bin\Debug\net8.0\Serilog.Settings.Configuration.dll
+E:\aniket\c#\c#test\OAStudentCourseManagement\StuCourCRUD\bin\Debug\net8.0\Serilog.Sinks.Console.dll
+E:\aniket\c#\c#test\OAStudentCourseManagement\StuCourCRUD\bin\Debug\net8.0\Serilog.Sinks.Debug.dll
+E:\aniket\c#\c#test\OAStudentCourseManagement\StuCourCRUD\bin\Debug\net8.0\Serilog.Sinks.File.dll
+E:\aniket\c#\c#test\OAStudentCourseManagement\StuCourCRUD\obj\Debug\net8.0\StuCourCRUD.MvcApplicationPartsAssemblyInfo.cs

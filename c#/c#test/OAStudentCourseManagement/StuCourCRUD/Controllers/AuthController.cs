@@ -13,20 +13,25 @@ namespace WebAPI.Controllers
     public class AuthController : ControllerBase
     {
         private readonly IUserService _userService;
+        private readonly ILogger<AuthController> _logger;
 
-        public AuthController(IUserService userService)
+        public AuthController(IUserService userService, ILogger<AuthController> logger)
         {
             _userService = userService;
+            _logger = logger;
         }
 
         [HttpPost("login")]
         public IActionResult Login([FromBody] User login)
         {
+            _logger.LogInformation("Login attempt for user: {Username}", login.Username);
+
             var users = _userService.GetUsers();
             var user = users.FirstOrDefault(u => u.Username == login.Username);
 
             if (user == null || !PasswordHasher.Verify(login.Password, user.Password))
             {
+                _logger.LogWarning("Login failed for user: {Username}", login.Username);
                 return Unauthorized("Invalid credentials");
             }
 
@@ -39,7 +44,16 @@ namespace WebAPI.Controllers
             var identity = new ClaimsIdentity(claims, "MyCookieAuth");
             var principal = new ClaimsPrincipal(identity);
 
-            HttpContext.SignInAsync("MyCookieAuth", principal);
+            try
+            {
+                HttpContext.SignInAsync("MyCookieAuth", principal);
+                _logger.LogInformation("User logged in successfully: {Username}", user.Username);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error during sign-in for user: {Username}", user.Username);
+                return StatusCode(500, "Login failed due to server error");
+            }
 
             return Ok("Logged in successfully");
         }
@@ -48,7 +62,20 @@ namespace WebAPI.Controllers
         [Authorize]
         public IActionResult Logout()
         {
-            HttpContext.SignOutAsync("MyCookieAuth");
+            var username = User.Identity?.Name ?? "Unknown";
+            _logger.LogInformation("Logout requested by user: {Username}", username);
+
+            try
+            {
+                HttpContext.SignOutAsync("MyCookieAuth");
+                _logger.LogInformation("User logged out: {Username}", username);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error during logout for user: {Username}", username);
+                return StatusCode(500, "Logout failed due to server error");
+            }
+
             return Ok("Logged out");
         }
     }

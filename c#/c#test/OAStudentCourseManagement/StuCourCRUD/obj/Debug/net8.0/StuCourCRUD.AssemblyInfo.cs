@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("StuCourCRUD")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e5932bc31eb0a3cec2390996a0ef9b67ee0441d9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e47aa6c5bc55e19e20d8e87eb64b71341e2da5d6")]
 [assembly: System.Reflection.AssemblyProductAttribute("StuCourCRUD")]
 [assembly: System.Reflection.AssemblyTitleAttribute("StuCourCRUD")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

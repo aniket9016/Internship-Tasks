@@ -3,8 +3,19 @@ using Microsoft.EntityFrameworkCore;
 using Repo;
 using Data;
 using Services;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
+
+// Serilog Configuration
+Log.Logger = new LoggerConfiguration()
+    .ReadFrom.Configuration(builder.Configuration)
+    .Enrich.FromLogContext()
+    .WriteTo.Console()
+    .WriteTo.File("Logs/log.txt", rollingInterval: RollingInterval.Day)
+    .CreateLogger();
+
+builder.Host.UseSerilog();
 
 // Add services to the container.
 builder.Services.AddControllers();
@@ -35,7 +46,7 @@ builder.Services.AddAuthentication("MyCookieAuth")
         options.Cookie.Name = "MyAuthCookie";
         options.LoginPath = "/api/auth/login";
         options.LogoutPath = "/api/auth/logout";
-        options.ExpireTimeSpan = TimeSpan.FromMinutes(30); // session expiration
+        options.ExpireTimeSpan = TimeSpan.FromMinutes(30); 
         options.SlidingExpiration = true;
         options.Cookie.HttpOnly = true;
         options.Cookie.SameSite = SameSiteMode.Strict;
@@ -55,7 +66,7 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 // Add authentication and authorization middleware
-app.UseAuthentication(); // Important: must be before UseAuthorization
+app.UseAuthentication(); 
 app.UseAuthorization();
 
 app.MapControllers();
