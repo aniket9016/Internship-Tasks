@@ -1,0 +1,17 @@
+C:\Users\TGSUser131\source\repos\OAJWTBasedAuthentication\Service\bin\Debug\net8.0\Service.deps.json
+C:\Users\TGSUser131\source\repos\OAJWTBasedAuthentication\Service\bin\Debug\net8.0\Service.dll
+C:\Users\TGSUser131\source\repos\OAJWTBasedAuthentication\Service\bin\Debug\net8.0\Service.pdb
+C:\Users\TGSUser131\source\repos\OAJWTBasedAuthentication\Service\bin\Debug\net8.0\Data.dll
+C:\Users\TGSUser131\source\repos\OAJWTBasedAuthentication\Service\bin\Debug\net8.0\Repo.dll
+C:\Users\TGSUser131\source\repos\OAJWTBasedAuthentication\Service\bin\Debug\net8.0\Data.pdb
+C:\Users\TGSUser131\source\repos\OAJWTBasedAuthentication\Service\bin\Debug\net8.0\Repo.pdb
+C:\Users\TGSUser131\source\repos\OAJWTBasedAuthentication\Service\obj\Debug\net8.0\Service.csproj.AssemblyReference.cache
+C:\Users\TGSUser131\source\repos\OAJWTBasedAuthentication\Service\obj\Debug\net8.0\Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\TGSUser131\source\repos\OAJWTBasedAuthentication\Service\obj\Debug\net8.0\Service.AssemblyInfoInputs.cache
+C:\Users\TGSUser131\source\repos\OAJWTBasedAuthentication\Service\obj\Debug\net8.0\Service.AssemblyInfo.cs
+C:\Users\TGSUser131\source\repos\OAJWTBasedAuthentication\Service\obj\Debug\net8.0\Service.csproj.CoreCompileInputs.cache
+C:\Users\TGSUser131\source\repos\OAJWTBasedAuthentication\Service\obj\Debug\net8.0\Service.csproj.Up2Date
+C:\Users\TGSUser131\source\repos\OAJWTBasedAuthentication\Service\obj\Debug\net8.0\Service.dll
+C:\Users\TGSUser131\source\repos\OAJWTBasedAuthentication\Service\obj\Debug\net8.0\refint\Service.dll
+C:\Users\TGSUser131\source\repos\OAJWTBasedAuthentication\Service\obj\Debug\net8.0\Service.pdb
+C:\Users\TGSUser131\source\repos\OAJWTBasedAuthentication\Service\obj\Debug\net8.0\ref\Service.dll
