@@ -1,71 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "E:\\aniket\\c#\\c#test\\OAStudentCourseManagement\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{AEB4E5AC-9150-4328-96B0-4A67AA82797A}|StuCourCRUD\\StuCourCRUD.csproj|e:\\aniket\\c#\\c#test\\oastudentcoursemanagement\\stucourcrud\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AEB4E5AC-9150-4328-96B0-4A67AA82797A}|StuCourCRUD\\StuCourCRUD.csproj|solutionrelative:stucourcrud\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AEB4E5AC-9150-4328-96B0-4A67AA82797A}|StuCourCRUD\\StuCourCRUD.csproj|e:\\aniket\\c#\\c#test\\oastudentcoursemanagement\\stucourcrud\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{AEB4E5AC-9150-4328-96B0-4A67AA82797A}|StuCourCRUD\\StuCourCRUD.csproj|solutionrelative:stucourcrud\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AEB4E5AC-9150-4328-96B0-4A67AA82797A}|StuCourCRUD\\StuCourCRUD.csproj|e:\\aniket\\c#\\c#test\\oastudentcoursemanagement\\stucourcrud\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AEB4E5AC-9150-4328-96B0-4A67AA82797A}|StuCourCRUD\\StuCourCRUD.csproj|solutionrelative:stucourcrud\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "E:\\aniket\\c#\\c#test\\OAStudentCourseManagement\\StuCourCRUD\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "StuCourCRUD\\Controllers\\AuthController.cs",
-              "ToolTip": "E:\\aniket\\c#\\c#test\\OAStudentCourseManagement\\StuCourCRUD\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "StuCourCRUD\\Controllers\\AuthController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAADwAAAAcAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-07T11:15:01.258Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "E:\\aniket\\c#\\c#test\\OAStudentCourseManagement\\StuCourCRUD\\appsettings.json",
-              "RelativeDocumentMoniker": "StuCourCRUD\\appsettings.json",
-              "ToolTip": "E:\\aniket\\c#\\c#test\\OAStudentCourseManagement\\StuCourCRUD\\appsettings.json",
-              "RelativeToolTip": "StuCourCRUD\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-04-07T11:14:56.57Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "E:\\aniket\\c#\\c#test\\OAStudentCourseManagement\\StuCourCRUD\\Program.cs",
-              "RelativeDocumentMoniker": "StuCourCRUD\\Program.cs",
-              "ToolTip": "E:\\aniket\\c#\\c#test\\OAStudentCourseManagement\\StuCourCRUD\\Program.cs",
-              "RelativeToolTip": "StuCourCRUD\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAYAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-07T10:50:21.214Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
+      "DocumentGroups": []
     }
   ]
 }
