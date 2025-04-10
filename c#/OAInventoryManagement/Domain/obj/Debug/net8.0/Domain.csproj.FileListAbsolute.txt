@@ -1,0 +1,15 @@
+E:\aniket\c#\OAInventoryManagement\Domain\bin\Debug\net8.0\Domain.deps.json
+E:\aniket\c#\OAInventoryManagement\Domain\bin\Debug\net8.0\Domain.runtimeconfig.json
+E:\aniket\c#\OAInventoryManagement\Domain\bin\Debug\net8.0\Domain.dll
+E:\aniket\c#\OAInventoryManagement\Domain\bin\Debug\net8.0\Domain.pdb
+E:\aniket\c#\OAInventoryManagement\Domain\obj\Debug\net8.0\Domain.csproj.AssemblyReference.cache
+E:\aniket\c#\OAInventoryManagement\Domain\obj\Debug\net8.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+E:\aniket\c#\OAInventoryManagement\Domain\obj\Debug\net8.0\Domain.AssemblyInfoInputs.cache
+E:\aniket\c#\OAInventoryManagement\Domain\obj\Debug\net8.0\Domain.AssemblyInfo.cs
+E:\aniket\c#\OAInventoryManagement\Domain\obj\Debug\net8.0\Domain.csproj.CoreCompileInputs.cache
+E:\aniket\c#\OAInventoryManagement\Domain\obj\Debug\net8.0\Domain.sourcelink.json
+E:\aniket\c#\OAInventoryManagement\Domain\obj\Debug\net8.0\Domain.dll
+E:\aniket\c#\OAInventoryManagement\Domain\obj\Debug\net8.0\refint\Domain.dll
+E:\aniket\c#\OAInventoryManagement\Domain\obj\Debug\net8.0\Domain.pdb
+E:\aniket\c#\OAInventoryManagement\Domain\obj\Debug\net8.0\Domain.genruntimeconfig.cache
+E:\aniket\c#\OAInventoryManagement\Domain\obj\Debug\net8.0\ref\Domain.dll

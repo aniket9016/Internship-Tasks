@@ -36,8 +36,9 @@ namespace UserEmpCRUD.Controllers
         public IActionResult AddEmployee(Employee employee)
         {
             _employeeService.InsertEmployee(employee);
-            return CreatedAtAction(nameof(GetEmployee), new { id = employee.Id }, employee);
+            return Ok(employee);
         }
+
 
         [HttpPut("{id}")]
         public IActionResult UpdateEmployee(Guid id, Employee employee)

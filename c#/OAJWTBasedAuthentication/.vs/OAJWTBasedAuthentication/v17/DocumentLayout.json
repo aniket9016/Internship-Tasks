@@ -1,30 +1,10 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\TGSUser131\\source\\repos\\OAJWTBasedAuthentication\\",
+  "WorkspaceRootPath": "E:\\aniket\\c#\\OAJWTBasedAuthentication\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0E4860EB-B3BB-40EF-BCE1-5614D39B42A5}|Data\\Data.csproj|c:\\users\\tgsuser131\\source\\repos\\oajwtbasedauthentication\\data\\loginmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0E4860EB-B3BB-40EF-BCE1-5614D39B42A5}|Data\\Data.csproj|solutionrelative:data\\loginmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7F59050B-1B98-4511-AA55-AB6F1E0CF498}|UserEmpCRUD\\UserEmpCRUD.csproj|c:\\users\\tgsuser131\\source\\repos\\oajwtbasedauthentication\\userempcrud\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{7F59050B-1B98-4511-AA55-AB6F1E0CF498}|UserEmpCRUD\\UserEmpCRUD.csproj|e:\\aniket\\c#\\oajwtbasedauthentication\\userempcrud\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{7F59050B-1B98-4511-AA55-AB6F1E0CF498}|UserEmpCRUD\\UserEmpCRUD.csproj|solutionrelative:userempcrud\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7F59050B-1B98-4511-AA55-AB6F1E0CF498}|UserEmpCRUD\\UserEmpCRUD.csproj|c:\\users\\tgsuser131\\source\\repos\\oajwtbasedauthentication\\userempcrud\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7F59050B-1B98-4511-AA55-AB6F1E0CF498}|UserEmpCRUD\\UserEmpCRUD.csproj|solutionrelative:userempcrud\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8B406DA7-416A-4679-99D6-3D7768F7D18D}|Service\\Service.csproj|c:\\users\\tgsuser131\\source\\repos\\oajwtbasedauthentication\\service\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B406DA7-416A-4679-99D6-3D7768F7D18D}|Service\\Service.csproj|solutionrelative:service\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8B406DA7-416A-4679-99D6-3D7768F7D18D}|Service\\Service.csproj|c:\\users\\tgsuser131\\source\\repos\\oajwtbasedauthentication\\service\\itokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B406DA7-416A-4679-99D6-3D7768F7D18D}|Service\\Service.csproj|solutionrelative:service\\itokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0E4860EB-B3BB-40EF-BCE1-5614D39B42A5}|Data\\Data.csproj|c:\\users\\tgsuser131\\source\\repos\\oajwtbasedauthentication\\data\\response.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0E4860EB-B3BB-40EF-BCE1-5614D39B42A5}|Data\\Data.csproj|solutionrelative:data\\response.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,84 +14,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\TGSUser131\\source\\repos\\OAJWTBasedAuthentication\\UserEmpCRUD\\Program.cs",
-              "RelativeDocumentMoniker": "UserEmpCRUD\\Program.cs",
-              "ToolTip": "C:\\Users\\TGSUser131\\source\\repos\\OAJWTBasedAuthentication\\UserEmpCRUD\\Program.cs",
-              "RelativeToolTip": "UserEmpCRUD\\Program.cs",
-              "ViewState": "AQIAAGQAAAAAAAAAAAAAAHIAAAAKAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-08T12:15:32.425Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\TGSUser131\\source\\repos\\OAJWTBasedAuthentication\\UserEmpCRUD\\appsettings.json",
-              "RelativeDocumentMoniker": "UserEmpCRUD\\appsettings.json",
-              "ToolTip": "C:\\Users\\TGSUser131\\source\\repos\\OAJWTBasedAuthentication\\UserEmpCRUD\\appsettings.json",
-              "RelativeToolTip": "UserEmpCRUD\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAADAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-04-08T12:15:25.42Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "TokenService.cs",
-              "DocumentMoniker": "C:\\Users\\TGSUser131\\source\\repos\\OAJWTBasedAuthentication\\Service\\TokenService.cs",
-              "RelativeDocumentMoniker": "Service\\TokenService.cs",
-              "ToolTip": "C:\\Users\\TGSUser131\\source\\repos\\OAJWTBasedAuthentication\\Service\\TokenService.cs",
-              "RelativeToolTip": "Service\\TokenService.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAQwB0AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-08T12:14:29.633Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ITokenService.cs",
-              "DocumentMoniker": "C:\\Users\\TGSUser131\\source\\repos\\OAJWTBasedAuthentication\\Service\\ITokenService.cs",
-              "RelativeDocumentMoniker": "Service\\ITokenService.cs",
-              "ToolTip": "C:\\Users\\TGSUser131\\source\\repos\\OAJWTBasedAuthentication\\Service\\ITokenService.cs",
-              "RelativeToolTip": "Service\\ITokenService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-08T12:14:27.816Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Response.cs",
-              "DocumentMoniker": "C:\\Users\\TGSUser131\\source\\repos\\OAJWTBasedAuthentication\\Data\\Response.cs",
-              "RelativeDocumentMoniker": "Data\\Response.cs",
-              "ToolTip": "C:\\Users\\TGSUser131\\source\\repos\\OAJWTBasedAuthentication\\Data\\Response.cs",
-              "RelativeToolTip": "Data\\Response.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-08T12:14:24.368Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "LoginModel.cs",
-              "DocumentMoniker": "C:\\Users\\TGSUser131\\source\\repos\\OAJWTBasedAuthentication\\Data\\LoginModel.cs",
-              "RelativeDocumentMoniker": "Data\\LoginModel.cs",
-              "ToolTip": "C:\\Users\\TGSUser131\\source\\repos\\OAJWTBasedAuthentication\\Data\\LoginModel.cs",
-              "RelativeToolTip": "Data\\LoginModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAsAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-08T12:14:23.448Z",
+              "Title": "appsettings.json",
+              "DocumentMoniker": "E:\\aniket\\c#\\OAJWTBasedAuthentication\\UserEmpCRUD\\appsettings.json",
+              "RelativeDocumentMoniker": "UserEmpCRUD\\appsettings.json",
+              "ToolTip": "E:\\aniket\\c#\\OAJWTBasedAuthentication\\UserEmpCRUD\\appsettings.json",
+              "RelativeToolTip": "UserEmpCRUD\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-09T06:06:18.779Z",
               "EditorCaption": ""
             }
           ]

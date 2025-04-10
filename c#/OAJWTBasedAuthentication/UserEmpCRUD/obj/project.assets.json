@@ -4908,11 +4908,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\TGSUser131\\source\\repos\\OAJWTBasedAuthentication\\UserEmpCRUD\\UserEmpCRUD.csproj",
+      "projectUniqueName": "E:\\aniket\\c#\\OAJWTBasedAuthentication\\UserEmpCRUD\\UserEmpCRUD.csproj",
       "projectName": "UserEmpCRUD",
-      "projectPath": "C:\\Users\\TGSUser131\\source\\repos\\OAJWTBasedAuthentication\\UserEmpCRUD\\UserEmpCRUD.csproj",
+      "projectPath": "E:\\aniket\\c#\\OAJWTBasedAuthentication\\UserEmpCRUD\\UserEmpCRUD.csproj",
       "packagesPath": "C:\\Users\\TGSUser131\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\TGSUser131\\source\\repos\\OAJWTBasedAuthentication\\UserEmpCRUD\\obj\\",
+      "outputPath": "E:\\aniket\\c#\\OAJWTBasedAuthentication\\UserEmpCRUD\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -4935,14 +4935,14 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\TGSUser131\\source\\repos\\OAJWTBasedAuthentication\\Data\\Data.csproj": {
-              "projectPath": "C:\\Users\\TGSUser131\\source\\repos\\OAJWTBasedAuthentication\\Data\\Data.csproj"
+            "E:\\aniket\\c#\\OAJWTBasedAuthentication\\Data\\Data.csproj": {
+              "projectPath": "E:\\aniket\\c#\\OAJWTBasedAuthentication\\Data\\Data.csproj"
             },
-            "C:\\Users\\TGSUser131\\source\\repos\\OAJWTBasedAuthentication\\Repo\\Repo.csproj": {
-              "projectPath": "C:\\Users\\TGSUser131\\source\\repos\\OAJWTBasedAuthentication\\Repo\\Repo.csproj"
+            "E:\\aniket\\c#\\OAJWTBasedAuthentication\\Repo\\Repo.csproj": {
+              "projectPath": "E:\\aniket\\c#\\OAJWTBasedAuthentication\\Repo\\Repo.csproj"
             },
-            "C:\\Users\\TGSUser131\\source\\repos\\OAJWTBasedAuthentication\\Service\\Service.csproj": {
-              "projectPath": "C:\\Users\\TGSUser131\\source\\repos\\OAJWTBasedAuthentication\\Service\\Service.csproj"
+            "E:\\aniket\\c#\\OAJWTBasedAuthentication\\Service\\Service.csproj": {
+              "projectPath": "E:\\aniket\\c#\\OAJWTBasedAuthentication\\Service\\Service.csproj"
             }
           }
         }
