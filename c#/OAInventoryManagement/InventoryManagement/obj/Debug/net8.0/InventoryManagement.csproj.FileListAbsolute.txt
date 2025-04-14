@@ -1,5 +1,6 @@
 E:\aniket\c#\OAInventoryManagement\InventoryManagement\bin\Debug\net8.0\appsettings.Development.json
 E:\aniket\c#\OAInventoryManagement\InventoryManagement\bin\Debug\net8.0\appsettings.json
+E:\aniket\c#\OAInventoryManagement\InventoryManagement\bin\Debug\net8.0\InventoryManagement.staticwebassets.runtime.json
 E:\aniket\c#\OAInventoryManagement\InventoryManagement\bin\Debug\net8.0\InventoryManagement.exe
 E:\aniket\c#\OAInventoryManagement\InventoryManagement\bin\Debug\net8.0\InventoryManagement.deps.json
 E:\aniket\c#\OAInventoryManagement\InventoryManagement\bin\Debug\net8.0\InventoryManagement.runtimeconfig.json
@@ -30,6 +31,7 @@ E:\aniket\c#\OAInventoryManagement\InventoryManagement\bin\Debug\net8.0\Microsof
 E:\aniket\c#\OAInventoryManagement\InventoryManagement\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
 E:\aniket\c#\OAInventoryManagement\InventoryManagement\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll
 E:\aniket\c#\OAInventoryManagement\InventoryManagement\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+E:\aniket\c#\OAInventoryManagement\InventoryManagement\bin\Debug\net8.0\Microsoft.Extensions.ObjectPool.dll
 E:\aniket\c#\OAInventoryManagement\InventoryManagement\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
 E:\aniket\c#\OAInventoryManagement\InventoryManagement\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll
 E:\aniket\c#\OAInventoryManagement\InventoryManagement\bin\Debug\net8.0\Microsoft.Identity.Client.dll

@@ -1,5 +1,12 @@
+using Domain.Models;
 using Microsoft.EntityFrameworkCore;
+using Repository.Repo;
 using Repository.Utilities;
+using Service.Custom.CategorySer;
+using Service.Custom.CustomerSer;
+using Service.Custom.ItemSer;
+using Service.Custom.SupplierSer;
+using Service.Custom.UserTypeSer;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,6 +21,15 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DevConnection")));
 #endregion
+// Register Repositories
+builder.Services.AddScoped(typeof(IRepositoryCommon<>), typeof(RepositoryCommon<>));
+
+// Register Services
+builder.Services.AddScoped<ICategoryService, CategoryService>();
+builder.Services.AddScoped<ICustomerService, CustomerService>();
+builder.Services.AddScoped<ISupplierService, SupplierService>();
+builder.Services.AddScoped<IUserTypeService, UserTypeService>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

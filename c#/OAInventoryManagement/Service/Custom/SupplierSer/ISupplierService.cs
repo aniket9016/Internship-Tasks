@@ -1,6 +1,8 @@
-﻿using Domain.ViewModel;
+﻿using Domain.Models;
+using Domain.ViewModel;
 using System;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 using System.Threading.Tasks;
 
 namespace Service.Custom.SupplierSer
@@ -9,8 +11,10 @@ namespace Service.Custom.SupplierSer
     {
         Task<ICollection<UserViewModel>> GetAll();
         Task<UserViewModel?> GetById(Guid id);
-        Task<bool> Insert(UserInsertModel model);
-        Task<bool> Update(UserUpdateModel model);
+        Task<bool> Insert(UserInsertModel model, string photoFileName);
+        Task<bool> Update(UserUpdateModel model, string photoFileName);
         Task<bool> Delete(Guid id);
+        Task<User> Find(Expression<Func<User, bool>> match);
+        Task<ICollection<User>> FindAll(Expression<Func<User, bool>> match);
     }
 }

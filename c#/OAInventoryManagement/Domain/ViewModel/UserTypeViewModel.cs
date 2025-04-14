@@ -17,6 +17,7 @@ namespace Domain.ViewModel
         public string TypeName { get; set; }
     }
 
+
     public class UserTypeUpdateModel: UserTypeInsertModel
     {
         public Guid Id { get; set; }

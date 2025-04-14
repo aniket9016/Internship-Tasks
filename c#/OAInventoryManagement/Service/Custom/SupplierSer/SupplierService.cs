@@ -1,11 +1,11 @@
 ﻿using Domain.Models;
 using Domain.ViewModel;
 using Repository.Repo;
-using Microsoft.AspNetCore.Http;
+using Service.Custom.UserTypeSer;
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Threading.Tasks;
 
 namespace Service.Custom.SupplierSer
@@ -13,91 +13,107 @@ namespace Service.Custom.SupplierSer
     public class SupplierService : ISupplierService
     {
         private readonly IRepositoryCommon<User> _repository;
+        private readonly IUserTypeService _userTypeService;
 
-        public SupplierService(IRepositoryCommon<User> repository)
+        public SupplierService(IRepositoryCommon<User> repository, IUserTypeService userTypeService)
         {
             _repository = repository;
+            _userTypeService = userTypeService;
         }
 
         public async Task<ICollection<UserViewModel>> GetAll()
         {
-            var users = await _repository.GetAll();
-            return users.Select(u => new UserViewModel
+            var suppliers = await _repository.FindAll(u => u.UserTypes.TypeName == "supplier");
+            return suppliers.Select(u => new UserViewModel
             {
                 UserId = u.UserId,
                 UserName = u.UserName,
                 Email = u.Email,
+                Password = u.Password,
                 Address = u.Address,
                 PhoneNumber = u.PhoneNumber,
-                Photo = u.Photo
+                Photo = u.Photo,
+                UserTypeViewModels = u.UserTypes != null
+                    ? new List<UserTypeViewModel>
+                    {
+                        new UserTypeViewModel
+                        {
+                            Id = u.UserTypes.Id,
+                            TypeName = u.UserTypes.TypeName
+                        }
+                    }
+                    : new List<UserTypeViewModel>()
             }).ToList();
         }
 
         public async Task<UserViewModel?> GetById(Guid id)
         {
             var user = await _repository.Get(id);
-            if (user == null) return null;
+            if (user == null || user.UserTypes?.TypeName != "supplier") return null;
 
             return new UserViewModel
             {
                 UserId = user.UserId,
                 UserName = user.UserName,
                 Email = user.Email,
+                Password = user.Password,
                 Address = user.Address,
                 PhoneNumber = user.PhoneNumber,
-                Photo = user.Photo
+                Photo = user.Photo,
+                UserTypeViewModels = user.UserTypes != null
+                    ? new List<UserTypeViewModel>
+                    {
+                        new UserTypeViewModel
+                        {
+                            Id = user.UserTypes.Id,
+                            TypeName = user.UserTypes.TypeName
+                        }
+                    }
+                    : new List<UserTypeViewModel>()
             };
         }
 
-        public async Task<bool> Insert(UserInsertModel model)
+        public async Task<bool> Insert(UserInsertModel model, string photoFileName)
         {
-            string photoPath = null;
-            if (model.Photo != null)
-            {
-                var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "images", model.Photo.FileName);
-                using (var stream = new FileStream(filePath, FileMode.Create))
-                {
-                    await model.Photo.CopyToAsync(stream);
-                }
-                photoPath = filePath;
-            }
+            var supplierType = (await _userTypeService.GetAll())
+                                .FirstOrDefault(x => x.TypeName == "supplier");
+
+            if (supplierType == null) return false;
 
             var user = new User
             {
-                UserId = Guid.NewGuid().ToString(),
+                Id = Guid.NewGuid(),
+                UserId = model.UserId,
                 UserName = model.UserName,
                 Email = model.Email,
                 Password = model.Password,
                 Address = model.Address,
                 PhoneNumber = model.PhoneNumber,
-                Photo = photoPath
+                Photo = photoFileName,
+                CreatedAt = DateTime.Now,
+                UpdatedAt = DateTime.Now,
+                CreatedBy = "System",
+                UpdatedBy = "System",
+                IsActive = true,
+                UserTypeId = supplierType.Id
             };
 
             return await _repository.Insert(user);
         }
 
-        public async Task<bool> Update(UserUpdateModel model)
+        public async Task<bool> Update(UserUpdateModel model, string photoFileName)
         {
             var user = await _repository.Get(model.Id);
-            if (user == null) return false;
-
-            string photoPath = user.Photo;
-            if (model.Photo != null)
-            {
-                var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "images", model.Photo.FileName);
-                using (var stream = new FileStream(filePath, FileMode.Create))
-                {
-                    await model.Photo.CopyToAsync(stream);
-                }
-                photoPath = filePath;
-            }
+            if (user == null || user.UserTypes?.TypeName != "supplier") return false;
 
             user.UserName = model.UserName;
             user.Email = model.Email;
             user.Password = model.Password;
             user.Address = model.Address;
             user.PhoneNumber = model.PhoneNumber;
-            user.Photo = photoPath;
+            user.Photo = photoFileName;
+            user.UpdatedAt = DateTime.Now;
+            user.UpdatedBy = "System";
 
             return await _repository.Update(user);
         }
@@ -105,9 +121,18 @@ namespace Service.Custom.SupplierSer
         public async Task<bool> Delete(Guid id)
         {
             var user = await _repository.Get(id);
-            if (user == null) return false;
-
+            if (user == null || user.UserTypes?.TypeName != "supplier") return false;
             return await _repository.Delete(user);
+        }
+
+        public async Task<User> Find(Expression<Func<User, bool>> match)
+        {
+            return await _repository.Find(match);
+        }
+
+        public async Task<ICollection<User>> FindAll(Expression<Func<User, bool>> match)
+        {
+            return await _repository.FindAll(match);
         }
     }
 }

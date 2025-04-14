@@ -45,11 +45,16 @@ namespace Service.Custom.CategorySer
             {
                 Id = Guid.NewGuid(),
                 CategoryName = model.CategoryName,
-                CreatedAt = DateTime.Now
+                CreatedAt = DateTime.Now,
+                UpdatedAt = DateTime.Now,
+                CreatedBy = "System",
+                UpdatedBy = "System",
+                IsActive = true
             };
 
             return await _repository.Insert(entity);
         }
+
 
         public async Task<bool> Update(CategoryUpdateModel model)
         {
@@ -57,7 +62,6 @@ namespace Service.Custom.CategorySer
             if (entity == null) return false;
 
             entity.CategoryName = model.CategoryName;
-            entity.UpdatedAt = DateTime.Now;
 
             return await _repository.Update(entity);
         }

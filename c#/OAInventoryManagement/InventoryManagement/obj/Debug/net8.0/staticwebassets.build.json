@@ -1,11 +1,19 @@
 {
   "Version": 1,
-  "Hash": "vCvGgnYZVK2p+rzFbLB4pMAwnkJ4MSNQvrl0PzcjbbQ=",
+  "Hash": "DLkKOUUO39797AoI3TRmRYbmUy2sYuJw+CB1KkKCYLQ=",
   "Source": "InventoryManagement",
   "BasePath": "_content/InventoryManagement",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "InventoryManagement\\wwwroot",
+      "Source": "InventoryManagement",
+      "ContentRoot": "E:\\aniket\\c#\\OAInventoryManagement\\InventoryManagement\\wwwroot\\",
+      "BasePath": "_content/InventoryManagement",
+      "Pattern": "**"
+    }
+  ],
   "Assets": []
 }
