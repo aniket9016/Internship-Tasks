@@ -33,16 +33,14 @@ namespace Service.Custom.SupplierSer
                 Address = u.Address,
                 PhoneNumber = u.PhoneNumber,
                 Photo = u.Photo,
-                UserTypeViewModels = u.UserTypes != null
-                    ? new List<UserTypeViewModel>
+                UserTypeViewModels = new List<UserTypeViewModel>
+                {
+                    new UserTypeViewModel
                     {
-                        new UserTypeViewModel
-                        {
-                            Id = u.UserTypes.Id,
-                            TypeName = u.UserTypes.TypeName
-                        }
+                        Id = u.UserTypes.Id,
+                        TypeName = u.UserTypes.TypeName
                     }
-                    : new List<UserTypeViewModel>()
+                }
             }).ToList();
         }
 
@@ -60,25 +58,24 @@ namespace Service.Custom.SupplierSer
                 Address = user.Address,
                 PhoneNumber = user.PhoneNumber,
                 Photo = user.Photo,
-                UserTypeViewModels = user.UserTypes != null
-                    ? new List<UserTypeViewModel>
+                UserTypeViewModels = new List<UserTypeViewModel>
+                {
+                    new UserTypeViewModel
                     {
-                        new UserTypeViewModel
-                        {
-                            Id = user.UserTypes.Id,
-                            TypeName = user.UserTypes.TypeName
-                        }
+                        Id = user.UserTypes.Id,
+                        TypeName = user.UserTypes.TypeName
                     }
-                    : new List<UserTypeViewModel>()
+                }
             };
         }
 
         public async Task<bool> Insert(UserInsertModel model, string photoFileName)
         {
             var supplierType = (await _userTypeService.GetAll())
-                                .FirstOrDefault(x => x.TypeName == "supplier");
+                                .FirstOrDefault(x => x.TypeName.ToLower() == "supplier");
 
-            if (supplierType == null) return false;
+            if (supplierType == null)
+                return false;
 
             var user = new User
             {
@@ -122,6 +119,7 @@ namespace Service.Custom.SupplierSer
         {
             var user = await _repository.Get(id);
             if (user == null || user.UserTypes?.TypeName != "supplier") return false;
+
             return await _repository.Delete(user);
         }
 

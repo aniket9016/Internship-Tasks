@@ -3,11 +3,13 @@ using Service.Custom.CategorySer;
 using Domain.ViewModel;
 using System;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 
 namespace InventoryManagement.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
+    [Authorize]
     public class CategoryController : ControllerBase
     {
         private readonly ICategoryService _categoryService;

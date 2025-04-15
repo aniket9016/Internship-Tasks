@@ -34,23 +34,17 @@ namespace Service.Custom.CustomerSer
                 Address = u.Address,
                 PhoneNumber = u.PhoneNumber,
                 Photo = u.Photo,
-                UserTypeViewModels = u.UserTypes != null
-                    ? new List<UserTypeViewModel>
-                    {
-                        new UserTypeViewModel
-                        {
-                            Id = u.UserTypes.Id,
-                            TypeName = u.UserTypes.TypeName
-                        }
-                    }
-                    : new List<UserTypeViewModel>()
+                UserTypeViewModels = new List<UserTypeViewModel>
+            {
+                new UserTypeViewModel { Id = u.UserTypes.Id, TypeName = u.UserTypes.TypeName }
+            }
             }).ToList();
         }
 
         public async Task<UserViewModel?> GetById(Guid id)
         {
             var user = await _repository.Get(id);
-            if (user == null || user.UserTypes?.TypeName != "customer") return null;
+            if (user?.UserTypes?.TypeName != "customer") return null;
 
             return new UserViewModel
             {
@@ -61,23 +55,17 @@ namespace Service.Custom.CustomerSer
                 Address = user.Address,
                 PhoneNumber = user.PhoneNumber,
                 Photo = user.Photo,
-                UserTypeViewModels = user.UserTypes != null
-                    ? new List<UserTypeViewModel>
-                    {
-                        new UserTypeViewModel
-                        {
-                            Id = user.UserTypes.Id,
-                            TypeName = user.UserTypes.TypeName
-                        }
-                    }
-                    : new List<UserTypeViewModel>()
+                UserTypeViewModels = new List<UserTypeViewModel>
+            {
+                new UserTypeViewModel { Id = user.UserTypes.Id, TypeName = user.UserTypes.TypeName }
+            }
             };
         }
 
         public async Task<bool> Insert(UserInsertModel model, string photoFileName)
         {
             var customerType = (await _userTypeService.GetAll())
-                                .FirstOrDefault(x => x.TypeName == "customer");
+                                .FirstOrDefault(x => x.TypeName.ToLower() == "customer");
 
             if (customerType == null) return false;
 
@@ -123,6 +111,7 @@ namespace Service.Custom.CustomerSer
         {
             var user = await _repository.Get(id);
             if (user == null || user.UserTypes?.TypeName != "customer") return false;
+
             return await _repository.Delete(user);
         }
 
@@ -136,4 +125,5 @@ namespace Service.Custom.CustomerSer
             return await _repository.FindAll(match);
         }
     }
+
 }

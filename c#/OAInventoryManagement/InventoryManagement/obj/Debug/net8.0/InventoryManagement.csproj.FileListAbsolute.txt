@@ -9,7 +9,9 @@ E:\aniket\c#\OAInventoryManagement\InventoryManagement\bin\Debug\net8.0\Inventor
 E:\aniket\c#\OAInventoryManagement\InventoryManagement\bin\Debug\net8.0\Azure.Core.dll
 E:\aniket\c#\OAInventoryManagement\InventoryManagement\bin\Debug\net8.0\Azure.Identity.dll
 E:\aniket\c#\OAInventoryManagement\InventoryManagement\bin\Debug\net8.0\Humanizer.dll
+E:\aniket\c#\OAInventoryManagement\InventoryManagement\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 E:\aniket\c#\OAInventoryManagement\InventoryManagement\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
+E:\aniket\c#\OAInventoryManagement\InventoryManagement\bin\Debug\net8.0\Microsoft.Bcl.Memory.dll
 E:\aniket\c#\OAInventoryManagement\InventoryManagement\bin\Debug\net8.0\Microsoft.Build.Locator.dll
 E:\aniket\c#\OAInventoryManagement\InventoryManagement\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
 E:\aniket\c#\OAInventoryManagement\InventoryManagement\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll

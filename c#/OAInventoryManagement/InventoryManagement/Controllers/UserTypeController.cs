@@ -3,11 +3,13 @@ using Service.Custom.UserTypeSer;
 using Domain.ViewModel;
 using System;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 
 namespace InventoryManagement.Controllers
 {
-    [ApiController]
+    [Authorize]
     [Route("api/[controller]")]
+    [ApiController]
     public class UserTypeController : ControllerBase
     {
         private readonly IUserTypeService _userTypeService;

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "DLkKOUUO39797AoI3TRmRYbmUy2sYuJw+CB1KkKCYLQ=",
+  "Hash": "qU4GgNqiSJohd8hVRenSU/8cAgFwuFlIbEFzjYEJ9Ts=",
   "Source": "InventoryManagement",
   "BasePath": "_content/InventoryManagement",
   "Mode": "Default",
@@ -15,5 +15,63 @@
       "Pattern": "**"
     }
   ],
-  "Assets": []
+  "Assets": [
+    {
+      "Identity": "E:\\aniket\\c#\\OAInventoryManagement\\InventoryManagement\\wwwroot\\images\\08d8d6e6-79a9-417c-9d35-01c8a97a3756.png",
+      "SourceId": "InventoryManagement",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\aniket\\c#\\OAInventoryManagement\\InventoryManagement\\wwwroot\\",
+      "BasePath": "_content/InventoryManagement",
+      "RelativePath": "images/08d8d6e6-79a9-417c-9d35-01c8a97a3756.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\08d8d6e6-79a9-417c-9d35-01c8a97a3756.png"
+    },
+    {
+      "Identity": "E:\\aniket\\c#\\OAInventoryManagement\\InventoryManagement\\wwwroot\\images\\4efba237-3ceb-4d65-acf2-9fe7a6bdba5b.png",
+      "SourceId": "InventoryManagement",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\aniket\\c#\\OAInventoryManagement\\InventoryManagement\\wwwroot\\",
+      "BasePath": "_content/InventoryManagement",
+      "RelativePath": "images/4efba237-3ceb-4d65-acf2-9fe7a6bdba5b.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\4efba237-3ceb-4d65-acf2-9fe7a6bdba5b.png"
+    },
+    {
+      "Identity": "E:\\aniket\\c#\\OAInventoryManagement\\InventoryManagement\\wwwroot\\images\\77bfb5d4-6e5e-4b5b-8271-042c9f3e7f23.png",
+      "SourceId": "InventoryManagement",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\aniket\\c#\\OAInventoryManagement\\InventoryManagement\\wwwroot\\",
+      "BasePath": "_content/InventoryManagement",
+      "RelativePath": "images/77bfb5d4-6e5e-4b5b-8271-042c9f3e7f23.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\77bfb5d4-6e5e-4b5b-8271-042c9f3e7f23.png"
+    }
+  ]
 }

@@ -30,7 +30,7 @@ namespace Domain.ViewModel
         public string Address { get; set; }
         public string PhoneNumber { get; set; }
         public IFormFile Photo { get; set; }
-        public List<UserTypeViewModel> UserTypeViewModels { get; set; }
+        //public List<UserTypeViewModel> UserTypeViewModels { get; set; }
 
     }
 
