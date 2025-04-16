@@ -7,7 +7,6 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace InventoryManagement.Controllers
 {
-    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class UserTypeController : ControllerBase

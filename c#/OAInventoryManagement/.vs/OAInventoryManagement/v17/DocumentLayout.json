@@ -32,9 +32,10 @@
               "RelativeDocumentMoniker": "InventoryManagement\\appsettings.json",
               "ToolTip": "E:\\aniket\\c#\\OAInventoryManagement\\InventoryManagement\\appsettings.json",
               "RelativeToolTip": "InventoryManagement\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAANAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-04-15T12:36:18.75Z"
+              "WhenOpened": "2025-04-16T10:06:40.953Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -44,9 +45,9 @@
               "RelativeDocumentMoniker": "InventoryManagement\\Program.cs",
               "ToolTip": "E:\\aniket\\c#\\OAInventoryManagement\\InventoryManagement\\Program.cs",
               "RelativeToolTip": "InventoryManagement\\Program.cs",
-              "ViewState": "AQIAADYAAAAAAAAAAAAAAEMAAAA5AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAIYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-15T12:08:10.674Z",
+              "WhenOpened": "2025-04-16T09:46:49.265Z",
               "EditorCaption": ""
             },
             {
@@ -57,9 +58,9 @@
               "RelativeDocumentMoniker": "InventoryManagement\\Controllers\\LoginController.cs",
               "ToolTip": "E:\\aniket\\c#\\OAInventoryManagement\\InventoryManagement\\Controllers\\LoginController.cs",
               "RelativeToolTip": "InventoryManagement\\Controllers\\LoginController.cs",
-              "ViewState": "AQIAACIAAAAAAAAAAAAgwDEAAAA/AAAA",
+              "ViewState": "AQIAAJkAAAAAAAAAAAAAAK8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-15T12:03:57.115Z",
+              "WhenOpened": "2025-04-16T09:39:09.608Z",
               "EditorCaption": ""
             }
           ]

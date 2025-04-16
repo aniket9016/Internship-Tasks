@@ -18,7 +18,8 @@ namespace Domain.ViewModel
         public string Address { get; set; }
         public string PhoneNumber { get; set; }
         public string? Photo { get; set; }
-        public List<UserTypeViewModel> UserTypeViewModels { get; set; }
+        public string? UserType { get; set; }
+        public List<UserTypeViewModel> UserTypeViewModels = new List<UserTypeViewModel>();
     }
 
     public class UserInsertModel

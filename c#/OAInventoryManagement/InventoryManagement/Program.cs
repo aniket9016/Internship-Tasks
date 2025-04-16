@@ -1,5 +1,4 @@
 using Domain.Models;
-using System.Net;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -13,9 +12,20 @@ using Service.Custom.SupplierSer;
 using Service.Custom.UserTypeSer;
 using System.Text;
 using Service.Custom.TokenSer;
-using static System.Runtime.InteropServices.JavaScript.JSType;
+using Microsoft.Extensions.Logging;
+using Serilog;
+using System.Net;
 
 var builder = WebApplication.CreateBuilder(args);
+
+// Setup Serilog
+Log.Logger = new LoggerConfiguration()
+    .WriteTo.Console()   // Log to console
+    .WriteTo.File("logs/myapp.txt", rollingInterval: RollingInterval.Day)  // Log to file with daily rolling
+    .CreateLogger();
+
+// Use Serilog for logging
+builder.Host.UseSerilog();
 
 // Add services to the container.
 builder.Services.AddControllers();
@@ -101,7 +111,9 @@ builder.Services.AddScoped<ICustomerService, CustomerService>();
 builder.Services.AddScoped<ISupplierService, SupplierService>();
 builder.Services.AddScoped<IUserTypeService, UserTypeService>();
 builder.Services.AddScoped<ITokenService, TokenService>();
+builder.Services.AddScoped<IItemService, ItemService>();
 builder.Services.AddAuthorization();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

@@ -24,27 +24,41 @@ namespace Service.Custom.CustomerSer
 
         public async Task<ICollection<UserViewModel>> GetAll()
         {
-            var customers = await _repository.FindAll(u => u.UserTypes.TypeName == "customer");
-            return customers.Select(u => new UserViewModel
+            var customerType = await _userTypeService.Find(x => x.TypeName.ToLower() == "customer");
+            if (customerType == null) return new List<UserViewModel>();
+
+            var users = await _repository.FindAll(x => x.UserTypeId == customerType.Id);
+
+            var result = users.Select(user => new UserViewModel
             {
-                UserId = u.UserId,
-                UserName = u.UserName,
-                Email = u.Email,
-                Password = u.Password,
-                Address = u.Address,
-                PhoneNumber = u.PhoneNumber,
-                Photo = u.Photo,
+                UserId = user.UserId,
+                UserName = user.UserName,
+                Email = user.Email,
+                Password = user.Password,
+                Address = user.Address,
+                PhoneNumber = user.PhoneNumber,
+                Photo = user.Photo,
+                UserType = customerType.TypeName,
                 UserTypeViewModels = new List<UserTypeViewModel>
-            {
-                new UserTypeViewModel { Id = u.UserTypes.Id, TypeName = u.UserTypes.TypeName }
-            }
+                {
+                    new UserTypeViewModel
+                    {
+                        Id = customerType.Id,
+                        TypeName = customerType.TypeName
+                    }
+                }
             }).ToList();
+
+            return result;
         }
 
         public async Task<UserViewModel?> GetById(Guid id)
         {
-            var user = await _repository.Get(id);
-            if (user?.UserTypes?.TypeName != "customer") return null;
+            var customerType = await _userTypeService.Find(x => x.TypeName.ToLower() == "customer");
+            if (customerType == null) return null;
+
+            var user = await _repository.Find(x => x.Id == id && x.UserTypeId == customerType.Id);
+            if (user == null) return null;
 
             return new UserViewModel
             {
@@ -55,18 +69,21 @@ namespace Service.Custom.CustomerSer
                 Address = user.Address,
                 PhoneNumber = user.PhoneNumber,
                 Photo = user.Photo,
+                UserType = customerType.TypeName,
                 UserTypeViewModels = new List<UserTypeViewModel>
-            {
-                new UserTypeViewModel { Id = user.UserTypes.Id, TypeName = user.UserTypes.TypeName }
-            }
+                {
+                    new UserTypeViewModel
+                    {
+                        Id = customerType.Id,
+                        TypeName = customerType.TypeName
+                    }
+                }
             };
         }
 
         public async Task<bool> Insert(UserInsertModel model, string photoFileName)
         {
-            var customerType = (await _userTypeService.GetAll())
-                                .FirstOrDefault(x => x.TypeName.ToLower() == "customer");
-
+            var customerType = await _userTypeService.Find(x => x.TypeName.ToLower() == "customer");
             if (customerType == null) return false;
 
             var user = new User
@@ -81,9 +98,6 @@ namespace Service.Custom.CustomerSer
                 Photo = photoFileName,
                 CreatedAt = DateTime.Now,
                 UpdatedAt = DateTime.Now,
-                CreatedBy = "System",
-                UpdatedBy = "System",
-                IsActive = true,
                 UserTypeId = customerType.Id
             };
 
@@ -92,9 +106,12 @@ namespace Service.Custom.CustomerSer
 
         public async Task<bool> Update(UserUpdateModel model, string photoFileName)
         {
-            var user = await _repository.Get(model.Id);
-            if (user == null || user.UserTypes?.TypeName != "customer") return false;
+            var customerType = await _userTypeService.Find(x => x.TypeName.ToLower() == "customer");
+            if (customerType == null) return false;
 
+            var user = await _repository.Find(x => x.Id == model.Id && x.UserTypeId == customerType.Id);
+            if (user == null) return false;
+            user.UserId = model.UserId;
             user.UserName = model.UserName;
             user.Email = model.Email;
             user.Password = model.Password;
@@ -102,28 +119,31 @@ namespace Service.Custom.CustomerSer
             user.PhoneNumber = model.PhoneNumber;
             user.Photo = photoFileName;
             user.UpdatedAt = DateTime.Now;
-            user.UpdatedBy = "System";
-
             return await _repository.Update(user);
         }
 
         public async Task<bool> Delete(Guid id)
         {
-            var user = await _repository.Get(id);
-            if (user == null || user.UserTypes?.TypeName != "customer") return false;
+            var customerType = await _userTypeService.Find(x => x.TypeName.ToLower() == "customer");
+            if (customerType == null) return false;
+
+            var user = await _repository.Find(x => x.Id == id && x.UserTypeId == customerType.Id);
+            if (user == null) return false;
 
             return await _repository.Delete(user);
         }
 
         public async Task<User> Find(Expression<Func<User, bool>> match)
         {
-            return await _repository.Find(match);
+            var customerType = await _userTypeService.Find(x => x.TypeName.ToLower() == "customer");
+            return await _repository.Find(x => x.UserTypeId == customerType.Id && match.Compile().Invoke(x));
         }
 
         public async Task<ICollection<User>> FindAll(Expression<Func<User, bool>> match)
         {
-            return await _repository.FindAll(match);
+            var customerType = await _userTypeService.Find(x => x.TypeName.ToLower() == "customer");
+            var allCustomers = await _repository.FindAll(x => x.UserTypeId == customerType.Id);
+            return allCustomers.Where(match.Compile()).ToList();
         }
     }
-
 }

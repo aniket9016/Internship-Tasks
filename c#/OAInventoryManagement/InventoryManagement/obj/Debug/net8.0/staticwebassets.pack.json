@@ -5,12 +5,24 @@
       "PackagePath": "staticwebassets\\images\\08d8d6e6-79a9-417c-9d35-01c8a97a3756.png"
     },
     {
+      "Id": "E:\\aniket\\c#\\OAInventoryManagement\\InventoryManagement\\wwwroot\\images\\1d667b9e-2e14-4dac-988f-88e87f72898a.png",
+      "PackagePath": "staticwebassets\\images\\1d667b9e-2e14-4dac-988f-88e87f72898a.png"
+    },
+    {
       "Id": "E:\\aniket\\c#\\OAInventoryManagement\\InventoryManagement\\wwwroot\\images\\4efba237-3ceb-4d65-acf2-9fe7a6bdba5b.png",
       "PackagePath": "staticwebassets\\images\\4efba237-3ceb-4d65-acf2-9fe7a6bdba5b.png"
     },
     {
       "Id": "E:\\aniket\\c#\\OAInventoryManagement\\InventoryManagement\\wwwroot\\images\\77bfb5d4-6e5e-4b5b-8271-042c9f3e7f23.png",
       "PackagePath": "staticwebassets\\images\\77bfb5d4-6e5e-4b5b-8271-042c9f3e7f23.png"
+    },
+    {
+      "Id": "E:\\aniket\\c#\\OAInventoryManagement\\InventoryManagement\\wwwroot\\images\\9ab1838b-2040-494b-84c1-cb8412953c6f.png",
+      "PackagePath": "staticwebassets\\images\\9ab1838b-2040-494b-84c1-cb8412953c6f.png"
+    },
+    {
+      "Id": "E:\\aniket\\c#\\OAInventoryManagement\\InventoryManagement\\wwwroot\\images\\e355bdb0-ae3b-4ffa-83bc-3d07846ee6b5.png",
+      "PackagePath": "staticwebassets\\images\\e355bdb0-ae3b-4ffa-83bc-3d07846ee6b5.png"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.InventoryManagement.Microsoft.AspNetCore.StaticWebAssets.props",

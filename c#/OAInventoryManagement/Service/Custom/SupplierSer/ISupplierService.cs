@@ -9,7 +9,7 @@ namespace Service.Custom.SupplierSer
 {
     public interface ISupplierService
     {
-        Task<ICollection<UserViewModel>> GetAll();
+        Task<IEnumerable<UserViewModel>> GetAll();
         Task<UserViewModel?> GetById(Guid id);
         Task<bool> Insert(UserInsertModel model, string photoFileName);
         Task<bool> Update(UserUpdateModel model, string photoFileName);

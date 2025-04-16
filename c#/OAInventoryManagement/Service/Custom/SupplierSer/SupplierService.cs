@@ -13,41 +13,53 @@ namespace Service.Custom.SupplierSer
     public class SupplierService : ISupplierService
     {
         private readonly IRepositoryCommon<User> _repository;
+        private readonly IRepositoryCommon<UserType> _userTypeRepository;
         private readonly IUserTypeService _userTypeService;
 
-        public SupplierService(IRepositoryCommon<User> repository, IUserTypeService userTypeService)
+        public SupplierService(IRepositoryCommon<User> repository, IUserTypeService userTypeService, IRepositoryCommon<UserType> userTypeRepository)
         {
             _repository = repository;
             _userTypeService = userTypeService;
+            _userTypeRepository = userTypeRepository;
         }
 
-        public async Task<ICollection<UserViewModel>> GetAll()
+        public async Task<IEnumerable<UserViewModel>> GetAll()
         {
-            var suppliers = await _repository.FindAll(u => u.UserTypes.TypeName == "supplier");
-            return suppliers.Select(u => new UserViewModel
+            var supplierType = await _userTypeService.Find(x => x.TypeName.ToLower() == "supplier");
+            if (supplierType == null) return Enumerable.Empty<UserViewModel>();
+
+            var users = await _repository.FindAll(x => x.UserTypeId == supplierType.Id);
+
+            var result = users.Select(user => new UserViewModel
             {
-                UserId = u.UserId,
-                UserName = u.UserName,
-                Email = u.Email,
-                Password = u.Password,
-                Address = u.Address,
-                PhoneNumber = u.PhoneNumber,
-                Photo = u.Photo,
+                UserId = user.UserId,
+                UserName = user.UserName,
+                Email = user.Email,
+                Password = user.Password,
+                Address = user.Address,
+                PhoneNumber = user.PhoneNumber,
+                Photo = user.Photo,
+                UserType = supplierType.TypeName,
                 UserTypeViewModels = new List<UserTypeViewModel>
                 {
                     new UserTypeViewModel
                     {
-                        Id = u.UserTypes.Id,
-                        TypeName = u.UserTypes.TypeName
+                        Id = supplierType.Id,
+                        TypeName = supplierType.TypeName
                     }
                 }
-            }).ToList();
+            });
+
+            return result;
         }
 
         public async Task<UserViewModel?> GetById(Guid id)
         {
-            var user = await _repository.Get(id);
-            if (user == null || user.UserTypes?.TypeName != "supplier") return null;
+            var supplierType = await _userTypeService.Find(x => x.TypeName.ToLower() == "supplier");
+            if (supplierType == null) return null;
+
+            var user = await _repository.Find(x => x.Id == id && x.UserTypeId == supplierType.Id);
+            if (user == null) return null;
 
             return new UserViewModel
             {
@@ -58,12 +70,13 @@ namespace Service.Custom.SupplierSer
                 Address = user.Address,
                 PhoneNumber = user.PhoneNumber,
                 Photo = user.Photo,
+                UserType = supplierType.TypeName,
                 UserTypeViewModels = new List<UserTypeViewModel>
                 {
                     new UserTypeViewModel
                     {
-                        Id = user.UserTypes.Id,
-                        TypeName = user.UserTypes.TypeName
+                        Id = supplierType.Id,
+                        TypeName = supplierType.TypeName
                     }
                 }
             };
@@ -71,11 +84,8 @@ namespace Service.Custom.SupplierSer
 
         public async Task<bool> Insert(UserInsertModel model, string photoFileName)
         {
-            var supplierType = (await _userTypeService.GetAll())
-                                .FirstOrDefault(x => x.TypeName.ToLower() == "supplier");
-
-            if (supplierType == null)
-                return false;
+            var supplierType = await _userTypeService.Find(x => x.TypeName.ToLower() == "supplier");
+            if (supplierType == null) return false;
 
             var user = new User
             {
@@ -89,9 +99,6 @@ namespace Service.Custom.SupplierSer
                 Photo = photoFileName,
                 CreatedAt = DateTime.Now,
                 UpdatedAt = DateTime.Now,
-                CreatedBy = "System",
-                UpdatedBy = "System",
-                IsActive = true,
                 UserTypeId = supplierType.Id
             };
 
@@ -100,8 +107,11 @@ namespace Service.Custom.SupplierSer
 
         public async Task<bool> Update(UserUpdateModel model, string photoFileName)
         {
-            var user = await _repository.Get(model.Id);
-            if (user == null || user.UserTypes?.TypeName != "supplier") return false;
+            var supplierType = await _userTypeService.Find(x => x.TypeName.ToLower() == "supplier");
+            if (supplierType == null) return false;
+
+            var user = await _repository.Find(x => x.Id == model.Id && x.UserTypeId == supplierType.Id);
+            if (user == null) return false;
 
             user.UserName = model.UserName;
             user.Email = model.Email;
@@ -110,27 +120,31 @@ namespace Service.Custom.SupplierSer
             user.PhoneNumber = model.PhoneNumber;
             user.Photo = photoFileName;
             user.UpdatedAt = DateTime.Now;
-            user.UpdatedBy = "System";
-
             return await _repository.Update(user);
         }
 
         public async Task<bool> Delete(Guid id)
         {
-            var user = await _repository.Get(id);
-            if (user == null || user.UserTypes?.TypeName != "supplier") return false;
+            var supplierType = await _userTypeService.Find(x => x.TypeName.ToLower() == "supplier");
+            if (supplierType == null) return false;
+
+            var user = await _repository.Find(x => x.Id == id && x.UserTypeId == supplierType.Id);
+            if (user == null) return false;
 
             return await _repository.Delete(user);
         }
 
         public async Task<User> Find(Expression<Func<User, bool>> match)
         {
-            return await _repository.Find(match);
+            var supplierType = await _userTypeService.Find(x => x.TypeName.ToLower() == "supplier");
+            return await _repository.Find(x => x.UserTypeId == supplierType.Id && match.Compile().Invoke(x));
         }
 
         public async Task<ICollection<User>> FindAll(Expression<Func<User, bool>> match)
         {
-            return await _repository.FindAll(match);
+            var supplierType = await _userTypeService.Find(x => x.TypeName.ToLower() == "supplier");
+            var allSuppliers = await _repository.FindAll(x => x.UserTypeId == supplierType.Id);
+            return allSuppliers.Where(match.Compile()).ToList();
         }
     }
 }

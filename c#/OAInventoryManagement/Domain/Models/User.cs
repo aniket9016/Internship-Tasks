@@ -29,7 +29,7 @@ namespace Domain.Models
         public string? Photo { get; set; }
 
         public Guid UserTypeId { get; set; }
-        public virtual UserType? UserTypes{ get; set; }
+        public virtual UserType UserTypes{ get; set; }
 
         public virtual List<SupplierItem>? SupplierItems { get; set; }
         public virtual List<CustomerItem>? CustomerItems { get; set; }

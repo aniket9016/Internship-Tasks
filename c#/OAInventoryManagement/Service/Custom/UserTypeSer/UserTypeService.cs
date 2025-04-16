@@ -4,6 +4,7 @@ using Repository.Repo;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Threading.Tasks;
 
 namespace Service.Custom.UserTypeSer
@@ -17,7 +18,7 @@ namespace Service.Custom.UserTypeSer
             _repository = repository;
         }
 
-        public async Task<ICollection<UserTypeViewModel>> GetAll()
+        public async Task<IEnumerable<UserTypeViewModel>> GetAll()
         {
             var userTypes = await _repository.GetAll();
             return userTypes.Select(ut => new UserTypeViewModel
@@ -73,6 +74,15 @@ namespace Service.Custom.UserTypeSer
             if (entity == null) return false;
 
             return await _repository.Delete(entity);
+        }
+        public async Task<UserType> Find(Expression<Func<UserType, bool>> match)
+        {
+            return await _repository.Find(match);
+        }
+
+        public async Task<ICollection<UserType>> FindAll(Expression<Func<UserType, bool>> match)
+        {
+            return await _repository.FindAll(match);
         }
     }
 }
