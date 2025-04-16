@@ -120,6 +120,7 @@ namespace Service.Custom.SupplierSer
             user.PhoneNumber = model.PhoneNumber;
             user.Photo = photoFileName;
             user.UpdatedAt = DateTime.Now;
+
             return await _repository.Update(user);
         }
 
@@ -137,14 +138,39 @@ namespace Service.Custom.SupplierSer
         public async Task<User> Find(Expression<Func<User, bool>> match)
         {
             var supplierType = await _userTypeService.Find(x => x.TypeName.ToLower() == "supplier");
-            return await _repository.Find(x => x.UserTypeId == supplierType.Id && match.Compile().Invoke(x));
+            if (supplierType == null) return null;
+
+            Expression<Func<User, bool>> supplierFilter = x => x.UserTypeId == supplierType.Id;
+            var combinedFilter = supplierFilter.And(match);
+
+            return await _repository.Find(combinedFilter);
         }
 
         public async Task<ICollection<User>> FindAll(Expression<Func<User, bool>> match)
         {
             var supplierType = await _userTypeService.Find(x => x.TypeName.ToLower() == "supplier");
-            var allSuppliers = await _repository.FindAll(x => x.UserTypeId == supplierType.Id);
-            return allSuppliers.Where(match.Compile()).ToList();
+            if (supplierType == null) return new List<User>();
+
+            Expression<Func<User, bool>> supplierFilter = x => x.UserTypeId == supplierType.Id;
+            var combinedFilter = supplierFilter.And(match);
+
+            return await _repository.FindAll(combinedFilter);
+        }
+    }
+
+    public static class ExpressionExtensions
+    {
+        public static Expression<Func<T, bool>> And<T>(
+            this Expression<Func<T, bool>> expr1,
+            Expression<Func<T, bool>> expr2)
+        {
+            var parameter = Expression.Parameter(typeof(T));
+
+            var body = Expression.AndAlso(
+                Expression.Invoke(expr1, parameter),
+                Expression.Invoke(expr2, parameter));
+
+            return Expression.Lambda<Func<T, bool>>(body, parameter);
         }
     }
 }

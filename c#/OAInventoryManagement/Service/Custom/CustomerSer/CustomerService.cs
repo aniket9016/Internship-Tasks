@@ -111,6 +111,7 @@ namespace Service.Custom.CustomerSer
 
             var user = await _repository.Find(x => x.Id == model.Id && x.UserTypeId == customerType.Id);
             if (user == null) return false;
+
             user.UserId = model.UserId;
             user.UserName = model.UserName;
             user.Email = model.Email;
@@ -119,6 +120,7 @@ namespace Service.Custom.CustomerSer
             user.PhoneNumber = model.PhoneNumber;
             user.Photo = photoFileName;
             user.UpdatedAt = DateTime.Now;
+
             return await _repository.Update(user);
         }
 
@@ -136,14 +138,40 @@ namespace Service.Custom.CustomerSer
         public async Task<User> Find(Expression<Func<User, bool>> match)
         {
             var customerType = await _userTypeService.Find(x => x.TypeName.ToLower() == "customer");
-            return await _repository.Find(x => x.UserTypeId == customerType.Id && match.Compile().Invoke(x));
+            if (customerType == null) return null;
+
+            Expression<Func<User, bool>> customerFilter = x => x.UserTypeId == customerType.Id;
+            var combinedFilter = customerFilter.And(match);
+
+            return await _repository.Find(combinedFilter);
         }
 
         public async Task<ICollection<User>> FindAll(Expression<Func<User, bool>> match)
         {
             var customerType = await _userTypeService.Find(x => x.TypeName.ToLower() == "customer");
-            var allCustomers = await _repository.FindAll(x => x.UserTypeId == customerType.Id);
-            return allCustomers.Where(match.Compile()).ToList();
+            if (customerType == null) return new List<User>();
+
+            Expression<Func<User, bool>> customerFilter = x => x.UserTypeId == customerType.Id;
+            var combinedFilter = customerFilter.And(match);
+
+            return await _repository.FindAll(combinedFilter);
+        }
+    }
+
+    // Reusable expression extension method for combining filters
+    public static class ExpressionExtensions
+    {
+        public static Expression<Func<T, bool>> And<T>(
+            this Expression<Func<T, bool>> expr1,
+            Expression<Func<T, bool>> expr2)
+        {
+            var parameter = Expression.Parameter(typeof(T));
+
+            var body = Expression.AndAlso(
+                Expression.Invoke(expr1, parameter),
+                Expression.Invoke(expr2, parameter));
+
+            return Expression.Lambda<Func<T, bool>>(body, parameter);
         }
     }
 }
