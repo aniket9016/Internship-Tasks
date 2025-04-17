@@ -22,7 +22,7 @@ namespace Service.Custom.CustomerSer
             _userTypeService = userTypeService;
         }
 
-        public async Task<ICollection<UserViewModel>> GetAll()
+        public async Task<IEnumerable<UserViewModel>> GetAll()
         {
             var customerType = await _userTypeService.Find(x => x.TypeName.ToLower() == "customer");
             if (customerType == null) return new List<UserViewModel>();
