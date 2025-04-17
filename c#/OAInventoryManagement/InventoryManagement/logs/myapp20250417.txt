@@ -1,0 +1,656 @@
+2025-04-17 10:06:20.108 +05:30 [INF] User profile is available. Using 'C:\Users\TGSUser131\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-17 10:06:20.517 +05:30 [INF] Now listening on: https://localhost:7130
+2025-04-17 10:06:20.522 +05:30 [INF] Now listening on: http://localhost:5085
+2025-04-17 10:06:20.527 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-17 10:06:20.529 +05:30 [INF] Hosting environment: Development
+2025-04-17 10:06:20.530 +05:30 [INF] Content root path: E:\aniket\c#\OAInventoryManagement\InventoryManagement
+2025-04-17 10:06:58.336 +05:30 [INF] User profile is available. Using 'C:\Users\TGSUser131\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-17 10:06:58.823 +05:30 [INF] Now listening on: https://localhost:7130
+2025-04-17 10:06:58.841 +05:30 [INF] Now listening on: http://localhost:5085
+2025-04-17 10:06:58.850 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-17 10:06:58.853 +05:30 [INF] Hosting environment: Development
+2025-04-17 10:06:58.854 +05:30 [INF] Content root path: E:\aniket\c#\OAInventoryManagement\InventoryManagement
+2025-04-17 10:06:59.568 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/index.html - null null
+2025-04-17 10:07:00.114 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/index.html - 200 null text/html;charset=utf-8 561.5025ms
+2025-04-17 10:07:00.114 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-17 10:07:00.130 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/_vs/browserLink - null null
+2025-04-17 10:07:00.149 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 35.7578ms
+2025-04-17 10:07:00.230 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/_vs/browserLink - 200 null text/javascript; charset=UTF-8 99.5252ms
+2025-04-17 10:07:00.502 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - null null
+2025-04-17 10:07:00.788 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 286.5648ms
+2025-04-17 10:07:32.931 +05:30 [INF] User profile is available. Using 'C:\Users\TGSUser131\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-17 10:07:33.233 +05:30 [INF] Now listening on: https://localhost:7130
+2025-04-17 10:07:33.236 +05:30 [INF] Now listening on: http://localhost:5085
+2025-04-17 10:07:33.241 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-17 10:07:33.243 +05:30 [INF] Hosting environment: Development
+2025-04-17 10:07:33.245 +05:30 [INF] Content root path: E:\aniket\c#\OAInventoryManagement\InventoryManagement
+2025-04-17 10:07:33.900 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/index.html - null null
+2025-04-17 10:07:34.279 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/index.html - 200 null text/html;charset=utf-8 381.927ms
+2025-04-17 10:07:34.283 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-17 10:07:34.283 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/_vs/browserLink - null null
+2025-04-17 10:07:34.298 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 14.7793ms
+2025-04-17 10:07:34.358 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/_vs/browserLink - 200 null text/javascript; charset=UTF-8 74.8776ms
+2025-04-17 10:07:34.546 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - null null
+2025-04-17 10:07:34.733 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 187.6505ms
+2025-04-17 10:07:43.171 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/api/UserType - null null
+2025-04-17 10:07:44.284 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-04-17 10:07:44.295 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2025-04-17 10:07:44.297 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/api/UserType - 401 null application/json; charset=utf-8 1126.4137ms
+2025-04-17 10:07:47.253 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/index.html - null null
+2025-04-17 10:07:47.323 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/_vs/browserLink - null null
+2025-04-17 10:07:47.323 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-17 10:07:47.324 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/index.html - 200 null text/html;charset=utf-8 70.8242ms
+2025-04-17 10:07:47.338 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 15.1048ms
+2025-04-17 10:07:47.354 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/_vs/browserLink - 200 null text/javascript; charset=UTF-8 30.5934ms
+2025-04-17 10:07:47.392 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - null null
+2025-04-17 10:07:47.424 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 32.4239ms
+2025-04-17 10:08:36.208 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7130/api/Login/login - application/json 61
+2025-04-17 10:08:36.225 +05:30 [INF] Executing endpoint 'InventoryManagement.Controllers.LoginController.Login (InventoryManagement)'
+2025-04-17 10:08:36.252 +05:30 [INF] Route matched with {action = "Login", controller = "Login"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Domain.ViewModel.LoginModel) on controller InventoryManagement.Controllers.LoginController (InventoryManagement).
+2025-04-17 10:08:37.792 +05:30 [INF] Executing action method InventoryManagement.Controllers.LoginController.Login (InventoryManagement) - Validation state: "Valid"
+2025-04-17 10:08:37.798 +05:30 [INF] Login attempt for email: satyam@gmail.com
+2025-04-17 10:08:39.102 +05:30 [INF] Executed DbCommand (51ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[CreatedBy], [u].[IsActive], [u].[TypeName], [u].[UpdatedAt], [u].[UpdatedBy]
+FROM [UserTypes] AS [u]
+WHERE LOWER([u].[TypeName]) = N'customer'
+2025-04-17 10:08:39.286 +05:30 [INF] Executed DbCommand (73ms) [Parameters=[@__customerType_Id_0='?' (DbType = Guid), @__model_Email_1='?' (Size = 4000), @__model_Password_2='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Address], [u].[CreatedAt], [u].[CreatedBy], [u].[Email], [u].[IsActive], [u].[Password], [u].[PhoneNumber], [u].[Photo], [u].[UpdatedAt], [u].[UpdatedBy], [u].[UserId], [u].[UserName], [u].[UserTypeId]
+FROM [Users] AS [u]
+WHERE [u].[UserTypeId] = @__customerType_Id_0 AND [u].[Email] = @__model_Email_1 AND [u].[Password] = @__model_Password_2
+2025-04-17 10:08:39.299 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[CreatedBy], [u].[IsActive], [u].[TypeName], [u].[UpdatedAt], [u].[UpdatedBy]
+FROM [UserTypes] AS [u]
+WHERE LOWER([u].[TypeName]) = N'supplier'
+2025-04-17 10:08:39.309 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__supplierType_Id_0='?' (DbType = Guid), @__model_Email_1='?' (Size = 4000), @__model_Password_2='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Address], [u].[CreatedAt], [u].[CreatedBy], [u].[Email], [u].[IsActive], [u].[Password], [u].[PhoneNumber], [u].[Photo], [u].[UpdatedAt], [u].[UpdatedBy], [u].[UserId], [u].[UserName], [u].[UserTypeId]
+FROM [Users] AS [u]
+WHERE [u].[UserTypeId] = @__supplierType_Id_0 AND [u].[Email] = @__model_Email_1 AND [u].[Password] = @__model_Password_2
+2025-04-17 10:08:39.363 +05:30 [INF] Supplier login successful for email: satyam@gmail.com
+2025-04-17 10:08:39.516 +05:30 [INF] Executed action method InventoryManagement.Controllers.LoginController.Login (InventoryManagement), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1717.7837ms.
+2025-04-17 10:08:39.524 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.Helper.Response`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-17 10:08:39.532 +05:30 [INF] Executed action InventoryManagement.Controllers.LoginController.Login (InventoryManagement) in 3274.6835ms
+2025-04-17 10:08:39.534 +05:30 [INF] Executed endpoint 'InventoryManagement.Controllers.LoginController.Login (InventoryManagement)'
+2025-04-17 10:08:39.547 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7130/api/Login/login - 200 null application/json; charset=utf-8 3339.0549ms
+2025-04-17 10:08:56.730 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/api/UserType - null null
+2025-04-17 10:08:56.777 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> System.MissingMethodException: Method not found: 'Byte[] Microsoft.IdentityModel.Tokens.Base64UrlEncoder.UnsafeDecode(System.ReadOnlyMemory`1<Char>)'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2025-04-17 10:08:56.804 +05:30 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2025-04-17 10:08:56.806 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-04-17 10:08:56.809 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2025-04-17 10:08:56.810 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/api/UserType - 401 null application/json; charset=utf-8 80.6938ms
+2025-04-17 10:14:33.308 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/index.html - null null
+2025-04-17 10:14:33.398 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/index.html - 200 null text/html;charset=utf-8 88.8782ms
+2025-04-17 10:14:33.422 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-17 10:14:33.412 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/_vs/browserLink - null null
+2025-04-17 10:14:33.431 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 9.5813ms
+2025-04-17 10:14:33.459 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/_vs/browserLink - 200 null text/javascript; charset=UTF-8 47.3054ms
+2025-04-17 10:14:33.616 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - null null
+2025-04-17 10:14:33.648 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 32.13ms
+2025-04-17 10:19:22.558 +05:30 [INF] User profile is available. Using 'C:\Users\TGSUser131\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-17 10:19:22.862 +05:30 [INF] Now listening on: https://localhost:7130
+2025-04-17 10:19:22.863 +05:30 [INF] Now listening on: http://localhost:5085
+2025-04-17 10:19:22.867 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-17 10:19:22.868 +05:30 [INF] Hosting environment: Development
+2025-04-17 10:19:22.869 +05:30 [INF] Content root path: E:\aniket\c#\OAInventoryManagement\InventoryManagement
+2025-04-17 10:19:23.303 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/index.html - null null
+2025-04-17 10:19:23.723 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/index.html - 200 null text/html;charset=utf-8 433.5253ms
+2025-04-17 10:19:23.737 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-17 10:19:23.746 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 9.1465ms
+2025-04-17 10:19:23.761 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/_vs/browserLink - null null
+2025-04-17 10:19:23.813 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/_vs/browserLink - 200 null text/javascript; charset=UTF-8 52.9594ms
+2025-04-17 10:19:24.268 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - null null
+2025-04-17 10:19:24.441 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 173.3382ms
+2025-04-17 10:19:46.862 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7130/api/Login/login - application/json 61
+2025-04-17 10:19:46.939 +05:30 [INF] Executing endpoint 'InventoryManagement.Controllers.LoginController.Login (InventoryManagement)'
+2025-04-17 10:19:46.964 +05:30 [INF] Route matched with {action = "Login", controller = "Login"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Domain.ViewModel.LoginModel) on controller InventoryManagement.Controllers.LoginController (InventoryManagement).
+2025-04-17 10:19:47.779 +05:30 [INF] Executing action method InventoryManagement.Controllers.LoginController.Login (InventoryManagement) - Validation state: "Valid"
+2025-04-17 10:19:47.783 +05:30 [INF] Login attempt for email: satyam@gmail.com
+2025-04-17 10:19:48.438 +05:30 [INF] Executed DbCommand (28ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[CreatedBy], [u].[IsActive], [u].[TypeName], [u].[UpdatedAt], [u].[UpdatedBy]
+FROM [UserTypes] AS [u]
+WHERE LOWER([u].[TypeName]) = N'customer'
+2025-04-17 10:19:48.586 +05:30 [INF] Executed DbCommand (27ms) [Parameters=[@__customerType_Id_0='?' (DbType = Guid), @__model_Email_1='?' (Size = 4000), @__model_Password_2='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Address], [u].[CreatedAt], [u].[CreatedBy], [u].[Email], [u].[IsActive], [u].[Password], [u].[PhoneNumber], [u].[Photo], [u].[UpdatedAt], [u].[UpdatedBy], [u].[UserId], [u].[UserName], [u].[UserTypeId]
+FROM [Users] AS [u]
+WHERE [u].[UserTypeId] = @__customerType_Id_0 AND [u].[Email] = @__model_Email_1 AND [u].[Password] = @__model_Password_2
+2025-04-17 10:19:48.600 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[CreatedBy], [u].[IsActive], [u].[TypeName], [u].[UpdatedAt], [u].[UpdatedBy]
+FROM [UserTypes] AS [u]
+WHERE LOWER([u].[TypeName]) = N'supplier'
+2025-04-17 10:19:48.611 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__supplierType_Id_0='?' (DbType = Guid), @__model_Email_1='?' (Size = 4000), @__model_Password_2='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Address], [u].[CreatedAt], [u].[CreatedBy], [u].[Email], [u].[IsActive], [u].[Password], [u].[PhoneNumber], [u].[Photo], [u].[UpdatedAt], [u].[UpdatedBy], [u].[UserId], [u].[UserName], [u].[UserTypeId]
+FROM [Users] AS [u]
+WHERE [u].[UserTypeId] = @__supplierType_Id_0 AND [u].[Email] = @__model_Email_1 AND [u].[Password] = @__model_Password_2
+2025-04-17 10:19:48.653 +05:30 [INF] Supplier login successful for email: satyam@gmail.com
+2025-04-17 10:19:48.689 +05:30 [INF] Executed action method InventoryManagement.Controllers.LoginController.Login (InventoryManagement), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 905.651ms.
+2025-04-17 10:19:48.700 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.Helper.Response`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-17 10:19:48.711 +05:30 [INF] Executed action InventoryManagement.Controllers.LoginController.Login (InventoryManagement) in 1741.1456ms
+2025-04-17 10:19:48.714 +05:30 [INF] Executed endpoint 'InventoryManagement.Controllers.LoginController.Login (InventoryManagement)'
+2025-04-17 10:19:48.723 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7130/api/Login/login - 200 null application/json; charset=utf-8 1860.8923ms
+2025-04-17 10:20:46.940 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/api/UserType - null null
+2025-04-17 10:20:46.986 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> System.MissingMethodException: Method not found: 'Byte[] Microsoft.IdentityModel.Tokens.Base64UrlEncoder.UnsafeDecode(System.ReadOnlyMemory`1<Char>)'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2025-04-17 10:20:47.004 +05:30 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2025-04-17 10:20:47.013 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-04-17 10:20:47.021 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2025-04-17 10:20:47.022 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/api/UserType - 401 null application/json; charset=utf-8 82.8762ms
+2025-04-17 10:25:26.135 +05:30 [INF] User profile is available. Using 'C:\Users\TGSUser131\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-17 10:25:26.436 +05:30 [INF] Now listening on: https://localhost:7130
+2025-04-17 10:25:26.437 +05:30 [INF] Now listening on: http://localhost:5085
+2025-04-17 10:25:26.440 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-17 10:25:26.441 +05:30 [INF] Hosting environment: Development
+2025-04-17 10:25:26.441 +05:30 [INF] Content root path: E:\aniket\c#\OAInventoryManagement\InventoryManagement
+2025-04-17 10:25:27.242 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/index.html - null null
+2025-04-17 10:25:27.719 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/index.html - 200 null text/html;charset=utf-8 482.6002ms
+2025-04-17 10:25:27.762 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-17 10:25:27.770 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 7.9243ms
+2025-04-17 10:25:27.776 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/_vs/browserLink - null null
+2025-04-17 10:25:27.828 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/_vs/browserLink - 200 null text/javascript; charset=UTF-8 51.8218ms
+2025-04-17 10:25:27.979 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - null null
+2025-04-17 10:25:28.168 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 188.3706ms
+2025-04-17 10:26:01.809 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7130/api/Login/login - application/json 61
+2025-04-17 10:26:01.892 +05:30 [INF] Executing endpoint 'InventoryManagement.Controllers.LoginController.Login (InventoryManagement)'
+2025-04-17 10:26:01.920 +05:30 [INF] Route matched with {action = "Login", controller = "Login"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Domain.ViewModel.LoginModel) on controller InventoryManagement.Controllers.LoginController (InventoryManagement).
+2025-04-17 10:26:02.743 +05:30 [INF] Executing action method InventoryManagement.Controllers.LoginController.Login (InventoryManagement) - Validation state: "Valid"
+2025-04-17 10:26:02.747 +05:30 [INF] Login attempt for email: satyam@gmail.com
+2025-04-17 10:26:03.433 +05:30 [INF] Executed DbCommand (30ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[CreatedBy], [u].[IsActive], [u].[TypeName], [u].[UpdatedAt], [u].[UpdatedBy]
+FROM [UserTypes] AS [u]
+WHERE LOWER([u].[TypeName]) = N'customer'
+2025-04-17 10:26:03.562 +05:30 [INF] Executed DbCommand (25ms) [Parameters=[@__customerType_Id_0='?' (DbType = Guid), @__model_Email_1='?' (Size = 4000), @__model_Password_2='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Address], [u].[CreatedAt], [u].[CreatedBy], [u].[Email], [u].[IsActive], [u].[Password], [u].[PhoneNumber], [u].[Photo], [u].[UpdatedAt], [u].[UpdatedBy], [u].[UserId], [u].[UserName], [u].[UserTypeId]
+FROM [Users] AS [u]
+WHERE [u].[UserTypeId] = @__customerType_Id_0 AND [u].[Email] = @__model_Email_1 AND [u].[Password] = @__model_Password_2
+2025-04-17 10:26:03.573 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[CreatedBy], [u].[IsActive], [u].[TypeName], [u].[UpdatedAt], [u].[UpdatedBy]
+FROM [UserTypes] AS [u]
+WHERE LOWER([u].[TypeName]) = N'supplier'
+2025-04-17 10:26:03.583 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__supplierType_Id_0='?' (DbType = Guid), @__model_Email_1='?' (Size = 4000), @__model_Password_2='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Address], [u].[CreatedAt], [u].[CreatedBy], [u].[Email], [u].[IsActive], [u].[Password], [u].[PhoneNumber], [u].[Photo], [u].[UpdatedAt], [u].[UpdatedBy], [u].[UserId], [u].[UserName], [u].[UserTypeId]
+FROM [Users] AS [u]
+WHERE [u].[UserTypeId] = @__supplierType_Id_0 AND [u].[Email] = @__model_Email_1 AND [u].[Password] = @__model_Password_2
+2025-04-17 10:26:03.646 +05:30 [INF] Supplier login successful for email: satyam@gmail.com
+2025-04-17 10:26:03.689 +05:30 [INF] Executed action method InventoryManagement.Controllers.LoginController.Login (InventoryManagement), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 939.5746ms.
+2025-04-17 10:26:03.699 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.Helper.Response`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-17 10:26:03.711 +05:30 [INF] Executed action InventoryManagement.Controllers.LoginController.Login (InventoryManagement) in 1785.5965ms
+2025-04-17 10:26:03.714 +05:30 [INF] Executed endpoint 'InventoryManagement.Controllers.LoginController.Login (InventoryManagement)'
+2025-04-17 10:26:03.724 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7130/api/Login/login - 200 null application/json; charset=utf-8 1914.9563ms
+2025-04-17 10:26:26.219 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/api/UserType - null null
+2025-04-17 10:26:26.273 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> System.MissingMethodException: Method not found: 'Byte[] Microsoft.IdentityModel.Tokens.Base64UrlEncoder.UnsafeDecode(System.ReadOnlyMemory`1<Char>)'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2025-04-17 10:26:26.291 +05:30 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2025-04-17 10:26:26.299 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-04-17 10:26:26.307 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2025-04-17 10:26:26.308 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/api/UserType - 401 null application/json; charset=utf-8 88.7839ms
+2025-04-17 10:28:54.380 +05:30 [INF] User profile is available. Using 'C:\Users\TGSUser131\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-17 10:28:54.706 +05:30 [INF] Now listening on: https://localhost:7130
+2025-04-17 10:28:54.708 +05:30 [INF] Now listening on: http://localhost:5085
+2025-04-17 10:28:54.711 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-17 10:28:54.712 +05:30 [INF] Hosting environment: Development
+2025-04-17 10:28:54.712 +05:30 [INF] Content root path: E:\aniket\c#\OAInventoryManagement\InventoryManagement
+2025-04-17 10:28:55.630 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/index.html - null null
+2025-04-17 10:28:56.021 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/index.html - 200 null text/html;charset=utf-8 405.2436ms
+2025-04-17 10:28:56.045 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-17 10:28:56.053 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 7.8716ms
+2025-04-17 10:28:56.060 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/_vs/browserLink - null null
+2025-04-17 10:28:56.109 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/_vs/browserLink - 200 null text/javascript; charset=UTF-8 48.8965ms
+2025-04-17 10:28:56.243 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - null null
+2025-04-17 10:28:56.451 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 208.3715ms
+2025-04-17 10:30:46.161 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7130/api/Login/login - application/json 61
+2025-04-17 10:30:46.271 +05:30 [INF] Executing endpoint 'InventoryManagement.Controllers.LoginController.Login (InventoryManagement)'
+2025-04-17 10:30:46.297 +05:30 [INF] Route matched with {action = "Login", controller = "Login"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Domain.ViewModel.LoginModel) on controller InventoryManagement.Controllers.LoginController (InventoryManagement).
+2025-04-17 10:30:47.148 +05:30 [INF] Executing action method InventoryManagement.Controllers.LoginController.Login (InventoryManagement) - Validation state: "Valid"
+2025-04-17 10:30:47.152 +05:30 [INF] Login attempt for email: satyam@gmail.com
+2025-04-17 10:30:47.847 +05:30 [INF] Executed DbCommand (31ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[CreatedBy], [u].[IsActive], [u].[TypeName], [u].[UpdatedAt], [u].[UpdatedBy]
+FROM [UserTypes] AS [u]
+WHERE LOWER([u].[TypeName]) = N'customer'
+2025-04-17 10:30:47.993 +05:30 [INF] Executed DbCommand (28ms) [Parameters=[@__customerType_Id_0='?' (DbType = Guid), @__model_Email_1='?' (Size = 4000), @__model_Password_2='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Address], [u].[CreatedAt], [u].[CreatedBy], [u].[Email], [u].[IsActive], [u].[Password], [u].[PhoneNumber], [u].[Photo], [u].[UpdatedAt], [u].[UpdatedBy], [u].[UserId], [u].[UserName], [u].[UserTypeId]
+FROM [Users] AS [u]
+WHERE [u].[UserTypeId] = @__customerType_Id_0 AND [u].[Email] = @__model_Email_1 AND [u].[Password] = @__model_Password_2
+2025-04-17 10:30:48.014 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[CreatedBy], [u].[IsActive], [u].[TypeName], [u].[UpdatedAt], [u].[UpdatedBy]
+FROM [UserTypes] AS [u]
+WHERE LOWER([u].[TypeName]) = N'supplier'
+2025-04-17 10:30:48.024 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__supplierType_Id_0='?' (DbType = Guid), @__model_Email_1='?' (Size = 4000), @__model_Password_2='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Address], [u].[CreatedAt], [u].[CreatedBy], [u].[Email], [u].[IsActive], [u].[Password], [u].[PhoneNumber], [u].[Photo], [u].[UpdatedAt], [u].[UpdatedBy], [u].[UserId], [u].[UserName], [u].[UserTypeId]
+FROM [Users] AS [u]
+WHERE [u].[UserTypeId] = @__supplierType_Id_0 AND [u].[Email] = @__model_Email_1 AND [u].[Password] = @__model_Password_2
+2025-04-17 10:30:48.067 +05:30 [INF] Supplier login successful for email: satyam@gmail.com
+2025-04-17 10:30:48.108 +05:30 [INF] Executed action method InventoryManagement.Controllers.LoginController.Login (InventoryManagement), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 954.8061ms.
+2025-04-17 10:30:48.119 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.Helper.Response`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-17 10:30:48.132 +05:30 [INF] Executed action InventoryManagement.Controllers.LoginController.Login (InventoryManagement) in 1830.4104ms
+2025-04-17 10:30:48.134 +05:30 [INF] Executed endpoint 'InventoryManagement.Controllers.LoginController.Login (InventoryManagement)'
+2025-04-17 10:30:48.143 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7130/api/Login/login - 200 null application/json; charset=utf-8 1982.2722ms
+2025-04-17 10:31:06.030 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/api/UserType - null null
+2025-04-17 10:31:06.059 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> System.MissingMethodException: Method not found: 'Byte[] Microsoft.IdentityModel.Tokens.Base64UrlEncoder.UnsafeDecode(System.ReadOnlyMemory`1<Char>)'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2025-04-17 10:31:06.079 +05:30 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2025-04-17 10:31:06.087 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-04-17 10:31:06.099 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2025-04-17 10:31:06.102 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/api/UserType - 401 null application/json; charset=utf-8 73.0982ms
+2025-04-17 10:31:19.803 +05:30 [INF] User profile is available. Using 'C:\Users\TGSUser131\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-17 10:31:20.080 +05:30 [INF] Now listening on: https://localhost:7130
+2025-04-17 10:31:20.082 +05:30 [INF] Now listening on: http://localhost:5085
+2025-04-17 10:31:20.086 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-17 10:31:20.088 +05:30 [INF] Hosting environment: Development
+2025-04-17 10:31:20.089 +05:30 [INF] Content root path: E:\aniket\c#\OAInventoryManagement\InventoryManagement
+2025-04-17 10:31:39.278 +05:30 [INF] User profile is available. Using 'C:\Users\TGSUser131\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-17 10:31:39.520 +05:30 [INF] Now listening on: https://localhost:7130
+2025-04-17 10:31:39.521 +05:30 [INF] Now listening on: http://localhost:5085
+2025-04-17 10:31:39.529 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-17 10:31:39.530 +05:30 [INF] Hosting environment: Development
+2025-04-17 10:31:39.531 +05:30 [INF] Content root path: E:\aniket\c#\OAInventoryManagement\InventoryManagement
+2025-04-17 10:31:39.826 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/index.html - null null
+2025-04-17 10:31:40.147 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/index.html - 200 null text/html;charset=utf-8 329.1463ms
+2025-04-17 10:31:40.165 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-17 10:31:40.174 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 8.9737ms
+2025-04-17 10:31:40.182 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/_vs/browserLink - null null
+2025-04-17 10:31:40.242 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/_vs/browserLink - 200 null text/javascript; charset=UTF-8 60.1657ms
+2025-04-17 10:31:40.381 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - null null
+2025-04-17 10:31:40.554 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 173.1578ms
+2025-04-17 10:32:01.907 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7130/api/Login/login - application/json 61
+2025-04-17 10:32:03.012 +05:30 [INF] Executing endpoint 'InventoryManagement.Controllers.LoginController.Login (InventoryManagement)'
+2025-04-17 10:32:03.052 +05:30 [INF] Route matched with {action = "Login", controller = "Login"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Domain.ViewModel.LoginModel) on controller InventoryManagement.Controllers.LoginController (InventoryManagement).
+2025-04-17 10:32:04.427 +05:30 [INF] Executing action method InventoryManagement.Controllers.LoginController.Login (InventoryManagement) - Validation state: "Valid"
+2025-04-17 10:32:04.431 +05:30 [INF] Login attempt for email: satyam@gmail.com
+2025-04-17 10:32:05.673 +05:30 [INF] Executed DbCommand (38ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[CreatedBy], [u].[IsActive], [u].[TypeName], [u].[UpdatedAt], [u].[UpdatedBy]
+FROM [UserTypes] AS [u]
+WHERE LOWER([u].[TypeName]) = N'customer'
+2025-04-17 10:32:05.868 +05:30 [INF] Executed DbCommand (79ms) [Parameters=[@__customerType_Id_0='?' (DbType = Guid), @__model_Email_1='?' (Size = 4000), @__model_Password_2='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Address], [u].[CreatedAt], [u].[CreatedBy], [u].[Email], [u].[IsActive], [u].[Password], [u].[PhoneNumber], [u].[Photo], [u].[UpdatedAt], [u].[UpdatedBy], [u].[UserId], [u].[UserName], [u].[UserTypeId]
+FROM [Users] AS [u]
+WHERE [u].[UserTypeId] = @__customerType_Id_0 AND [u].[Email] = @__model_Email_1 AND [u].[Password] = @__model_Password_2
+2025-04-17 10:32:05.878 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[CreatedBy], [u].[IsActive], [u].[TypeName], [u].[UpdatedAt], [u].[UpdatedBy]
+FROM [UserTypes] AS [u]
+WHERE LOWER([u].[TypeName]) = N'supplier'
+2025-04-17 10:32:05.889 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__supplierType_Id_0='?' (DbType = Guid), @__model_Email_1='?' (Size = 4000), @__model_Password_2='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Address], [u].[CreatedAt], [u].[CreatedBy], [u].[Email], [u].[IsActive], [u].[Password], [u].[PhoneNumber], [u].[Photo], [u].[UpdatedAt], [u].[UpdatedBy], [u].[UserId], [u].[UserName], [u].[UserTypeId]
+FROM [Users] AS [u]
+WHERE [u].[UserTypeId] = @__supplierType_Id_0 AND [u].[Email] = @__model_Email_1 AND [u].[Password] = @__model_Password_2
+2025-04-17 10:32:05.932 +05:30 [INF] Supplier login successful for email: satyam@gmail.com
+2025-04-17 10:32:06.079 +05:30 [INF] Executed action method InventoryManagement.Controllers.LoginController.Login (InventoryManagement), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1646.494ms.
+2025-04-17 10:32:06.092 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.Helper.Response`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-17 10:32:06.124 +05:30 [INF] Executed action InventoryManagement.Controllers.LoginController.Login (InventoryManagement) in 3066.727ms
+2025-04-17 10:32:06.126 +05:30 [INF] Executed endpoint 'InventoryManagement.Controllers.LoginController.Login (InventoryManagement)'
+2025-04-17 10:32:06.130 +05:30 [INF] HTTP POST /api/Login/login responded 200 in 3117.7618 ms
+2025-04-17 10:32:06.144 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7130/api/Login/login - 200 null application/json; charset=utf-8 4236.6551ms
+2025-04-17 10:32:30.430 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/api/UserType - null null
+2025-04-17 10:32:30.457 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> System.MissingMethodException: Method not found: 'Byte[] Microsoft.IdentityModel.Tokens.Base64UrlEncoder.UnsafeDecode(System.ReadOnlyMemory`1<Char>)'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2025-04-17 10:32:30.477 +05:30 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2025-04-17 10:32:30.483 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-04-17 10:32:30.494 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2025-04-17 10:32:30.495 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/api/UserType - 401 null application/json; charset=utf-8 65.6504ms
+2025-04-17 10:40:15.818 +05:30 [INF] User profile is available. Using 'C:\Users\TGSUser131\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-17 10:40:16.347 +05:30 [INF] Now listening on: https://localhost:7130
+2025-04-17 10:40:16.348 +05:30 [INF] Now listening on: http://localhost:5085
+2025-04-17 10:40:16.351 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-17 10:40:16.353 +05:30 [INF] Hosting environment: Development
+2025-04-17 10:40:16.353 +05:30 [INF] Content root path: E:\aniket\c#\OAInventoryManagement\InventoryManagement
+2025-04-17 10:40:17.154 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/index.html - null null
+2025-04-17 10:40:17.589 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/index.html - 200 null text/html;charset=utf-8 447.262ms
+2025-04-17 10:40:17.599 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-17 10:40:17.599 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/_vs/browserLink - null null
+2025-04-17 10:40:17.613 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 13.664ms
+2025-04-17 10:40:17.690 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/_vs/browserLink - 200 null text/javascript; charset=UTF-8 90.4497ms
+2025-04-17 10:40:17.798 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - null null
+2025-04-17 10:40:18.017 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 219.6897ms
+2025-04-17 10:41:17.208 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7130/api/Login/login - application/json 59
+2025-04-17 10:41:17.294 +05:30 [INF] Executing endpoint 'InventoryManagement.Controllers.LoginController.Login (InventoryManagement)'
+2025-04-17 10:41:17.324 +05:30 [INF] Route matched with {action = "Login", controller = "Login"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Domain.ViewModel.LoginModel) on controller InventoryManagement.Controllers.LoginController (InventoryManagement).
+2025-04-17 10:41:18.206 +05:30 [INF] Executing action method InventoryManagement.Controllers.LoginController.Login (InventoryManagement) - Validation state: "Valid"
+2025-04-17 10:41:18.903 +05:30 [INF] Executed DbCommand (39ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[CreatedBy], [u].[IsActive], [u].[TypeName], [u].[UpdatedAt], [u].[UpdatedBy]
+FROM [UserTypes] AS [u]
+WHERE LOWER([u].[TypeName]) = N'customer'
+2025-04-17 10:41:19.035 +05:30 [INF] Executed DbCommand (27ms) [Parameters=[@__customerType_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Address], [u].[CreatedAt], [u].[CreatedBy], [u].[Email], [u].[IsActive], [u].[Password], [u].[PhoneNumber], [u].[Photo], [u].[UpdatedAt], [u].[UpdatedBy], [u].[UserId], [u].[UserName], [u].[UserTypeId]
+FROM [Users] AS [u]
+WHERE [u].[UserTypeId] = @__customerType_Id_0
+2025-04-17 10:41:19.127 +05:30 [INF] Executed action method InventoryManagement.Controllers.LoginController.Login (InventoryManagement), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 913.8145ms.
+2025-04-17 10:41:19.135 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-17 10:41:19.154 +05:30 [INF] Executed action InventoryManagement.Controllers.LoginController.Login (InventoryManagement) in 1825.7422ms
+2025-04-17 10:41:19.156 +05:30 [INF] Executed endpoint 'InventoryManagement.Controllers.LoginController.Login (InventoryManagement)'
+2025-04-17 10:41:19.160 +05:30 [INF] HTTP POST /api/Login/login responded 200 in 1867.0006 ms
+2025-04-17 10:41:19.173 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7130/api/Login/login - 200 null application/json; charset=utf-8 1964.6237ms
+2025-04-17 10:41:36.400 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/api/UserType - null null
+2025-04-17 10:41:36.447 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> System.MissingMethodException: Method not found: 'Byte[] Microsoft.IdentityModel.Tokens.Base64UrlEncoder.UnsafeDecode(System.ReadOnlyMemory`1<Char>)'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2025-04-17 10:41:36.471 +05:30 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2025-04-17 10:41:36.477 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-04-17 10:41:36.486 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2025-04-17 10:41:36.487 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/api/UserType - 401 null application/json; charset=utf-8 87.8775ms
+2025-04-17 10:55:35.921 +05:30 [INF] User profile is available. Using 'C:\Users\TGSUser131\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-17 10:55:36.160 +05:30 [INF] Now listening on: https://localhost:7130
+2025-04-17 10:55:36.162 +05:30 [INF] Now listening on: http://localhost:5085
+2025-04-17 10:55:36.165 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-17 10:55:36.166 +05:30 [INF] Hosting environment: Development
+2025-04-17 10:55:36.166 +05:30 [INF] Content root path: E:\aniket\c#\OAInventoryManagement\InventoryManagement
+2025-04-17 10:55:36.819 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/index.html - null null
+2025-04-17 10:55:37.187 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/index.html - 200 null text/html;charset=utf-8 378.6283ms
+2025-04-17 10:55:37.212 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-17 10:55:37.213 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/_vs/browserLink - null null
+2025-04-17 10:55:37.238 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 25.6025ms
+2025-04-17 10:55:37.291 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/_vs/browserLink - 200 null text/javascript; charset=UTF-8 77.9474ms
+2025-04-17 10:55:37.409 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - null null
+2025-04-17 10:55:37.677 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 268.1533ms
+2025-04-17 10:57:32.867 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7130/api/Item/supplier?supplierId=27569988-993D-4895-AEF6-6CB93A2D7F7D - multipart/form-data; boundary=----WebKitFormBoundaryezPZ99UmK02AuWV1 6316008
+2025-04-17 10:57:32.968 +05:30 [INF] Executing endpoint 'InventoryManagement.Controllers.ItemController.AddSupplierItem (InventoryManagement)'
+2025-04-17 10:57:32.996 +05:30 [INF] Route matched with {action = "AddSupplierItem", controller = "Item"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddSupplierItem(Domain.ViewModel.ItemInsertModel, Microsoft.AspNetCore.Http.IFormFile, System.Guid) on controller InventoryManagement.Controllers.ItemController (InventoryManagement).
+2025-04-17 10:57:34.129 +05:30 [INF] Executing action method InventoryManagement.Controllers.ItemController.AddSupplierItem (InventoryManagement) - Validation state: "Valid"
+2025-04-17 10:57:35.160 +05:30 [INF] Executed DbCommand (77ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Address], [u].[CreatedAt], [u].[CreatedBy], [u].[Email], [u].[IsActive], [u].[Password], [u].[PhoneNumber], [u].[Photo], [u].[UpdatedAt], [u].[UpdatedBy], [u].[UserId], [u].[UserName], [u].[UserTypeId]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0
+2025-04-17 10:57:35.222 +05:30 [INF] Executed action method InventoryManagement.Controllers.ItemController.AddSupplierItem (InventoryManagement), returned result Microsoft.AspNetCore.Mvc.BadRequestObjectResult in 1082.8384ms.
+2025-04-17 10:57:35.239 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2025-04-17 10:57:35.250 +05:30 [INF] Executed action InventoryManagement.Controllers.ItemController.AddSupplierItem (InventoryManagement) in 2248.1324ms
+2025-04-17 10:57:35.253 +05:30 [INF] Executed endpoint 'InventoryManagement.Controllers.ItemController.AddSupplierItem (InventoryManagement)'
+2025-04-17 10:57:35.278 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7130/api/Item/supplier?supplierId=27569988-993D-4895-AEF6-6CB93A2D7F7D - 400 null text/plain; charset=utf-8 2410.227ms
+2025-04-17 11:02:35.517 +05:30 [INF] User profile is available. Using 'C:\Users\TGSUser131\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-17 11:02:35.783 +05:30 [INF] Now listening on: https://localhost:7130
+2025-04-17 11:02:35.784 +05:30 [INF] Now listening on: http://localhost:5085
+2025-04-17 11:02:35.787 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-17 11:02:35.789 +05:30 [INF] Hosting environment: Development
+2025-04-17 11:02:35.790 +05:30 [INF] Content root path: E:\aniket\c#\OAInventoryManagement\InventoryManagement
+2025-04-17 11:02:36.599 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/index.html - null null
+2025-04-17 11:02:37.042 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/index.html - 200 null text/html;charset=utf-8 454.0327ms
+2025-04-17 11:02:37.057 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/_vs/browserLink - null null
+2025-04-17 11:02:37.057 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-17 11:02:37.075 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 18.3808ms
+2025-04-17 11:02:37.131 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/_vs/browserLink - 200 null text/javascript; charset=UTF-8 73.9551ms
+2025-04-17 11:02:37.261 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - null null
+2025-04-17 11:02:37.526 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 264.8345ms
+2025-04-17 11:03:22.298 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/api/Item/supplier/3058C3A0-4A02-4BC2-A70C-34341A556ACC - null null
+2025-04-17 11:03:22.450 +05:30 [INF] Executing endpoint 'InventoryManagement.Controllers.ItemController.GetAllItemsBySupplier (InventoryManagement)'
+2025-04-17 11:03:22.476 +05:30 [INF] Route matched with {action = "GetAllItemsBySupplier", controller = "Item"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllItemsBySupplier(System.Guid) on controller InventoryManagement.Controllers.ItemController (InventoryManagement).
+2025-04-17 11:03:23.298 +05:30 [INF] Executing action method InventoryManagement.Controllers.ItemController.GetAllItemsBySupplier (InventoryManagement) - Validation state: "Valid"
+2025-04-17 11:03:23.978 +05:30 [INF] Executed DbCommand (44ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Address], [u].[CreatedAt], [u].[CreatedBy], [u].[Email], [u].[IsActive], [u].[Password], [u].[PhoneNumber], [u].[Photo], [u].[UpdatedAt], [u].[UpdatedBy], [u].[UserId], [u].[UserName], [u].[UserTypeId]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0
+2025-04-17 11:03:24.115 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[@__supplier_UserTypeId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[CreatedBy], [u].[IsActive], [u].[TypeName], [u].[UpdatedAt], [u].[UpdatedBy]
+FROM [UserTypes] AS [u]
+WHERE [u].[Id] = @__supplier_UserTypeId_0 AND LOWER([u].[TypeName]) = N'supplier'
+2025-04-17 11:03:24.163 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__supplierId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreatedAt], [s].[CreatedBy], [s].[IsActive], [s].[ItemId], [s].[UpdatedAt], [s].[UpdatedBy], [s].[UserId]
+FROM [SupplierItems] AS [s]
+WHERE [s].[UserId] = @__supplierId_0
+2025-04-17 11:03:24.199 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [i].[Id], [i].[CategoryId], [i].[CreatedAt], [i].[CreatedBy], [i].[IsActive], [i].[ItemCode], [i].[ItemDescription], [i].[ItemName], [i].[Price], [i].[UpdatedAt], [i].[UpdatedBy]
+FROM [Items] AS [i]
+WHERE [i].[Id] = @__id_0
+2025-04-17 11:03:24.242 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CategoryName], [c].[CreatedAt], [c].[CreatedBy], [c].[IsActive], [c].[UpdatedAt], [c].[UpdatedBy]
+FROM [Categories] AS [c]
+WHERE [c].[Id] = @__id_0
+2025-04-17 11:03:24.268 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__item_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[Id], [i].[CreatedAt], [i].[CreatedBy], [i].[IsActive], [i].[ItemId], [i].[ItemImage], [i].[UpdatedAt], [i].[UpdatedBy]
+FROM [ItemImages] AS [i]
+WHERE [i].[ItemId] = @__item_Id_0
+2025-04-17 11:03:24.294 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__item_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreatedAt], [s].[CreatedBy], [s].[IsActive], [s].[ItemId], [s].[UpdatedAt], [s].[UpdatedBy], [s].[UserId]
+FROM [SupplierItems] AS [s]
+WHERE [s].[ItemId] = @__item_Id_0
+2025-04-17 11:03:24.305 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[CreatedBy], [u].[IsActive], [u].[TypeName], [u].[UpdatedAt], [u].[UpdatedBy]
+FROM [UserTypes] AS [u]
+WHERE LOWER([u].[TypeName]) = N'supplier'
+2025-04-17 11:03:24.317 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid), @__supplierType_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Address], [u].[CreatedAt], [u].[CreatedBy], [u].[Email], [u].[IsActive], [u].[Password], [u].[PhoneNumber], [u].[Photo], [u].[UpdatedAt], [u].[UpdatedBy], [u].[UserId], [u].[UserName], [u].[UserTypeId]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0 AND [u].[UserTypeId] = @__supplierType_Id_1
+2025-04-17 11:03:24.329 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__item_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreatedAt], [c].[CreatedBy], [c].[IsActive], [c].[ItemId], [c].[UpdatedAt], [c].[UpdatedBy], [c].[UserId]
+FROM [CustomerItems] AS [c]
+WHERE [c].[ItemId] = @__item_Id_0
+2025-04-17 11:03:24.337 +05:30 [INF] Executed action method InventoryManagement.Controllers.ItemController.GetAllItemsBySupplier (InventoryManagement), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1032.6548ms.
+2025-04-17 11:03:24.347 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Domain.ViewModel.ItemViewModel, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-17 11:03:24.366 +05:30 [INF] Executed action InventoryManagement.Controllers.ItemController.GetAllItemsBySupplier (InventoryManagement) in 1884.4997ms
+2025-04-17 11:03:24.368 +05:30 [INF] Executed endpoint 'InventoryManagement.Controllers.ItemController.GetAllItemsBySupplier (InventoryManagement)'
+2025-04-17 11:03:24.378 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/api/Item/supplier/3058C3A0-4A02-4BC2-A70C-34341A556ACC - 200 null application/json; charset=utf-8 2080.0509ms
+2025-04-17 11:03:39.653 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/api/Item/customer/3058C3A0-4A02-4BC2-A70C-34341A556ACC - null null
+2025-04-17 11:03:39.663 +05:30 [INF] Executing endpoint 'InventoryManagement.Controllers.ItemController.GetAllItemsByCustomer (InventoryManagement)'
+2025-04-17 11:03:39.673 +05:30 [INF] Route matched with {action = "GetAllItemsByCustomer", controller = "Item"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllItemsByCustomer(System.Guid) on controller InventoryManagement.Controllers.ItemController (InventoryManagement).
+2025-04-17 11:03:39.751 +05:30 [INF] Executing action method InventoryManagement.Controllers.ItemController.GetAllItemsByCustomer (InventoryManagement) - Validation state: "Valid"
+2025-04-17 11:03:39.762 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Address], [u].[CreatedAt], [u].[CreatedBy], [u].[Email], [u].[IsActive], [u].[Password], [u].[PhoneNumber], [u].[Photo], [u].[UpdatedAt], [u].[UpdatedBy], [u].[UserId], [u].[UserName], [u].[UserTypeId]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0
+2025-04-17 11:03:39.773 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__customer_UserTypeId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[CreatedBy], [u].[IsActive], [u].[TypeName], [u].[UpdatedAt], [u].[UpdatedBy]
+FROM [UserTypes] AS [u]
+WHERE [u].[Id] = @__customer_UserTypeId_0 AND LOWER([u].[TypeName]) = N'customer'
+2025-04-17 11:03:39.777 +05:30 [INF] Executed action method InventoryManagement.Controllers.ItemController.GetAllItemsByCustomer (InventoryManagement), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 24.0781ms.
+2025-04-17 11:03:39.779 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Domain.ViewModel.ItemViewModel, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-17 11:03:39.780 +05:30 [INF] Executed action InventoryManagement.Controllers.ItemController.GetAllItemsByCustomer (InventoryManagement) in 104.6912ms
+2025-04-17 11:03:39.782 +05:30 [INF] Executed endpoint 'InventoryManagement.Controllers.ItemController.GetAllItemsByCustomer (InventoryManagement)'
+2025-04-17 11:03:39.783 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/api/Item/customer/3058C3A0-4A02-4BC2-A70C-34341A556ACC - 200 null application/json; charset=utf-8 130.4655ms
+2025-04-17 11:04:09.258 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/api/Item/customer/BAE4C658-50DC-4A87-A447-526A4FD5DD27 - null null
+2025-04-17 11:04:09.265 +05:30 [INF] Executing endpoint 'InventoryManagement.Controllers.ItemController.GetAllItemsByCustomer (InventoryManagement)'
+2025-04-17 11:04:09.280 +05:30 [INF] Route matched with {action = "GetAllItemsByCustomer", controller = "Item"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllItemsByCustomer(System.Guid) on controller InventoryManagement.Controllers.ItemController (InventoryManagement).
+2025-04-17 11:04:09.327 +05:30 [INF] Executing action method InventoryManagement.Controllers.ItemController.GetAllItemsByCustomer (InventoryManagement) - Validation state: "Valid"
+2025-04-17 11:04:09.331 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Address], [u].[CreatedAt], [u].[CreatedBy], [u].[Email], [u].[IsActive], [u].[Password], [u].[PhoneNumber], [u].[Photo], [u].[UpdatedAt], [u].[UpdatedBy], [u].[UserId], [u].[UserName], [u].[UserTypeId]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0
+2025-04-17 11:04:09.336 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__customer_UserTypeId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[CreatedBy], [u].[IsActive], [u].[TypeName], [u].[UpdatedAt], [u].[UpdatedBy]
+FROM [UserTypes] AS [u]
+WHERE [u].[Id] = @__customer_UserTypeId_0 AND LOWER([u].[TypeName]) = N'customer'
+2025-04-17 11:04:09.346 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__customerId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreatedAt], [c].[CreatedBy], [c].[IsActive], [c].[ItemId], [c].[UpdatedAt], [c].[UpdatedBy], [c].[UserId]
+FROM [CustomerItems] AS [c]
+WHERE [c].[UserId] = @__customerId_0
+2025-04-17 11:04:09.360 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [i].[Id], [i].[CategoryId], [i].[CreatedAt], [i].[CreatedBy], [i].[IsActive], [i].[ItemCode], [i].[ItemDescription], [i].[ItemName], [i].[Price], [i].[UpdatedAt], [i].[UpdatedBy]
+FROM [Items] AS [i]
+WHERE [i].[Id] = @__id_0
+2025-04-17 11:04:09.366 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CategoryName], [c].[CreatedAt], [c].[CreatedBy], [c].[IsActive], [c].[UpdatedAt], [c].[UpdatedBy]
+FROM [Categories] AS [c]
+WHERE [c].[Id] = @__id_0
+2025-04-17 11:04:09.370 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__item_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[Id], [i].[CreatedAt], [i].[CreatedBy], [i].[IsActive], [i].[ItemId], [i].[ItemImage], [i].[UpdatedAt], [i].[UpdatedBy]
+FROM [ItemImages] AS [i]
+WHERE [i].[ItemId] = @__item_Id_0
+2025-04-17 11:04:09.373 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__item_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreatedAt], [s].[CreatedBy], [s].[IsActive], [s].[ItemId], [s].[UpdatedAt], [s].[UpdatedBy], [s].[UserId]
+FROM [SupplierItems] AS [s]
+WHERE [s].[ItemId] = @__item_Id_0
+2025-04-17 11:04:09.376 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__item_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreatedAt], [c].[CreatedBy], [c].[IsActive], [c].[ItemId], [c].[UpdatedAt], [c].[UpdatedBy], [c].[UserId]
+FROM [CustomerItems] AS [c]
+WHERE [c].[ItemId] = @__item_Id_0
+2025-04-17 11:04:09.386 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[CreatedBy], [u].[IsActive], [u].[TypeName], [u].[UpdatedAt], [u].[UpdatedBy]
+FROM [UserTypes] AS [u]
+WHERE LOWER([u].[TypeName]) = N'customer'
+2025-04-17 11:04:09.394 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Guid), @__customerType_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Address], [u].[CreatedAt], [u].[CreatedBy], [u].[Email], [u].[IsActive], [u].[Password], [u].[PhoneNumber], [u].[Photo], [u].[UpdatedAt], [u].[UpdatedBy], [u].[UserId], [u].[UserName], [u].[UserTypeId]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0 AND [u].[UserTypeId] = @__customerType_Id_1
+2025-04-17 11:04:09.398 +05:30 [INF] Executed action method InventoryManagement.Controllers.ItemController.GetAllItemsByCustomer (InventoryManagement), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 69.4245ms.
+2025-04-17 11:04:09.400 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Domain.ViewModel.ItemViewModel, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-17 11:04:09.401 +05:30 [INF] Executed action InventoryManagement.Controllers.ItemController.GetAllItemsByCustomer (InventoryManagement) in 116.8365ms
+2025-04-17 11:04:09.403 +05:30 [INF] Executed endpoint 'InventoryManagement.Controllers.ItemController.GetAllItemsByCustomer (InventoryManagement)'
+2025-04-17 11:04:09.404 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/api/Item/customer/BAE4C658-50DC-4A87-A447-526A4FD5DD27 - 200 null application/json; charset=utf-8 145.827ms
+2025-04-17 11:04:28.417 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/api/Item/254B494E-378E-4E40-9F19-0861C5F3ABD0 - null null
+2025-04-17 11:04:28.420 +05:30 [INF] Executing endpoint 'InventoryManagement.Controllers.ItemController.GetItem (InventoryManagement)'
+2025-04-17 11:04:28.436 +05:30 [INF] Route matched with {action = "GetItem", controller = "Item"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetItem(System.Guid) on controller InventoryManagement.Controllers.ItemController (InventoryManagement).
+2025-04-17 11:04:28.457 +05:30 [INF] Executing action method InventoryManagement.Controllers.ItemController.GetItem (InventoryManagement) - Validation state: "Valid"
+2025-04-17 11:04:28.462 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [i].[Id], [i].[CategoryId], [i].[CreatedAt], [i].[CreatedBy], [i].[IsActive], [i].[ItemCode], [i].[ItemDescription], [i].[ItemName], [i].[Price], [i].[UpdatedAt], [i].[UpdatedBy]
+FROM [Items] AS [i]
+WHERE [i].[Id] = @__id_0
+2025-04-17 11:04:28.466 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CategoryName], [c].[CreatedAt], [c].[CreatedBy], [c].[IsActive], [c].[UpdatedAt], [c].[UpdatedBy]
+FROM [Categories] AS [c]
+WHERE [c].[Id] = @__id_0
+2025-04-17 11:04:28.470 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__item_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[Id], [i].[CreatedAt], [i].[CreatedBy], [i].[IsActive], [i].[ItemId], [i].[ItemImage], [i].[UpdatedAt], [i].[UpdatedBy]
+FROM [ItemImages] AS [i]
+WHERE [i].[ItemId] = @__item_Id_0
+2025-04-17 11:04:28.473 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__item_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreatedAt], [s].[CreatedBy], [s].[IsActive], [s].[ItemId], [s].[UpdatedAt], [s].[UpdatedBy], [s].[UserId]
+FROM [SupplierItems] AS [s]
+WHERE [s].[ItemId] = @__item_Id_0
+2025-04-17 11:04:28.479 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[CreatedBy], [u].[IsActive], [u].[TypeName], [u].[UpdatedAt], [u].[UpdatedBy]
+FROM [UserTypes] AS [u]
+WHERE LOWER([u].[TypeName]) = N'supplier'
+2025-04-17 11:04:28.482 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid), @__supplierType_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Address], [u].[CreatedAt], [u].[CreatedBy], [u].[Email], [u].[IsActive], [u].[Password], [u].[PhoneNumber], [u].[Photo], [u].[UpdatedAt], [u].[UpdatedBy], [u].[UserId], [u].[UserName], [u].[UserTypeId]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0 AND [u].[UserTypeId] = @__supplierType_Id_1
+2025-04-17 11:04:28.486 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__item_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreatedAt], [c].[CreatedBy], [c].[IsActive], [c].[ItemId], [c].[UpdatedAt], [c].[UpdatedBy], [c].[UserId]
+FROM [CustomerItems] AS [c]
+WHERE [c].[ItemId] = @__item_Id_0
+2025-04-17 11:04:28.488 +05:30 [INF] Executed action method InventoryManagement.Controllers.ItemController.GetItem (InventoryManagement), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 29.2049ms.
+2025-04-17 11:04:28.489 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.ViewModel.ItemViewModel'.
+2025-04-17 11:04:28.490 +05:30 [INF] Executed action InventoryManagement.Controllers.ItemController.GetItem (InventoryManagement) in 52.1409ms
+2025-04-17 11:04:28.492 +05:30 [INF] Executed endpoint 'InventoryManagement.Controllers.ItemController.GetItem (InventoryManagement)'
+2025-04-17 11:04:28.493 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/api/Item/254B494E-378E-4E40-9F19-0861C5F3ABD0 - 200 null application/json; charset=utf-8 76.276ms
+2025-04-17 11:04:42.034 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/index.html - null null
+2025-04-17 11:04:42.096 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/index.html - 200 null text/html;charset=utf-8 62.6304ms
+2025-04-17 11:04:42.135 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-17 11:04:42.137 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/_vs/browserLink - null null
+2025-04-17 11:04:42.154 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 18.9406ms
+2025-04-17 11:04:42.176 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/_vs/browserLink - 200 null text/javascript; charset=UTF-8 38.9967ms
+2025-04-17 11:04:42.322 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - null null
+2025-04-17 11:04:42.350 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 27.6406ms
+2025-04-17 11:06:08.817 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7130/api/Item/supplier?supplierId=3058C3A0-4A02-4BC2-A70C-34341A556ACC - multipart/form-data; boundary=----WebKitFormBoundaryAyndhAIuusni5yAE 1969589
+2025-04-17 11:06:08.846 +05:30 [INF] Executing endpoint 'InventoryManagement.Controllers.ItemController.AddSupplierItem (InventoryManagement)'
+2025-04-17 11:06:08.851 +05:30 [INF] Route matched with {action = "AddSupplierItem", controller = "Item"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddSupplierItem(Domain.ViewModel.ItemInsertModel, Microsoft.AspNetCore.Http.IFormFile, System.Guid) on controller InventoryManagement.Controllers.ItemController (InventoryManagement).
+2025-04-17 11:06:09.045 +05:30 [INF] Executing action method InventoryManagement.Controllers.ItemController.AddSupplierItem (InventoryManagement) - Validation state: "Valid"
+2025-04-17 11:06:09.068 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Address], [u].[CreatedAt], [u].[CreatedBy], [u].[Email], [u].[IsActive], [u].[Password], [u].[PhoneNumber], [u].[Photo], [u].[UpdatedAt], [u].[UpdatedBy], [u].[UserId], [u].[UserName], [u].[UserTypeId]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0
+2025-04-17 11:06:09.076 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__supplier_UserTypeId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[CreatedBy], [u].[IsActive], [u].[TypeName], [u].[UpdatedAt], [u].[UpdatedBy]
+FROM [UserTypes] AS [u]
+WHERE [u].[Id] = @__supplier_UserTypeId_0 AND LOWER([u].[TypeName]) = N'supplier'
+2025-04-17 11:06:09.250 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Guid), @p2='?' (DbType = DateTime2), @p3='?' (Size = 4000), @p4='?' (DbType = Boolean), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = Int32), @p9='?' (DbType = DateTime2), @p10='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Items] ([Id], [CategoryId], [CreatedAt], [CreatedBy], [IsActive], [ItemCode], [ItemDescription], [ItemName], [Price], [UpdatedAt], [UpdatedBy])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10);
+2025-04-17 11:06:09.278 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (DbType = Boolean), @p4='?' (DbType = Guid), @p5='?' (DbType = DateTime2), @p6='?' (Size = 4000), @p7='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [SupplierItems] ([Id], [CreatedAt], [CreatedBy], [IsActive], [ItemId], [UpdatedAt], [UpdatedBy], [UserId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+2025-04-17 11:06:09.292 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (DbType = Boolean), @p4='?' (DbType = Guid), @p5='?' (Size = 4000), @p6='?' (DbType = DateTime2), @p7='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [ItemImages] ([Id], [CreatedAt], [CreatedBy], [IsActive], [ItemId], [ItemImage], [UpdatedAt], [UpdatedBy])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+2025-04-17 11:06:09.296 +05:30 [INF] Executed action method InventoryManagement.Controllers.ItemController.AddSupplierItem (InventoryManagement), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 249.0489ms.
+2025-04-17 11:06:09.298 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2025-04-17 11:06:09.300 +05:30 [INF] Executed action InventoryManagement.Controllers.ItemController.AddSupplierItem (InventoryManagement) in 445.8123ms
+2025-04-17 11:06:09.302 +05:30 [INF] Executed endpoint 'InventoryManagement.Controllers.ItemController.AddSupplierItem (InventoryManagement)'
+2025-04-17 11:06:09.307 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7130/api/Item/supplier?supplierId=3058C3A0-4A02-4BC2-A70C-34341A556ACC - 200 null text/plain; charset=utf-8 490.3215ms
+2025-04-17 11:07:28.999 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7130/api/Item/customer?customerId=BAE4C658-50DC-4A87-A447-526A4FD5DD27 - multipart/form-data; boundary=----WebKitFormBoundaryEAyd0sgGPXt9EsBP 2939183
+2025-04-17 11:07:29.050 +05:30 [INF] Executing endpoint 'InventoryManagement.Controllers.ItemController.AddCustomerItem (InventoryManagement)'
+2025-04-17 11:07:29.055 +05:30 [INF] Route matched with {action = "AddCustomerItem", controller = "Item"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddCustomerItem(Domain.ViewModel.ItemInsertModel, Microsoft.AspNetCore.Http.IFormFile, System.Guid) on controller InventoryManagement.Controllers.ItemController (InventoryManagement).
+2025-04-17 11:07:29.184 +05:30 [INF] Executing action method InventoryManagement.Controllers.ItemController.AddCustomerItem (InventoryManagement) - Validation state: "Valid"
+2025-04-17 11:07:29.199 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Address], [u].[CreatedAt], [u].[CreatedBy], [u].[Email], [u].[IsActive], [u].[Password], [u].[PhoneNumber], [u].[Photo], [u].[UpdatedAt], [u].[UpdatedBy], [u].[UserId], [u].[UserName], [u].[UserTypeId]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0
+2025-04-17 11:07:29.203 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__customer_UserTypeId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[CreatedBy], [u].[IsActive], [u].[TypeName], [u].[UpdatedAt], [u].[UpdatedBy]
+FROM [UserTypes] AS [u]
+WHERE [u].[Id] = @__customer_UserTypeId_0 AND LOWER([u].[TypeName]) = N'customer'
+2025-04-17 11:07:29.208 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Guid), @p2='?' (DbType = DateTime2), @p3='?' (Size = 4000), @p4='?' (DbType = Boolean), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = Int32), @p9='?' (DbType = DateTime2), @p10='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Items] ([Id], [CategoryId], [CreatedAt], [CreatedBy], [IsActive], [ItemCode], [ItemDescription], [ItemName], [Price], [UpdatedAt], [UpdatedBy])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10);
+2025-04-17 11:07:29.220 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (DbType = Boolean), @p4='?' (DbType = Guid), @p5='?' (DbType = DateTime2), @p6='?' (Size = 4000), @p7='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [CustomerItems] ([Id], [CreatedAt], [CreatedBy], [IsActive], [ItemId], [UpdatedAt], [UpdatedBy], [UserId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+2025-04-17 11:07:29.224 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (DbType = Boolean), @p4='?' (DbType = Guid), @p5='?' (Size = 4000), @p6='?' (DbType = DateTime2), @p7='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [ItemImages] ([Id], [CreatedAt], [CreatedBy], [IsActive], [ItemId], [ItemImage], [UpdatedAt], [UpdatedBy])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+2025-04-17 11:07:29.227 +05:30 [INF] Executed action method InventoryManagement.Controllers.ItemController.AddCustomerItem (InventoryManagement), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 41.7031ms.
+2025-04-17 11:07:29.228 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2025-04-17 11:07:29.229 +05:30 [INF] Executed action InventoryManagement.Controllers.ItemController.AddCustomerItem (InventoryManagement) in 172.7863ms
+2025-04-17 11:07:29.231 +05:30 [INF] Executed endpoint 'InventoryManagement.Controllers.ItemController.AddCustomerItem (InventoryManagement)'
+2025-04-17 11:07:29.233 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7130/api/Item/customer?customerId=BAE4C658-50DC-4A87-A447-526A4FD5DD27 - 200 null text/plain; charset=utf-8 234.523ms
+2025-04-17 11:07:33.929 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/index.html - null null
+2025-04-17 11:07:33.982 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/index.html - 200 null text/html;charset=utf-8 53.2052ms
+2025-04-17 11:07:34.026 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/_vs/browserLink - null null
+2025-04-17 11:07:34.027 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-17 11:07:34.035 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 8.2943ms
+2025-04-17 11:07:34.073 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/_vs/browserLink - 200 null text/javascript; charset=UTF-8 47.5318ms
+2025-04-17 11:07:34.224 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - null null
+2025-04-17 11:07:34.249 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 24.8622ms
+2025-04-17 11:07:47.056 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/index.html - null null
+2025-04-17 11:07:47.090 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/index.html - 200 null text/html;charset=utf-8 33.8118ms
+2025-04-17 11:07:47.106 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/_vs/browserLink - null null
+2025-04-17 11:07:47.106 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-17 11:07:47.112 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 5.8698ms
+2025-04-17 11:07:47.123 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/_vs/browserLink - 200 null text/javascript; charset=UTF-8 16.9015ms
+2025-04-17 11:07:47.165 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - null null
+2025-04-17 11:07:47.191 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 26.3475ms

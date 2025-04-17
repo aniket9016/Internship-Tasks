@@ -16,168 +16,113 @@ namespace Service.Custom.ItemSer
 {
     public class ItemService : IItemService
     {
-        private readonly IRepositoryCommon<Item> _itemRepo;
-        private readonly IRepositoryCommon<ItemImages> _itemImageRepo;
-        private readonly IRepositoryCommon<CustomerItem> _customerItemRepo;
-        private readonly IRepositoryCommon<SupplierItem> _supplierItemRepo;
-        private readonly IRepositoryCommon<User> _userRepo;
+        private readonly IRepositoryCommon<Item> _itemRepository;
+        private readonly IRepositoryCommon<ItemImages> _itemImagesRepository;
+        private readonly IRepositoryCommon<CustomerItem> _customerItemRepository;
+        private readonly IRepositoryCommon<SupplierItem> _supplierItemRepository;
+        private readonly IRepositoryCommon<User> _userRepository;
         private readonly ICategoryService _categoryService;
+        private readonly IUserTypeService _userTypeService;
         private readonly ICustomerService _customerService;
         private readonly ISupplierService _supplierService;
-        private readonly IUserTypeService _userTypeService;
 
         public ItemService(
-            IRepositoryCommon<Item> itemRepo,
-            IRepositoryCommon<ItemImages> itemImageRepo,
-            IRepositoryCommon<CustomerItem> customerItemRepo,
-            IRepositoryCommon<SupplierItem> supplierItemRepo,
-            IRepositoryCommon<User> userRepo,
+            IRepositoryCommon<Item> itemRepository,
+            IRepositoryCommon<ItemImages> itemImagesRepository,
+            IRepositoryCommon<CustomerItem> customerItemRepository,
+            IRepositoryCommon<SupplierItem> supplierItemRepository,
+            IRepositoryCommon<User> userRepository,
             ICategoryService categoryService,
+            IUserTypeService userTypeService,
             ICustomerService customerService,
-            ISupplierService supplierService,
-            IUserTypeService userTypeService)
+            ISupplierService supplierService)
         {
-            _itemRepo = itemRepo;
-            _itemImageRepo = itemImageRepo;
-            _customerItemRepo = customerItemRepo;
-            _supplierItemRepo = supplierItemRepo;
-            _userRepo = userRepo;
+            _itemRepository = itemRepository;
+            _itemImagesRepository = itemImagesRepository;
+            _customerItemRepository = customerItemRepository;
+            _supplierItemRepository = supplierItemRepository;
+            _userRepository = userRepository;
             _categoryService = categoryService;
+            _userTypeService = userTypeService;
             _customerService = customerService;
             _supplierService = supplierService;
-            _userTypeService = userTypeService;
         }
 
-        public async Task<ICollection<ItemViewModel>> GetAll()
+        public async Task<ICollection<ItemViewModel>> GetAllItemsBySupplier(Guid supplierId)
         {
-            var items = await _itemRepo.GetAll();
-            var itemViewModels = new List<ItemViewModel>();
+            // Verify that the user exists and is a supplier
+            var supplier = await _userRepository.Get(supplierId);
+            if (supplier == null) return new List<ItemViewModel>();
 
-            foreach (var item in items)
-            {
-                var itemImages = await _itemImageRepo.FindAll(x => x.ItemId == item.Id);
-                var supplierItems = await _supplierItemRepo.FindAll(x => x.ItemId == item.Id);
-                var customerItems = await _customerItemRepo.FindAll(x => x.ItemId == item.Id);
-                var category = await _categoryService.GetById(item.CategoryId);
+            var userType = await _userTypeService.Find(x => x.Id == supplier.UserTypeId && x.TypeName.ToLower() == "supplier");
+            if (userType == null) return new List<ItemViewModel>();
 
-                var viewModel = new ItemViewModel
-                {
-                    ItemCode = item.ItemCode,
-                    ItemName = item.ItemName,
-                    ItemDescription = item.ItemDescription,
-                    Price = item.Price,
-                    ItemImages = itemImages.Select(img => new ItemImageViewModel
-                    {
-                        ItemImage = img.ItemImage
-                    }).ToList(),
-                    CategoryViewModels = category != null ?
-                        new List<CategoryViewModel> { category } :
-                        new List<CategoryViewModel>(),
-                    UserViewModels = new List<UserViewModel>()
-                };
+            // Get all supplier items for this supplier
+            var supplierItems = await _supplierItemRepository.FindAll(x => x.UserId == supplierId);
+            if (supplierItems == null || !supplierItems.Any()) return new List<ItemViewModel>();
 
-                foreach (var supplierItem in supplierItems)
-                {
-                    if (supplierItem.UserId != Guid.Empty)
-                    {
-                        var user = await _userRepo.Get(supplierItem.UserId);
-                        if (user != null)
-                        {
-                            var supplier = await _supplierService.GetById(supplierItem.UserId);
-                            if (supplier != null)
-                            {
-                                viewModel.UserViewModels.Add(supplier);
-                            }
-                        }
-                    }
-                }
-
-                foreach (var customerItem in customerItems)
-                {
-                    if (customerItem.UserId != Guid.Empty)
-                    {
-                        var user = await _userRepo.Get(customerItem.UserId);
-                        if (user != null)
-                        {
-                            var customer = await _customerService.GetById(customerItem.UserId);
-                            if (customer != null)
-                            {
-                                viewModel.UserViewModels.Add(customer);
-                            }
-                        }
-                    }
-                }
-
-                itemViewModels.Add(viewModel);
-            }
-
-            return itemViewModels;
-        }
-
-        public async Task<ItemViewModel?> GetById(Guid id)
-        {
-            var item = await _itemRepo.Get(id);
-            if (item == null) return null;
-
-            var itemImages = await _itemImageRepo.FindAll(x => x.ItemId == item.Id);
-            var supplierItems = await _supplierItemRepo.FindAll(x => x.ItemId == item.Id);
-            var customerItems = await _customerItemRepo.FindAll(x => x.ItemId == item.Id);
-            var category = await _categoryService.GetById(item.CategoryId);
-
-            var viewModel = new ItemViewModel
-            {
-                ItemCode = item.ItemCode,
-                ItemName = item.ItemName,
-                ItemDescription = item.ItemDescription,
-                Price = item.Price,
-                ItemImages = itemImages.Select(img => new ItemImageViewModel
-                {
-                    ItemImage = img.ItemImage
-                }).ToList(),
-                CategoryViewModels = category != null ?
-                    new List<CategoryViewModel> { category } :
-                    new List<CategoryViewModel>(),
-                UserViewModels = new List<UserViewModel>()
-            };
+            var result = new List<ItemViewModel>();
 
             foreach (var supplierItem in supplierItems)
             {
-                if (supplierItem.UserId != Guid.Empty)
+                var item = await _itemRepository.Get(supplierItem.ItemId);
+                if (item != null)
                 {
-                    var user = await _userRepo.Get(supplierItem.UserId);
-                    if (user != null)
-                    {
-                        var supplier = await _supplierService.GetById(supplierItem.UserId);
-                        if (supplier != null)
-                        {
-                            viewModel.UserViewModels.Add(supplier);
-                        }
-                    }
+                    var itemViewModel = await BuildItemViewModel(item);
+                    result.Add(itemViewModel);
                 }
             }
+
+            return result;
+        }
+
+        public async Task<ICollection<ItemViewModel>> GetAllItemsByCustomer(Guid customerId)
+        {
+            // Verify that the user exists and is a customer
+            var customer = await _userRepository.Get(customerId);
+            if (customer == null) return new List<ItemViewModel>();
+
+            var userType = await _userTypeService.Find(x => x.Id == customer.UserTypeId && x.TypeName.ToLower() == "customer");
+            if (userType == null) return new List<ItemViewModel>();
+
+            // Get all customer items for this customer
+            var customerItems = await _customerItemRepository.FindAll(x => x.UserId == customerId);
+            if (customerItems == null || !customerItems.Any()) return new List<ItemViewModel>();
+
+            var result = new List<ItemViewModel>();
 
             foreach (var customerItem in customerItems)
             {
-                if (customerItem.UserId != Guid.Empty)
+                var item = await _itemRepository.Get(customerItem.ItemId);
+                if (item != null)
                 {
-                    var user = await _userRepo.Get(customerItem.UserId);
-                    if (user != null)
-                    {
-                        var customer = await _customerService.GetById(customerItem.UserId);
-                        if (customer != null)
-                        {
-                            viewModel.UserViewModels.Add(customer);
-                        }
-                    }
+                    var itemViewModel = await BuildItemViewModel(item);
+                    result.Add(itemViewModel);
                 }
             }
 
-            return viewModel;
+            return result;
         }
 
-        public async Task<bool> Insert(ItemInsertModel model, string imageFileName)
+        public async Task<ItemViewModel> GetItem(Guid itemId)
         {
-            var entity = new Item
+            var item = await _itemRepository.Get(itemId);
+            if (item == null) return null;
+
+            return await BuildItemViewModel(item);
+        }
+
+        public async Task<bool> AddSupplierItem(ItemInsertModel model, string imageFileName, Guid supplierId)
+        {
+            // Verify that the user exists and is a supplier
+            var supplier = await _userRepository.Get(supplierId);
+            if (supplier == null) return false;
+
+            var userType = await _userTypeService.Find(x => x.Id == supplier.UserTypeId && x.TypeName.ToLower() == "supplier");
+            if (userType == null) return false;
+
+            // Create new item
+            var item = new Item
             {
                 Id = Guid.NewGuid(),
                 ItemCode = model.ItemCode,
@@ -192,204 +137,15 @@ namespace Service.Custom.ItemSer
                 IsActive = true
             };
 
-            var inserted = await _itemRepo.Insert(entity);
+            // Save the item
+            var itemInserted = await _itemRepository.Insert(item);
+            if (!itemInserted) return false;
 
-            if (inserted && !string.IsNullOrEmpty(imageFileName))
-            {
-                var image = new ItemImages
-                {
-                    Id = Guid.NewGuid(),
-                    ItemId = entity.Id,
-                    ItemImage = imageFileName,
-                    CreatedAt = DateTime.Now,
-                    UpdatedAt = DateTime.Now,
-                    CreatedBy = "System",
-                    UpdatedBy = "System",
-                    IsActive = true
-                };
-                await _itemImageRepo.Insert(image);
-            }
-
-            return inserted;
-        }
-
-        public async Task<bool> Update(ItemUpdateModel model, string imageFileName)
-        {
-            var entity = await _itemRepo.Get(model.Id);
-            if (entity == null) return false;
-
-            entity.ItemCode = model.ItemCode;
-            entity.ItemName = model.ItemName;
-            entity.ItemDescription = model.ItemDescription;
-            entity.Price = model.Price;
-            entity.CategoryId = model.CategoryId;
-            entity.UpdatedAt = DateTime.Now;
-            entity.UpdatedBy = "System";
-
-            var updated = await _itemRepo.Update(entity);
-
-            if (updated && !string.IsNullOrEmpty(imageFileName))
-            {
-                var existingImages = await _itemImageRepo.FindAll(x => x.ItemId == entity.Id);
-                foreach (var img in existingImages)
-                {
-                    await _itemImageRepo.Delete(img);
-                }
-
-                var newImage = new ItemImages
-                {
-                    Id = Guid.NewGuid(),
-                    ItemId = entity.Id,
-                    ItemImage = imageFileName,
-                    CreatedAt = DateTime.Now,
-                    UpdatedAt = DateTime.Now,
-                    CreatedBy = "System",
-                    UpdatedBy = "System",
-                    IsActive = true
-                };
-                await _itemImageRepo.Insert(newImage);
-            }
-
-            return updated;
-        }
-
-        public async Task<bool> Delete(Guid id)
-        {
-            var entity = await _itemRepo.Get(id);
-            if (entity == null) return false;
-
-            var images = await _itemImageRepo.FindAll(x => x.ItemId == id);
-            foreach (var img in images)
-            {
-                await _itemImageRepo.Delete(img);
-            }
-
-            var customerItems = await _customerItemRepo.FindAll(x => x.ItemId == id);
-            foreach (var ci in customerItems)
-            {
-                await _customerItemRepo.Delete(ci);
-            }
-
-            var supplierItems = await _supplierItemRepo.FindAll(x => x.ItemId == id);
-            foreach (var si in supplierItems)
-            {
-                await _supplierItemRepo.Delete(si);
-            }
-
-            return await _itemRepo.Delete(entity);
-        }
-
-        public async Task<Item> Find(Expression<Func<Item, bool>> match)
-        {
-            return await _itemRepo.Find(match);
-        }
-
-        public async Task<ICollection<Item>> FindAll(Expression<Func<Item, bool>> match)
-        {
-            return await _itemRepo.FindAll(match);
-        }
-
-        public async Task<ICollection<ItemViewModel>> GetItemsBySuppliers()
-        {
-            var userType = (await _userTypeService.GetAll())
-                           .FirstOrDefault(ut => ut.TypeName.ToLower() == "supplier");
-
-            if (userType == null) return new List<ItemViewModel>();
-
-            var users = await _userRepo.FindAll(u => u.UserTypeId == userType.Id);
-            var supplierItems = new List<SupplierItem>();
-
-            foreach (var user in users)
-            {
-                var items = await _supplierItemRepo.FindAll(si => si.UserId == user.Id);
-                supplierItems.AddRange(items);
-            }
-
-            var result = new List<ItemViewModel>();
-
-            foreach (var supplierItem in supplierItems)
-            {
-                var item = await GetById(supplierItem.ItemId);
-                if (item != null)
-                {
-                    result.Add(item);
-                }
-            }
-
-            return result;
-        }
-
-        public async Task<ICollection<ItemViewModel>> GetItemsByCustomers()
-        {
-            var userType = (await _userTypeService.GetAll())
-                           .FirstOrDefault(ut => ut.TypeName.ToLower() == "customer");
-
-            if (userType == null) return new List<ItemViewModel>();
-
-            var users = await _userRepo.FindAll(u => u.UserTypeId == userType.Id);
-            var customerItems = new List<CustomerItem>();
-
-            foreach (var user in users)
-            {
-                var items = await _customerItemRepo.FindAll(ci => ci.UserId == user.Id);
-                customerItems.AddRange(items);
-            }
-
-            var result = new List<ItemViewModel>();
-
-            foreach (var customerItem in customerItems)
-            {
-                var item = await GetById(customerItem.ItemId);
-                if (item != null)
-                {
-                    result.Add(item);
-                }
-            }
-
-            return result;
-        }
-
-        public async Task<bool> AddItemToCustomer(Guid itemId, Guid customerId)
-        {
-            var item = await _itemRepo.Get(itemId);
-            if (item == null) return false;
-
-            var user = await _userRepo.Get(customerId);
-            if (user == null) return false;
-
-            var existing = await _customerItemRepo.Find(ci => ci.ItemId == itemId && ci.UserId == customerId);
-            if (existing != null) return true;
-
-            var customerItem = new CustomerItem
-            {
-                Id = Guid.NewGuid(),
-                ItemId = itemId,
-                UserId = customerId,
-                CreatedAt = DateTime.Now,
-                UpdatedAt = DateTime.Now,
-                CreatedBy = "System",
-                UpdatedBy = "System",
-                IsActive = true
-            };
-
-            return await _customerItemRepo.Insert(customerItem);
-        }
-
-        public async Task<bool> AddItemToSupplier(Guid itemId, Guid supplierId)
-        {
-            var item = await _itemRepo.Get(itemId);
-            if (item == null) return false;
-
-            var user = await _userRepo.Get(supplierId);
-            if (user == null) return false;
-
-            var existing = await _supplierItemRepo.Find(si => si.ItemId == itemId && si.UserId == supplierId);
-            if (existing != null) return true;
-
+            // Create supplier-item relationship
             var supplierItem = new SupplierItem
             {
                 Id = Guid.NewGuid(),
-                ItemId = itemId,
+                ItemId = item.Id,
                 UserId = supplierId,
                 CreatedAt = DateTime.Now,
                 UpdatedAt = DateTime.Now,
@@ -398,80 +154,252 @@ namespace Service.Custom.ItemSer
                 IsActive = true
             };
 
-            return await _supplierItemRepo.Insert(supplierItem);
-        }
-
-        public async Task<bool> RemoveItemFromCustomer(Guid itemId, Guid customerId)
-        {
-            var customerItem = await _customerItemRepo.Find(ci => ci.ItemId == itemId && ci.UserId == customerId);
-            if (customerItem == null) return false;
-
-            return await _customerItemRepo.Delete(customerItem);
-        }
-
-        public async Task<bool> RemoveItemFromSupplier(Guid itemId, Guid supplierId)
-        {
-            var supplierItem = await _supplierItemRepo.Find(si => si.ItemId == itemId && si.UserId == supplierId);
-            if (supplierItem == null) return false;
-
-            return await _supplierItemRepo.Delete(supplierItem);
-        }
-
-        public async Task<ICollection<ItemViewModel>> GetItemsByCategory(Guid categoryId)
-        {
-            var items = await _itemRepo.FindAll(i => i.CategoryId == categoryId);
-            var itemViewModels = new List<ItemViewModel>();
-
-            foreach (var item in items)
+            var supplierItemInserted = await _supplierItemRepository.Insert(supplierItem);
+            if (!supplierItemInserted)
             {
-                var viewModel = await GetById(item.Id);
-                if (viewModel != null)
-                {
-                    itemViewModels.Add(viewModel);
-                }
+                // Roll back item creation if supplier-item relationship fails
+                await _itemRepository.Delete(item);
+                return false;
             }
 
-            return itemViewModels;
+            // Add image if available
+            if (!string.IsNullOrEmpty(imageFileName))
+            {
+                var itemImage = new ItemImages
+                {
+                    Id = Guid.NewGuid(),
+                    ItemId = item.Id,
+                    ItemImage = imageFileName,
+                    CreatedAt = DateTime.Now,
+                    UpdatedAt = DateTime.Now,
+                    CreatedBy = "System",
+                    UpdatedBy = "System",
+                    IsActive = true
+                };
+
+                await _itemImagesRepository.Insert(itemImage);
+            }
+
+            return true;
         }
 
-        public async Task<ICollection<ItemViewModel>> GetItemsBySupplier(Guid supplierId)
+        public async Task<bool> AddCustomerItem(ItemInsertModel model, string imageFileName, Guid customerId)
         {
-            var user = await _userRepo.Get(supplierId);
-            if (user == null) return new List<ItemViewModel>();
+            // Verify that the user exists and is a customer
+            var customer = await _userRepository.Get(customerId);
+            if (customer == null) return false;
 
-            var supplierItems = await _supplierItemRepo.FindAll(si => si.UserId == supplierId);
-            var itemViewModels = new List<ItemViewModel>();
+            var userType = await _userTypeService.Find(x => x.Id == customer.UserTypeId && x.TypeName.ToLower() == "customer");
+            if (userType == null) return false;
 
+            // Create new item
+            var item = new Item
+            {
+                Id = Guid.NewGuid(),
+                ItemCode = model.ItemCode,
+                ItemName = model.ItemName,
+                ItemDescription = model.ItemDescription,
+                Price = model.Price,
+                CategoryId = model.CategoryId,
+                CreatedAt = DateTime.Now,
+                UpdatedAt = DateTime.Now,
+                CreatedBy = "System",
+                UpdatedBy = "System",
+                IsActive = true
+            };
+
+            // Save the item
+            var itemInserted = await _itemRepository.Insert(item);
+            if (!itemInserted) return false;
+
+            // Create customer-item relationship
+            var customerItem = new CustomerItem
+            {
+                Id = Guid.NewGuid(),
+                ItemId = item.Id,
+                UserId = customerId,
+                CreatedAt = DateTime.Now,
+                UpdatedAt = DateTime.Now,
+                CreatedBy = "System",
+                UpdatedBy = "System",
+                IsActive = true
+            };
+
+            var customerItemInserted = await _customerItemRepository.Insert(customerItem);
+            if (!customerItemInserted)
+            {
+                // Roll back item creation if customer-item relationship fails
+                await _itemRepository.Delete(item);
+                return false;
+            }
+
+            // Add image if available
+            if (!string.IsNullOrEmpty(imageFileName))
+            {
+                var itemImage = new ItemImages
+                {
+                    Id = Guid.NewGuid(),
+                    ItemId = item.Id,
+                    ItemImage = imageFileName,
+                    CreatedAt = DateTime.Now,
+                    UpdatedAt = DateTime.Now,
+                    CreatedBy = "System",
+                    UpdatedBy = "System",
+                    IsActive = true
+                };
+
+                await _itemImagesRepository.Insert(itemImage);
+            }
+
+            return true;
+        }
+
+        public async Task<bool> EditItem(ItemUpdateModel model, string imageFileName)
+        {
+            // Get the item to update
+            var item = await _itemRepository.Get(model.Id);
+            if (item == null) return false;
+
+            // Update item properties
+            item.ItemCode = model.ItemCode;
+            item.ItemName = model.ItemName;
+            item.ItemDescription = model.ItemDescription;
+            item.Price = model.Price;
+            item.CategoryId = model.CategoryId;
+            item.UpdatedAt = DateTime.Now;
+            item.UpdatedBy = "System";
+
+            // Update the item
+            var updated = await _itemRepository.Update(item);
+            if (!updated) return false;
+
+            // Update image if provided
+            if (!string.IsNullOrEmpty(imageFileName))
+            {
+                // Delete existing images
+                var existingImages = await _itemImagesRepository.FindAll(x => x.ItemId == item.Id);
+                foreach (var existingImage in existingImages)
+                {
+                    await _itemImagesRepository.Delete(existingImage);
+                }
+
+                // Add new image
+                var itemImage = new ItemImages
+                {
+                    Id = Guid.NewGuid(),
+                    ItemId = item.Id,
+                    ItemImage = imageFileName,
+                    CreatedAt = DateTime.Now,
+                    UpdatedAt = DateTime.Now,
+                    CreatedBy = "System",
+                    UpdatedBy = "System",
+                    IsActive = true
+                };
+
+                await _itemImagesRepository.Insert(itemImage);
+            }
+
+            return true;
+        }
+
+        public async Task<bool> DeleteItem(Guid itemId)
+        {
+            var item = await _itemRepository.Get(itemId);
+            if (item == null) return false;
+
+            // Delete related records first
+
+            // Delete images
+            var images = await _itemImagesRepository.FindAll(x => x.ItemId == itemId);
+            foreach (var image in images)
+            {
+                await _itemImagesRepository.Delete(image);
+            }
+
+            // Delete supplier relationships
+            var supplierItems = await _supplierItemRepository.FindAll(x => x.ItemId == itemId);
             foreach (var supplierItem in supplierItems)
             {
-                var viewModel = await GetById(supplierItem.ItemId);
-                if (viewModel != null)
-                {
-                    itemViewModels.Add(viewModel);
-                }
+                await _supplierItemRepository.Delete(supplierItem);
             }
 
-            return itemViewModels;
-        }
-
-        public async Task<ICollection<ItemViewModel>> GetItemsByCustomer(Guid customerId)
-        {
-            var user = await _userRepo.Get(customerId);
-            if (user == null) return new List<ItemViewModel>();
-
-            var customerItems = await _customerItemRepo.FindAll(ci => ci.UserId == customerId);
-            var itemViewModels = new List<ItemViewModel>();
-
+            // Delete customer relationships
+            var customerItems = await _customerItemRepository.FindAll(x => x.ItemId == itemId);
             foreach (var customerItem in customerItems)
             {
-                var viewModel = await GetById(customerItem.ItemId);
-                if (viewModel != null)
+                await _customerItemRepository.Delete(customerItem);
+            }
+
+            // Delete the item itself
+            return await _itemRepository.Delete(item);
+        }
+
+        public async Task<Item> Find(Expression<Func<Item, bool>> match)
+        {
+            return await _itemRepository.Find(match);
+        }
+
+        public async Task<ICollection<Item>> FindAll(Expression<Func<Item, bool>> match)
+        {
+            return await _itemRepository.FindAll(match);
+        }
+
+        // Helper method to build ItemViewModel from Item
+        private async Task<ItemViewModel> BuildItemViewModel(Item item)
+        {
+            // Get category
+            var category = await _categoryService.GetById(item.CategoryId);
+            var categoryViewModels = new List<CategoryViewModel>();
+            if (category != null)
+            {
+                categoryViewModels.Add(category);
+            }
+
+            // Get images
+            var images = await _itemImagesRepository.FindAll(x => x.ItemId == item.Id);
+            var imageViewModels = images.Select(img => new ItemImageViewModel
+            {
+                ItemImage = img.ItemImage
+            }).ToList();
+
+            // Get related users
+            var userViewModels = new List<UserViewModel>();
+
+            // Get supplier
+            var supplierItems = await _supplierItemRepository.FindAll(x => x.ItemId == item.Id);
+            foreach (var supplierItem in supplierItems)
+            {
+                var supplierViewModel = await _supplierService.GetById(supplierItem.UserId);
+                if (supplierViewModel != null)
                 {
-                    itemViewModels.Add(viewModel);
+                    userViewModels.Add(supplierViewModel);
                 }
             }
 
-            return itemViewModels;
+            // Get customers
+            var customerItems = await _customerItemRepository.FindAll(x => x.ItemId == item.Id);
+            foreach (var customerItem in customerItems)
+            {
+                var customerViewModel = await _customerService.GetById(customerItem.UserId);
+                if (customerViewModel != null)
+                {
+                    userViewModels.Add(customerViewModel);
+                }
+            }
+
+            // Build the view model
+            var itemViewModel = new ItemViewModel
+            {
+                ItemCode = item.ItemCode,
+                ItemName = item.ItemName,
+                ItemDescription = item.ItemDescription,
+                Price = item.Price,
+                ItemImages = imageViewModels,
+                CategoryViewModels = categoryViewModels,
+                UserViewModels = userViewModels
+            };
+
+            return itemViewModel;
         }
     }
 }

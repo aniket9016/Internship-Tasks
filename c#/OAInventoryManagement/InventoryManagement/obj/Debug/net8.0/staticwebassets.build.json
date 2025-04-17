@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "AcXpEehqsNyAKO7wjTMEK34MqLzv8lI/TEHZk93T9/M=",
+  "Hash": "ZCcCGgNi9GKkZCGQzRYCdXzyy+DoMzzpsm4uJJ4e7Rc=",
   "Source": "InventoryManagement",
   "BasePath": "_content/InventoryManagement",
   "Mode": "Default",
@@ -205,6 +205,44 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\Item\\d2b432b7-676d-4b17-902a-1213fbf47552.jpg"
+    },
+    {
+      "Identity": "E:\\aniket\\c#\\OAInventoryManagement\\InventoryManagement\\wwwroot\\images\\Item\\f4b83761-ee16-4c90-9b75-13155aa7431f.jpg",
+      "SourceId": "InventoryManagement",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\aniket\\c#\\OAInventoryManagement\\InventoryManagement\\wwwroot\\",
+      "BasePath": "_content/InventoryManagement",
+      "RelativePath": "images/Item/f4b83761-ee16-4c90-9b75-13155aa7431f.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Item\\f4b83761-ee16-4c90-9b75-13155aa7431f.jpg"
+    },
+    {
+      "Identity": "E:\\aniket\\c#\\OAInventoryManagement\\InventoryManagement\\wwwroot\\images\\User\\24dcdafc-9d83-4bee-8502-bdcfdda57ee9.png",
+      "SourceId": "InventoryManagement",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\aniket\\c#\\OAInventoryManagement\\InventoryManagement\\wwwroot\\",
+      "BasePath": "_content/InventoryManagement",
+      "RelativePath": "images/User/24dcdafc-9d83-4bee-8502-bdcfdda57ee9.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\User\\24dcdafc-9d83-4bee-8502-bdcfdda57ee9.png"
     }
   ]
 }

@@ -37,6 +37,14 @@
       "PackagePath": "staticwebassets\\images\\Item\\d2b432b7-676d-4b17-902a-1213fbf47552.jpg"
     },
     {
+      "Id": "E:\\aniket\\c#\\OAInventoryManagement\\InventoryManagement\\wwwroot\\images\\Item\\f4b83761-ee16-4c90-9b75-13155aa7431f.jpg",
+      "PackagePath": "staticwebassets\\images\\Item\\f4b83761-ee16-4c90-9b75-13155aa7431f.jpg"
+    },
+    {
+      "Id": "E:\\aniket\\c#\\OAInventoryManagement\\InventoryManagement\\wwwroot\\images\\User\\24dcdafc-9d83-4bee-8502-bdcfdda57ee9.png",
+      "PackagePath": "staticwebassets\\images\\User\\24dcdafc-9d83-4bee-8502-bdcfdda57ee9.png"
+    },
+    {
       "Id": "E:\\aniket\\c#\\OAInventoryManagement\\InventoryManagement\\wwwroot\\images\\e355bdb0-ae3b-4ffa-83bc-3d07846ee6b5.png",
       "PackagePath": "staticwebassets\\images\\e355bdb0-ae3b-4ffa-83bc-3d07846ee6b5.png"
     },
