@@ -1,6 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Demo",
+    "\\Repo",
+    "\\Service",
+    "\\Services",
+    "\\StuCourCRUD"
   ],
   "SelectedNode": "\\OAStudentCourseManagement.sln",
   "PreviewInSolutionExplorer": false

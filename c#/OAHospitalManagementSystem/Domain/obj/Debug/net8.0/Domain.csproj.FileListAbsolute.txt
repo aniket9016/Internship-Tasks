@@ -1,0 +1,12 @@
+E:\aniket\c#\OAHospitalManagementSystem\Domain\bin\Debug\net8.0\Domain.deps.json
+E:\aniket\c#\OAHospitalManagementSystem\Domain\bin\Debug\net8.0\Domain.dll
+E:\aniket\c#\OAHospitalManagementSystem\Domain\bin\Debug\net8.0\Domain.pdb
+E:\aniket\c#\OAHospitalManagementSystem\Domain\obj\Debug\net8.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+E:\aniket\c#\OAHospitalManagementSystem\Domain\obj\Debug\net8.0\Domain.AssemblyInfoInputs.cache
+E:\aniket\c#\OAHospitalManagementSystem\Domain\obj\Debug\net8.0\Domain.AssemblyInfo.cs
+E:\aniket\c#\OAHospitalManagementSystem\Domain\obj\Debug\net8.0\Domain.csproj.CoreCompileInputs.cache
+E:\aniket\c#\OAHospitalManagementSystem\Domain\obj\Debug\net8.0\Domain.sourcelink.json
+E:\aniket\c#\OAHospitalManagementSystem\Domain\obj\Debug\net8.0\Domain.dll
+E:\aniket\c#\OAHospitalManagementSystem\Domain\obj\Debug\net8.0\refint\Domain.dll
+E:\aniket\c#\OAHospitalManagementSystem\Domain\obj\Debug\net8.0\Domain.pdb
+E:\aniket\c#\OAHospitalManagementSystem\Domain\obj\Debug\net8.0\ref\Domain.dll

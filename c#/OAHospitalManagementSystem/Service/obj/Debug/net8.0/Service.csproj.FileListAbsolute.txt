@@ -1,0 +1,12 @@
+E:\aniket\c#\OAHospitalManagementSystem\Service\bin\Debug\net8.0\Service.deps.json
+E:\aniket\c#\OAHospitalManagementSystem\Service\bin\Debug\net8.0\Service.dll
+E:\aniket\c#\OAHospitalManagementSystem\Service\bin\Debug\net8.0\Service.pdb
+E:\aniket\c#\OAHospitalManagementSystem\Service\obj\Debug\net8.0\Service.GeneratedMSBuildEditorConfig.editorconfig
+E:\aniket\c#\OAHospitalManagementSystem\Service\obj\Debug\net8.0\Service.AssemblyInfoInputs.cache
+E:\aniket\c#\OAHospitalManagementSystem\Service\obj\Debug\net8.0\Service.AssemblyInfo.cs
+E:\aniket\c#\OAHospitalManagementSystem\Service\obj\Debug\net8.0\Service.csproj.CoreCompileInputs.cache
+E:\aniket\c#\OAHospitalManagementSystem\Service\obj\Debug\net8.0\Service.sourcelink.json
+E:\aniket\c#\OAHospitalManagementSystem\Service\obj\Debug\net8.0\Service.dll
+E:\aniket\c#\OAHospitalManagementSystem\Service\obj\Debug\net8.0\refint\Service.dll
+E:\aniket\c#\OAHospitalManagementSystem\Service\obj\Debug\net8.0\Service.pdb
+E:\aniket\c#\OAHospitalManagementSystem\Service\obj\Debug\net8.0\ref\Service.dll

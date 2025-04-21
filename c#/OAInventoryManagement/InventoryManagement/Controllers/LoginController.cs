@@ -52,6 +52,7 @@ namespace InventoryManagement.Controllers
 
             var customer = await _customerService.Find(u =>
                 u.Email == model.Email && u.Password == model.Password);
+            _logger.LogInformation("Customer found: {Email}", customer?.Email);
 
             if (customer != null)
             {

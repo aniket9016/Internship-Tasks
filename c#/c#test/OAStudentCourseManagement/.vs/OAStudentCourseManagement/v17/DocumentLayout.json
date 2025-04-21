@@ -3,8 +3,20 @@
   "WorkspaceRootPath": "E:\\aniket\\c#\\c#test\\OAStudentCourseManagement\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AEB4E5AC-9150-4328-96B0-4A67AA82797A}|StuCourCRUD\\StuCourCRUD.csproj|e:\\aniket\\c#\\c#test\\oastudentcoursemanagement\\stucourcrud\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AEB4E5AC-9150-4328-96B0-4A67AA82797A}|StuCourCRUD\\StuCourCRUD.csproj|solutionrelative:stucourcrud\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AEB4E5AC-9150-4328-96B0-4A67AA82797A}|StuCourCRUD\\StuCourCRUD.csproj|e:\\aniket\\c#\\c#test\\oastudentcoursemanagement\\stucourcrud\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEB4E5AC-9150-4328-96B0-4A67AA82797A}|StuCourCRUD\\StuCourCRUD.csproj|solutionrelative:stucourcrud\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6642C77C-AA65-484C-82E6-2A4EE5437BB5}|Demo\\Data.csproj|e:\\aniket\\c#\\c#test\\oastudentcoursemanagement\\demo\\passwordhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6642C77C-AA65-484C-82E6-2A4EE5437BB5}|Demo\\Data.csproj|solutionrelative:demo\\passwordhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEB4E5AC-9150-4328-96B0-4A67AA82797A}|StuCourCRUD\\StuCourCRUD.csproj|e:\\aniket\\c#\\c#test\\oastudentcoursemanagement\\stucourcrud\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEB4E5AC-9150-4328-96B0-4A67AA82797A}|StuCourCRUD\\StuCourCRUD.csproj|solutionrelative:stucourcrud\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6642C77C-AA65-484C-82E6-2A4EE5437BB5}|Demo\\Data.csproj|e:\\aniket\\c#\\c#test\\oastudentcoursemanagement\\demo\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6642C77C-AA65-484C-82E6-2A4EE5437BB5}|Demo\\Data.csproj|solutionrelative:demo\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,14 +31,53 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "E:\\aniket\\c#\\c#test\\OAStudentCourseManagement\\StuCourCRUD\\Program.cs",
-              "RelativeDocumentMoniker": "StuCourCRUD\\Program.cs",
-              "ToolTip": "E:\\aniket\\c#\\c#test\\OAStudentCourseManagement\\StuCourCRUD\\Program.cs",
-              "RelativeToolTip": "StuCourCRUD\\Program.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Title": "UserController.cs",
+              "DocumentMoniker": "E:\\aniket\\c#\\c#test\\OAStudentCourseManagement\\StuCourCRUD\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "StuCourCRUD\\Controllers\\UserController.cs",
+              "ToolTip": "E:\\aniket\\c#\\c#test\\OAStudentCourseManagement\\StuCourCRUD\\Controllers\\UserController.cs",
+              "RelativeToolTip": "StuCourCRUD\\Controllers\\UserController.cs",
+              "ViewState": "AQIAABwAAAAAAAAAAAAcwCgAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-16T10:02:54.006Z",
+              "WhenOpened": "2025-04-17T07:25:57.817Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "E:\\aniket\\c#\\c#test\\OAStudentCourseManagement\\StuCourCRUD\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "StuCourCRUD\\Controllers\\AuthController.cs",
+              "ToolTip": "E:\\aniket\\c#\\c#test\\OAStudentCourseManagement\\StuCourCRUD\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "StuCourCRUD\\Controllers\\AuthController.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAcwB8AAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-17T07:25:46.284Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PasswordHasher.cs",
+              "DocumentMoniker": "E:\\aniket\\c#\\c#test\\OAStudentCourseManagement\\Demo\\PasswordHasher.cs",
+              "RelativeDocumentMoniker": "Demo\\PasswordHasher.cs",
+              "ToolTip": "E:\\aniket\\c#\\c#test\\OAStudentCourseManagement\\Demo\\PasswordHasher.cs",
+              "RelativeToolTip": "Demo\\PasswordHasher.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-17T07:25:40.449Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Student.cs",
+              "DocumentMoniker": "E:\\aniket\\c#\\c#test\\OAStudentCourseManagement\\Demo\\Student.cs",
+              "RelativeDocumentMoniker": "Demo\\Student.cs",
+              "ToolTip": "E:\\aniket\\c#\\c#test\\OAStudentCourseManagement\\Demo\\Student.cs",
+              "RelativeToolTip": "Demo\\Student.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-17T07:25:39.579Z",
               "EditorCaption": ""
             }
           ]

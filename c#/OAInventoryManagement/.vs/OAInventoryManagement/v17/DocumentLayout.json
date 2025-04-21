@@ -3,16 +3,40 @@
   "WorkspaceRootPath": "E:\\aniket\\c#\\OAInventoryManagement\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{00E0142B-44CA-4789-A385-898AC2998D7D}|InventoryManagement\\InventoryManagement.csproj|e:\\aniket\\c#\\oainventorymanagement\\inventorymanagement\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00E0142B-44CA-4789-A385-898AC2998D7D}|InventoryManagement\\InventoryManagement.csproj|solutionrelative:inventorymanagement\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00E0142B-44CA-4789-A385-898AC2998D7D}|InventoryManagement\\InventoryManagement.csproj|e:\\aniket\\c#\\oainventorymanagement\\inventorymanagement\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{00E0142B-44CA-4789-A385-898AC2998D7D}|InventoryManagement\\InventoryManagement.csproj|solutionrelative:inventorymanagement\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50980511-7A45-481F-8A43-3BD6A8BB9563}|Domain\\Domain.csproj|e:\\aniket\\c#\\oainventorymanagement\\domain\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50980511-7A45-481F-8A43-3BD6A8BB9563}|Domain\\Domain.csproj|solutionrelative:domain\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50980511-7A45-481F-8A43-3BD6A8BB9563}|Domain\\Domain.csproj|e:\\aniket\\c#\\oainventorymanagement\\domain\\models\\supplieritem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50980511-7A45-481F-8A43-3BD6A8BB9563}|Domain\\Domain.csproj|solutionrelative:domain\\models\\supplieritem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50980511-7A45-481F-8A43-3BD6A8BB9563}|Domain\\Domain.csproj|e:\\aniket\\c#\\oainventorymanagement\\domain\\models\\customeritem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50980511-7A45-481F-8A43-3BD6A8BB9563}|Domain\\Domain.csproj|solutionrelative:domain\\models\\customeritem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50980511-7A45-481F-8A43-3BD6A8BB9563}|Domain\\Domain.csproj|e:\\aniket\\c#\\oainventorymanagement\\domain\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50980511-7A45-481F-8A43-3BD6A8BB9563}|Domain\\Domain.csproj|solutionrelative:domain\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{00E0142B-44CA-4789-A385-898AC2998D7D}|InventoryManagement\\InventoryManagement.csproj|e:\\aniket\\c#\\oainventorymanagement\\inventorymanagement\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{00E0142B-44CA-4789-A385-898AC2998D7D}|InventoryManagement\\InventoryManagement.csproj|solutionrelative:inventorymanagement\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4A38AD65-845E-4966-AF10-79F133043C91}|Service\\Service.csproj|e:\\aniket\\c#\\oainventorymanagement\\service\\custom\\tokenser\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4A38AD65-845E-4966-AF10-79F133043C91}|Service\\Service.csproj|solutionrelative:service\\custom\\tokenser\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{50980511-7A45-481F-8A43-3BD6A8BB9563}|Domain\\Domain.csproj|e:\\aniket\\c#\\oainventorymanagement\\domain\\models\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50980511-7A45-481F-8A43-3BD6A8BB9563}|Domain\\Domain.csproj|solutionrelative:domain\\models\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4A38AD65-845E-4966-AF10-79F133043C91}|Service\\Service.csproj|e:\\aniket\\c#\\oainventorymanagement\\service\\custom\\tokenser\\itokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4A38AD65-845E-4966-AF10-79F133043C91}|Service\\Service.csproj|solutionrelative:service\\custom\\tokenser\\itokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4A38AD65-845E-4966-AF10-79F133043C91}|Service\\Service.csproj|e:\\aniket\\c#\\oainventorymanagement\\service\\custom\\customerser\\customerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A38AD65-845E-4966-AF10-79F133043C91}|Service\\Service.csproj|solutionrelative:service\\custom\\customerser\\customerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,45 +46,123 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "TokenService.cs",
-              "DocumentMoniker": "E:\\aniket\\c#\\OAInventoryManagement\\Service\\Custom\\TokenSer\\TokenService.cs",
-              "RelativeDocumentMoniker": "Service\\Custom\\TokenSer\\TokenService.cs",
-              "ToolTip": "E:\\aniket\\c#\\OAInventoryManagement\\Service\\Custom\\TokenSer\\TokenService.cs",
-              "RelativeToolTip": "Service\\Custom\\TokenSer\\TokenService.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAA4wCMAAAAAAAAA",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\aniket\\c#\\OAInventoryManagement\\InventoryManagement\\Program.cs",
+              "RelativeDocumentMoniker": "InventoryManagement\\Program.cs",
+              "ToolTip": "E:\\aniket\\c#\\OAInventoryManagement\\InventoryManagement\\Program.cs",
+              "RelativeToolTip": "InventoryManagement\\Program.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAAAGMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T07:04:21.295Z",
+              "WhenOpened": "2025-04-21T05:06:58.131Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "E:\\aniket\\c#\\OAInventoryManagement\\InventoryManagement\\appsettings.json",
+              "RelativeDocumentMoniker": "InventoryManagement\\appsettings.json",
+              "ToolTip": "E:\\aniket\\c#\\OAInventoryManagement\\InventoryManagement\\appsettings.json",
+              "RelativeToolTip": "InventoryManagement\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-21T05:06:25.485Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "ITokenService.cs",
-              "DocumentMoniker": "E:\\aniket\\c#\\OAInventoryManagement\\Service\\Custom\\TokenSer\\ITokenService.cs",
-              "RelativeDocumentMoniker": "Service\\Custom\\TokenSer\\ITokenService.cs",
-              "ToolTip": "E:\\aniket\\c#\\OAInventoryManagement\\Service\\Custom\\TokenSer\\ITokenService.cs",
-              "RelativeToolTip": "Service\\Custom\\TokenSer\\ITokenService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
+              "Title": "User.cs",
+              "DocumentMoniker": "E:\\aniket\\c#\\OAInventoryManagement\\Domain\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Domain\\Models\\User.cs",
+              "ToolTip": "E:\\aniket\\c#\\OAInventoryManagement\\Domain\\Models\\User.cs",
+              "RelativeToolTip": "Domain\\Models\\User.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAAwwBwAAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T07:04:06.743Z",
+              "WhenOpened": "2025-04-21T04:12:41.462Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
+              "Title": "SupplierItem.cs",
+              "DocumentMoniker": "E:\\aniket\\c#\\OAInventoryManagement\\Domain\\Models\\SupplierItem.cs",
+              "RelativeDocumentMoniker": "Domain\\Models\\SupplierItem.cs",
+              "ToolTip": "E:\\aniket\\c#\\OAInventoryManagement\\Domain\\Models\\SupplierItem.cs",
+              "RelativeToolTip": "Domain\\Models\\SupplierItem.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-21T04:12:40.614Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CustomerItem.cs",
+              "DocumentMoniker": "E:\\aniket\\c#\\OAInventoryManagement\\Domain\\Models\\CustomerItem.cs",
+              "RelativeDocumentMoniker": "Domain\\Models\\CustomerItem.cs",
+              "ToolTip": "E:\\aniket\\c#\\OAInventoryManagement\\Domain\\Models\\CustomerItem.cs",
+              "RelativeToolTip": "Domain\\Models\\CustomerItem.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-21T04:12:38.942Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Category.cs",
+              "DocumentMoniker": "E:\\aniket\\c#\\OAInventoryManagement\\Domain\\Models\\Category.cs",
+              "RelativeDocumentMoniker": "Domain\\Models\\Category.cs",
+              "ToolTip": "E:\\aniket\\c#\\OAInventoryManagement\\Domain\\Models\\Category.cs",
+              "RelativeToolTip": "Domain\\Models\\Category.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-21T04:12:35.894Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "BaseEntity.cs",
+              "DocumentMoniker": "E:\\aniket\\c#\\OAInventoryManagement\\Domain\\Models\\BaseEntity.cs",
+              "RelativeDocumentMoniker": "Domain\\Models\\BaseEntity.cs",
+              "ToolTip": "E:\\aniket\\c#\\OAInventoryManagement\\Domain\\Models\\BaseEntity.cs",
+              "RelativeToolTip": "Domain\\Models\\BaseEntity.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABAAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-21T04:11:16.83Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "LoginController.cs",
               "DocumentMoniker": "E:\\aniket\\c#\\OAInventoryManagement\\InventoryManagement\\Controllers\\LoginController.cs",
               "RelativeDocumentMoniker": "InventoryManagement\\Controllers\\LoginController.cs",
               "ToolTip": "E:\\aniket\\c#\\OAInventoryManagement\\InventoryManagement\\Controllers\\LoginController.cs",
               "RelativeToolTip": "InventoryManagement\\Controllers\\LoginController.cs",
-              "ViewState": "AQIAADAAAAAAAAAAAAAIwDQAAAAgAAAA",
+              "ViewState": "AQIAACMAAAAAAAAAAAAQwCYAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T07:03:33.93Z",
+              "WhenOpened": "2025-04-18T12:15:16.241Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CustomerService.cs",
+              "DocumentMoniker": "E:\\aniket\\c#\\OAInventoryManagement\\Service\\Custom\\CustomerSer\\CustomerService.cs",
+              "RelativeDocumentMoniker": "Service\\Custom\\CustomerSer\\CustomerService.cs",
+              "ToolTip": "E:\\aniket\\c#\\OAInventoryManagement\\Service\\Custom\\CustomerSer\\CustomerService.cs",
+              "RelativeToolTip": "Service\\Custom\\CustomerSer\\CustomerService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAJIAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-18T12:14:36.293Z",
               "EditorCaption": ""
             }
           ]

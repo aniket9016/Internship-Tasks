@@ -137,41 +137,15 @@ namespace Service.Custom.CustomerSer
 
         public async Task<User> Find(Expression<Func<User, bool>> match)
         {
-            var customerType = await _userTypeService.Find(x => x.TypeName.ToLower() == "customer");
-            if (customerType == null) return null;
-
-            Expression<Func<User, bool>> customerFilter = x => x.UserTypeId == customerType.Id;
-            var combinedFilter = customerFilter.And(match);
-
-            return await _repository.Find(combinedFilter);
+            return await _repository.Find(match);
         }
 
         public async Task<ICollection<User>> FindAll(Expression<Func<User, bool>> match)
         {
-            var customerType = await _userTypeService.Find(x => x.TypeName.ToLower() == "customer");
-            if (customerType == null) return new List<User>();
+            return await _repository.FindAll(match);
 
-            Expression<Func<User, bool>> customerFilter = x => x.UserTypeId == customerType.Id;
-            var combinedFilter = customerFilter.And(match);
-
-            return await _repository.FindAll(combinedFilter);
         }
     }
 
-    // Reusable expression extension method for combining filters
-    public static class ExpressionExtensions
-    {
-        public static Expression<Func<T, bool>> And<T>(
-            this Expression<Func<T, bool>> expr1,
-            Expression<Func<T, bool>> expr2)
-        {
-            var parameter = Expression.Parameter(typeof(T));
-
-            var body = Expression.AndAlso(
-                Expression.Invoke(expr1, parameter),
-                Expression.Invoke(expr2, parameter));
-
-            return Expression.Lambda<Func<T, bool>>(body, parameter);
-        }
-    }
+    
 }
