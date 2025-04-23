@@ -17,14 +17,12 @@ namespace Domain.Models
         [Required]
         public string AppointmentTime { get; set; }
         public AppointmentStatus Status { get; set; } = AppointmentStatus.Pending;
-        public string Notes { get; set; }
         public string ReasonForVisit { get; set; }
         [ForeignKey("PatientId")]
         public virtual Patient Patient { get; set; }
         [ForeignKey("DoctorId")]
         public virtual Doctor Doctor { get; set; }
     }
-
     public enum AppointmentStatus
     {
         Pending,

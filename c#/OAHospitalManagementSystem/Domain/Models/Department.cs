@@ -13,7 +13,6 @@ namespace Domain.Models
         [StringLength(100)]
         public string DepartmentName { get; set; }
         public string Description { get; set; }
-        public string Location { get; set; }
         public virtual ICollection<Doctor> Doctors { get; set; } = new List<Doctor>();
     }
 }

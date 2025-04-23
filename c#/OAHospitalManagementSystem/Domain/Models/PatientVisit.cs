@@ -17,7 +17,6 @@ namespace Domain.Models
         public DateTime VisitDate { get; set; }
         public string Diagnosis { get; set; }
         public string Treatment { get; set; }
-        public string Notes { get; set; }
         public Guid? AppointmentId { get; set; }
         [ForeignKey("PatientId")]
         public virtual Patient Patient { get; set; }

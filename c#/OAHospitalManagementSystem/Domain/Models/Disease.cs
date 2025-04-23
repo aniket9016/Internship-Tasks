@@ -15,14 +15,10 @@ namespace Domain.Models
         public string Name { get; set; }
         public string Description { get; set; }
         public string Symptoms { get; set; }
-        public string Causes { get; set; }
         public string Treatment { get; set; }
-        public string Prevention { get; set; }
-        public string RiskFactors { get; set; }
         public Guid? DepartmentId { get; set; }
         [ForeignKey("DepartmentId")]
         public virtual Department Department { get; set; }
         public virtual ICollection<PatientVisit> PatientVisits { get; set; } = new List<PatientVisit>();
-        public virtual ICollection<MedicalRecord> MedicalRecords { get; set; } = new List<MedicalRecord>();
     }
 }

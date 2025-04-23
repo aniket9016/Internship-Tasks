@@ -18,7 +18,6 @@ namespace Repository.Context
         public DbSet<Department> Departments { get; set; }
         public DbSet<Disease> Diseases { get; set; }
         public DbSet<Doctor> Doctors { get; set; }
-        public DbSet<MedicalRecord> MedicalRecords { get; set; }
         public DbSet<Medicine> Medicines { get; set; }
         public DbSet<Patient> Patients { get; set; }
         public DbSet<PatientVisit> PatientVisits { get; set; }
@@ -57,12 +56,6 @@ namespace Repository.Context
                 .OnDelete(DeleteBehavior.Restrict);
 
             modelBuilder.Entity<Billing>()
-                .HasOne(b => b.Department)
-                .WithMany()
-                .HasForeignKey(b => b.DepartmentId)
-                .OnDelete(DeleteBehavior.SetNull);
-
-            modelBuilder.Entity<Billing>()
                 .HasOne(b => b.PatientVisit)
                 .WithMany(pv => pv.Billings)
                 .HasForeignKey(b => b.PatientVisitId)
@@ -88,12 +81,6 @@ namespace Repository.Context
                 .HasForeignKey(pv => pv.DiseaseId)
                 .OnDelete(DeleteBehavior.Restrict);
 
-            modelBuilder.Entity<Disease>()
-                .HasMany(d => d.MedicalRecords)
-                .WithOne(mr => mr.Disease)
-                .HasForeignKey(mr => mr.DiseaseId)
-                .OnDelete(DeleteBehavior.SetNull);
-
             // Doctor
             modelBuilder.Entity<Doctor>()
                 .HasMany(d => d.Schedules)
@@ -105,13 +92,6 @@ namespace Repository.Context
                 .HasMany(d => d.Prescriptions)
                 .WithOne(p => p.Doctor)
                 .HasForeignKey(p => p.DoctorId)
-                .OnDelete(DeleteBehavior.Restrict);
-
-            // MedicalRecord
-            modelBuilder.Entity<MedicalRecord>()
-                .HasOne(m => m.Patient)
-                .WithMany(p => p.MedicalRecords)
-                .HasForeignKey(m => m.PatientId)
                 .OnDelete(DeleteBehavior.Restrict);
 
             // PatientVisit

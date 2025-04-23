@@ -14,10 +14,6 @@ namespace Domain.Models
         public string Name { get; set; }
         public string Description { get; set; }
         public string Dosage { get; set; }
-        public string SideEffects { get; set; }
-        public string Precautions { get; set; }
-        public string Interactions { get; set; }
-        public string Manufacturer { get; set; }
         public DateTime ExpiryDate { get; set; }
         public decimal Price { get; set; }
         public bool RequiresPrescription { get; set; }

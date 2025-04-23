@@ -20,14 +20,10 @@ namespace Domain.Models
         public string Email { get; set; }
         [Required]
         public string Password { get; set; }
-        public string Address { get; set; }
         [Phone]
         public string PhoneNumber { get; set; }
-        public string Photo { get; set; }
         public Guid DepartmentId { get; set; }
         public string Qualification { get; set; }
-        public string Experience { get; set; }
-        public string LicenseNumber { get; set; }
         [ForeignKey("DepartmentId")]
         public virtual Department Department { get; set; }
         public virtual ICollection<Appointment> Appointments { get; set; } = new List<Appointment>();

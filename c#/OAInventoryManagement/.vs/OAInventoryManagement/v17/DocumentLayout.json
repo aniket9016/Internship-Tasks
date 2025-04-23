@@ -56,7 +56,7 @@
               "RelativeDocumentMoniker": "InventoryManagement\\Program.cs",
               "ToolTip": "E:\\aniket\\c#\\OAInventoryManagement\\InventoryManagement\\Program.cs",
               "RelativeToolTip": "InventoryManagement\\Program.cs",
-              "ViewState": "AQIAABUAAAAAAAAAAAAAAGMAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAGMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-21T05:06:58.131Z",
               "EditorCaption": ""
@@ -71,8 +71,7 @@
               "RelativeToolTip": "InventoryManagement\\appsettings.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAADAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-04-21T05:06:25.485Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-21T05:06:25.485Z"
             },
             {
               "$type": "Document",
@@ -84,8 +83,7 @@
               "RelativeToolTip": "Domain\\Models\\User.cs",
               "ViewState": "AQIAABQAAAAAAAAAAAAwwBwAAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-21T04:12:41.462Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-21T04:12:41.462Z"
             },
             {
               "$type": "Document",
@@ -97,8 +95,7 @@
               "RelativeToolTip": "Domain\\Models\\SupplierItem.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-21T04:12:40.614Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-21T04:12:40.614Z"
             },
             {
               "$type": "Document",
@@ -110,8 +107,7 @@
               "RelativeToolTip": "Domain\\Models\\CustomerItem.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-21T04:12:38.942Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-21T04:12:38.942Z"
             },
             {
               "$type": "Document",
@@ -123,8 +119,7 @@
               "RelativeToolTip": "Domain\\Models\\Category.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-21T04:12:35.894Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-21T04:12:35.894Z"
             },
             {
               "$type": "Document",
@@ -136,8 +131,7 @@
               "RelativeToolTip": "Domain\\Models\\BaseEntity.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAAAABAAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-21T04:11:16.83Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-21T04:11:16.83Z"
             },
             {
               "$type": "Document",
@@ -149,8 +143,7 @@
               "RelativeToolTip": "InventoryManagement\\Controllers\\LoginController.cs",
               "ViewState": "AQIAACMAAAAAAAAAAAAQwCYAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-18T12:15:16.241Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-18T12:15:16.241Z"
             },
             {
               "$type": "Document",
@@ -162,8 +155,7 @@
               "RelativeToolTip": "Service\\Custom\\CustomerSer\\CustomerService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAJIAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-18T12:14:36.293Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-18T12:14:36.293Z"
             }
           ]
         }
