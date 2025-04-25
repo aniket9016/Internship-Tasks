@@ -86,9 +86,8 @@ class Todo extends React.Component {
                         {tasks.map((task, index) => (
                             <li
                                 key={index}
-                                className={`list-group-item d-flex align-items-center justify-content-between ${
-                                    task.completed ? 'list-group-item-light' : ''
-                                }`}
+                                className={`list-group-item d-flex align-items-center justify-content-between ${task.completed ? 'list-group-item-light' : ''
+                                    }`}
                             >
                                 <div
                                     role="button"
@@ -103,9 +102,8 @@ class Todo extends React.Component {
                                 </div>
                                 <div className="flex-grow-1">
                                     <h5
-                                        className={`mb-1 ${
-                                            task.completed ? 'text-decoration-line-through text-muted' : ''
-                                        }`}
+                                        className={`mb-1 ${task.completed ? 'text-decoration-line-through text-muted' : ''
+                                            }`}
                                     >
                                         {task.title || 'Untitled Task'}
                                     </h5>

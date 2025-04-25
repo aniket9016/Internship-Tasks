@@ -57,7 +57,7 @@ namespace InventoryManagement.Controllers
             if (customer != null)
             {
                 _logger.LogInformation("Customer login successful for email: {Email}", model.Email);
-                var token = _tokenService.GenerateToken(customer);
+                var token = _tokenService.GenerateToken(customer.Email);
                 return Ok(new Response<string> { Message = "Login successful", Status = 200, Data = token });
             }
 
@@ -67,7 +67,7 @@ namespace InventoryManagement.Controllers
             if (supplier != null)
             {
                 _logger.LogInformation("Supplier login successful for email: {Email}", model.Email);
-                var token = _tokenService.GenerateToken(supplier);
+                var token = _tokenService.GenerateToken(supplier.Email);
                 return Ok(new Response<string> { Message = "Login successful", Status = 200, Data = token });
             }
 

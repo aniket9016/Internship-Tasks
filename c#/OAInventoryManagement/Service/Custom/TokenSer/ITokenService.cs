@@ -10,6 +10,6 @@ namespace Service.Custom.TokenSer
 {
     public interface ITokenService
     {
-       public string GenerateToken(User user);
+        string GenerateToken(string email);
     }
 }

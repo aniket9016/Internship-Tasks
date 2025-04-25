@@ -32,10 +32,12 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
+
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -45,6 +47,193 @@
 .content {
   flex: 1;
 }
-.tempclass{
+
+.tempclass {
   margin-top: 12rem;
+}
+
+.counter-component .card {
+  border-radius: 15px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  overflow: hidden;
+}
+
+@keyframes counter-pop {
+  0% {
+    transform: scale(0.5);
+    opacity: 0.5;
+  }
+
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.counter-component .count {
+  font-size: 2rem;
+  display: inline-block;
+}
+
+.counter-component .count-animate {
+  animation: counter-pop 0.3s ease-out;
+}
+
+.counter-component .btn {
+  transition: transform 0.2s;
+}
+
+.counter-component .btn:hover:not(:disabled) {
+  transform: scale(1.05);
+}
+
+.counter-component .progress {
+  height: 8px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.counter-component .progress-bar {
+  transition: width 0.3s ease;
+}
+
+.dark-register-container {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 1rem;
+  background-color: transparent;
+}
+
+.dark-register-card {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+}
+
+.dark-register-header {
+  background: #121212;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+  position: relative;
+  border-bottom: 1px solid #333;
+}
+
+.dark-register-header:after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background: #121212;
+  border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+  transform: scaleX(1.5);
+}
+
+.dark-register-header h2 {
+  margin: 0;
+  font-weight: 600;
+  position: relative;
+  z-index: 1;
+  color: #fff;
+}
+
+.dark-register-body {
+  background: #1a1a1a;
+  padding: 2rem;
+  padding-top: 2.5rem;
+  color: #e0e0e0;
+}
+
+.dark-register-body .form-label {
+  color: #e0e0e0;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.dark-input {
+  background-color: #2a2a2a !important;
+  border: 1px solid #444 !important;
+  color: #e0e0e0 !important;
+}
+
+.dark-input:focus {
+  background-color: #333 !important;
+  border-color: #666 !important;
+  box-shadow: 0 0 0 0.25rem rgba(120, 120, 120, 0.25) !important;
+  color: #fff !important;
+}
+
+.dark-input::placeholder {
+  color: #888 !important;
+  opacity: 1;
+}
+
+.dark-register-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.dark-register-buttons .btn {
+  padding: 0.5rem 1.5rem;
+}
+
+.dark-button {
+  background-color: #303030 !important;
+  border-color: #444 !important;
+  flex-grow: 1;
+}
+
+.dark-button:hover {
+  background-color: #444 !important;
+  border-color: #555 !important;
+}
+
+.btn-outline-light {
+  border-color: #444 !important;
+  color: #e0e0e0 !important;
+}
+
+.btn-outline-light:hover {
+  background-color: #333 !important;
+  color: #fff !important;
+}
+
+.dark-signin-link {
+  text-align: center;
+  margin-top: 1.5rem;
+  color: #aaa;
+}
+
+.dark-signin-link a {
+  color: #999;
+  text-decoration: none;
+}
+
+.dark-signin-link a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Override autofill styles */
+.dark-input:-webkit-autofill,
+.dark-input:-webkit-autofill:hover,
+.dark-input:-webkit-autofill:focus {
+  -webkit-text-fill-color: #e0e0e0;
+  -webkit-box-shadow: 0 0 0px 1000px #2a2a2a inset;
+  transition: background-color 5000s ease-in-out 0s;
 }

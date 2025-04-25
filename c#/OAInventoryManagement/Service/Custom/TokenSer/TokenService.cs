@@ -17,7 +17,7 @@ namespace Service.Custom.TokenSer
             _configuration = configuration;
         }
 
-        public string GenerateToken(User user)
+        public string GenerateToken(string email)
         {
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]));
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);

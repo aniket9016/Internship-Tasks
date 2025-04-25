@@ -1,5 +1,4 @@
 import React from 'react';
-import './Counter.css';
 
 class Counter extends React.Component {
   static MAX = 10;
