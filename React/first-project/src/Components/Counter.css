@@ -1,0 +1,51 @@
+.counter-component .card {
+  border-radius: 15px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  overflow: hidden;
+}
+
+@keyframes counter-pop {
+  0% {
+    transform: scale(0.5);
+    opacity: 0.5;
+  }
+  
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.counter-component .count {
+  font-size: 2rem;
+  display: inline-block;
+}
+
+.counter-component .count-animate {
+  animation: counter-pop 0.3s ease-out;
+}
+
+.counter-component .btn {
+  transition: transform 0.2s;
+}
+
+.counter-component .btn:hover:not(:disabled) {
+  transform: scale(1.05);
+}
+
+.counter-component .progress {
+  height: 8px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.counter-component .progress-bar {
+  transition: width 0.3s ease;
+}
