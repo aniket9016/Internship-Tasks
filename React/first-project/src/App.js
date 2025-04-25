@@ -6,6 +6,7 @@ import Todo from './Components/Todo';
 import Home from './Components/Home';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Register from './Components/Register';
+import NoPage from './Components/NoPage';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             <Route path="/counter" element={<Counter />} />
             <Route path="/todo" element={<Todo />} />
             <Route path="/register" element={<Register />} />
+            <Route path="*" element={<NoPage />} />
           </Routes>
         </div>
         <Footer />
