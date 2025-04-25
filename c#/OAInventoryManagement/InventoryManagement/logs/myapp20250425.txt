@@ -1159,3 +1159,667 @@ DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
 2025-04-25 12:42:32.103 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/_vs/browserLink - 200 null text/javascript; charset=UTF-8 27.9093ms
 2025-04-25 12:42:32.135 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - null null
 2025-04-25 12:42:32.169 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 33.9742ms
+2025-04-25 14:39:33.172 +05:30 [INF] User profile is available. Using 'C:\Users\TGSUser131\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-25 14:39:33.508 +05:30 [INF] Now listening on: https://localhost:7130
+2025-04-25 14:39:33.509 +05:30 [INF] Now listening on: http://localhost:5085
+2025-04-25 14:39:33.514 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-25 14:39:33.515 +05:30 [INF] Hosting environment: Development
+2025-04-25 14:39:33.516 +05:30 [INF] Content root path: E:\aniket\c#\OAInventoryManagement\InventoryManagement
+2025-04-25 14:39:34.258 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/index.html - null null
+2025-04-25 14:39:34.848 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/index.html - 200 null text/html;charset=utf-8 602.611ms
+2025-04-25 14:39:34.859 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/_vs/browserLink - null null
+2025-04-25 14:39:34.859 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-25 14:39:34.882 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 22.7893ms
+2025-04-25 14:39:34.953 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/_vs/browserLink - 200 null text/javascript; charset=UTF-8 95.2634ms
+2025-04-25 14:39:35.045 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - null null
+2025-04-25 14:39:35.303 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 258.3678ms
+2025-04-25 14:39:40.213 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/api/Category - null null
+2025-04-25 14:39:40.288 +05:30 [INF] Executing endpoint 'InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement)'
+2025-04-25 14:39:40.310 +05:30 [INF] Route matched with {action = "GetAll", controller = "Category"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller InventoryManagement.Controllers.CategoryController (InventoryManagement).
+2025-04-25 14:39:41.249 +05:30 [INF] Executing action method InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement) - Validation state: "Valid"
+2025-04-25 14:39:41.819 +05:30 [INF] Executed DbCommand (47ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CategoryName], [c].[CreatedAt], [c].[CreatedBy], [c].[IsActive], [c].[UpdatedAt], [c].[UpdatedBy]
+FROM [Categories] AS [c]
+2025-04-25 14:39:41.953 +05:30 [INF] Executed action method InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 699.8317ms.
+2025-04-25 14:39:41.962 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Domain.ViewModel.CategoryViewModel, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-25 14:39:41.983 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/api/Category - null null
+2025-04-25 14:39:41.985 +05:30 [INF] Executed action InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement) in 1669.1573ms
+2025-04-25 14:39:41.987 +05:30 [INF] Executing endpoint 'InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement)'
+2025-04-25 14:39:41.987 +05:30 [INF] Executed endpoint 'InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement)'
+2025-04-25 14:39:41.988 +05:30 [INF] Route matched with {action = "GetAll", controller = "Category"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller InventoryManagement.Controllers.CategoryController (InventoryManagement).
+2025-04-25 14:39:41.996 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/api/Category - 200 null application/json; charset=utf-8 1782.4566ms
+2025-04-25 14:39:42.054 +05:30 [INF] Executing action method InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement) - Validation state: "Valid"
+2025-04-25 14:39:42.066 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CategoryName], [c].[CreatedAt], [c].[CreatedBy], [c].[IsActive], [c].[UpdatedAt], [c].[UpdatedBy]
+FROM [Categories] AS [c]
+2025-04-25 14:39:42.069 +05:30 [INF] Executed action method InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 14.2417ms.
+2025-04-25 14:39:42.071 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Domain.ViewModel.CategoryViewModel, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-25 14:39:42.072 +05:30 [INF] Executed action InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement) in 80.791ms
+2025-04-25 14:39:42.074 +05:30 [INF] Executed endpoint 'InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement)'
+2025-04-25 14:39:42.075 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/api/Category - 200 null application/json; charset=utf-8 92.987ms
+2025-04-25 14:39:44.138 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/api/Category - null null
+2025-04-25 14:39:44.144 +05:30 [INF] Executing endpoint 'InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement)'
+2025-04-25 14:39:44.146 +05:30 [INF] Route matched with {action = "GetAll", controller = "Category"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller InventoryManagement.Controllers.CategoryController (InventoryManagement).
+2025-04-25 14:39:44.203 +05:30 [INF] Executing action method InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement) - Validation state: "Valid"
+2025-04-25 14:39:44.206 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CategoryName], [c].[CreatedAt], [c].[CreatedBy], [c].[IsActive], [c].[UpdatedAt], [c].[UpdatedBy]
+FROM [Categories] AS [c]
+2025-04-25 14:39:44.209 +05:30 [INF] Executed action method InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 4.6472ms.
+2025-04-25 14:39:44.210 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Domain.ViewModel.CategoryViewModel, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-25 14:39:44.211 +05:30 [INF] Executed action InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement) in 54.036ms
+2025-04-25 14:39:44.213 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/api/Category - null null
+2025-04-25 14:39:44.214 +05:30 [INF] Executed endpoint 'InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement)'
+2025-04-25 14:39:44.218 +05:30 [INF] Executing endpoint 'InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement)'
+2025-04-25 14:39:44.219 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/api/Category - 200 null application/json; charset=utf-8 81.1509ms
+2025-04-25 14:39:44.219 +05:30 [INF] Route matched with {action = "GetAll", controller = "Category"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller InventoryManagement.Controllers.CategoryController (InventoryManagement).
+2025-04-25 14:39:44.252 +05:30 [INF] Executing action method InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement) - Validation state: "Valid"
+2025-04-25 14:39:44.255 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CategoryName], [c].[CreatedAt], [c].[CreatedBy], [c].[IsActive], [c].[UpdatedAt], [c].[UpdatedBy]
+FROM [Categories] AS [c]
+2025-04-25 14:39:44.258 +05:30 [INF] Executed action method InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 4.4355ms.
+2025-04-25 14:39:44.259 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Domain.ViewModel.CategoryViewModel, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-25 14:39:44.260 +05:30 [INF] Executed action InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement) in 37.0895ms
+2025-04-25 14:39:44.263 +05:30 [INF] Executed endpoint 'InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement)'
+2025-04-25 14:39:44.264 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/api/Category - 200 null application/json; charset=utf-8 50.4797ms
+2025-04-25 14:41:50.116 +05:30 [INF] User profile is available. Using 'C:\Users\TGSUser131\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-25 14:41:50.363 +05:30 [INF] Now listening on: https://localhost:7130
+2025-04-25 14:41:50.365 +05:30 [INF] Now listening on: http://localhost:5085
+2025-04-25 14:41:50.370 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-25 14:41:50.371 +05:30 [INF] Hosting environment: Development
+2025-04-25 14:41:50.372 +05:30 [INF] Content root path: E:\aniket\c#\OAInventoryManagement\InventoryManagement
+2025-04-25 14:41:51.127 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/index.html - null null
+2025-04-25 14:41:51.439 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/index.html - 200 null text/html;charset=utf-8 319.2294ms
+2025-04-25 14:41:51.460 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/_vs/browserLink - null null
+2025-04-25 14:41:51.461 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-25 14:41:51.482 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 19.557ms
+2025-04-25 14:41:51.544 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/_vs/browserLink - 200 null text/javascript; charset=UTF-8 83.32ms
+2025-04-25 14:41:51.598 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - null null
+2025-04-25 14:41:51.797 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 199.5904ms
+2025-04-25 14:41:55.184 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/api/Category - null null
+2025-04-25 14:41:55.199 +05:30 [INF] CORS policy execution successful.
+2025-04-25 14:41:55.383 +05:30 [INF] Executing endpoint 'InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement)'
+2025-04-25 14:41:55.450 +05:30 [INF] Route matched with {action = "GetAll", controller = "Category"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller InventoryManagement.Controllers.CategoryController (InventoryManagement).
+2025-04-25 14:41:56.294 +05:30 [INF] Executing action method InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement) - Validation state: "Valid"
+2025-04-25 14:41:56.870 +05:30 [INF] Executed DbCommand (42ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CategoryName], [c].[CreatedAt], [c].[CreatedBy], [c].[IsActive], [c].[UpdatedAt], [c].[UpdatedBy]
+FROM [Categories] AS [c]
+2025-04-25 14:41:56.973 +05:30 [INF] Executed action method InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 674.3502ms.
+2025-04-25 14:41:56.983 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Domain.ViewModel.CategoryViewModel, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-25 14:41:57.000 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/api/Category - null null
+2025-04-25 14:41:57.004 +05:30 [INF] Executed action InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement) in 1547.9367ms
+2025-04-25 14:41:57.006 +05:30 [INF] CORS policy execution successful.
+2025-04-25 14:41:57.007 +05:30 [INF] Executed endpoint 'InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement)'
+2025-04-25 14:41:57.008 +05:30 [INF] Executing endpoint 'InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement)'
+2025-04-25 14:41:57.010 +05:30 [INF] Route matched with {action = "GetAll", controller = "Category"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller InventoryManagement.Controllers.CategoryController (InventoryManagement).
+2025-04-25 14:41:57.025 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/api/Category - 200 null application/json; charset=utf-8 1841.1223ms
+2025-04-25 14:41:57.088 +05:30 [INF] Executing action method InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement) - Validation state: "Valid"
+2025-04-25 14:41:57.100 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CategoryName], [c].[CreatedAt], [c].[CreatedBy], [c].[IsActive], [c].[UpdatedAt], [c].[UpdatedBy]
+FROM [Categories] AS [c]
+2025-04-25 14:41:57.103 +05:30 [INF] Executed action method InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 13.2301ms.
+2025-04-25 14:41:57.104 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Domain.ViewModel.CategoryViewModel, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-25 14:41:57.106 +05:30 [INF] Executed action InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement) in 93.5214ms
+2025-04-25 14:41:57.107 +05:30 [INF] Executed endpoint 'InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement)'
+2025-04-25 14:41:57.108 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/api/Category - 200 null application/json; charset=utf-8 108.5425ms
+2025-04-25 14:42:01.572 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/api/Category - null null
+2025-04-25 14:42:01.577 +05:30 [INF] CORS policy execution successful.
+2025-04-25 14:42:01.581 +05:30 [INF] Executing endpoint 'InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement)'
+2025-04-25 14:42:01.582 +05:30 [INF] Route matched with {action = "GetAll", controller = "Category"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller InventoryManagement.Controllers.CategoryController (InventoryManagement).
+2025-04-25 14:42:01.633 +05:30 [INF] Executing action method InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement) - Validation state: "Valid"
+2025-04-25 14:42:01.639 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CategoryName], [c].[CreatedAt], [c].[CreatedBy], [c].[IsActive], [c].[UpdatedAt], [c].[UpdatedBy]
+FROM [Categories] AS [c]
+2025-04-25 14:42:01.642 +05:30 [INF] Executed action method InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 6.6379ms.
+2025-04-25 14:42:01.644 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Domain.ViewModel.CategoryViewModel, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-25 14:42:01.645 +05:30 [INF] Executed action InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement) in 59.7016ms
+2025-04-25 14:42:01.647 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/api/Category - null null
+2025-04-25 14:42:01.648 +05:30 [INF] Executed endpoint 'InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement)'
+2025-04-25 14:42:01.650 +05:30 [INF] CORS policy execution successful.
+2025-04-25 14:42:01.652 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/api/Category - 200 null application/json; charset=utf-8 80.1528ms
+2025-04-25 14:42:01.653 +05:30 [INF] Executing endpoint 'InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement)'
+2025-04-25 14:42:01.657 +05:30 [INF] Route matched with {action = "GetAll", controller = "Category"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller InventoryManagement.Controllers.CategoryController (InventoryManagement).
+2025-04-25 14:42:01.685 +05:30 [INF] Executing action method InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement) - Validation state: "Valid"
+2025-04-25 14:42:01.689 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CategoryName], [c].[CreatedAt], [c].[CreatedBy], [c].[IsActive], [c].[UpdatedAt], [c].[UpdatedBy]
+FROM [Categories] AS [c]
+2025-04-25 14:42:01.692 +05:30 [INF] Executed action method InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 4.3957ms.
+2025-04-25 14:42:01.693 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Domain.ViewModel.CategoryViewModel, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-25 14:42:01.695 +05:30 [INF] Executed action InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement) in 35.7444ms
+2025-04-25 14:42:01.697 +05:30 [INF] Executed endpoint 'InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement)'
+2025-04-25 14:42:01.698 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/api/Category - 200 null application/json; charset=utf-8 50.8141ms
+2025-04-25 14:42:04.124 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/api/Category - null null
+2025-04-25 14:42:04.128 +05:30 [INF] CORS policy execution successful.
+2025-04-25 14:42:04.129 +05:30 [INF] Executing endpoint 'InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement)'
+2025-04-25 14:42:04.131 +05:30 [INF] Route matched with {action = "GetAll", controller = "Category"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller InventoryManagement.Controllers.CategoryController (InventoryManagement).
+2025-04-25 14:42:04.157 +05:30 [INF] Executing action method InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement) - Validation state: "Valid"
+2025-04-25 14:42:04.161 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CategoryName], [c].[CreatedAt], [c].[CreatedBy], [c].[IsActive], [c].[UpdatedAt], [c].[UpdatedBy]
+FROM [Categories] AS [c]
+2025-04-25 14:42:04.164 +05:30 [INF] Executed action method InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 5.6628ms.
+2025-04-25 14:42:04.166 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Domain.ViewModel.CategoryViewModel, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-25 14:42:04.168 +05:30 [INF] Executed action InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement) in 34.7506ms
+2025-04-25 14:42:04.169 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/api/Category - null null
+2025-04-25 14:42:04.170 +05:30 [INF] Executed endpoint 'InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement)'
+2025-04-25 14:42:04.173 +05:30 [INF] CORS policy execution successful.
+2025-04-25 14:42:04.174 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/api/Category - 200 null application/json; charset=utf-8 50.3777ms
+2025-04-25 14:42:04.175 +05:30 [INF] Executing endpoint 'InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement)'
+2025-04-25 14:42:04.180 +05:30 [INF] Route matched with {action = "GetAll", controller = "Category"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller InventoryManagement.Controllers.CategoryController (InventoryManagement).
+2025-04-25 14:42:04.205 +05:30 [INF] Executing action method InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement) - Validation state: "Valid"
+2025-04-25 14:42:04.211 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CategoryName], [c].[CreatedAt], [c].[CreatedBy], [c].[IsActive], [c].[UpdatedAt], [c].[UpdatedBy]
+FROM [Categories] AS [c]
+2025-04-25 14:42:04.214 +05:30 [INF] Executed action method InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 6.8161ms.
+2025-04-25 14:42:04.218 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Domain.ViewModel.CategoryViewModel, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-25 14:42:04.220 +05:30 [INF] Executed action InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement) in 37.6992ms
+2025-04-25 14:42:04.222 +05:30 [INF] Executed endpoint 'InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement)'
+2025-04-25 14:42:04.223 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/api/Category - 200 null application/json; charset=utf-8 54.2243ms
+2025-04-25 14:42:05.131 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/api/Category - null null
+2025-04-25 14:42:05.134 +05:30 [INF] CORS policy execution successful.
+2025-04-25 14:42:05.135 +05:30 [INF] Executing endpoint 'InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement)'
+2025-04-25 14:42:05.136 +05:30 [INF] Route matched with {action = "GetAll", controller = "Category"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller InventoryManagement.Controllers.CategoryController (InventoryManagement).
+2025-04-25 14:42:05.176 +05:30 [INF] Executing action method InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement) - Validation state: "Valid"
+2025-04-25 14:42:05.181 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CategoryName], [c].[CreatedAt], [c].[CreatedBy], [c].[IsActive], [c].[UpdatedAt], [c].[UpdatedBy]
+FROM [Categories] AS [c]
+2025-04-25 14:42:05.185 +05:30 [INF] Executed action method InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 6.6188ms.
+2025-04-25 14:42:05.187 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Domain.ViewModel.CategoryViewModel, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-25 14:42:05.189 +05:30 [INF] Executed action InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement) in 45.0357ms
+2025-04-25 14:42:05.190 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/api/Category - null null
+2025-04-25 14:42:05.190 +05:30 [INF] Executed endpoint 'InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement)'
+2025-04-25 14:42:05.192 +05:30 [INF] CORS policy execution successful.
+2025-04-25 14:42:05.193 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/api/Category - 200 null application/json; charset=utf-8 62.4342ms
+2025-04-25 14:42:05.195 +05:30 [INF] Executing endpoint 'InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement)'
+2025-04-25 14:42:05.201 +05:30 [INF] Route matched with {action = "GetAll", controller = "Category"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller InventoryManagement.Controllers.CategoryController (InventoryManagement).
+2025-04-25 14:42:05.221 +05:30 [INF] Executing action method InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement) - Validation state: "Valid"
+2025-04-25 14:42:05.223 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CategoryName], [c].[CreatedAt], [c].[CreatedBy], [c].[IsActive], [c].[UpdatedAt], [c].[UpdatedBy]
+FROM [Categories] AS [c]
+2025-04-25 14:42:05.226 +05:30 [INF] Executed action method InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 3.8721ms.
+2025-04-25 14:42:05.227 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Domain.ViewModel.CategoryViewModel, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-25 14:42:05.230 +05:30 [INF] Executed action InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement) in 27.042ms
+2025-04-25 14:42:05.232 +05:30 [INF] Executed endpoint 'InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement)'
+2025-04-25 14:42:05.233 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/api/Category - 200 null application/json; charset=utf-8 42.802ms
+2025-04-25 14:42:05.946 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/api/Category - null null
+2025-04-25 14:42:05.950 +05:30 [INF] CORS policy execution successful.
+2025-04-25 14:42:05.955 +05:30 [INF] Executing endpoint 'InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement)'
+2025-04-25 14:42:05.956 +05:30 [INF] Route matched with {action = "GetAll", controller = "Category"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller InventoryManagement.Controllers.CategoryController (InventoryManagement).
+2025-04-25 14:42:05.992 +05:30 [INF] Executing action method InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement) - Validation state: "Valid"
+2025-04-25 14:42:05.995 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CategoryName], [c].[CreatedAt], [c].[CreatedBy], [c].[IsActive], [c].[UpdatedAt], [c].[UpdatedBy]
+FROM [Categories] AS [c]
+2025-04-25 14:42:06.000 +05:30 [INF] Executed action method InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 6.0912ms.
+2025-04-25 14:42:06.001 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Domain.ViewModel.CategoryViewModel, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-25 14:42:06.003 +05:30 [INF] Executed action InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement) in 43.7287ms
+2025-04-25 14:42:06.004 +05:30 [INF] Executed endpoint 'InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement)'
+2025-04-25 14:42:06.005 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/api/Category - null null
+2025-04-25 14:42:06.006 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/api/Category - 200 null application/json; charset=utf-8 59.4753ms
+2025-04-25 14:42:06.008 +05:30 [INF] CORS policy execution successful.
+2025-04-25 14:42:06.012 +05:30 [INF] Executing endpoint 'InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement)'
+2025-04-25 14:42:06.013 +05:30 [INF] Route matched with {action = "GetAll", controller = "Category"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller InventoryManagement.Controllers.CategoryController (InventoryManagement).
+2025-04-25 14:42:06.031 +05:30 [INF] Executing action method InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement) - Validation state: "Valid"
+2025-04-25 14:42:06.035 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CategoryName], [c].[CreatedAt], [c].[CreatedBy], [c].[IsActive], [c].[UpdatedAt], [c].[UpdatedBy]
+FROM [Categories] AS [c]
+2025-04-25 14:42:06.037 +05:30 [INF] Executed action method InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 3.5575ms.
+2025-04-25 14:42:06.038 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Domain.ViewModel.CategoryViewModel, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-25 14:42:06.039 +05:30 [INF] Executed action InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement) in 24.7987ms
+2025-04-25 14:42:06.041 +05:30 [INF] Executed endpoint 'InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement)'
+2025-04-25 14:42:06.042 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/api/Category - 200 null application/json; charset=utf-8 36.4823ms
+2025-04-25 14:42:06.187 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/api/Category - null null
+2025-04-25 14:42:06.191 +05:30 [INF] CORS policy execution successful.
+2025-04-25 14:42:06.194 +05:30 [INF] Executing endpoint 'InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement)'
+2025-04-25 14:42:06.196 +05:30 [INF] Route matched with {action = "GetAll", controller = "Category"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller InventoryManagement.Controllers.CategoryController (InventoryManagement).
+2025-04-25 14:42:06.230 +05:30 [INF] Executing action method InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement) - Validation state: "Valid"
+2025-04-25 14:42:06.235 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CategoryName], [c].[CreatedAt], [c].[CreatedBy], [c].[IsActive], [c].[UpdatedAt], [c].[UpdatedBy]
+FROM [Categories] AS [c]
+2025-04-25 14:42:06.237 +05:30 [INF] Executed action method InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 5.6919ms.
+2025-04-25 14:42:06.239 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Domain.ViewModel.CategoryViewModel, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-25 14:42:06.240 +05:30 [INF] Executed action InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement) in 38.2307ms
+2025-04-25 14:42:06.241 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/api/Category - null null
+2025-04-25 14:42:06.242 +05:30 [INF] Executed endpoint 'InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement)'
+2025-04-25 14:42:06.244 +05:30 [INF] CORS policy execution successful.
+2025-04-25 14:42:06.245 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/api/Category - 200 null application/json; charset=utf-8 57.862ms
+2025-04-25 14:42:06.246 +05:30 [INF] Executing endpoint 'InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement)'
+2025-04-25 14:42:06.251 +05:30 [INF] Route matched with {action = "GetAll", controller = "Category"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller InventoryManagement.Controllers.CategoryController (InventoryManagement).
+2025-04-25 14:42:06.271 +05:30 [INF] Executing action method InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement) - Validation state: "Valid"
+2025-04-25 14:42:06.274 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CategoryName], [c].[CreatedAt], [c].[CreatedBy], [c].[IsActive], [c].[UpdatedAt], [c].[UpdatedBy]
+FROM [Categories] AS [c]
+2025-04-25 14:42:06.277 +05:30 [INF] Executed action method InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 4.2144ms.
+2025-04-25 14:42:06.279 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Domain.ViewModel.CategoryViewModel, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-25 14:42:06.280 +05:30 [INF] Executed action InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement) in 27.5605ms
+2025-04-25 14:42:06.284 +05:30 [INF] Executed endpoint 'InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement)'
+2025-04-25 14:42:06.286 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/api/Category - 200 null application/json; charset=utf-8 44.2954ms
+2025-04-25 14:42:06.418 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/api/Category - null null
+2025-04-25 14:42:06.421 +05:30 [INF] CORS policy execution successful.
+2025-04-25 14:42:06.423 +05:30 [INF] Executing endpoint 'InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement)'
+2025-04-25 14:42:06.426 +05:30 [INF] Route matched with {action = "GetAll", controller = "Category"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller InventoryManagement.Controllers.CategoryController (InventoryManagement).
+2025-04-25 14:42:06.460 +05:30 [INF] Executing action method InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement) - Validation state: "Valid"
+2025-04-25 14:42:06.464 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CategoryName], [c].[CreatedAt], [c].[CreatedBy], [c].[IsActive], [c].[UpdatedAt], [c].[UpdatedBy]
+FROM [Categories] AS [c]
+2025-04-25 14:42:06.468 +05:30 [INF] Executed action method InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 5.8467ms.
+2025-04-25 14:42:06.470 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Domain.ViewModel.CategoryViewModel, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-25 14:42:06.471 +05:30 [INF] Executed action InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement) in 42.5214ms
+2025-04-25 14:42:06.473 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/api/Category - null null
+2025-04-25 14:42:06.473 +05:30 [INF] Executed endpoint 'InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement)'
+2025-04-25 14:42:06.475 +05:30 [INF] CORS policy execution successful.
+2025-04-25 14:42:06.476 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/api/Category - 200 null application/json; charset=utf-8 59.0782ms
+2025-04-25 14:42:06.478 +05:30 [INF] Executing endpoint 'InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement)'
+2025-04-25 14:42:06.482 +05:30 [INF] Route matched with {action = "GetAll", controller = "Category"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller InventoryManagement.Controllers.CategoryController (InventoryManagement).
+2025-04-25 14:42:06.506 +05:30 [INF] Executing action method InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement) - Validation state: "Valid"
+2025-04-25 14:42:06.509 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CategoryName], [c].[CreatedAt], [c].[CreatedBy], [c].[IsActive], [c].[UpdatedAt], [c].[UpdatedBy]
+FROM [Categories] AS [c]
+2025-04-25 14:42:06.511 +05:30 [INF] Executed action method InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 3.9359ms.
+2025-04-25 14:42:06.513 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Domain.ViewModel.CategoryViewModel, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-25 14:42:06.514 +05:30 [INF] Executed action InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement) in 29.6856ms
+2025-04-25 14:42:06.516 +05:30 [INF] Executed endpoint 'InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement)'
+2025-04-25 14:42:06.519 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/api/Category - 200 null application/json; charset=utf-8 46.8271ms
+2025-04-25 14:42:06.621 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/api/Category - null null
+2025-04-25 14:42:06.626 +05:30 [INF] CORS policy execution successful.
+2025-04-25 14:42:06.629 +05:30 [INF] Executing endpoint 'InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement)'
+2025-04-25 14:42:06.641 +05:30 [INF] Route matched with {action = "GetAll", controller = "Category"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller InventoryManagement.Controllers.CategoryController (InventoryManagement).
+2025-04-25 14:42:06.672 +05:30 [INF] Executing action method InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement) - Validation state: "Valid"
+2025-04-25 14:42:06.675 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CategoryName], [c].[CreatedAt], [c].[CreatedBy], [c].[IsActive], [c].[UpdatedAt], [c].[UpdatedBy]
+FROM [Categories] AS [c]
+2025-04-25 14:42:06.678 +05:30 [INF] Executed action method InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 4.8381ms.
+2025-04-25 14:42:06.680 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Domain.ViewModel.CategoryViewModel, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-25 14:42:06.681 +05:30 [INF] Executed action InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement) in 36.6856ms
+2025-04-25 14:42:06.683 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/api/Category - null null
+2025-04-25 14:42:06.683 +05:30 [INF] Executed endpoint 'InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement)'
+2025-04-25 14:42:06.687 +05:30 [INF] CORS policy execution successful.
+2025-04-25 14:42:06.688 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/api/Category - 200 null application/json; charset=utf-8 67.5877ms
+2025-04-25 14:42:06.689 +05:30 [INF] Executing endpoint 'InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement)'
+2025-04-25 14:42:06.694 +05:30 [INF] Route matched with {action = "GetAll", controller = "Category"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller InventoryManagement.Controllers.CategoryController (InventoryManagement).
+2025-04-25 14:42:06.712 +05:30 [INF] Executing action method InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement) - Validation state: "Valid"
+2025-04-25 14:42:06.714 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CategoryName], [c].[CreatedAt], [c].[CreatedBy], [c].[IsActive], [c].[UpdatedAt], [c].[UpdatedBy]
+FROM [Categories] AS [c]
+2025-04-25 14:42:06.716 +05:30 [INF] Executed action method InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 3.2082ms.
+2025-04-25 14:42:06.719 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Domain.ViewModel.CategoryViewModel, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-25 14:42:06.720 +05:30 [INF] Executed action InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement) in 24.4733ms
+2025-04-25 14:42:06.722 +05:30 [INF] Executed endpoint 'InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement)'
+2025-04-25 14:42:06.723 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/api/Category - 200 null application/json; charset=utf-8 39.346ms
+2025-04-25 14:42:06.854 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/api/Category - null null
+2025-04-25 14:42:06.866 +05:30 [INF] CORS policy execution successful.
+2025-04-25 14:42:06.873 +05:30 [INF] Executing endpoint 'InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement)'
+2025-04-25 14:42:06.875 +05:30 [INF] Route matched with {action = "GetAll", controller = "Category"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller InventoryManagement.Controllers.CategoryController (InventoryManagement).
+2025-04-25 14:42:06.906 +05:30 [INF] Executing action method InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement) - Validation state: "Valid"
+2025-04-25 14:42:06.909 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CategoryName], [c].[CreatedAt], [c].[CreatedBy], [c].[IsActive], [c].[UpdatedAt], [c].[UpdatedBy]
+FROM [Categories] AS [c]
+2025-04-25 14:42:06.912 +05:30 [INF] Executed action method InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 4.3735ms.
+2025-04-25 14:42:06.914 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Domain.ViewModel.CategoryViewModel, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-25 14:42:06.916 +05:30 [INF] Executed action InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement) in 36.6146ms
+2025-04-25 14:42:06.918 +05:30 [INF] Executed endpoint 'InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement)'
+2025-04-25 14:42:06.919 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/api/Category - null null
+2025-04-25 14:42:06.920 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/api/Category - 200 null application/json; charset=utf-8 65.8411ms
+2025-04-25 14:42:06.922 +05:30 [INF] CORS policy execution successful.
+2025-04-25 14:42:06.926 +05:30 [INF] Executing endpoint 'InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement)'
+2025-04-25 14:42:06.927 +05:30 [INF] Route matched with {action = "GetAll", controller = "Category"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller InventoryManagement.Controllers.CategoryController (InventoryManagement).
+2025-04-25 14:42:06.951 +05:30 [INF] Executing action method InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement) - Validation state: "Valid"
+2025-04-25 14:42:06.957 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CategoryName], [c].[CreatedAt], [c].[CreatedBy], [c].[IsActive], [c].[UpdatedAt], [c].[UpdatedBy]
+FROM [Categories] AS [c]
+2025-04-25 14:42:06.960 +05:30 [INF] Executed action method InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 4.5759ms.
+2025-04-25 14:42:06.961 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Domain.ViewModel.CategoryViewModel, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-25 14:42:06.963 +05:30 [INF] Executed action InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement) in 33.6295ms
+2025-04-25 14:42:06.964 +05:30 [INF] Executed endpoint 'InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement)'
+2025-04-25 14:42:06.965 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/api/Category - 200 null application/json; charset=utf-8 46.015ms
+2025-04-25 14:42:07.086 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/api/Category - null null
+2025-04-25 14:42:07.089 +05:30 [INF] CORS policy execution successful.
+2025-04-25 14:42:07.094 +05:30 [INF] Executing endpoint 'InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement)'
+2025-04-25 14:42:07.096 +05:30 [INF] Route matched with {action = "GetAll", controller = "Category"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller InventoryManagement.Controllers.CategoryController (InventoryManagement).
+2025-04-25 14:42:07.136 +05:30 [INF] Executing action method InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement) - Validation state: "Valid"
+2025-04-25 14:42:07.140 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CategoryName], [c].[CreatedAt], [c].[CreatedBy], [c].[IsActive], [c].[UpdatedAt], [c].[UpdatedBy]
+FROM [Categories] AS [c]
+2025-04-25 14:42:07.143 +05:30 [INF] Executed action method InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 4.7185ms.
+2025-04-25 14:42:07.145 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Domain.ViewModel.CategoryViewModel, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-25 14:42:07.146 +05:30 [INF] Executed action InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement) in 45.9827ms
+2025-04-25 14:42:07.148 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/api/Category - null null
+2025-04-25 14:42:07.148 +05:30 [INF] Executed endpoint 'InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement)'
+2025-04-25 14:42:07.150 +05:30 [INF] CORS policy execution successful.
+2025-04-25 14:42:07.151 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/api/Category - 200 null application/json; charset=utf-8 64.9903ms
+2025-04-25 14:42:07.153 +05:30 [INF] Executing endpoint 'InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement)'
+2025-04-25 14:42:07.158 +05:30 [INF] Route matched with {action = "GetAll", controller = "Category"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller InventoryManagement.Controllers.CategoryController (InventoryManagement).
+2025-04-25 14:42:07.192 +05:30 [INF] Executing action method InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement) - Validation state: "Valid"
+2025-04-25 14:42:07.195 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CategoryName], [c].[CreatedAt], [c].[CreatedBy], [c].[IsActive], [c].[UpdatedAt], [c].[UpdatedBy]
+FROM [Categories] AS [c]
+2025-04-25 14:42:07.198 +05:30 [INF] Executed action method InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 4.5483ms.
+2025-04-25 14:42:07.200 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Domain.ViewModel.CategoryViewModel, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-25 14:42:07.203 +05:30 [INF] Executed action InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement) in 42.8637ms
+2025-04-25 14:42:07.205 +05:30 [INF] Executed endpoint 'InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement)'
+2025-04-25 14:42:07.207 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/api/Category - 200 null application/json; charset=utf-8 58.9593ms
+2025-04-25 14:42:07.278 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/api/Category - null null
+2025-04-25 14:42:07.288 +05:30 [INF] CORS policy execution successful.
+2025-04-25 14:42:07.290 +05:30 [INF] Executing endpoint 'InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement)'
+2025-04-25 14:42:07.292 +05:30 [INF] Route matched with {action = "GetAll", controller = "Category"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller InventoryManagement.Controllers.CategoryController (InventoryManagement).
+2025-04-25 14:42:07.330 +05:30 [INF] Executing action method InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement) - Validation state: "Valid"
+2025-04-25 14:42:07.333 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CategoryName], [c].[CreatedAt], [c].[CreatedBy], [c].[IsActive], [c].[UpdatedAt], [c].[UpdatedBy]
+FROM [Categories] AS [c]
+2025-04-25 14:42:07.336 +05:30 [INF] Executed action method InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 3.9935ms.
+2025-04-25 14:42:07.338 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Domain.ViewModel.CategoryViewModel, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-25 14:42:07.340 +05:30 [INF] Executed action InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement) in 40.5685ms
+2025-04-25 14:42:07.342 +05:30 [INF] Executed endpoint 'InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement)'
+2025-04-25 14:42:07.343 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/api/Category - 200 null application/json; charset=utf-8 64.9849ms
+2025-04-25 14:42:07.343 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/api/Category - null null
+2025-04-25 14:42:07.348 +05:30 [INF] CORS policy execution successful.
+2025-04-25 14:42:07.349 +05:30 [INF] Executing endpoint 'InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement)'
+2025-04-25 14:42:07.350 +05:30 [INF] Route matched with {action = "GetAll", controller = "Category"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller InventoryManagement.Controllers.CategoryController (InventoryManagement).
+2025-04-25 14:42:07.385 +05:30 [INF] Executing action method InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement) - Validation state: "Valid"
+2025-04-25 14:42:07.390 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CategoryName], [c].[CreatedAt], [c].[CreatedBy], [c].[IsActive], [c].[UpdatedAt], [c].[UpdatedBy]
+FROM [Categories] AS [c]
+2025-04-25 14:42:07.392 +05:30 [INF] Executed action method InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 6.2048ms.
+2025-04-25 14:42:07.394 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Domain.ViewModel.CategoryViewModel, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-25 14:42:07.396 +05:30 [INF] Executed action InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement) in 43.563ms
+2025-04-25 14:42:07.397 +05:30 [INF] Executed endpoint 'InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement)'
+2025-04-25 14:42:07.398 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/api/Category - 200 null application/json; charset=utf-8 55.3687ms
+2025-04-25 14:42:07.484 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/api/Category - null null
+2025-04-25 14:42:07.487 +05:30 [INF] CORS policy execution successful.
+2025-04-25 14:42:07.493 +05:30 [INF] Executing endpoint 'InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement)'
+2025-04-25 14:42:07.494 +05:30 [INF] Route matched with {action = "GetAll", controller = "Category"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller InventoryManagement.Controllers.CategoryController (InventoryManagement).
+2025-04-25 14:42:07.536 +05:30 [INF] Executing action method InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement) - Validation state: "Valid"
+2025-04-25 14:42:07.540 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CategoryName], [c].[CreatedAt], [c].[CreatedBy], [c].[IsActive], [c].[UpdatedAt], [c].[UpdatedBy]
+FROM [Categories] AS [c]
+2025-04-25 14:42:07.542 +05:30 [INF] Executed action method InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 3.92ms.
+2025-04-25 14:42:07.544 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Domain.ViewModel.CategoryViewModel, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-25 14:42:07.546 +05:30 [INF] Executed action InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement) in 44.9959ms
+2025-04-25 14:42:07.548 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/api/Category - null null
+2025-04-25 14:42:07.548 +05:30 [INF] Executed endpoint 'InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement)'
+2025-04-25 14:42:07.550 +05:30 [INF] CORS policy execution successful.
+2025-04-25 14:42:07.551 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/api/Category - 200 null application/json; charset=utf-8 67.2904ms
+2025-04-25 14:42:07.552 +05:30 [INF] Executing endpoint 'InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement)'
+2025-04-25 14:42:07.558 +05:30 [INF] Route matched with {action = "GetAll", controller = "Category"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller InventoryManagement.Controllers.CategoryController (InventoryManagement).
+2025-04-25 14:42:07.590 +05:30 [INF] Executing action method InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement) - Validation state: "Valid"
+2025-04-25 14:42:07.594 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CategoryName], [c].[CreatedAt], [c].[CreatedBy], [c].[IsActive], [c].[UpdatedAt], [c].[UpdatedBy]
+FROM [Categories] AS [c]
+2025-04-25 14:42:07.596 +05:30 [INF] Executed action method InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 4.2293ms.
+2025-04-25 14:42:07.598 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Domain.ViewModel.CategoryViewModel, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-25 14:42:07.600 +05:30 [INF] Executed action InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement) in 39.7087ms
+2025-04-25 14:42:07.602 +05:30 [INF] Executed endpoint 'InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement)'
+2025-04-25 14:42:07.605 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/api/Category - 200 null application/json; charset=utf-8 57.6483ms
+2025-04-25 14:42:07.696 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/api/Category - null null
+2025-04-25 14:42:07.699 +05:30 [INF] CORS policy execution successful.
+2025-04-25 14:42:07.700 +05:30 [INF] Executing endpoint 'InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement)'
+2025-04-25 14:42:07.703 +05:30 [INF] Route matched with {action = "GetAll", controller = "Category"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller InventoryManagement.Controllers.CategoryController (InventoryManagement).
+2025-04-25 14:42:07.744 +05:30 [INF] Executing action method InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement) - Validation state: "Valid"
+2025-04-25 14:42:07.747 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CategoryName], [c].[CreatedAt], [c].[CreatedBy], [c].[IsActive], [c].[UpdatedAt], [c].[UpdatedBy]
+FROM [Categories] AS [c]
+2025-04-25 14:42:07.749 +05:30 [INF] Executed action method InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 4.0817ms.
+2025-04-25 14:42:07.751 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Domain.ViewModel.CategoryViewModel, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-25 14:42:07.753 +05:30 [INF] Executed action InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement) in 45.8596ms
+2025-04-25 14:42:07.755 +05:30 [INF] Executed endpoint 'InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement)'
+2025-04-25 14:42:07.755 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/api/Category - null null
+2025-04-25 14:42:07.759 +05:30 [INF] CORS policy execution successful.
+2025-04-25 14:42:07.757 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/api/Category - 200 null application/json; charset=utf-8 60.7651ms
+2025-04-25 14:42:07.760 +05:30 [INF] Executing endpoint 'InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement)'
+2025-04-25 14:42:07.764 +05:30 [INF] Route matched with {action = "GetAll", controller = "Category"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller InventoryManagement.Controllers.CategoryController (InventoryManagement).
+2025-04-25 14:42:07.794 +05:30 [INF] Executing action method InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement) - Validation state: "Valid"
+2025-04-25 14:42:07.797 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CategoryName], [c].[CreatedAt], [c].[CreatedBy], [c].[IsActive], [c].[UpdatedAt], [c].[UpdatedBy]
+FROM [Categories] AS [c]
+2025-04-25 14:42:07.800 +05:30 [INF] Executed action method InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 4.3888ms.
+2025-04-25 14:42:07.802 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Domain.ViewModel.CategoryViewModel, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-25 14:42:07.804 +05:30 [INF] Executed action InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement) in 37.4742ms
+2025-04-25 14:42:07.807 +05:30 [INF] Executed endpoint 'InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement)'
+2025-04-25 14:42:07.808 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/api/Category - 200 null application/json; charset=utf-8 53.6632ms
+2025-04-25 14:42:07.904 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/api/Category - null null
+2025-04-25 14:42:07.907 +05:30 [INF] CORS policy execution successful.
+2025-04-25 14:42:07.908 +05:30 [INF] Executing endpoint 'InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement)'
+2025-04-25 14:42:07.911 +05:30 [INF] Route matched with {action = "GetAll", controller = "Category"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller InventoryManagement.Controllers.CategoryController (InventoryManagement).
+2025-04-25 14:42:07.957 +05:30 [INF] Executing action method InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement) - Validation state: "Valid"
+2025-04-25 14:42:07.960 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CategoryName], [c].[CreatedAt], [c].[CreatedBy], [c].[IsActive], [c].[UpdatedAt], [c].[UpdatedBy]
+FROM [Categories] AS [c]
+2025-04-25 14:42:07.963 +05:30 [INF] Executed action method InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 4.361ms.
+2025-04-25 14:42:07.965 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Domain.ViewModel.CategoryViewModel, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-25 14:42:07.967 +05:30 [INF] Executed action InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement) in 52.1557ms
+2025-04-25 14:42:07.968 +05:30 [INF] Executed endpoint 'InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement)'
+2025-04-25 14:42:07.969 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/api/Category - 200 null application/json; charset=utf-8 65.4333ms
+2025-04-25 14:42:07.969 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/api/Category - null null
+2025-04-25 14:42:07.976 +05:30 [INF] CORS policy execution successful.
+2025-04-25 14:42:07.977 +05:30 [INF] Executing endpoint 'InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement)'
+2025-04-25 14:42:07.978 +05:30 [INF] Route matched with {action = "GetAll", controller = "Category"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller InventoryManagement.Controllers.CategoryController (InventoryManagement).
+2025-04-25 14:42:08.008 +05:30 [INF] Executing action method InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement) - Validation state: "Valid"
+2025-04-25 14:42:08.012 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CategoryName], [c].[CreatedAt], [c].[CreatedBy], [c].[IsActive], [c].[UpdatedAt], [c].[UpdatedBy]
+FROM [Categories] AS [c]
+2025-04-25 14:42:08.014 +05:30 [INF] Executed action method InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 4.5633ms.
+2025-04-25 14:42:08.016 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Domain.ViewModel.CategoryViewModel, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-25 14:42:08.017 +05:30 [INF] Executed action InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement) in 37.3269ms
+2025-04-25 14:42:08.019 +05:30 [INF] Executed endpoint 'InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement)'
+2025-04-25 14:42:08.020 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/api/Category - 200 null application/json; charset=utf-8 50.8086ms
+2025-04-25 14:42:08.115 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/api/Category - null null
+2025-04-25 14:42:08.118 +05:30 [INF] CORS policy execution successful.
+2025-04-25 14:42:08.123 +05:30 [INF] Executing endpoint 'InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement)'
+2025-04-25 14:42:08.126 +05:30 [INF] Route matched with {action = "GetAll", controller = "Category"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller InventoryManagement.Controllers.CategoryController (InventoryManagement).
+2025-04-25 14:42:08.162 +05:30 [INF] Executing action method InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement) - Validation state: "Valid"
+2025-04-25 14:42:08.164 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CategoryName], [c].[CreatedAt], [c].[CreatedBy], [c].[IsActive], [c].[UpdatedAt], [c].[UpdatedBy]
+FROM [Categories] AS [c]
+2025-04-25 14:42:08.167 +05:30 [INF] Executed action method InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 4.1246ms.
+2025-04-25 14:42:08.169 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Domain.ViewModel.CategoryViewModel, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-25 14:42:08.170 +05:30 [INF] Executed action InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement) in 37.762ms
+2025-04-25 14:42:08.172 +05:30 [INF] Executed endpoint 'InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement)'
+2025-04-25 14:42:08.172 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/api/Category - null null
+2025-04-25 14:42:08.175 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/api/Category - 200 null application/json; charset=utf-8 59.5618ms
+2025-04-25 14:42:08.177 +05:30 [INF] CORS policy execution successful.
+2025-04-25 14:42:08.182 +05:30 [INF] Executing endpoint 'InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement)'
+2025-04-25 14:42:08.183 +05:30 [INF] Route matched with {action = "GetAll", controller = "Category"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller InventoryManagement.Controllers.CategoryController (InventoryManagement).
+2025-04-25 14:42:08.209 +05:30 [INF] Executing action method InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement) - Validation state: "Valid"
+2025-04-25 14:42:08.212 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CategoryName], [c].[CreatedAt], [c].[CreatedBy], [c].[IsActive], [c].[UpdatedAt], [c].[UpdatedBy]
+FROM [Categories] AS [c]
+2025-04-25 14:42:08.215 +05:30 [INF] Executed action method InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 4.2327ms.
+2025-04-25 14:42:08.217 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Domain.ViewModel.CategoryViewModel, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-25 14:42:08.219 +05:30 [INF] Executed action InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement) in 34.3243ms
+2025-04-25 14:42:08.222 +05:30 [INF] Executed endpoint 'InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement)'
+2025-04-25 14:42:08.225 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/api/Category - 200 null application/json; charset=utf-8 52.8844ms
+2025-04-25 14:42:10.592 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/api/Category - null null
+2025-04-25 14:42:10.595 +05:30 [INF] CORS policy execution successful.
+2025-04-25 14:42:10.596 +05:30 [INF] Executing endpoint 'InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement)'
+2025-04-25 14:42:10.600 +05:30 [INF] Route matched with {action = "GetAll", controller = "Category"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller InventoryManagement.Controllers.CategoryController (InventoryManagement).
+2025-04-25 14:42:10.655 +05:30 [INF] Executing action method InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement) - Validation state: "Valid"
+2025-04-25 14:42:10.659 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CategoryName], [c].[CreatedAt], [c].[CreatedBy], [c].[IsActive], [c].[UpdatedAt], [c].[UpdatedBy]
+FROM [Categories] AS [c]
+2025-04-25 14:42:10.661 +05:30 [INF] Executed action method InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 3.5747ms.
+2025-04-25 14:42:10.662 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Domain.ViewModel.CategoryViewModel, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-25 14:42:10.664 +05:30 [INF] Executed action InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement) in 61.184ms
+2025-04-25 14:42:10.666 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/api/Category - null null
+2025-04-25 14:42:10.667 +05:30 [INF] Executed endpoint 'InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement)'
+2025-04-25 14:42:10.669 +05:30 [INF] CORS policy execution successful.
+2025-04-25 14:42:10.670 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/api/Category - 200 null application/json; charset=utf-8 78.0035ms
+2025-04-25 14:42:10.671 +05:30 [INF] Executing endpoint 'InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement)'
+2025-04-25 14:42:10.674 +05:30 [INF] Route matched with {action = "GetAll", controller = "Category"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller InventoryManagement.Controllers.CategoryController (InventoryManagement).
+2025-04-25 14:42:10.694 +05:30 [INF] Executing action method InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement) - Validation state: "Valid"
+2025-04-25 14:42:10.697 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CategoryName], [c].[CreatedAt], [c].[CreatedBy], [c].[IsActive], [c].[UpdatedAt], [c].[UpdatedBy]
+FROM [Categories] AS [c]
+2025-04-25 14:42:10.700 +05:30 [INF] Executed action method InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 5.1904ms.
+2025-04-25 14:42:10.702 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Domain.ViewModel.CategoryViewModel, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-25 14:42:10.703 +05:30 [INF] Executed action InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement) in 27.6831ms
+2025-04-25 14:42:10.705 +05:30 [INF] Executed endpoint 'InventoryManagement.Controllers.CategoryController.GetAll (InventoryManagement)'
+2025-04-25 14:42:10.706 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/api/Category - 200 null application/json; charset=utf-8 39.7536ms
+2025-04-25 14:42:42.653 +05:30 [INF] User profile is available. Using 'C:\Users\TGSUser131\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-25 14:42:42.920 +05:30 [INF] Now listening on: https://localhost:7130
+2025-04-25 14:42:42.922 +05:30 [INF] Now listening on: http://localhost:5085
+2025-04-25 14:42:42.924 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-25 14:42:42.925 +05:30 [INF] Hosting environment: Development
+2025-04-25 14:42:42.926 +05:30 [INF] Content root path: E:\aniket\c#\OAInventoryManagement\InventoryManagement
+2025-04-25 14:42:43.782 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/index.html - null null
+2025-04-25 14:42:44.097 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/index.html - 200 null text/html;charset=utf-8 325.7978ms
+2025-04-25 14:42:44.130 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/_vs/browserLink - null null
+2025-04-25 14:42:44.130 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-25 14:42:44.152 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 22.0312ms
+2025-04-25 14:42:44.198 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/_vs/browserLink - 200 null text/javascript; charset=UTF-8 67.5204ms
+2025-04-25 14:42:44.248 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - null null
+2025-04-25 14:42:44.424 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 176.6892ms
+2025-04-25 14:43:07.605 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7130/api/Login/login - application/json 47
+2025-04-25 14:43:07.628 +05:30 [INF] CORS policy execution failed.
+2025-04-25 14:43:07.629 +05:30 [INF] Request origin https://localhost:7130 does not have permission to access the resource.
+2025-04-25 14:43:07.691 +05:30 [INF] Executing endpoint 'InventoryManagement.Controllers.LoginController.Login (InventoryManagement)'
+2025-04-25 14:43:07.716 +05:30 [INF] Route matched with {action = "Login", controller = "Login"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Domain.ViewModel.LoginModel) on controller InventoryManagement.Controllers.LoginController (InventoryManagement).
+2025-04-25 14:43:08.554 +05:30 [INF] Executing action method InventoryManagement.Controllers.LoginController.Login (InventoryManagement) - Validation state: "Valid"
+2025-04-25 14:43:08.558 +05:30 [INF] Login attempt for email: string
+2025-04-25 14:43:09.258 +05:30 [INF] Executed DbCommand (42ms) [Parameters=[@__model_Email_0='?' (Size = 4000), @__model_Password_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Address], [u].[CreatedAt], [u].[CreatedBy], [u].[Email], [u].[IsActive], [u].[Password], [u].[PhoneNumber], [u].[Photo], [u].[UpdatedAt], [u].[UpdatedBy], [u].[UserId], [u].[UserName], [u].[UserTypeId]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__model_Email_0 AND [u].[Password] = @__model_Password_1
+2025-04-25 14:43:09.281 +05:30 [INF] Customer found: null
+2025-04-25 14:43:09.327 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[CreatedBy], [u].[IsActive], [u].[TypeName], [u].[UpdatedAt], [u].[UpdatedBy]
+FROM [UserTypes] AS [u]
+WHERE LOWER([u].[TypeName]) = N'supplier'
+2025-04-25 14:43:09.411 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__supplierType_Id_0='?' (DbType = Guid), @__model_Email_1='?' (Size = 4000), @__model_Password_2='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Address], [u].[CreatedAt], [u].[CreatedBy], [u].[Email], [u].[IsActive], [u].[Password], [u].[PhoneNumber], [u].[Photo], [u].[UpdatedAt], [u].[UpdatedBy], [u].[UserId], [u].[UserName], [u].[UserTypeId]
+FROM [Users] AS [u]
+WHERE [u].[UserTypeId] = @__supplierType_Id_0 AND [u].[Email] = @__model_Email_1 AND [u].[Password] = @__model_Password_2
+2025-04-25 14:43:09.413 +05:30 [WRN] Login failed for email: string
+2025-04-25 14:43:09.419 +05:30 [INF] Executed action method InventoryManagement.Controllers.LoginController.Login (InventoryManagement), returned result Microsoft.AspNetCore.Mvc.BadRequestObjectResult in 860.2149ms.
+2025-04-25 14:43:09.427 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Domain.Helper.Response`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-25 14:43:09.439 +05:30 [INF] Executed action InventoryManagement.Controllers.LoginController.Login (InventoryManagement) in 1718.9297ms
+2025-04-25 14:43:09.441 +05:30 [INF] Executed endpoint 'InventoryManagement.Controllers.LoginController.Login (InventoryManagement)'
+2025-04-25 14:43:09.452 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7130/api/Login/login - 400 null application/json; charset=utf-8 1847.1069ms
+2025-04-25 14:43:21.797 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7130/api/Login/login - application/json 61
+2025-04-25 14:43:21.805 +05:30 [INF] CORS policy execution failed.
+2025-04-25 14:43:21.806 +05:30 [INF] Request origin https://localhost:7130 does not have permission to access the resource.
+2025-04-25 14:43:21.810 +05:30 [INF] Executing endpoint 'InventoryManagement.Controllers.LoginController.Login (InventoryManagement)'
+2025-04-25 14:43:21.811 +05:30 [INF] Route matched with {action = "Login", controller = "Login"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Domain.ViewModel.LoginModel) on controller InventoryManagement.Controllers.LoginController (InventoryManagement).
+2025-04-25 14:43:21.900 +05:30 [INF] Executing action method InventoryManagement.Controllers.LoginController.Login (InventoryManagement) - Validation state: "Valid"
+2025-04-25 14:43:21.902 +05:30 [INF] Login attempt for email: satyam@gmail.com
+2025-04-25 14:43:21.912 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__model_Email_0='?' (Size = 4000), @__model_Password_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Address], [u].[CreatedAt], [u].[CreatedBy], [u].[Email], [u].[IsActive], [u].[Password], [u].[PhoneNumber], [u].[Photo], [u].[UpdatedAt], [u].[UpdatedBy], [u].[UserId], [u].[UserName], [u].[UserTypeId]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__model_Email_0 AND [u].[Password] = @__model_Password_1
+2025-04-25 14:43:21.952 +05:30 [INF] Customer found: satyam@gmail.com
+2025-04-25 14:43:21.953 +05:30 [INF] Customer login successful for email: satyam@gmail.com
+2025-04-25 14:43:22.005 +05:30 [INF] Executed action method InventoryManagement.Controllers.LoginController.Login (InventoryManagement), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 103.1577ms.
+2025-04-25 14:43:22.008 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.Helper.Response`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-25 14:43:22.009 +05:30 [INF] Executed action InventoryManagement.Controllers.LoginController.Login (InventoryManagement) in 194.7534ms
+2025-04-25 14:43:22.011 +05:30 [INF] Executed endpoint 'InventoryManagement.Controllers.LoginController.Login (InventoryManagement)'
+2025-04-25 14:43:22.012 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7130/api/Login/login - 200 null application/json; charset=utf-8 214.9311ms
+2025-04-25 14:43:40.380 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/api/UserType - null null
+2025-04-25 14:43:40.430 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-04-25 14:43:40.438 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2025-04-25 14:43:40.441 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/api/UserType - 401 null application/json; charset=utf-8 60.3807ms
+2025-04-25 14:43:57.850 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/api/UserType - null null
+2025-04-25 14:43:57.867 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> System.MissingMethodException: Method not found: 'Byte[] Microsoft.IdentityModel.Tokens.Base64UrlEncoder.UnsafeDecode(System.ReadOnlyMemory`1<Char>)'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2025-04-25 14:43:57.886 +05:30 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2025-04-25 14:43:57.888 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-04-25 14:43:57.891 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2025-04-25 14:43:57.892 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/api/UserType - 401 null application/json; charset=utf-8 42.7954ms
+2025-04-25 14:52:47.158 +05:30 [INF] User profile is available. Using 'C:\Users\TGSUser131\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-25 14:52:47.450 +05:30 [INF] Now listening on: https://localhost:7130
+2025-04-25 14:52:47.452 +05:30 [INF] Now listening on: http://localhost:5085
+2025-04-25 14:52:47.456 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-25 14:52:47.457 +05:30 [INF] Hosting environment: Development
+2025-04-25 14:52:47.458 +05:30 [INF] Content root path: E:\aniket\c#\OAInventoryManagement\InventoryManagement
+2025-04-25 14:52:48.441 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/index.html - null null
+2025-04-25 14:52:48.749 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/index.html - 200 null text/html;charset=utf-8 317.751ms
+2025-04-25 14:52:48.767 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/_vs/browserLink - null null
+2025-04-25 14:52:48.767 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-25 14:52:48.796 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 28.9865ms
+2025-04-25 14:52:48.833 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/_vs/browserLink - 200 null text/javascript; charset=UTF-8 66.1203ms
+2025-04-25 14:52:48.885 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - null null
+2025-04-25 14:52:49.068 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 185.385ms
+2025-04-25 14:53:16.219 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7130/api/Login/login - application/json 61
+2025-04-25 14:53:16.240 +05:30 [INF] CORS policy execution failed.
+2025-04-25 14:53:16.242 +05:30 [INF] Request origin https://localhost:7130 does not have permission to access the resource.
+2025-04-25 14:53:16.301 +05:30 [INF] Executing endpoint 'InventoryManagement.Controllers.LoginController.Login (InventoryManagement)'
+2025-04-25 14:53:16.327 +05:30 [INF] Route matched with {action = "Login", controller = "Login"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Domain.ViewModel.LoginModel) on controller InventoryManagement.Controllers.LoginController (InventoryManagement).
+2025-04-25 14:53:17.144 +05:30 [INF] Executing action method InventoryManagement.Controllers.LoginController.Login (InventoryManagement) - Validation state: "Valid"
+2025-04-25 14:53:17.148 +05:30 [INF] Login attempt for email: satyam@gmail.com
+2025-04-25 14:53:17.867 +05:30 [INF] Executed DbCommand (66ms) [Parameters=[@__model_Email_0='?' (Size = 4000), @__model_Password_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Address], [u].[CreatedAt], [u].[CreatedBy], [u].[Email], [u].[IsActive], [u].[Password], [u].[PhoneNumber], [u].[Photo], [u].[UpdatedAt], [u].[UpdatedBy], [u].[UserId], [u].[UserName], [u].[UserTypeId]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__model_Email_0 AND [u].[Password] = @__model_Password_1
+2025-04-25 14:53:18.003 +05:30 [INF] Customer found: satyam@gmail.com
+2025-04-25 14:53:18.004 +05:30 [INF] Customer login successful for email: satyam@gmail.com
+2025-04-25 14:53:18.046 +05:30 [INF] Executed action method InventoryManagement.Controllers.LoginController.Login (InventoryManagement), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 895.7574ms.
+2025-04-25 14:53:18.058 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.Helper.Response`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-25 14:53:18.070 +05:30 [INF] Executed action InventoryManagement.Controllers.LoginController.Login (InventoryManagement) in 1737.9591ms
+2025-04-25 14:53:18.072 +05:30 [INF] Executed endpoint 'InventoryManagement.Controllers.LoginController.Login (InventoryManagement)'
+2025-04-25 14:53:18.085 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7130/api/Login/login - 200 null application/json; charset=utf-8 1865.8507ms
+2025-04-25 14:53:42.950 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/api/UserType - null null
+2025-04-25 14:53:42.976 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> System.MissingMethodException: Method not found: 'Byte[] Microsoft.IdentityModel.Tokens.Base64UrlEncoder.UnsafeDecode(System.ReadOnlyMemory`1<Char>)'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2025-04-25 14:53:42.995 +05:30 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2025-04-25 14:53:43.002 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-04-25 14:53:43.011 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2025-04-25 14:53:43.012 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/api/UserType - 401 null application/json; charset=utf-8 62.175ms
+2025-04-25 14:55:25.936 +05:30 [INF] User profile is available. Using 'C:\Users\TGSUser131\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-25 14:55:26.269 +05:30 [INF] Now listening on: https://localhost:7130
+2025-04-25 14:55:26.270 +05:30 [INF] Now listening on: http://localhost:5085
+2025-04-25 14:55:26.274 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-25 14:55:26.277 +05:30 [INF] Hosting environment: Development
+2025-04-25 14:55:26.278 +05:30 [INF] Content root path: E:\aniket\c#\OAInventoryManagement\InventoryManagement
+2025-04-25 14:55:26.798 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/index.html - null null
+2025-04-25 14:55:27.144 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/index.html - 200 null text/html;charset=utf-8 358.2695ms
+2025-04-25 14:55:27.189 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/_vs/browserLink - null null
+2025-04-25 14:55:27.189 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-25 14:55:27.202 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 12.8222ms
+2025-04-25 14:55:27.252 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/_vs/browserLink - 200 null text/javascript; charset=UTF-8 62.5943ms
+2025-04-25 14:55:27.306 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - null null
+2025-04-25 14:55:27.507 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 200.8599ms
+2025-04-25 14:55:45.983 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7130/api/Login/login - application/json 59
+2025-04-25 14:55:45.996 +05:30 [INF] CORS policy execution failed.
+2025-04-25 14:55:45.997 +05:30 [INF] Request origin https://localhost:7130 does not have permission to access the resource.
+2025-04-25 14:55:46.077 +05:30 [INF] Executing endpoint 'InventoryManagement.Controllers.LoginController.Login (InventoryManagement)'
+2025-04-25 14:55:46.104 +05:30 [INF] Route matched with {action = "Login", controller = "Login"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Domain.ViewModel.LoginModel) on controller InventoryManagement.Controllers.LoginController (InventoryManagement).
+2025-04-25 14:55:46.995 +05:30 [INF] Executing action method InventoryManagement.Controllers.LoginController.Login (InventoryManagement) - Validation state: "Valid"
+2025-04-25 14:55:47.000 +05:30 [INF] Login attempt for email: suraj@gmail.com
+2025-04-25 14:55:47.685 +05:30 [INF] Executed DbCommand (40ms) [Parameters=[@__model_Email_0='?' (Size = 4000), @__model_Password_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Address], [u].[CreatedAt], [u].[CreatedBy], [u].[Email], [u].[IsActive], [u].[Password], [u].[PhoneNumber], [u].[Photo], [u].[UpdatedAt], [u].[UpdatedBy], [u].[UserId], [u].[UserName], [u].[UserTypeId]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__model_Email_0 AND [u].[Password] = @__model_Password_1
+2025-04-25 14:55:47.776 +05:30 [INF] Customer found: suraj@gmail.com
+2025-04-25 14:55:47.778 +05:30 [INF] Customer login successful for email: suraj@gmail.com
+2025-04-25 14:55:47.820 +05:30 [INF] Executed action method InventoryManagement.Controllers.LoginController.Login (InventoryManagement), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 816.4786ms.
+2025-04-25 14:55:47.833 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.Helper.Response`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-25 14:55:47.846 +05:30 [INF] Executed action InventoryManagement.Controllers.LoginController.Login (InventoryManagement) in 1736.9853ms
+2025-04-25 14:55:47.849 +05:30 [INF] Executed endpoint 'InventoryManagement.Controllers.LoginController.Login (InventoryManagement)'
+2025-04-25 14:55:47.859 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7130/api/Login/login - 200 null application/json; charset=utf-8 1876.3483ms
+2025-04-25 14:56:11.934 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/api/UserType - null null
+2025-04-25 14:56:11.950 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> System.MissingMethodException: Method not found: 'Byte[] Microsoft.IdentityModel.Tokens.Base64UrlEncoder.UnsafeDecode(System.ReadOnlyMemory`1<Char>)'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2025-04-25 14:56:11.972 +05:30 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2025-04-25 14:56:11.979 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-04-25 14:56:11.988 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2025-04-25 14:56:11.998 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/api/UserType - 401 null application/json; charset=utf-8 64.4746ms

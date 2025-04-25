@@ -15,21 +15,31 @@ using Service.Custom.TokenSer;
 using Microsoft.Extensions.Logging;
 using Serilog;
 using System.Net;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Setup Serilog
 Log.Logger = new LoggerConfiguration()
-    .WriteTo.Console()   // Log to console
-    .WriteTo.File("logs/myapp.txt", rollingInterval: RollingInterval.Day)  // Log to file with daily rolling
+    .WriteTo.Console()
+    .WriteTo.File("logs/myapp.txt", rollingInterval: RollingInterval.Day)
     .CreateLogger();
 
-// Use Serilog for logging
 builder.Host.UseSerilog();
 
 // Add services to the container.
 builder.Services.AddControllers();
+
+// ? Add CORS policy to allow frontend access
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowFrontend",
+        builder => builder
+            .WithOrigins("http://localhost:3000")
+            .AllowAnyHeader()
+            .AllowAnyMethod()
+            .AllowCredentials());
+});
+
 builder.Services.AddEndpointsApiExplorer();
 
 #region Swagger Configuration
@@ -43,7 +53,7 @@ builder.Services.AddSwaggerGen(c =>
         Scheme = "Bearer",
         BearerFormat = "JWT",
         In = ParameterLocation.Header,
-        Description = "Enter 'Bearer' [space] and then your token in the text input below.\r\nExample: \"Bearer 1safsfsdfdfd\"",
+        Description = "Enter 'Bearer' [space] and then your token.\r\nExample: \"Bearer eyJhbGci...\"",
     });
     c.AddSecurityRequirement(new OpenApiSecurityRequirement
     {
@@ -75,9 +85,9 @@ builder.Services.AddAuthentication(x =>
         ValidateAudience = true,
         ValidateLifetime = true,
         ValidateIssuerSigningKey = true,
-        ValidIssuer = builder.Configuration["JWT:Issuer"],
-        ValidAudience = builder.Configuration["JWT:Issuer"],
-        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JWT:Key"]))
+        ValidIssuer = builder.Configuration["Jwt:Issuer"],  // Should match the running server
+        ValidAudience = builder.Configuration["Jwt:Audience"],
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
     };
     options.Events = new JwtBearerEvents
     {
@@ -113,6 +123,7 @@ builder.Services.AddScoped<ISupplierService, SupplierService>();
 builder.Services.AddScoped<IUserTypeService, UserTypeService>();
 builder.Services.AddScoped<ITokenService, TokenService>();
 builder.Services.AddScoped<IItemService, ItemService>();
+
 builder.Services.AddAuthorization();
 
 var app = builder.Build();
@@ -125,6 +136,9 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+// ? Enable CORS before authentication
+app.UseCors("AllowFrontend");
 
 app.UseAuthentication();
 app.UseAuthorization();
