@@ -53,6 +53,16 @@ builder.Services.AddAuthentication("MyCookieAuth")
     });
 
 builder.Services.AddAuthorization();
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowReactApp",
+        policy => policy
+            .WithOrigins("http://localhost:3000") // React app URL
+            .AllowAnyMethod()
+            .AllowAnyHeader()
+            .AllowCredentials() // Allow cookies / auth headers
+    );
+});
 
 var app = builder.Build();
 
@@ -64,6 +74,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.UseCors("AllowReactApp");
+
 
 // Add authentication and authorization middleware
 app.UseAuthentication(); 

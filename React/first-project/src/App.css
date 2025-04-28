@@ -41,7 +41,7 @@
 .wrapper {
   display: flex;
   flex-direction: column;
-  min-height: 116.5vh;
+  min-height: 109vh;
 }
 
 .content {

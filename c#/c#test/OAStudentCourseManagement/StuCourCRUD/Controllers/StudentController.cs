@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace WebAPI.Controllers
 {
-    [Authorize]
+    //[Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class StudentController : ControllerBase
