@@ -55,7 +55,7 @@ class Todo extends React.Component {
         const { newTitle, newDescription, tasks } = this.state;
 
         return (
-            <div className="container mt-5" style={{ maxWidth: '600px' }}>
+            <div className="container" style={{ maxWidth: '600px' }}>
                 <div className="card shadow p-4">
                     <h3 className="text-center mb-4">Todo List</h3>
 

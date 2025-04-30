@@ -9,7 +9,7 @@ const Task3 = () => {
                 <div className="col-md-2">
                     <Sidebar />
                 </div>
-                <div className="col-md-10 bg-light p-4">
+                <div className="col-md-10 bg-light">
                     <Outlet />
                 </div>
             </div>

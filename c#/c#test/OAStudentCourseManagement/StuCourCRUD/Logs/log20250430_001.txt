@@ -1,0 +1,1 @@
+2025-04-30 16:35:51.419 +05:30 [ERR] An error occurred using the connection to database 'OAStudentCourseWEBAPI' on server '(localdb)\MSSQLLocalDB'.

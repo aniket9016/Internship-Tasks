@@ -1,43 +1,41 @@
-import React from 'react';
+import React, { useEffect, useState } from "react";
 
-class FetchApi extends React.Component {
-    state = {
-        categories: [],
-        loading: true,
-        error: null,
-    };
+function FetchApi() {
+  const [posts, setPost] = useState([]);
 
-    componentDidMount() {
-        fetch('https://localhost:7130/api/Category')
-            .then((res) => {
-                if (!res.ok) throw new Error(`HTTP error! Status: ${res.status}`);
-                return res.json();
-            })
-            .then((data) => this.setState({ categories: data, loading: false }))
-            .catch((err) => this.setState({ error: err.message, loading: false }));
-    }
+  useEffect(() => {
+    fetch("https://jsonplaceholder.typicode.com/posts")
+      .then((res) => res.json())
+      .then((data) => setPost(data.slice(0, 12)));
+  }, []);
 
-    render() {
-        const { categories, loading, error } = this.state;
-
-        if (loading) return <p>Loading categories...</p>;
-        if (error) return <p>Error: {error}</p>;
-
-        return (
-            <div className="categories-container">
-                <h2>Categories</h2>
-                {categories.length ? (
-                    <ul>
-                        {categories.map((cat) => (
-                            <li key={cat.id}>{cat.categoryName}</li>
-                        ))}
-                    </ul>
-                ) : (
-                    <p>No categories found</p>
-                )}
+  return (
+    <div className="container">
+      <h1 className="text-center mb-4">JSON Placeholder Posts</h1>
+      <div className="row g-4">
+        {posts.map((post) => (
+          <div className="col-md-4" key={post.id}>
+            <div className="card h-100 shadow-sm">
+              <img
+                src="https://plus.unsplash.com/premium_photo-1734737430862-2f58fdf36262?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                className="card-img-top"
+                alt="Post visual"
+              />
+              <div className="card-body">
+                <h5 className="card-title text-truncate">{post.title}</h5>
+                <p className="card-text">{post.body.slice(0, 100)}...</p>
+              </div>
+              <div className="card-footer bg-transparent border-0">
+                <a href="/" className="btn btn-primary w-100">
+                  Read More
+                </a>
+              </div>
             </div>
-        );
-    }
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 }
 
 export default FetchApi;

@@ -25,7 +25,7 @@ class Counter extends React.Component {
     const pct = (count / Counter.MAX) * 100;
 
     return (
-      <div className="counter-component container d-flex justify-content-center mt-5">
+      <div className="counter-component container d-flex justify-content-center ">
         <div className="card text-center shadow p-4" style={{ width: '300px' }}>
           <div className="card-header">
             <h3>Counter</h3>
