@@ -1,30 +1,32 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { addTodo, deleteTodo, toggleComplete } from "./actions/todoActions";
-import { FaTrashAlt, FaCheckCircle, FaRegCircle } from 'react-icons/fa';
+import { addTodo, deleteTodo, toggleComplete } from "./actions/action";
+import { FaTrashAlt, FaCheckCircle, FaRegCircle } from "react-icons/fa";
 
 function TodoRedux() {
-  const [inputTitle, setInputTitle] = useState('');
-  const [inputDescription, setInputDescription] = useState('');
+  const [inputTitle, setInputTitle] = useState("");
+  const [inputDescription, setInputDescription] = useState("");
   const tasks = useSelector((state) => state.todo);
   const dispatch = useDispatch();
 
   const handleAdd = () => {
-    if (inputTitle.trim() === '' && inputDescription.trim() === '') {
+    if (inputTitle.trim() === "" && inputDescription.trim() === "") {
       alert("Please enter at least a title or description.");
       return;
     }
 
-    dispatch(addTodo({
-      title: inputTitle.trim(),
-      description: inputDescription.trim()
-    }));
-    setInputTitle('');
-    setInputDescription('');
+    dispatch(
+      addTodo({
+        title: inputTitle.trim(),
+        description: inputDescription.trim(),
+      })
+    );
+    setInputTitle("");
+    setInputDescription("");
   };
 
   return (
-    <div className="container" style={{ maxWidth: '600px' }}>
+    <div className="container" style={{ maxWidth: "600px" }}>
       <div className="card shadow p-4">
         <h3 className="text-center mb-4">Todo List with Redux</h3>
 
@@ -50,12 +52,16 @@ function TodoRedux() {
 
         <ul className="list-group">
           {tasks.length === 0 && (
-            <li className="list-group-item text-muted text-center">No tasks yet.</li>
+            <li className="list-group-item text-muted text-center">
+              No tasks yet.
+            </li>
           )}
           {tasks.map((task, index) => (
             <li
               key={index}
-              className={`list-group-item d-flex align-items-center justify-content-between ${task.completed ? 'list-group-item-light' : ''}`}
+              className={`list-group-item d-flex align-items-center justify-content-between ${
+                task.completed ? "list-group-item-light" : ""
+              }`}
             >
               <div
                 role="button"
@@ -69,11 +75,23 @@ function TodoRedux() {
                 )}
               </div>
               <div className="flex-grow-1">
-                <h5 className={`mb-1 ${task.completed ? 'text-decoration-line-through text-muted' : ''}`}>
-                  {task.title || 'Untitled Task'}
+                <h5
+                  className={`mb-1 ${
+                    task.completed
+                      ? "text-decoration-line-through text-muted"
+                      : ""
+                  }`}
+                >
+                  {task.title || "Untitled Task"}
                 </h5>
-                <small className={`${task.completed ? 'text-decoration-line-through text-muted' : 'text-muted'}`}>
-                  {task.description || 'No description'}
+                <small
+                  className={`${
+                    task.completed
+                      ? "text-decoration-line-through text-muted"
+                      : "text-muted"
+                  }`}
+                >
+                  {task.description || "No description"}
                 </small>
               </div>
               <button

@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "E:\\aniket\\c#\\OAEmployeeDepartmentWEBAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D03DF26C-C873-471D-9D9E-9ED30578E00E}|Service\\Service.csproj|e:\\aniket\\c#\\oaemployeedepartmentwebapi\\service\\departmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D03DF26C-C873-471D-9D9E-9ED30578E00E}|Service\\Service.csproj|solutionrelative:service\\departmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{10FB876F-E6CF-4074-8841-F2BCA1ACFF7B}|Data\\Data.csproj|e:\\aniket\\c#\\oaemployeedepartmentwebapi\\data\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10FB876F-E6CF-4074-8841-F2BCA1ACFF7B}|Data\\Data.csproj|solutionrelative:data\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6F0DBC8C-0E18-432A-A785-583870FD4D53}|Repo\\Repo.csproj|e:\\aniket\\c#\\oaemployeedepartmentwebapi\\repo\\departmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6F0DBC8C-0E18-432A-A785-583870FD4D53}|Repo\\Repo.csproj|solutionrelative:repo\\departmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{703F39E8-7B91-4694-ABCE-4FB8B004CDB5}|CRUD\\CRUD.csproj|e:\\aniket\\c#\\oaemployeedepartmentwebapi\\crud\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{703F39E8-7B91-4694-ABCE-4FB8B004CDB5}|CRUD\\CRUD.csproj|solutionrelative:crud\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{703F39E8-7B91-4694-ABCE-4FB8B004CDB5}|CRUD\\CRUD.csproj|e:\\aniket\\c#\\oaemployeedepartmentwebapi\\crud\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{703F39E8-7B91-4694-ABCE-4FB8B004CDB5}|CRUD\\CRUD.csproj|solutionrelative:crud\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,40 +23,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "DepartmentService.cs",
-              "DocumentMoniker": "E:\\aniket\\c#\\OAEmployeeDepartmentWEBAPI\\Service\\DepartmentService.cs",
-              "RelativeDocumentMoniker": "Service\\DepartmentService.cs",
-              "ToolTip": "E:\\aniket\\c#\\OAEmployeeDepartmentWEBAPI\\Service\\DepartmentService.cs",
-              "RelativeToolTip": "Service\\DepartmentService.cs",
-              "ViewState": "AQIAABoAAAAAAAAAAAAIwAAAAAAAAAAA",
+              "Title": "Employee.cs",
+              "DocumentMoniker": "E:\\aniket\\c#\\OAEmployeeDepartmentWEBAPI\\Data\\Employee.cs",
+              "RelativeDocumentMoniker": "Data\\Employee.cs",
+              "ToolTip": "E:\\aniket\\c#\\OAEmployeeDepartmentWEBAPI\\Data\\Employee.cs",
+              "RelativeToolTip": "Data\\Employee.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAowAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-07T06:07:43.447Z",
+              "WhenOpened": "2025-05-02T12:21:28.597Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "DepartmentRepository.cs",
-              "DocumentMoniker": "E:\\aniket\\c#\\OAEmployeeDepartmentWEBAPI\\Repo\\DepartmentRepository.cs",
-              "RelativeDocumentMoniker": "Repo\\DepartmentRepository.cs",
-              "ToolTip": "E:\\aniket\\c#\\OAEmployeeDepartmentWEBAPI\\Repo\\DepartmentRepository.cs",
-              "RelativeToolTip": "Repo\\DepartmentRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Title": "EmployeeController.cs",
+              "DocumentMoniker": "E:\\aniket\\c#\\OAEmployeeDepartmentWEBAPI\\CRUD\\Controllers\\EmployeeController.cs",
+              "RelativeDocumentMoniker": "CRUD\\Controllers\\EmployeeController.cs",
+              "ToolTip": "E:\\aniket\\c#\\OAEmployeeDepartmentWEBAPI\\CRUD\\Controllers\\EmployeeController.cs",
+              "RelativeToolTip": "CRUD\\Controllers\\EmployeeController.cs",
+              "ViewState": "AQIAACYAAAAAAAAAAAAAADEAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-07T06:06:27.583Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "E:\\aniket\\c#\\OAEmployeeDepartmentWEBAPI\\CRUD\\Program.cs",
-              "RelativeDocumentMoniker": "CRUD\\Program.cs",
-              "ToolTip": "E:\\aniket\\c#\\OAEmployeeDepartmentWEBAPI\\CRUD\\Program.cs",
-              "RelativeToolTip": "CRUD\\Program.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAABQAAAAUAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-07T06:05:04.982Z",
+              "WhenOpened": "2025-05-02T11:57:36.057Z",
               "EditorCaption": ""
             }
           ]

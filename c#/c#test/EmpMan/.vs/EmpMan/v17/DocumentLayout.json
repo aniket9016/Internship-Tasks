@@ -40,7 +40,7 @@
               "RelativeDocumentMoniker": "EmpMan\\Views\\Department\\Index.cshtml",
               "ToolTip": "E:\\aniket\\c#\\c#test\\EmpMan\\EmpMan\\Views\\Department\\Index.cshtml",
               "RelativeToolTip": "EmpMan\\Views\\Department\\Index.cshtml",
-              "ViewState": "AQIAAFEAAAAAAAAAAAAAAGYAAAAFAAAA",
+              "ViewState": "AQIAADAAAAAAAAAAAAAAAGYAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-03-17T08:48:00.016Z",
               "EditorCaption": ""
@@ -55,8 +55,7 @@
               "RelativeToolTip": "EmpMan\\Models\\Department.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-17T08:47:11.943Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-17T08:47:11.943Z"
             },
             {
               "$type": "Document",
@@ -68,8 +67,7 @@
               "RelativeToolTip": "EmpMan\\Views\\City\\Index.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAGQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-17T07:35:55.366Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-17T07:35:55.366Z"
             },
             {
               "$type": "Document",
@@ -81,8 +79,7 @@
               "RelativeToolTip": "EmpMan\\Controllers\\CityController.cs",
               "ViewState": "AQIAADoAAAAAAAAAAAAuwFQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-17T07:34:56.734Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-17T07:34:56.734Z"
             },
             {
               "$type": "Document",
@@ -94,8 +91,7 @@
               "RelativeToolTip": "EmpMan\\Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-17T07:33:53.263Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-17T07:33:53.263Z"
             }
           ]
         }

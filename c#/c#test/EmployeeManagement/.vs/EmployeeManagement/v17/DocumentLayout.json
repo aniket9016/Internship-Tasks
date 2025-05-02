@@ -54,8 +54,7 @@
               "RelativeToolTip": "EmployeeManagement\\Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-13T11:20:16.68Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-13T11:20:16.68Z"
             },
             {
               "$type": "Document",
@@ -67,8 +66,7 @@
               "RelativeToolTip": "EmployeeManagement\\appsettings.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAADAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-03-13T11:19:54.339Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-13T11:19:54.339Z"
             },
             {
               "$type": "Document",
@@ -80,8 +78,7 @@
               "RelativeToolTip": "EmployeeManagement\\Models\\City.cs",
               "ViewState": "AQIAAAcAAAAAAAAAAAAqwBMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-13T11:17:53.522Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-13T11:17:53.522Z"
             },
             {
               "$type": "Document",
@@ -93,8 +90,7 @@
               "RelativeToolTip": "EmployeeManagement\\Controllers\\DepartmentController.cs",
               "ViewState": "AQIAADgAAAAAAAAAAAAgwEEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-13T11:30:47.752Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-13T11:30:47.752Z"
             },
             {
               "$type": "Document",
@@ -119,8 +115,7 @@
               "RelativeToolTip": "EmployeeManagement\\Models\\Salary.cs",
               "ViewState": "AQIAAAgAAAAAAAAAAAAqwBcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-13T11:19:23.339Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-13T11:19:23.339Z"
             },
             {
               "$type": "Document",
@@ -132,8 +127,7 @@
               "RelativeToolTip": "EmployeeManagement\\Models\\Department.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAAAqwBIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-13T11:18:48.905Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-13T11:18:48.905Z"
             },
             {
               "$type": "Document",
@@ -145,8 +139,7 @@
               "RelativeToolTip": "EmployeeManagement\\Models\\Employee.cs",
               "ViewState": "AQIAAB0AAAAAAAAAAAAiwCsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-13T11:18:15.281Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-13T11:18:15.281Z"
             }
           ]
         }

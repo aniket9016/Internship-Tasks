@@ -1,0 +1,147 @@
+/* ==========================
+   THEME BASE STYLES
+========================== */
+
+/* Light Theme */
+body.light-theme {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+body.light-theme .theme-bg {
+  background-color: #f9f9f9;
+}
+
+body.light-theme .theme-text {
+  color: #000000;
+}
+
+body.light-theme .modal-content {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+body.light-theme .btn-icon.edit {
+  background-color: #ffc107;
+  color: black;
+}
+
+body.light-theme .btn-icon.delete {
+  background-color: #dc3545;
+  color: white;
+}
+
+/* Dark Theme */
+body.dark-theme {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+body.dark-theme .theme-bg {
+  background-color: #1e1e2f;
+}
+
+body.dark-theme .theme-text {
+  color: #f0f0f0;
+}
+
+body.dark-theme .modal-content {
+  background-color: #2c2c3c;
+  color: #ffffff;
+}
+
+/* ==========================
+   COMMON LAYOUT / COMPONENTS
+========================== */
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  flex: 1;
+}
+
+.department-container {
+  min-height: 100vh;
+  padding: 2rem;
+  border-radius: 12px;
+}
+
+.table th,
+.table td {
+  vertical-align: middle;
+  text-align: center;
+}
+
+.table-dark-custom thead {
+  background-color: #292b3a;
+}
+
+.table-dark-custom tbody tr:hover {
+  background-color: #3a3c4d;
+  cursor: pointer;
+}
+
+/* ==========================
+   BUTTONS & ICONS
+========================== */
+
+.btn-custom-add {
+  background-color: #28a745;
+  border: none;
+  font-weight: bold;
+}
+
+.btn-custom-add:hover {
+  background-color: #218838;
+}
+
+.btn-icon {
+  border: none;
+  margin-right: 0.5rem;
+  padding: 6px 10px;
+  border-radius: 4px;
+}
+
+.btn-icon.edit {
+  background-color: #ffc107;
+  color: black;
+}
+
+.btn-icon.delete {
+  background-color: #dc3545;
+  color: white;
+}
+
+/* ==========================
+   THEME SWITCH BUTTON
+========================== */
+
+.theme-switch {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border-radius: 50%;
+  padding: 10px;
+  z-index: 1000;
+  border: 1px solid;
+  background: none;
+}
+.employee-dark-card {
+  background-color: #1c1f2e;
+  color: white;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.profile-pic {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.tempclass{
+  padding-bottom: 10rem;
+}

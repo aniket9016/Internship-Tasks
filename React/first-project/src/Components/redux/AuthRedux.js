@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { login, logout } from "./actions/authActions";
+import { login, logout } from "./actions/action";
 
 function AuthRedux() {
   const user = useSelector((state) => state.auth);

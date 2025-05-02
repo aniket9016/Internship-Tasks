@@ -80,8 +80,6 @@ namespace WebAPI.Controllers
             return Ok(new { success = true, message = "Employee updated successfully" });
         }
 
-
-
         [HttpDelete("{id}")]
         public IActionResult DeleteEmployee(long id)
         {
@@ -101,25 +99,36 @@ namespace WebAPI.Controllers
         private async Task<string> SaveImageAsync(IFormFile file)
         {
             string uploadsFolder = Path.Combine(_webHostEnvironment.WebRootPath, "Images");
-            Directory.CreateDirectory(uploadsFolder);
+            if (!Directory.Exists(uploadsFolder))
+            {
+                Directory.CreateDirectory(uploadsFolder);
+            }
 
-            string fileName = file.FileName; 
+            string fileName = Guid.NewGuid().ToString() + Path.GetExtension(file.FileName);
             string filePath = Path.Combine(uploadsFolder, fileName);
 
             using var stream = new FileStream(filePath, FileMode.Create);
             await file.CopyToAsync(stream);
 
-            return fileName;
+            return "/Images/" + fileName;
         }
 
-
-        private void DeleteImage(string fileName)
+        private void DeleteImage(string filePath)
         {
-            string filePath = Path.Combine(_webHostEnvironment.WebRootPath, "Images", fileName);
-            if (System.IO.File.Exists(filePath))
+            string fileName = Path.GetFileName(filePath); // Extract just the file name
+            string fullPath = Path.Combine(_webHostEnvironment.WebRootPath, "Images", fileName);
+            if (System.IO.File.Exists(fullPath))
             {
-                System.IO.File.Delete(filePath);
+                try
+                {
+                    System.IO.File.Delete(fullPath);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Error deleting image: {ex.Message}");
+                }
             }
         }
+
     }
 }

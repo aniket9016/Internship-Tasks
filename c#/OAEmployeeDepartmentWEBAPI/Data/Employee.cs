@@ -22,5 +22,7 @@ namespace Data
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         public string ProfilePic { get; set; }
+
+        public string? Department { get; set; }
     }
 }
