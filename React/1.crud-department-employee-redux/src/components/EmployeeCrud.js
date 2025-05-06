@@ -41,31 +41,29 @@ function EmployeeCrud({ theme, toggleTheme }) {
     department: "",
   });
 
-  // Pagination state
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(5);
 
-  // Create a custom MUI theme for the pagination component
   const darkTheme = createTheme({
     palette: {
-      mode: 'dark',
+      mode: "dark",
       primary: {
-        main: '#ffffff',
+        main: "#ffffff",
       },
       text: {
-        primary: '#ffffff',
-        secondary: '#cccccc',
+        primary: "#ffffff",
+        secondary: "#cccccc",
       },
     },
     components: {
       MuiTablePagination: {
         styleOverrides: {
           root: {
-            color: '#ffffff',
-            backgroundColor: 'transparent',
+            color: "#ffffff",
+            backgroundColor: "transparent",
           },
           selectIcon: {
-            color: '#ffffff',
+            color: "#ffffff",
           },
         },
       },
@@ -370,9 +368,11 @@ function EmployeeCrud({ theme, toggleTheme }) {
     setPage(0);
   };
 
-  const employeesToShow = employees.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage);
+  const employeesToShow = employees.slice(
+    page * rowsPerPage,
+    page * rowsPerPage + rowsPerPage
+  );
 
-  // Calculate display range text
   const from = employees.length === 0 ? 0 : page * rowsPerPage + 1;
   const to = Math.min((page + 1) * rowsPerPage, employees.length);
   const countText = `${from}-${to} of ${employees.length}`;
@@ -459,10 +459,9 @@ function EmployeeCrud({ theme, toggleTheme }) {
                 </td>
               </tr>
             )}
-          </tbody>
+          </tbody>  
         </Table>
 
-        {/* Custom styled pagination component */}
         <div className="d-flex justify-content-between align-items-center mt-3">
           <div className="text-white">{countText}</div>
           <ThemeProvider theme={darkTheme}>
@@ -476,28 +475,28 @@ function EmployeeCrud({ theme, toggleTheme }) {
               rowsPerPageOptions={[5, 10, 25]}
               labelRowsPerPage="Rows per page:"
               sx={{
-                color: '#ffffff',
-                '.MuiTablePagination-selectIcon': {
-                  color: '#ffffff',
+                color: "#ffffff",
+                ".MuiTablePagination-selectIcon": {
+                  color: "#ffffff",
                 },
-                '.MuiTablePagination-select': {
-                  color: '#ffffff',
+                ".MuiTablePagination-select": {
+                  color: "#ffffff",
                 },
-                '.MuiTablePagination-selectLabel': {
-                  color: '#ffffff',
+                ".MuiTablePagination-selectLabel": {
+                  color: "#ffffff",
                 },
-                '.MuiTablePagination-displayedRows': {
-                  color: '#ffffff',
+                ".MuiTablePagination-displayedRows": {
+                  color: "#ffffff",
                 },
-                '.MuiTablePagination-actions': {
-                  color: '#ffffff',
+                ".MuiTablePagination-actions": {
+                  color: "#ffffff",
                 },
-                '.MuiIconButton-root': {
-                  color: '#ffffff',
+                ".MuiIconButton-root": {
+                  color: "#ffffff",
                 },
-                '.Mui-disabled': {
-                  color: '#666666 !important',
-                }
+                ".Mui-disabled": {
+                  color: "#666666 !important",
+                },
               }}
             />
           </ThemeProvider>

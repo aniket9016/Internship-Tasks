@@ -24,11 +24,9 @@ function DepartmentCrud({ theme, toggleTheme }) {
   const [formData, setFormData] = useState({ id: 0, departmentName: "" });
   const [selectedDept, setSelectedDept] = useState(null);
 
-  // Pagination state
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(5);
 
-  // Create a custom MUI theme for the pagination component
   const darkTheme = createTheme({
     palette: {
       mode: 'dark',
@@ -123,7 +121,6 @@ function DepartmentCrud({ theme, toggleTheme }) {
     setSelectedDept(null);
   };
 
-  // Pagination handlers
   const handleChangePage = (event, newPage) => {
     setPage(newPage);
   };
@@ -133,13 +130,11 @@ function DepartmentCrud({ theme, toggleTheme }) {
     setPage(0);
   };
 
-  // Calculate departments to display based on pagination
   const departmentsToShow = departments.slice(
     page * rowsPerPage,
     page * rowsPerPage + rowsPerPage
   );
 
-  // Calculate display range text
   const from = departments.length === 0 ? 0 : page * rowsPerPage + 1;
   const to = Math.min((page + 1) * rowsPerPage, departments.length);
   const countText = `${from}-${to} of ${departments.length}`;
@@ -295,7 +290,6 @@ function DepartmentCrud({ theme, toggleTheme }) {
           </tbody>
         </Table>
 
-        {/* Custom styled pagination component */}
         {departments.length > 0 && (
           <div className="d-flex justify-content-between align-items-center mt-3">
             <div className="text-white">{countText}</div>
