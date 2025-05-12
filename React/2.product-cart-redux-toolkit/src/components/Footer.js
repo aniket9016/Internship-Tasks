@@ -1,17 +1,24 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Box, Container, Typography } from "@mui/material";
 
 function Footer() {
   return (
-    <footer className="bg-dark text-white mt-auto py-2">
-      <Container>
-        <Row>
-          <Col className="text-center">
-            <p className="mb-0">&copy; 2025 Aniket. All rights reserved.</p>
-          </Col>
-        </Row>
+    <Box
+      component="footer"
+      sx={{
+        backgroundColor: "primary.dark",
+        color: "white",
+        py: 2,
+        mt: "auto",
+        textAlign: "center",
+      }}
+    >
+      <Container maxWidth="lg">
+        <Typography variant="body2" component="p" sx={{ m: 0 }}>
+          &copy; 2025 Aniket. All rights reserved.
+        </Typography>
       </Container>
-    </footer>
+    </Box>
   );
 }
 

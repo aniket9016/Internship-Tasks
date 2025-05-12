@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "E:\\aniket\\c#\\EmployeeWEBAPI\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{C93FAB6A-18A7-4C9C-866A-C7364DEC86E6}|ProductWEBAPI\\EmployeeWEBAPI.csproj|e:\\aniket\\c#\\employeewebapi\\productwebapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{C93FAB6A-18A7-4C9C-866A-C7364DEC86E6}|ProductWEBAPI\\EmployeeWEBAPI.csproj|solutionrelative:productwebapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C93FAB6A-18A7-4C9C-866A-C7364DEC86E6}|ProductWEBAPI\\EmployeeWEBAPI.csproj|e:\\aniket\\c#\\employeewebapi\\productwebapi\\controllers\\employeescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C93FAB6A-18A7-4C9C-866A-C7364DEC86E6}|ProductWEBAPI\\EmployeeWEBAPI.csproj|solutionrelative:productwebapi\\controllers\\employeescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -19,6 +23,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "E:\\aniket\\c#\\EmployeeWEBAPI\\ProductWEBAPI\\appsettings.json",
+              "RelativeDocumentMoniker": "ProductWEBAPI\\appsettings.json",
+              "ToolTip": "E:\\aniket\\c#\\EmployeeWEBAPI\\ProductWEBAPI\\appsettings.json",
+              "RelativeToolTip": "ProductWEBAPI\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-12T05:18:24.283Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "EmployeesController.cs",
               "DocumentMoniker": "E:\\aniket\\c#\\EmployeeWEBAPI\\ProductWEBAPI\\Controllers\\EmployeesController.cs",
               "RelativeDocumentMoniker": "ProductWEBAPI\\Controllers\\EmployeesController.cs",

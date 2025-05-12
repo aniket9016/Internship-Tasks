@@ -55,7 +55,6 @@ function Home({ theme }) {
   const cardStyle = {
     backgroundColor: theme === "dark" ? "#1f1f1f" : "#ffffff",
     color: theme === "dark" ? "#f0f0f0" : "#1f1f1f",
-    height: "180px",
   };
 
   return (
@@ -64,7 +63,7 @@ function Home({ theme }) {
         <Col md={6} className="mb-4">
           <Row>
             <Col md={12} className="mb-3">
-              <Card className="text-center shadow" style={cardStyle}>
+              <Card className="text-center shadow" style={{ ...cardStyle, height: "180px" }}>
                 <Card.Body>
                   <FontAwesomeIcon icon={faUsers} size="2x" className="mb-2" />
                   <h5>Total Employees</h5>
@@ -79,7 +78,7 @@ function Home({ theme }) {
               </Card>
             </Col>
             <Col md={12}>
-              <Card className="text-center shadow" style={cardStyle}>
+              <Card className="text-center shadow" style={{ ...cardStyle, height: "180px" }}>
                 <Card.Body>
                   <FontAwesomeIcon
                     icon={faBuilding}
@@ -104,8 +103,7 @@ function Home({ theme }) {
           <Card
             className="text-center shadow"
             style={{
-              backgroundColor: theme === "dark" ? "#1f1f1f" : "#ffffff",
-              color: theme === "dark" ? "#f0f0f0" : "#1f1f1f",
+              ...cardStyle,
               height: "380px",
               display: "flex",
               flexDirection: "column",
@@ -150,7 +148,7 @@ function Home({ theme }) {
 
       <Row className="mt-5 mb-4">
         <Col md={6}>
-          <Card className="shadow mb-4" style={cardStyle}>
+          <Card className="shadow mb-4" style={{ ...cardStyle, height: "380px" }}>
             <Card.Header className="d-flex justify-content-between align-items-center">
               <h5 className="mb-0">Department List</h5>
               <Button
@@ -161,7 +159,7 @@ function Home({ theme }) {
                 <i className="fas fa-plus me-1"></i> Add
               </Button>
             </Card.Header>
-            <Card.Body className="p-0">
+            <Card.Body className="p-0" style={{ overflowY: "auto" }}>
               <Table
                 striped
                 bordered
@@ -198,7 +196,7 @@ function Home({ theme }) {
         </Col>
 
         <Col md={6}>
-          <Card className="shadow mb-4" style={cardStyle}>
+          <Card className="shadow mb-4" style={{ ...cardStyle, height: "380px" }}>
             <Card.Header className="d-flex justify-content-between align-items-center">
               <h5 className="mb-0">Employee List</h5>
               <Button
@@ -209,7 +207,7 @@ function Home({ theme }) {
                 <i className="fas fa-plus me-1"></i> Add
               </Button>
             </Card.Header>
-            <Card.Body className="p-0">
+            <Card.Body className="p-0" style={{ overflowY: "auto" }}>
               <Table
                 striped
                 bordered

@@ -24,7 +24,7 @@ namespace WebAPI.Controllers
         }
 
         [HttpGet("{id}")]
-        public IActionResult GetStudent(long id)
+        public IActionResult GetStudent(int id)
         {
             var student = _studentService.GetStudent(id);
             if (student == null)
@@ -34,14 +34,16 @@ namespace WebAPI.Controllers
         }
 
         [HttpPost]
-        public IActionResult AddStudent(Student student)
+        public IActionResult AddStudent([FromBody] Student student)
         {
+            student.Id = 0;
+
             _studentService.InsertStudent(student);
             return CreatedAtAction(nameof(GetStudent), new { id = student.Id }, student);
         }
 
         [HttpPut("{id}")]
-        public IActionResult UpdateStudent(long id, Student student)
+        public IActionResult UpdateStudent(int id, [FromBody] Student student)
         {
             if (id != student.Id)
                 return BadRequest("ID mismatch");
@@ -55,7 +57,7 @@ namespace WebAPI.Controllers
         }
 
         [HttpDelete("{id}")]
-        public IActionResult DeleteStudent(long id)
+        public IActionResult DeleteStudent(int id)
         {
             var student = _studentService.GetStudent(id);
             if (student == null)

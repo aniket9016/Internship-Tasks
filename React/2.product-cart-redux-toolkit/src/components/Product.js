@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchProducts } from "../features/productSlice";
 import { addToCart } from "../features/cartSlice";
 import { useNavigate } from "react-router-dom";
+import CommonModal from "../components/CommonModal";
 
 function Product() {
   const dispatch = useDispatch();
@@ -17,17 +18,6 @@ function Product() {
     setLoading(true);
     dispatch(fetchProducts()).finally(() => setLoading(false));
   }, [dispatch]);
-
-  // Lock scroll on modal open
-  useEffect(() => {
-    if (showModal) {
-      document.body.classList.add("modal-open");
-    } else {
-      document.body.classList.remove("modal-open");
-    }
-
-    return () => document.body.classList.remove("modal-open");
-  }, [showModal]);
 
   const handleAddToCart = (product) => {
     dispatch(addToCart(product));
@@ -55,9 +45,7 @@ function Product() {
         <div className="row">
           {products.map((product) => (
             <div className="col-md-4 mb-4" key={product.id}>
-              <div
-                className="card h-100 product-card"
-              >
+              <div className="card h-100 product-card">
                 <img
                   src={product.image}
                   className="card-img-top p-3"
@@ -93,75 +81,36 @@ function Product() {
         </div>
       )}
 
-      {/* Modal Backdrop */}
-      {showModal && (
-        <div
-          className="modal-backdrop fade show"
-          style={{
-            position: "fixed",
-            top: 0,
-            left: 0,
-            width: "100%",
-            height: "100%",
-            backgroundColor: "rgba(0, 0, 0, 0.5)",
-            zIndex: 1040,
-          }}
-        />
-      )}
-
-      {/* Modal */}
-      {showModal && modalProduct && (
-        <div
-          className="modal show"
-          tabIndex="-1"
-          style={{ display: "block", zIndex: 1050 }}
-          aria-labelledby="exampleModalLabel"
-          aria-hidden="true"
-        >
-          <div className="modal-dialog">
-            <div className="modal-content">
-              <div className="modal-header">
-                <h5 className="modal-title" id="exampleModalLabel">
-                  Product Added to Cart
-                </h5>
-                <button
-                  type="button"
-                  className="btn-close"
-                  aria-label="Close"
-                  onClick={closeModal}
-                />
-              </div>
-              <div className="modal-body text-center">
-                <p>
-                  <strong>{modalProduct.title}</strong> has been added to your cart.
-                </p>
-                <img
-                  src={modalProduct.image}
-                  alt={modalProduct.title}
-                  className="img-fluid"
-                  style={{ maxHeight: "200px", objectFit: "contain" }}
-                />
-              </div>
-              <div className="modal-footer">
-                <button
-                  type="button"
-                  className="btn btn-secondary"
-                  onClick={closeModal}
-                >
-                  Close
-                </button>
-                <button
-                  type="button"
-                  className="btn btn-primary"
-                  onClick={goToCart}
-                >
-                  Go to Cart
-                </button>
-              </div>
+      <CommonModal
+        show={showModal}
+        title="Product Added to Cart"
+        onClose={closeModal}
+        body={
+          modalProduct && (
+            <div className="text-center">
+              <p>
+                <strong>{modalProduct.title}</strong> has been added to your cart.
+              </p>
+              <img
+                src={modalProduct.image}
+                alt={modalProduct.title}
+                className="img-fluid"
+                style={{ maxHeight: "200px", objectFit: "contain" }}
+              />
             </div>
-          </div>
-        </div>
-      )}
+          )
+        }
+        footer={
+          <>
+            <button className="btn btn-secondary" onClick={closeModal}>
+              Close
+            </button>
+            <button className="btn btn-primary" onClick={goToCart}>
+              Go to Cart
+            </button>
+          </>
+        }
+      />
     </div>
   );
 }
