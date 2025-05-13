@@ -4,6 +4,7 @@ import todoReducer from "../features/todoSlice";
 import productReducer from "../features/productSlice";
 import cartReducer from "../features/cartSlice";
 import studentReducer from "../features/studentSlice";
+import authReducer from "../features/authSlice";
 
 export const store = configureStore({
   reducer: {
@@ -12,5 +13,6 @@ export const store = configureStore({
     products: productReducer,
     cart: cartReducer,
     student: studentReducer,
+    auth: authReducer, 
   },
 });

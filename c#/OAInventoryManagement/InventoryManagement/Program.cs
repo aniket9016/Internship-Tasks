@@ -45,7 +45,7 @@ builder.Services.AddEndpointsApiExplorer();
 #region Swagger Configuration
 builder.Services.AddSwaggerGen(c =>
 {
-    c.SwaggerDoc("v1", new OpenApiInfo { Title = "EmployeeManagement", Version = "v1" });
+    c.SwaggerDoc("v1", new OpenApiInfo { Title = "Inventory Management", Version = "v1" });
     c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme()
     {
         Name = "Authorization",

@@ -1,0 +1,133 @@
+2025-05-12 15:55:21.103 +05:30 [INF] User profile is available. Using 'C:\Users\TGSUser131\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-12 15:55:22.270 +05:30 [INF] Now listening on: https://localhost:7130
+2025-05-12 15:55:22.285 +05:30 [INF] Now listening on: http://localhost:5085
+2025-05-12 15:55:22.290 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-12 15:55:22.296 +05:30 [INF] Hosting environment: Development
+2025-05-12 15:55:22.297 +05:30 [INF] Content root path: E:\aniket\c#\OAInventoryManagement\InventoryManagement
+2025-05-12 15:55:27.239 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger - null null
+2025-05-12 15:55:27.616 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger - 301 0 null 388.9855ms
+2025-05-12 15:55:27.672 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/index.html - null null
+2025-05-12 15:55:27.931 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/index.html - 200 null text/html;charset=utf-8 259.0899ms
+2025-05-12 15:55:28.016 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/swagger-ui-standalone-preset.js - null null
+2025-05-12 15:55:28.015 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/swagger-ui.css - null null
+2025-05-12 15:55:28.054 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/swagger-ui-bundle.js - null null
+2025-05-12 15:55:28.366 +05:30 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-05-12 15:55:28.405 +05:30 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-05-12 15:55:28.021 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-12 15:55:28.431 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/swagger-ui-standalone-preset.js - 200 339486 text/javascript 414.6521ms
+2025-05-12 15:55:28.436 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/swagger-ui.css - 200 143943 text/css 420.8111ms
+2025-05-12 15:55:28.455 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 434.5116ms
+2025-05-12 15:55:28.470 +05:30 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-05-12 15:55:28.481 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/swagger-ui-bundle.js - 200 1096145 text/javascript 426.5293ms
+2025-05-12 15:55:29.061 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/_vs/browserLink - null null
+2025-05-12 15:55:29.127 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/_vs/browserLink - 200 null text/javascript; charset=UTF-8 65.6435ms
+2025-05-12 15:55:31.821 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - null null
+2025-05-12 15:55:32.099 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 278.6339ms
+2025-05-12 15:55:33.545 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/favicon-32x32.png - null null
+2025-05-12 15:55:33.548 +05:30 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2025-05-12 15:55:33.550 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/favicon-32x32.png - 200 628 image/png 5.1014ms
+2025-05-12 15:56:25.179 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7130/api/Login/login - application/json 61
+2025-05-12 15:56:25.187 +05:30 [INF] CORS policy execution failed.
+2025-05-12 15:56:25.215 +05:30 [INF] Request origin https://localhost:7130 does not have permission to access the resource.
+2025-05-12 15:56:26.990 +05:30 [INF] Executing endpoint 'InventoryManagement.Controllers.LoginController.Login (InventoryManagement)'
+2025-05-12 15:56:27.030 +05:30 [INF] Route matched with {action = "Login", controller = "Login"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Domain.ViewModel.LoginModel) on controller InventoryManagement.Controllers.LoginController (InventoryManagement).
+2025-05-12 15:56:29.142 +05:30 [INF] Executing action method InventoryManagement.Controllers.LoginController.Login (InventoryManagement) - Validation state: "Valid"
+2025-05-12 15:56:29.151 +05:30 [INF] Login attempt for email: satyam@gmail.com
+2025-05-12 15:56:31.178 +05:30 [INF] Executed DbCommand (135ms) [Parameters=[@__model_Email_0='?' (Size = 4000), @__model_Password_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Address], [u].[CreatedAt], [u].[CreatedBy], [u].[Email], [u].[IsActive], [u].[Password], [u].[PhoneNumber], [u].[Photo], [u].[UpdatedAt], [u].[UpdatedBy], [u].[UserId], [u].[UserName], [u].[UserTypeId]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__model_Email_0 AND [u].[Password] = @__model_Password_1
+2025-05-12 15:56:31.352 +05:30 [INF] Customer found: satyam@gmail.com
+2025-05-12 15:56:31.354 +05:30 [INF] Customer login successful for email: satyam@gmail.com
+2025-05-12 15:56:31.556 +05:30 [INF] Executed action method InventoryManagement.Controllers.LoginController.Login (InventoryManagement), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2403.5116ms.
+2025-05-12 15:56:31.563 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.Helper.Response`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-12 15:56:31.579 +05:30 [INF] Executed action InventoryManagement.Controllers.LoginController.Login (InventoryManagement) in 4539.9718ms
+2025-05-12 15:56:31.582 +05:30 [INF] Executed endpoint 'InventoryManagement.Controllers.LoginController.Login (InventoryManagement)'
+2025-05-12 15:56:31.593 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7130/api/Login/login - 200 null application/json; charset=utf-8 6413.6751ms
+2025-05-12 15:57:17.565 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/api/UserType - null null
+2025-05-12 15:57:17.595 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> System.MissingMethodException: Method not found: 'Byte[] Microsoft.IdentityModel.Tokens.Base64UrlEncoder.UnsafeDecode(System.ReadOnlyMemory`1<Char>)'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2025-05-12 15:57:17.631 +05:30 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2025-05-12 15:57:17.640 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-05-12 15:57:17.649 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2025-05-12 15:57:17.650 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/api/UserType - 401 null application/json; charset=utf-8 84.4553ms
+2025-05-12 16:27:19.130 +05:30 [INF] User profile is available. Using 'C:\Users\TGSUser131\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-12 16:27:19.519 +05:30 [INF] Now listening on: https://localhost:7130
+2025-05-12 16:27:19.521 +05:30 [INF] Now listening on: http://localhost:5085
+2025-05-12 16:27:19.525 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-12 16:27:19.527 +05:30 [INF] Hosting environment: Development
+2025-05-12 16:27:19.528 +05:30 [INF] Content root path: E:\aniket\c#\OAInventoryManagement\InventoryManagement
+2025-05-12 16:27:21.529 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/index.html - null null
+2025-05-12 16:27:21.801 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'Swashbuckle.AspNetCore.Swagger.ISwaggerProvider' while attempting to Invoke middleware 'Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware'.
+   at lambda_method2(Closure, Object, HttpContext, IServiceProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-05-12 16:27:21.912 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/index.html - 500 null text/html; charset=utf-8 393.8866ms
+2025-05-12 16:27:21.979 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/_vs/browserLink - null null
+2025-05-12 16:27:21.978 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-12 16:27:22.003 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 24.4524ms
+2025-05-12 16:27:22.097 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/_vs/browserLink - 200 null text/javascript; charset=UTF-8 118.8399ms
+2025-05-12 16:27:22.193 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/favicon.ico - null null
+2025-05-12 16:27:22.211 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'Swashbuckle.AspNetCore.Swagger.ISwaggerProvider' while attempting to Invoke middleware 'Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware'.
+   at lambda_method2(Closure, Object, HttpContext, IServiceProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-05-12 16:27:22.216 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/favicon.ico - 500 null text/plain; charset=utf-8 22.7963ms
+2025-05-12 16:27:44.778 +05:30 [INF] User profile is available. Using 'C:\Users\TGSUser131\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-12 16:27:45.132 +05:30 [INF] Now listening on: https://localhost:7130
+2025-05-12 16:27:45.134 +05:30 [INF] Now listening on: http://localhost:5085
+2025-05-12 16:27:45.138 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-12 16:27:45.142 +05:30 [INF] Hosting environment: Development
+2025-05-12 16:27:45.146 +05:30 [INF] Content root path: E:\aniket\c#\OAInventoryManagement\InventoryManagement
+2025-05-12 16:27:46.914 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/index.html - null null
+2025-05-12 16:27:47.194 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'Swashbuckle.AspNetCore.Swagger.ISwaggerProvider' while attempting to Invoke middleware 'Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware'.
+   at lambda_method2(Closure, Object, HttpContext, IServiceProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-05-12 16:27:47.311 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/index.html - 500 null text/html; charset=utf-8 407.7461ms
+2025-05-12 16:27:47.380 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-12 16:27:47.380 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/_vs/browserLink - null null
+2025-05-12 16:27:47.398 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 18.4871ms
+2025-05-12 16:27:47.475 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/_vs/browserLink - 200 null text/javascript; charset=UTF-8 95.227ms
+2025-05-12 16:27:47.748 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/favicon.ico - null null
+2025-05-12 16:27:47.779 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'Swashbuckle.AspNetCore.Swagger.ISwaggerProvider' while attempting to Invoke middleware 'Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware'.
+   at lambda_method2(Closure, Object, HttpContext, IServiceProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-05-12 16:27:47.784 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/favicon.ico - 500 null text/plain; charset=utf-8 35.875ms
+2025-05-12 16:28:14.026 +05:30 [INF] User profile is available. Using 'C:\Users\TGSUser131\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-12 16:28:14.895 +05:30 [INF] Now listening on: https://localhost:7130
+2025-05-12 16:28:14.897 +05:30 [INF] Now listening on: http://localhost:5085
+2025-05-12 16:28:14.901 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-12 16:28:14.903 +05:30 [INF] Hosting environment: Development
+2025-05-12 16:28:14.904 +05:30 [INF] Content root path: E:\aniket\c#\OAInventoryManagement\InventoryManagement
+2025-05-12 16:28:16.622 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/index.html - null null
+2025-05-12 16:28:17.504 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/index.html - 200 null text/html;charset=utf-8 893.5342ms
+2025-05-12 16:28:17.597 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/_vs/browserLink - null null
+2025-05-12 16:28:17.596 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-12 16:28:17.645 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 49.0058ms
+2025-05-12 16:28:17.685 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/_vs/browserLink - 200 null text/javascript; charset=UTF-8 88.529ms
+2025-05-12 16:28:17.954 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - null null
+2025-05-12 16:28:18.333 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 378.7811ms
+2025-05-12 16:29:37.532 +05:30 [INF] User profile is available. Using 'C:\Users\TGSUser131\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-12 16:29:37.985 +05:30 [INF] Now listening on: https://localhost:7130
+2025-05-12 16:29:37.987 +05:30 [INF] Now listening on: http://localhost:5085
+2025-05-12 16:29:37.992 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-12 16:29:37.993 +05:30 [INF] Hosting environment: Development
+2025-05-12 16:29:37.994 +05:30 [INF] Content root path: E:\aniket\c#\OAInventoryManagement\InventoryManagement
+2025-05-12 16:29:39.888 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/index.html - null null
+2025-05-12 16:29:40.435 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/index.html - 200 null text/html;charset=utf-8 557.1761ms
+2025-05-12 16:29:40.575 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-12 16:29:40.576 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/_vs/browserLink - null null
+2025-05-12 16:29:40.588 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 12.9912ms
+2025-05-12 16:29:40.635 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/_vs/browserLink - 200 null text/javascript; charset=UTF-8 58.5713ms
+2025-05-12 16:29:40.759 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - null null
+2025-05-12 16:29:41.071 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 311.584ms

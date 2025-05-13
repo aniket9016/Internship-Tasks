@@ -1,8 +1,10 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { NavLink, useNavigate } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { logout } from "../features/authSlice";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import MenuIcon from "@mui/icons-material/Menu";
+import { ExitToApp, Login as LoginIcon } from "@mui/icons-material"; 
 import {
   AppBar,
   Badge,
@@ -24,10 +26,15 @@ import {
   Assignment,
   People,
   PersonAdd,
+  Domain,
 } from "@mui/icons-material";
 
 const Header = ({ title }) => {
   const cartCount = useSelector((state) => state.cart.items.length);
+  const { isAuthenticated } = useSelector((state) => state.auth);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
   const [openDrawer, setOpenDrawer] = React.useState(false);
 
   const navLinks = [
@@ -40,8 +47,17 @@ const Header = ({ title }) => {
     { label: "Register", path: "/register", icon: <PersonAdd /> },
   ];
 
+  if (isAuthenticated) {
+    navLinks.push({ label: "Department", path: "/department", icon: <Domain /> });
+  }
+
   const handleDrawerToggle = () => {
     setOpenDrawer(!openDrawer);
+  };
+
+  const handleLogout = () => {
+    dispatch(logout());  
+    navigate("/");  
   };
 
   return (
@@ -114,10 +130,31 @@ const Header = ({ title }) => {
               <ShoppingCartIcon />
             </Badge>
           </IconButton>
+
+          {/* Conditionally render login/logout button based on authentication status */}
+          {isAuthenticated ? (
+            <>
+              <IconButton onClick={handleLogout} color="inherit">
+                <ExitToApp /> {/* Logout Icon */}
+              </IconButton>
+              <Typography variant="body1" color="inherit" sx={{ ml: 1 }}>
+                Logout
+              </Typography>
+            </>
+          ) : (
+            <>
+              <IconButton component={NavLink} to="/login" color="inherit">
+                <LoginIcon /> {/* Login Icon */}
+              </IconButton>
+              <Typography variant="body1" color="inherit" sx={{ ml: 1 }}>
+                Login
+              </Typography>
+            </>
+          )}
         </Toolbar>
       </AppBar>
 
-      <Box ></Box>
+      <Box></Box>
     </>
   );
 };

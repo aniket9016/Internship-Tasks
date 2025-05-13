@@ -12,7 +12,10 @@ import Student from "./components/Student";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Register from "./components/Register";
-import Home  from "./components/Home";
+import Home from "./components/Home";
+import Login from "./components/Login";
+import Department from "./components/Department";
+import PrivateRoute from "./components/PrivateRoute"; 
 
 function App() {
   return (
@@ -30,6 +33,15 @@ function App() {
             <Route path="todo" element={<Todo />} />
             <Route path="student" element={<Student />} />
             <Route path="register" element={<Register />} />
+            <Route
+              path="department"
+              element={
+                <PrivateRoute>
+                  <Department />
+                </PrivateRoute>
+              }
+            />
+            <Route path="login" element={<Login />} />
           </Routes>
         </div>
         <Footer />
