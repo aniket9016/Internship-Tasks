@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import axiosInstance from "../utils/axiosInstance";
 import {
   Button,
@@ -12,220 +12,269 @@ import {
   Paper,
   Typography,
   Box,
+  Stack,
+  IconButton,
 } from "@mui/material";
 import {
   AddCircle,
   Edit,
-  Update,
   Delete as DeleteIcon,
 } from "@mui/icons-material";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import CommonModal from "../components/CommonModal";
 
 const Department = () => {
   const [departments, setDepartments] = useState([]);
-  const [newDepartment, setNewDepartment] = useState("");
-  const [newDescription, setNewDescription] = useState("");
-  const [editDepartment, setEditDepartment] = useState(null);
-  const [editName, setEditName] = useState("");
-  const [editDescription, setEditDescription] = useState("");
+  const [modalType, setModalType] = useState(null);
+  const [modalVisible, setModalVisible] = useState(false);
+
+  const [selectedDept, setSelectedDept] = useState(null);
+  const [name, setName] = useState("");
+  const [description, setDescription] = useState("");
+  const [errors, setErrors] = useState({});
   const navigate = useNavigate();
 
   useEffect(() => {
     const token = localStorage.getItem("token");
     if (!token) {
-      localStorage.removeItem("token");
+      navigate("/");
+    }
+  }, [navigate]);
+
+  const fetchDepartments = useCallback(async () => {
+    try {
+      const res = await axiosInstance.get("https://localhost:7227/api/Department");
+      setDepartments(res.data);
+    } catch (error) {
+      console.error("Error fetching departments", error);
       navigate("/");
     }
   }, [navigate]);
 
   useEffect(() => {
-    const fetchDepartments = async () => {
-      try {
-        const response = await axiosInstance.get(
-          "https://localhost:7227/api/Department"
-        );
-        setDepartments(response.data);
-      } catch (error) {
-        console.error("Error fetching departments", error);
-        localStorage.removeItem("token");
-        navigate("/");
-      }
-    };
-
     fetchDepartments();
-  }, [navigate]);
+  }, [fetchDepartments]);
 
-  const handleAddDepartment = async () => {
+  const openModal = (type, dept = null) => {
+    setModalType(type);
+    setSelectedDept(dept);
+    setName(dept?.name || "");
+    setDescription(dept?.description || "");
+    setErrors({});
+    setModalVisible(true);
+  };
+
+  const closeModal = () => {
+    setModalVisible(false);
+    setModalType(null);
+    setSelectedDept(null);
+    setName("");
+    setDescription("");
+    setErrors({});
+  };
+
+  const validate = () => {
+    const newErrors = {};
+    if (!name.trim()) newErrors.name = "Name is required";
+    if (!description.trim()) newErrors.description = "Description is required";
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const handleAdd = async () => {
+    if (!validate()) return;
     try {
-      await axiosInstance.post("https://localhost:7227/api/Department", {
-        name: newDepartment,
-        description: newDescription,
+      const res = await axiosInstance.post("https://localhost:7227/api/Department", {
+        name,
+        description,
       });
-      setDepartments([
-        ...departments,
-        { name: newDepartment, description: newDescription },
-      ]);
-      setNewDepartment("");
-      setNewDescription("");
-      toast.success("Department added successfully!");
+      setDepartments([...departments, res.data]);
+      toast.success("Department added!");
+      closeModal();
     } catch (error) {
       console.error("Error adding department", error);
-      toast.error("Failed to add department!");
+      toast.error("Failed to add department.");
     }
   };
 
-  const handleUpdateDepartment = async (id) => {
+  const handleUpdate = async () => {
+    if (!validate()) return;
     try {
-      await axiosInstance.put(`https://localhost:7227/api/Department/${id}`, {
-        id: id,
-        name: editName,
-        description: editDescription,
+      await axiosInstance.put(`https://localhost:7227/api/Department/${selectedDept.id}`, {
+        id: selectedDept.id,
+        name,
+        description,
       });
-      setDepartments(
-        departments.map((dept) =>
-          dept.id === id
-            ? { ...dept, name: editName, description: editDescription }
-            : dept
+      setDepartments((prev) =>
+        prev.map((dept) =>
+          dept.id === selectedDept.id ? { ...dept, name, description } : dept
         )
       );
-      setEditDepartment(null);
-      setEditName("");
-      setEditDescription("");
-      toast.success("Department updated successfully!");
+      toast.success("Department updated!");
+      closeModal();
     } catch (error) {
       console.error("Error updating department", error);
-      toast.error("Failed to update department!");
+      toast.error("Failed to update department.");
     }
   };
 
-  const handleDeleteDepartment = async (id) => {
+  const handleDelete = async () => {
     try {
-      await axiosInstance.delete(`https://localhost:7227/api/Department/${id}`);
-      setDepartments(departments.filter((dept) => dept.id !== id));
-      toast.success("Department deleted successfully!");
+      await axiosInstance.delete(`https://localhost:7227/api/Department/${selectedDept.id}`);
+      setDepartments((prev) => prev.filter((d) => d.id !== selectedDept.id));
+      toast.success("Department deleted!");
+      closeModal();
     } catch (error) {
       console.error("Error deleting department", error);
-      toast.error("Failed to delete department!");
+      toast.error("Failed to delete department.");
     }
+  };
+
+  const renderModalContent = () => {
+    if (modalType === "add" || modalType === "edit") {
+      return (
+        <Stack spacing={2}>
+          <TextField
+            label="Department Name"
+            fullWidth
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            error={!!errors.name}
+            helperText={errors.name}
+          />
+          <TextField
+            label="Description"
+            fullWidth
+            value={description}
+            onChange={(e) => setDescription(e.target.value)}
+            error={!!errors.description}
+            helperText={errors.description}
+          />
+        </Stack>
+      );
+    }
+
+    if (modalType === "delete") {
+      return (
+        <Typography>
+          Are you sure you want to delete <strong>{selectedDept?.name}</strong>?
+        </Typography>
+      );
+    }
+
+    return null;
+  };
+
+  const renderModalFooter = () => {
+    if (modalType === "add") {
+      return (
+        <Button variant="contained" onClick={handleAdd}>
+          Add
+        </Button>
+      );
+    }
+
+    if (modalType === "edit") {
+      return (
+        <Button variant="contained" color="warning" onClick={handleUpdate}>
+          Update
+        </Button>
+      );
+    }
+
+    if (modalType === "delete") {
+      return (
+        <Button variant="contained" color="error" onClick={handleDelete}>
+          Delete
+        </Button>
+      );
+    }
+
+    return null;
   };
 
   return (
-    <div style={{ padding: "20px" }}>
-      <Typography variant="h4" gutterBottom>
-        Departments
+    <Box sx={{ p: 4 }}>
+      <Typography variant="h4" fontWeight="bold" gutterBottom color="primary.dark">
+        Department Management
       </Typography>
 
-      <Box mb={3} display="flex" alignItems="center">
-        <TextField
-          label="New Department"
-          variant="outlined"
-          value={newDepartment}
-          onChange={(e) => setNewDepartment(e.target.value)}
-          sx={{ marginRight: 2, width: 300 }}
-        />
-        <TextField
-          label="Description"
-          variant="outlined"
-          value={newDescription}
-          onChange={(e) => setNewDescription(e.target.value)}
-          sx={{ marginRight: 2, width: 300 }}
-        />
+      <Box sx={{ mb: 3 }}>
         <Button
           variant="contained"
           color="primary"
-          onClick={handleAddDepartment}
           startIcon={<AddCircle />}
-          sx={{ width: 200 }}
+          onClick={() => openModal("add")}
         >
-          Add Department
+          Add New
         </Button>
       </Box>
 
-      <TableContainer component={Paper}>
+      <TableContainer component={Paper} elevation={3} sx={{ borderRadius: 2 }}>
         <Table>
           <TableHead>
-            <TableRow>
-              <TableCell sx={{ fontWeight: "bold", fontSize: "20px" }}>
-                Department Name
-              </TableCell>
-              <TableCell sx={{ fontWeight: "bold", fontSize: "20px" }}>
-                Description
-              </TableCell>
-              <TableCell sx={{ fontWeight: "bold", fontSize: "20px" }}>
-                Actions
-              </TableCell>
+            <TableRow sx={{ bgcolor: "primary.light" }}>
+              <TableCell sx={{ fontWeight: "bold", color: "white" }}>Name</TableCell>
+              <TableCell sx={{ fontWeight: "bold", color: "white" }}>Description</TableCell>
+              <TableCell sx={{ fontWeight: "bold", color: "white" }}>Actions</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
-            {departments.length > 0 ? (
-              departments.map((dept) => (
-                <TableRow key={dept.id}>
-                  <TableCell>
-                    {editDepartment === dept.id ? (
-                      <TextField
-                        value={editName}
-                        onChange={(e) => setEditName(e.target.value)}
-                      />
-                    ) : (
-                      dept.name
-                    )}
-                  </TableCell>
-                  <TableCell>
-                    {editDepartment === dept.id ? (
-                      <TextField
-                        value={editDescription}
-                        onChange={(e) => setEditDescription(e.target.value)}
-                      />
-                    ) : (
-                      dept.description
-                    )}
-                  </TableCell>
-                  <TableCell>
-                    {editDepartment === dept.id ? (
-                      <Button
-                        variant="contained"
-                        color="secondary"
-                        onClick={() => handleUpdateDepartment(dept.id)}
-                        startIcon={<Update />}
-                      >
-                        Update
-                      </Button>
-                    ) : (
-                      <Button
-                        variant="contained"
-                        color="primary"
-                        onClick={() => {
-                          setEditDepartment(dept.id);
-                          setEditName(dept.name);
-                          setEditDescription(dept.description);
-                        }}
-                        startIcon={<Edit />}
-                      >
-                        Edit
-                      </Button>
-                    )}
-                    <Button
-                      variant="contained"
-                      color="error"
-                      onClick={() => handleDeleteDepartment(dept.id)}
-                      startIcon={<DeleteIcon />}
-                      sx={{ marginLeft: 1 }}
+            {departments.map((dept) => (
+              <TableRow key={dept.id} hover>
+                <TableCell>{dept.name}</TableCell>
+                <TableCell>{dept.description}</TableCell>
+                <TableCell>
+                  <Stack direction="row" spacing={1}>
+                    <IconButton
+                      color="primary"
+                      onClick={() => openModal("edit", dept)}
                     >
-                      Delete
-                    </Button>
-                  </TableCell>
-                </TableRow>
-              ))
-            ) : (
+                      <Edit />
+                    </IconButton>
+                    <IconButton
+                      color="error"
+                      onClick={() => openModal("delete", dept)}
+                    >
+                      <DeleteIcon />
+                    </IconButton>
+                  </Stack>
+                </TableCell>
+              </TableRow>
+            ))}
+            {departments.length === 0 && (
               <TableRow>
-                <TableCell colSpan={3}>No departments found</TableCell>
+                <TableCell colSpan={3} align="center">
+                  No departments found.
+                </TableCell>
               </TableRow>
             )}
           </TableBody>
         </Table>
       </TableContainer>
-    </div>
+
+      <CommonModal
+        show={modalVisible}
+        title={
+          modalType === "add"
+            ? "Add Department"
+            : modalType === "edit"
+            ? "Edit Department"
+            : "Delete Department"
+        }
+        body={renderModalContent()}
+        footer={
+          <>
+            <Button onClick={closeModal} variant="outlined" sx={{ mr: 2 }}>
+              Cancel
+            </Button>
+            {renderModalFooter()}
+          </>
+        }
+        onClose={closeModal}
+      />
+    </Box>
   );
 };
 
