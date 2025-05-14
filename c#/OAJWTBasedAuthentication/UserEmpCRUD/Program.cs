@@ -12,14 +12,13 @@ using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 
-#region Swagger Configuration
 builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "EmployeeManagement", Version = "v1" });
+
     c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme()
     {
         Name = "Authorization",
@@ -29,6 +28,7 @@ builder.Services.AddSwaggerGen(c =>
         In = ParameterLocation.Header,
         Description = "Enter 'Bearer' [space] and then your token in the text input below.\r\nExample: \"Bearer 1safsfsdfdfd\"",
     });
+
     c.AddSecurityRequirement(new OpenApiSecurityRequirement
     {
         {
@@ -43,9 +43,7 @@ builder.Services.AddSwaggerGen(c =>
         }
     });
 });
-#endregion
 
-#region JWT Authentication
 builder.Services.AddAuthentication(x =>
 {
     x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -63,56 +61,57 @@ builder.Services.AddAuthentication(x =>
         ValidAudience = builder.Configuration["JWT:Issuer"],
         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JWT:Key"]))
     };
+
     options.Events = new JwtBearerEvents
     {
         OnChallenge = async context =>
         {
-            context.HandleResponse();
             context.Response.StatusCode = 401;
-
             var response = new Data.Response<string>
             {
-                Message = "You are not authorized!",
+                Message = "You are not authorized! Please log in with the correct credentials.",
                 Status = (int)HttpStatusCode.Unauthorized
+            };
+
+            await context.Response.WriteAsJsonAsync(response);
+        },
+        OnForbidden = async context =>
+        {
+            context.Response.StatusCode = 403;
+            var response = new Data.Response<string>
+            {
+                Message = "You do not have the necessary permissions to access this resource. Only admins are allowed.",
+                Status = (int)HttpStatusCode.Forbidden
             };
 
             await context.Response.WriteAsJsonAsync(response);
         }
     };
 });
-#endregion
 
-#region Database
-// Database context
+
 builder.Services.AddDbContext<AppDBContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DevConnection")));
-#endregion
 
-#region DI for Repositories and Services
 builder.Services.AddScoped<IEmployeeRepository<Employee>, EmployeeRepository>();
 builder.Services.AddScoped<IDepartmentRepository<Department>, DepartmentRepository>();
 
 builder.Services.AddScoped<IEmployeeService, EmployeeService>();
 builder.Services.AddScoped<IDepartmentService, DepartmentService>();
 builder.Services.AddScoped<ITokenService, TokenService>();
-#endregion
 
-#region CORS Configuration
-// Enable CORS
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowReactApp", policy =>
     {
-        policy.WithOrigins("http://localhost:3000") 
+        policy.WithOrigins("http://localhost:3000")
             .AllowAnyHeader()
             .AllowAnyMethod();
     });
 });
-#endregion
 
 var app = builder.Build();
 
-// Configure the middleware
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();

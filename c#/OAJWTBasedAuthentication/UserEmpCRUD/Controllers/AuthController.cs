@@ -27,8 +27,9 @@ namespace WebAPI.Controllers
             if (employee == null)
                 return Unauthorized("Invalid email or password");
 
-            var token = _tokenService.GenerateToken(employee.Email);
+            var token = _tokenService.GenerateToken(employee.Email, employee.Role);
             return Ok(new { Token = token });
         }
+
     }
 }

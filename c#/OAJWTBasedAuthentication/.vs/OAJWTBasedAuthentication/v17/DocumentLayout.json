@@ -1,12 +1,122 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "E:\\aniket\\c#\\OAJWTBasedAuthentication\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7F59050B-1B98-4511-AA55-AB6F1E0CF498}|UserEmpCRUD\\UserEmpCRUD.csproj|e:\\aniket\\c#\\oajwtbasedauthentication\\userempcrud\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F59050B-1B98-4511-AA55-AB6F1E0CF498}|UserEmpCRUD\\UserEmpCRUD.csproj|solutionrelative:userempcrud\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E4860EB-B3BB-40EF-BCE1-5614D39B42A5}|Data\\Data.csproj|e:\\aniket\\c#\\oajwtbasedauthentication\\data\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0E4860EB-B3BB-40EF-BCE1-5614D39B42A5}|Data\\Data.csproj|solutionrelative:data\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B406DA7-416A-4679-99D6-3D7768F7D18D}|Service\\Service.csproj|e:\\aniket\\c#\\oajwtbasedauthentication\\service\\itokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B406DA7-416A-4679-99D6-3D7768F7D18D}|Service\\Service.csproj|solutionrelative:service\\itokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B406DA7-416A-4679-99D6-3D7768F7D18D}|Service\\Service.csproj|e:\\aniket\\c#\\oajwtbasedauthentication\\service\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B406DA7-416A-4679-99D6-3D7768F7D18D}|Service\\Service.csproj|solutionrelative:service\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F59050B-1B98-4511-AA55-AB6F1E0CF498}|UserEmpCRUD\\UserEmpCRUD.csproj|e:\\aniket\\c#\\oajwtbasedauthentication\\userempcrud\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F59050B-1B98-4511-AA55-AB6F1E0CF498}|UserEmpCRUD\\UserEmpCRUD.csproj|solutionrelative:userempcrud\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F59050B-1B98-4511-AA55-AB6F1E0CF498}|UserEmpCRUD\\UserEmpCRUD.csproj|e:\\aniket\\c#\\oajwtbasedauthentication\\userempcrud\\controllers\\departmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F59050B-1B98-4511-AA55-AB6F1E0CF498}|UserEmpCRUD\\UserEmpCRUD.csproj|solutionrelative:userempcrud\\controllers\\departmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\aniket\\c#\\OAJWTBasedAuthentication\\UserEmpCRUD\\Program.cs",
+              "RelativeDocumentMoniker": "UserEmpCRUD\\Program.cs",
+              "ToolTip": "E:\\aniket\\c#\\OAJWTBasedAuthentication\\UserEmpCRUD\\Program.cs",
+              "RelativeToolTip": "UserEmpCRUD\\Program.cs",
+              "ViewState": "AQIAAD8AAAAAAAAAAAAAACoAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T06:23:08.334Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DepartmentController.cs",
+              "DocumentMoniker": "E:\\aniket\\c#\\OAJWTBasedAuthentication\\UserEmpCRUD\\Controllers\\DepartmentController.cs",
+              "RelativeDocumentMoniker": "UserEmpCRUD\\Controllers\\DepartmentController.cs",
+              "ToolTip": "E:\\aniket\\c#\\OAJWTBasedAuthentication\\UserEmpCRUD\\Controllers\\DepartmentController.cs",
+              "RelativeToolTip": "UserEmpCRUD\\Controllers\\DepartmentController.cs",
+              "ViewState": "AQIAAC0AAAAAAAAAAAAYwEQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T06:23:07.133Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "E:\\aniket\\c#\\OAJWTBasedAuthentication\\UserEmpCRUD\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "UserEmpCRUD\\Controllers\\AuthController.cs",
+              "ToolTip": "E:\\aniket\\c#\\OAJWTBasedAuthentication\\UserEmpCRUD\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "UserEmpCRUD\\Controllers\\AuthController.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAAwCMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T06:23:06.38Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TokenService.cs",
+              "DocumentMoniker": "E:\\aniket\\c#\\OAJWTBasedAuthentication\\Service\\TokenService.cs",
+              "RelativeDocumentMoniker": "Service\\TokenService.cs",
+              "ToolTip": "E:\\aniket\\c#\\OAJWTBasedAuthentication\\Service\\TokenService.cs",
+              "RelativeToolTip": "Service\\TokenService.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAA3wCsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T06:23:04.965Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ITokenService.cs",
+              "DocumentMoniker": "E:\\aniket\\c#\\OAJWTBasedAuthentication\\Service\\ITokenService.cs",
+              "RelativeDocumentMoniker": "Service\\ITokenService.cs",
+              "ToolTip": "E:\\aniket\\c#\\OAJWTBasedAuthentication\\Service\\ITokenService.cs",
+              "RelativeToolTip": "Service\\ITokenService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T06:23:04.349Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Employee.cs",
+              "DocumentMoniker": "E:\\aniket\\c#\\OAJWTBasedAuthentication\\Data\\Employee.cs",
+              "RelativeDocumentMoniker": "Data\\Employee.cs",
+              "ToolTip": "E:\\aniket\\c#\\OAJWTBasedAuthentication\\Data\\Employee.cs",
+              "RelativeToolTip": "Data\\Employee.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAADwvxkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T06:23:02.068Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

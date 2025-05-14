@@ -5,7 +5,7 @@ using Services;
 
 namespace UserEmpCRUD.Controllers
 {
-    [Authorize]
+    [Authorize(Roles = "Admin")]
     [Route("api/[controller]")]
     [ApiController]
     public class DepartmentController : ControllerBase
