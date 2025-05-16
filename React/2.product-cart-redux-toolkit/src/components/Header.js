@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { logout } from "../features/authSlice";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import MenuIcon from "@mui/icons-material/Menu";
-import { ExitToApp, Login as LoginIcon } from "@mui/icons-material"; 
+import { ExitToApp, Login as LoginIcon } from "@mui/icons-material";
 import {
   AppBar,
   Badge,
@@ -48,7 +48,11 @@ const Header = ({ title }) => {
   ];
 
   if (isAuthenticated) {
-    navLinks.push({ label: "Department", path: "/department", icon: <Domain /> });
+    navLinks.push({
+      label: "Department",
+      path: "/department",
+      icon: <Domain />,
+    });
   }
 
   const handleDrawerToggle = () => {
@@ -56,8 +60,8 @@ const Header = ({ title }) => {
   };
 
   const handleLogout = () => {
-    dispatch(logout());  
-    navigate("/");  
+    dispatch(logout());
+    navigate("/");
   };
 
   return (
@@ -131,11 +135,10 @@ const Header = ({ title }) => {
             </Badge>
           </IconButton>
 
-          {/* Conditionally render login/logout button based on authentication status */}
           {isAuthenticated ? (
             <>
               <IconButton onClick={handleLogout} color="inherit">
-                <ExitToApp /> {/* Logout Icon */}
+                <ExitToApp />
               </IconButton>
               <Typography variant="body1" color="inherit" sx={{ ml: 1 }}>
                 Logout
@@ -144,7 +147,7 @@ const Header = ({ title }) => {
           ) : (
             <>
               <IconButton component={NavLink} to="/login" color="inherit">
-                <LoginIcon /> {/* Login Icon */}
+                <LoginIcon />
               </IconButton>
               <Typography variant="body1" color="inherit" sx={{ ml: 1 }}>
                 Login

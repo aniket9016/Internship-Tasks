@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "E:\\aniket\\c#\\OAInventoryManagement\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{00E0142B-44CA-4789-A385-898AC2998D7D}|InventoryManagement\\InventoryManagement.csproj|e:\\aniket\\c#\\oainventorymanagement\\inventorymanagement\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{00E0142B-44CA-4789-A385-898AC2998D7D}|InventoryManagement\\InventoryManagement.csproj|solutionrelative:inventorymanagement\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{50980511-7A45-481F-8A43-3BD6A8BB9563}|Domain\\Domain.csproj|e:\\aniket\\c#\\oainventorymanagement\\domain\\viewmodel\\userviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50980511-7A45-481F-8A43-3BD6A8BB9563}|Domain\\Domain.csproj|solutionrelative:domain\\viewmodel\\userviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{00E0142B-44CA-4789-A385-898AC2998D7D}|InventoryManagement\\InventoryManagement.csproj|e:\\aniket\\c#\\oainventorymanagement\\inventorymanagement\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{00E0142B-44CA-4789-A385-898AC2998D7D}|InventoryManagement\\InventoryManagement.csproj|solutionrelative:inventorymanagement\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{50980511-7A45-481F-8A43-3BD6A8BB9563}|Domain\\Domain.csproj|e:\\aniket\\c#\\oainventorymanagement\\domain\\models\\usertype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50980511-7A45-481F-8A43-3BD6A8BB9563}|Domain\\Domain.csproj|solutionrelative:domain\\models\\usertype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50980511-7A45-481F-8A43-3BD6A8BB9563}|Domain\\Domain.csproj|e:\\aniket\\c#\\oainventorymanagement\\domain\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50980511-7A45-481F-8A43-3BD6A8BB9563}|Domain\\Domain.csproj|solutionrelative:domain\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50980511-7A45-481F-8A43-3BD6A8BB9563}|Domain\\Domain.csproj|e:\\aniket\\c#\\oainventorymanagement\\domain\\models\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50980511-7A45-481F-8A43-3BD6A8BB9563}|Domain\\Domain.csproj|solutionrelative:domain\\models\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,28 +31,51 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "E:\\aniket\\c#\\OAInventoryManagement\\InventoryManagement\\Program.cs",
-              "RelativeDocumentMoniker": "InventoryManagement\\Program.cs",
-              "ToolTip": "E:\\aniket\\c#\\OAInventoryManagement\\InventoryManagement\\Program.cs",
-              "RelativeToolTip": "InventoryManagement\\Program.cs",
-              "ViewState": "AQIAAFQAAAAAAAAAAAAAAC8AAABGAAAA",
+              "Title": "UserViewModel.cs",
+              "DocumentMoniker": "E:\\aniket\\c#\\OAInventoryManagement\\Domain\\ViewModel\\UserViewModel.cs",
+              "RelativeDocumentMoniker": "Domain\\ViewModel\\UserViewModel.cs",
+              "ToolTip": "E:\\aniket\\c#\\OAInventoryManagement\\Domain\\ViewModel\\UserViewModel.cs",
+              "RelativeToolTip": "Domain\\ViewModel\\UserViewModel.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAAowBUAAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T10:58:52.102Z",
+              "WhenOpened": "2025-05-15T12:23:29.621Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "E:\\aniket\\c#\\OAInventoryManagement\\InventoryManagement\\appsettings.json",
-              "RelativeDocumentMoniker": "InventoryManagement\\appsettings.json",
-              "ToolTip": "E:\\aniket\\c#\\OAInventoryManagement\\InventoryManagement\\appsettings.json",
-              "RelativeToolTip": "InventoryManagement\\appsettings.json",
+              "Title": "UserType.cs",
+              "DocumentMoniker": "E:\\aniket\\c#\\OAInventoryManagement\\Domain\\Models\\UserType.cs",
+              "RelativeDocumentMoniker": "Domain\\Models\\UserType.cs",
+              "ToolTip": "E:\\aniket\\c#\\OAInventoryManagement\\Domain\\Models\\UserType.cs",
+              "RelativeToolTip": "Domain\\Models\\UserType.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-05-12T10:58:50.117Z",
-              "EditorCaption": ""
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T12:23:23.117Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "User.cs",
+              "DocumentMoniker": "E:\\aniket\\c#\\OAInventoryManagement\\Domain\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Domain\\Models\\User.cs",
+              "ToolTip": "E:\\aniket\\c#\\OAInventoryManagement\\Domain\\Models\\User.cs",
+              "RelativeToolTip": "Domain\\Models\\User.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAAwwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T12:23:12.486Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BaseEntity.cs",
+              "DocumentMoniker": "E:\\aniket\\c#\\OAInventoryManagement\\Domain\\Models\\BaseEntity.cs",
+              "RelativeDocumentMoniker": "Domain\\Models\\BaseEntity.cs",
+              "ToolTip": "E:\\aniket\\c#\\OAInventoryManagement\\Domain\\Models\\BaseEntity.cs",
+              "RelativeToolTip": "Domain\\Models\\BaseEntity.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T12:23:03.009Z"
             }
           ]
         }

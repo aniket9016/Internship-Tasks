@@ -1,0 +1,1086 @@
+2025-05-15 09:41:02.817 +05:30 [INF] User profile is available. Using 'C:\Users\TGSUser131\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-15 09:41:03.616 +05:30 [INF] Now listening on: https://localhost:7130
+2025-05-15 09:41:03.618 +05:30 [INF] Now listening on: http://localhost:5085
+2025-05-15 09:41:03.621 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-15 09:41:03.623 +05:30 [INF] Hosting environment: Development
+2025-05-15 09:41:03.624 +05:30 [INF] Content root path: E:\aniket\c#\OAInventoryManagement\InventoryManagement
+2025-05-15 09:41:07.090 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/index.html - null null
+2025-05-15 09:41:07.724 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/index.html - 200 null text/html;charset=utf-8 647.5551ms
+2025-05-15 09:41:07.749 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-15 09:41:07.750 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/_vs/browserLink - null null
+2025-05-15 09:41:07.759 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 10.1064ms
+2025-05-15 09:41:07.826 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/_vs/browserLink - 200 null text/javascript; charset=UTF-8 76.5391ms
+2025-05-15 09:41:07.990 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - null null
+2025-05-15 09:41:08.282 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 292.0138ms
+2025-05-15 09:41:21.436 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/api/UserType - null null
+2025-05-15 09:41:22.653 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-05-15 09:41:22.664 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2025-05-15 09:41:22.665 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/api/UserType - 401 null application/json; charset=utf-8 1229.7783ms
+2025-05-15 09:56:25.959 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7130/api/Login/login - application/json 61
+2025-05-15 09:56:25.969 +05:30 [INF] CORS policy execution failed.
+2025-05-15 09:56:25.970 +05:30 [INF] Request origin https://localhost:7130 does not have permission to access the resource.
+2025-05-15 09:56:25.979 +05:30 [INF] Executing endpoint 'InventoryManagement.Controllers.LoginController.Login (InventoryManagement)'
+2025-05-15 09:56:26.020 +05:30 [INF] Route matched with {action = "Login", controller = "Login"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Domain.ViewModel.LoginModel) on controller InventoryManagement.Controllers.LoginController (InventoryManagement).
+2025-05-15 09:56:27.568 +05:30 [INF] Executing action method InventoryManagement.Controllers.LoginController.Login (InventoryManagement) - Validation state: "Valid"
+2025-05-15 09:56:27.572 +05:30 [INF] Login attempt for email: satyam@gmail.com
+2025-05-15 09:56:28.994 +05:30 [INF] Executed DbCommand (104ms) [Parameters=[@__model_Email_0='?' (Size = 4000), @__model_Password_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Address], [u].[CreatedAt], [u].[CreatedBy], [u].[Email], [u].[IsActive], [u].[Password], [u].[PhoneNumber], [u].[Photo], [u].[UpdatedAt], [u].[UpdatedBy], [u].[UserId], [u].[UserName], [u].[UserTypeId]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__model_Email_0 AND [u].[Password] = @__model_Password_1
+2025-05-15 09:56:29.086 +05:30 [INF] Customer found: satyam@gmail.com
+2025-05-15 09:56:29.088 +05:30 [INF] Customer login successful for email: satyam@gmail.com
+2025-05-15 09:56:29.261 +05:30 [INF] Executed action method InventoryManagement.Controllers.LoginController.Login (InventoryManagement), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1687.9622ms.
+2025-05-15 09:56:29.269 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.Helper.Response`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-15 09:56:29.287 +05:30 [INF] Executed action InventoryManagement.Controllers.LoginController.Login (InventoryManagement) in 3260.0821ms
+2025-05-15 09:56:29.290 +05:30 [INF] Executed endpoint 'InventoryManagement.Controllers.LoginController.Login (InventoryManagement)'
+2025-05-15 09:56:29.300 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7130/api/Login/login - 200 null application/json; charset=utf-8 3344.2618ms
+2025-05-15 09:57:09.909 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/api/UserType - null null
+2025-05-15 09:57:09.964 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> System.MissingMethodException: Method not found: 'Byte[] Microsoft.IdentityModel.Tokens.Base64UrlEncoder.UnsafeDecode(System.ReadOnlyMemory`1<Char>)'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2025-05-15 09:57:09.988 +05:30 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2025-05-15 09:57:09.990 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-05-15 09:57:09.994 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2025-05-15 09:57:10.003 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/api/UserType - 401 null application/json; charset=utf-8 94.5708ms
+2025-05-15 09:59:16.069 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/api/UserType - null null
+2025-05-15 09:59:16.083 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> System.MissingMethodException: Method not found: 'Byte[] Microsoft.IdentityModel.Tokens.Base64UrlEncoder.UnsafeDecode(System.ReadOnlyMemory`1<Char>)'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2025-05-15 09:59:16.090 +05:30 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2025-05-15 09:59:16.093 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-05-15 09:59:16.095 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2025-05-15 09:59:16.101 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/api/UserType - 401 null application/json; charset=utf-8 32.9694ms
+2025-05-15 10:01:25.310 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/.well-known/appspecific/com.chrome.devtools.json - null null
+2025-05-15 10:01:25.338 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/.well-known/appspecific/com.chrome.devtools.json - 404 0 null 27.8049ms
+2025-05-15 10:01:25.398 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7130/.well-known/appspecific/com.chrome.devtools.json, Response status code: 404
+2025-05-15 10:06:58.941 +05:30 [INF] User profile is available. Using 'C:\Users\TGSUser131\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-15 10:06:59.300 +05:30 [INF] Now listening on: https://localhost:7130
+2025-05-15 10:06:59.301 +05:30 [INF] Now listening on: http://localhost:5085
+2025-05-15 10:06:59.305 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-15 10:06:59.306 +05:30 [INF] Hosting environment: Development
+2025-05-15 10:06:59.307 +05:30 [INF] Content root path: E:\aniket\c#\OAInventoryManagement\InventoryManagement
+2025-05-15 10:06:59.832 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/index.html - null null
+2025-05-15 10:07:00.207 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/index.html - 200 null text/html;charset=utf-8 381.2334ms
+2025-05-15 10:07:00.230 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-15 10:07:00.231 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/_vs/browserLink - null null
+2025-05-15 10:07:00.342 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 111.6175ms
+2025-05-15 10:07:00.382 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/_vs/browserLink - 200 null text/javascript; charset=UTF-8 151.3172ms
+2025-05-15 10:07:00.489 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - null null
+2025-05-15 10:07:00.826 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 336.4934ms
+2025-05-15 10:07:53.876 +05:30 [INF] User profile is available. Using 'C:\Users\TGSUser131\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-15 10:07:54.156 +05:30 [INF] Now listening on: https://localhost:7130
+2025-05-15 10:07:54.158 +05:30 [INF] Now listening on: http://localhost:5085
+2025-05-15 10:07:54.161 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-15 10:07:54.162 +05:30 [INF] Hosting environment: Development
+2025-05-15 10:07:54.162 +05:30 [INF] Content root path: E:\aniket\c#\OAInventoryManagement\InventoryManagement
+2025-05-15 10:07:54.883 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/index.html - null null
+2025-05-15 10:07:55.244 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/index.html - 200 null text/html;charset=utf-8 372.2595ms
+2025-05-15 10:07:55.251 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/_vs/browserLink - null null
+2025-05-15 10:07:55.251 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-15 10:07:55.264 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 13.4308ms
+2025-05-15 10:07:55.333 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/_vs/browserLink - 200 null text/javascript; charset=UTF-8 82.6654ms
+2025-05-15 10:07:55.455 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - null null
+2025-05-15 10:07:55.736 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 281.0795ms
+2025-05-15 10:08:09.480 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/api/User/GetAllSuppliers - null null
+2025-05-15 10:08:10.446 +05:30 [INF] Executing endpoint 'InventoryManagement.Controllers.UserController.GetAllSuppliers (InventoryManagement)'
+2025-05-15 10:08:10.467 +05:30 [INF] Route matched with {action = "GetAllSuppliers", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllSuppliers() on controller InventoryManagement.Controllers.UserController (InventoryManagement).
+2025-05-15 10:08:11.840 +05:30 [INF] Executing action method InventoryManagement.Controllers.UserController.GetAllSuppliers (InventoryManagement) - Validation state: "Valid"
+2025-05-15 10:08:13.015 +05:30 [INF] Executed DbCommand (27ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[CreatedBy], [u].[IsActive], [u].[TypeName], [u].[UpdatedAt], [u].[UpdatedBy]
+FROM [UserTypes] AS [u]
+WHERE LOWER([u].[TypeName]) = N'supplier'
+2025-05-15 10:08:13.190 +05:30 [INF] Executed DbCommand (81ms) [Parameters=[@__supplierType_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Address], [u].[CreatedAt], [u].[CreatedBy], [u].[Email], [u].[IsActive], [u].[Password], [u].[PhoneNumber], [u].[Photo], [u].[UpdatedAt], [u].[UpdatedBy], [u].[UserId], [u].[UserName], [u].[UserTypeId]
+FROM [Users] AS [u]
+WHERE [u].[UserTypeId] = @__supplierType_Id_0
+2025-05-15 10:08:13.244 +05:30 [INF] Executed action method InventoryManagement.Controllers.UserController.GetAllSuppliers (InventoryManagement), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1398.6261ms.
+2025-05-15 10:08:13.253 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`3[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IEnumerable`1[[Domain.ViewModel.UserViewModel, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-15 10:08:13.277 +05:30 [INF] Executed action InventoryManagement.Controllers.UserController.GetAllSuppliers (InventoryManagement) in 2803.6124ms
+2025-05-15 10:08:13.279 +05:30 [INF] Executed endpoint 'InventoryManagement.Controllers.UserController.GetAllSuppliers (InventoryManagement)'
+2025-05-15 10:08:13.287 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/api/User/GetAllSuppliers - 200 null application/json; charset=utf-8 3807.62ms
+2025-05-15 10:09:33.061 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7130/api/Login/login - application/json 59
+2025-05-15 10:09:33.072 +05:30 [INF] CORS policy execution failed.
+2025-05-15 10:09:33.074 +05:30 [INF] Request origin https://localhost:7130 does not have permission to access the resource.
+2025-05-15 10:09:33.078 +05:30 [INF] Executing endpoint 'InventoryManagement.Controllers.LoginController.Login (InventoryManagement)'
+2025-05-15 10:09:33.090 +05:30 [INF] Route matched with {action = "Login", controller = "Login"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Domain.ViewModel.LoginModel) on controller InventoryManagement.Controllers.LoginController (InventoryManagement).
+2025-05-15 10:09:33.223 +05:30 [INF] Executing action method InventoryManagement.Controllers.LoginController.Login (InventoryManagement) - Validation state: "Valid"
+2025-05-15 10:09:33.228 +05:30 [INF] Login attempt for email: suraj@gmail.com
+2025-05-15 10:09:33.245 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__model_Email_0='?' (Size = 4000), @__model_Password_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Address], [u].[CreatedAt], [u].[CreatedBy], [u].[Email], [u].[IsActive], [u].[Password], [u].[PhoneNumber], [u].[Photo], [u].[UpdatedAt], [u].[UpdatedBy], [u].[UserId], [u].[UserName], [u].[UserTypeId]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__model_Email_0 AND [u].[Password] = @__model_Password_1
+2025-05-15 10:09:33.249 +05:30 [INF] Customer found: suraj@gmail.com
+2025-05-15 10:09:33.378 +05:30 [INF] Executed action method InventoryManagement.Controllers.LoginController.Login (InventoryManagement), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 153.8137ms.
+2025-05-15 10:09:33.382 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.Helper.Response`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-15 10:09:33.386 +05:30 [INF] Executed action InventoryManagement.Controllers.LoginController.Login (InventoryManagement) in 293.342ms
+2025-05-15 10:09:33.387 +05:30 [INF] Executed endpoint 'InventoryManagement.Controllers.LoginController.Login (InventoryManagement)'
+2025-05-15 10:09:33.389 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7130/api/Login/login - 200 null application/json; charset=utf-8 327.7696ms
+2025-05-15 10:09:52.074 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/api/UserType - null null
+2025-05-15 10:09:52.091 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (customer)
+2025-05-15 10:09:52.098 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2025-05-15 10:09:52.099 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/api/UserType - 401 null application/json; charset=utf-8 26.4204ms
+2025-05-15 10:10:08.916 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/api/UserType - null null
+2025-05-15 10:10:08.933 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> System.MissingMethodException: Method not found: 'Byte[] Microsoft.IdentityModel.Tokens.Base64UrlEncoder.UnsafeDecode(System.ReadOnlyMemory`1<Char>)'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2025-05-15 10:10:08.954 +05:30 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2025-05-15 10:10:08.957 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (customer)
+2025-05-15 10:10:08.959 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2025-05-15 10:10:08.960 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/api/UserType - 401 null application/json; charset=utf-8 43.7395ms
+2025-05-15 10:10:11.677 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/api/UserType - null null
+2025-05-15 10:10:11.682 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> System.MissingMethodException: Method not found: 'Byte[] Microsoft.IdentityModel.Tokens.Base64UrlEncoder.UnsafeDecode(System.ReadOnlyMemory`1<Char>)'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2025-05-15 10:10:11.687 +05:30 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2025-05-15 10:10:11.691 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (customer)
+2025-05-15 10:10:11.692 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2025-05-15 10:10:11.693 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/api/UserType - 401 null application/json; charset=utf-8 16.648ms
+2025-05-15 10:10:12.152 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/api/UserType - null null
+2025-05-15 10:10:12.156 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> System.MissingMethodException: Method not found: 'Byte[] Microsoft.IdentityModel.Tokens.Base64UrlEncoder.UnsafeDecode(System.ReadOnlyMemory`1<Char>)'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2025-05-15 10:10:12.188 +05:30 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2025-05-15 10:10:12.190 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (customer)
+2025-05-15 10:10:12.192 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2025-05-15 10:10:12.193 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/api/UserType - 401 null application/json; charset=utf-8 41.8552ms
+2025-05-15 10:10:13.549 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/index.html - null null
+2025-05-15 10:10:13.609 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/index.html - 200 null text/html;charset=utf-8 60.0134ms
+2025-05-15 10:10:13.630 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/_vs/browserLink - null null
+2025-05-15 10:10:13.630 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-15 10:10:13.638 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 8.2654ms
+2025-05-15 10:10:13.658 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/_vs/browserLink - 200 null text/javascript; charset=UTF-8 28.1117ms
+2025-05-15 10:10:13.829 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - null null
+2025-05-15 10:10:13.865 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 36.4182ms
+2025-05-15 10:10:34.563 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7130/api/Login/login - application/json 59
+2025-05-15 10:10:34.619 +05:30 [INF] CORS policy execution failed.
+2025-05-15 10:10:34.623 +05:30 [INF] Request origin https://localhost:7130 does not have permission to access the resource.
+2025-05-15 10:10:34.624 +05:30 [INF] Executing endpoint 'InventoryManagement.Controllers.LoginController.Login (InventoryManagement)'
+2025-05-15 10:10:34.625 +05:30 [INF] Route matched with {action = "Login", controller = "Login"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Domain.ViewModel.LoginModel) on controller InventoryManagement.Controllers.LoginController (InventoryManagement).
+2025-05-15 10:10:34.663 +05:30 [INF] Executing action method InventoryManagement.Controllers.LoginController.Login (InventoryManagement) - Validation state: "Valid"
+2025-05-15 10:10:34.665 +05:30 [INF] Login attempt for email: suraj@gmail.com
+2025-05-15 10:10:34.671 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__model_Email_0='?' (Size = 4000), @__model_Password_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Address], [u].[CreatedAt], [u].[CreatedBy], [u].[Email], [u].[IsActive], [u].[Password], [u].[PhoneNumber], [u].[Photo], [u].[UpdatedAt], [u].[UpdatedBy], [u].[UserId], [u].[UserName], [u].[UserTypeId]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__model_Email_0 AND [u].[Password] = @__model_Password_1
+2025-05-15 10:10:34.674 +05:30 [INF] Customer found: suraj@gmail.com
+2025-05-15 10:10:34.675 +05:30 [INF] Executed action method InventoryManagement.Controllers.LoginController.Login (InventoryManagement), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 10.898ms.
+2025-05-15 10:10:34.677 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.Helper.Response`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-15 10:10:34.678 +05:30 [INF] Executed action InventoryManagement.Controllers.LoginController.Login (InventoryManagement) in 50.7167ms
+2025-05-15 10:10:34.679 +05:30 [INF] Executed endpoint 'InventoryManagement.Controllers.LoginController.Login (InventoryManagement)'
+2025-05-15 10:10:34.680 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7130/api/Login/login - 200 null application/json; charset=utf-8 117.0596ms
+2025-05-15 10:10:47.100 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7130/api/Login/login - application/json 59
+2025-05-15 10:10:47.102 +05:30 [INF] CORS policy execution failed.
+2025-05-15 10:10:47.103 +05:30 [INF] Request origin https://localhost:7130 does not have permission to access the resource.
+2025-05-15 10:10:47.104 +05:30 [INF] Executing endpoint 'InventoryManagement.Controllers.LoginController.Login (InventoryManagement)'
+2025-05-15 10:10:47.106 +05:30 [INF] Route matched with {action = "Login", controller = "Login"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Domain.ViewModel.LoginModel) on controller InventoryManagement.Controllers.LoginController (InventoryManagement).
+2025-05-15 10:10:47.129 +05:30 [INF] Executing action method InventoryManagement.Controllers.LoginController.Login (InventoryManagement) - Validation state: "Valid"
+2025-05-15 10:10:47.131 +05:30 [INF] Login attempt for email: suraj@gmail.com
+2025-05-15 10:10:47.134 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__model_Email_0='?' (Size = 4000), @__model_Password_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Address], [u].[CreatedAt], [u].[CreatedBy], [u].[Email], [u].[IsActive], [u].[Password], [u].[PhoneNumber], [u].[Photo], [u].[UpdatedAt], [u].[UpdatedBy], [u].[UserId], [u].[UserName], [u].[UserTypeId]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__model_Email_0 AND [u].[Password] = @__model_Password_1
+2025-05-15 10:10:47.137 +05:30 [INF] Customer found: suraj@gmail.com
+2025-05-15 10:10:47.138 +05:30 [INF] Executed action method InventoryManagement.Controllers.LoginController.Login (InventoryManagement), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 7.2535ms.
+2025-05-15 10:10:47.140 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.Helper.Response`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-15 10:10:47.143 +05:30 [INF] Executed action InventoryManagement.Controllers.LoginController.Login (InventoryManagement) in 34.4203ms
+2025-05-15 10:10:47.145 +05:30 [INF] Executed endpoint 'InventoryManagement.Controllers.LoginController.Login (InventoryManagement)'
+2025-05-15 10:10:47.147 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7130/api/Login/login - 200 null application/json; charset=utf-8 47.0298ms
+2025-05-15 10:11:15.809 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/api/UserType - null null
+2025-05-15 10:11:15.848 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> System.MissingMethodException: Method not found: 'Byte[] Microsoft.IdentityModel.Tokens.Base64UrlEncoder.UnsafeDecode(System.ReadOnlyMemory`1<Char>)'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2025-05-15 10:11:15.853 +05:30 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2025-05-15 10:11:15.855 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (customer)
+2025-05-15 10:11:15.856 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2025-05-15 10:11:15.857 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/api/UserType - 401 null application/json; charset=utf-8 48.3798ms
+2025-05-15 10:16:52.093 +05:30 [INF] User profile is available. Using 'C:\Users\TGSUser131\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-15 10:16:52.319 +05:30 [INF] Now listening on: https://localhost:7130
+2025-05-15 10:16:52.321 +05:30 [INF] Now listening on: http://localhost:5085
+2025-05-15 10:16:52.324 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-15 10:16:52.326 +05:30 [INF] Hosting environment: Development
+2025-05-15 10:16:52.327 +05:30 [INF] Content root path: E:\aniket\c#\OAInventoryManagement\InventoryManagement
+2025-05-15 10:16:54.460 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/index.html - null null
+2025-05-15 10:16:54.945 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/index.html - 200 null text/html;charset=utf-8 496.2061ms
+2025-05-15 10:16:55.033 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-15 10:16:55.033 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/_vs/browserLink - null null
+2025-05-15 10:16:55.072 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 38.6737ms
+2025-05-15 10:16:55.182 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/_vs/browserLink - 200 null text/javascript; charset=UTF-8 148.5633ms
+2025-05-15 10:16:55.294 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - null null
+2025-05-15 10:16:55.658 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 364.3117ms
+2025-05-15 10:17:18.475 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7130/api/Login/login - application/json 59
+2025-05-15 10:17:18.494 +05:30 [INF] CORS policy execution failed.
+2025-05-15 10:17:18.496 +05:30 [INF] Request origin https://localhost:7130 does not have permission to access the resource.
+2025-05-15 10:17:19.518 +05:30 [INF] Executing endpoint 'InventoryManagement.Controllers.LoginController.Login (InventoryManagement)'
+2025-05-15 10:17:19.544 +05:30 [INF] Route matched with {action = "Login", controller = "Login"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Domain.ViewModel.LoginModel) on controller InventoryManagement.Controllers.LoginController (InventoryManagement).
+2025-05-15 10:17:20.863 +05:30 [INF] Executing action method InventoryManagement.Controllers.LoginController.Login (InventoryManagement) - Validation state: "Valid"
+2025-05-15 10:17:20.868 +05:30 [INF] Login attempt for email: suraj@gmail.com
+2025-05-15 10:17:22.113 +05:30 [INF] Executed DbCommand (84ms) [Parameters=[@__model_Email_0='?' (Size = 4000), @__model_Password_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Address], [u].[CreatedAt], [u].[CreatedBy], [u].[Email], [u].[IsActive], [u].[Password], [u].[PhoneNumber], [u].[Photo], [u].[UpdatedAt], [u].[UpdatedBy], [u].[UserId], [u].[UserName], [u].[UserTypeId]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__model_Email_0 AND [u].[Password] = @__model_Password_1
+2025-05-15 10:17:22.219 +05:30 [INF] Customer found: suraj@gmail.com
+2025-05-15 10:17:22.351 +05:30 [INF] Executed action method InventoryManagement.Controllers.LoginController.Login (InventoryManagement), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1482.8351ms.
+2025-05-15 10:17:22.360 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.Helper.Response`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-15 10:17:22.370 +05:30 [INF] Executed action InventoryManagement.Controllers.LoginController.Login (InventoryManagement) in 2821.24ms
+2025-05-15 10:17:22.372 +05:30 [INF] Executed endpoint 'InventoryManagement.Controllers.LoginController.Login (InventoryManagement)'
+2025-05-15 10:17:22.383 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7130/api/Login/login - 200 null application/json; charset=utf-8 3907.4649ms
+2025-05-15 10:17:48.479 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/api/UserType - null null
+2025-05-15 10:17:48.502 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> System.MissingMethodException: Method not found: 'Byte[] Microsoft.IdentityModel.Tokens.Base64UrlEncoder.UnsafeDecode(System.ReadOnlyMemory`1<Char>)'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2025-05-15 10:17:48.522 +05:30 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2025-05-15 10:17:48.530 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (customer)
+2025-05-15 10:17:48.539 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2025-05-15 10:17:48.540 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/api/UserType - 401 null application/json; charset=utf-8 62.0729ms
+2025-05-15 10:23:12.620 +05:30 [INF] User profile is available. Using 'C:\Users\TGSUser131\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-15 10:23:12.988 +05:30 [INF] Now listening on: https://localhost:7130
+2025-05-15 10:23:12.990 +05:30 [INF] Now listening on: http://localhost:5085
+2025-05-15 10:23:12.995 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-15 10:23:12.997 +05:30 [INF] Hosting environment: Development
+2025-05-15 10:23:12.998 +05:30 [INF] Content root path: E:\aniket\c#\OAInventoryManagement\InventoryManagement
+2025-05-15 10:23:14.363 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/index.html - null null
+2025-05-15 10:23:14.856 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/index.html - 200 null text/html;charset=utf-8 501.8484ms
+2025-05-15 10:23:14.914 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/_vs/browserLink - null null
+2025-05-15 10:23:14.914 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-15 10:23:14.930 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 16.2573ms
+2025-05-15 10:23:14.990 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/_vs/browserLink - 200 null text/javascript; charset=UTF-8 75.9543ms
+2025-05-15 10:23:15.102 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - null null
+2025-05-15 10:23:15.404 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 302.6008ms
+2025-05-15 10:23:32.097 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7130/api/Login/login - application/json 59
+2025-05-15 10:23:32.108 +05:30 [INF] CORS policy execution failed.
+2025-05-15 10:23:32.109 +05:30 [INF] Request origin https://localhost:7130 does not have permission to access the resource.
+2025-05-15 10:23:32.170 +05:30 [INF] Executing endpoint 'InventoryManagement.Controllers.LoginController.Login (InventoryManagement)'
+2025-05-15 10:23:32.195 +05:30 [INF] Route matched with {action = "Login", controller = "Login"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Domain.ViewModel.LoginModel) on controller InventoryManagement.Controllers.LoginController (InventoryManagement).
+2025-05-15 10:23:33.086 +05:30 [INF] Executing action method InventoryManagement.Controllers.LoginController.Login (InventoryManagement) - Validation state: "Valid"
+2025-05-15 10:23:33.091 +05:30 [INF] Login attempt for email: suraj@gmail.com
+2025-05-15 10:23:33.726 +05:30 [INF] Executed DbCommand (39ms) [Parameters=[@__model_Email_0='?' (Size = 4000), @__model_Password_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Address], [u].[CreatedAt], [u].[CreatedBy], [u].[Email], [u].[IsActive], [u].[Password], [u].[PhoneNumber], [u].[Photo], [u].[UpdatedAt], [u].[UpdatedBy], [u].[UserId], [u].[UserName], [u].[UserTypeId]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__model_Email_0 AND [u].[Password] = @__model_Password_1
+2025-05-15 10:23:33.832 +05:30 [INF] Customer found: suraj@gmail.com
+2025-05-15 10:23:33.868 +05:30 [INF] Executed action method InventoryManagement.Controllers.LoginController.Login (InventoryManagement), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 777.7364ms.
+2025-05-15 10:23:33.877 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.Helper.Response`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-15 10:23:33.888 +05:30 [INF] Executed action InventoryManagement.Controllers.LoginController.Login (InventoryManagement) in 1687.1383ms
+2025-05-15 10:23:33.890 +05:30 [INF] Executed endpoint 'InventoryManagement.Controllers.LoginController.Login (InventoryManagement)'
+2025-05-15 10:23:33.900 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7130/api/Login/login - 200 null application/json; charset=utf-8 1803.3852ms
+2025-05-15 10:23:57.756 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/api/UserType - null null
+2025-05-15 10:23:57.773 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> System.MissingMethodException: Method not found: 'Byte[] Microsoft.IdentityModel.Tokens.Base64UrlEncoder.UnsafeDecode(System.ReadOnlyMemory`1<Char>)'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2025-05-15 10:23:57.791 +05:30 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2025-05-15 10:23:57.797 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Customer)
+2025-05-15 10:23:57.805 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2025-05-15 10:23:57.814 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/api/UserType - 401 null application/json; charset=utf-8 58.3565ms
+2025-05-15 10:34:02.207 +05:30 [INF] User profile is available. Using 'C:\Users\TGSUser131\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-15 10:34:02.548 +05:30 [INF] Now listening on: https://localhost:7130
+2025-05-15 10:34:02.556 +05:30 [INF] Now listening on: http://localhost:5085
+2025-05-15 10:34:02.567 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-15 10:34:02.577 +05:30 [INF] Hosting environment: Development
+2025-05-15 10:34:02.577 +05:30 [INF] Content root path: E:\aniket\c#\OAInventoryManagement\InventoryManagement
+2025-05-15 10:34:03.737 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/index.html - null null
+2025-05-15 10:34:04.173 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/index.html - 200 null text/html;charset=utf-8 444.67ms
+2025-05-15 10:34:04.237 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-15 10:34:04.239 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/_vs/browserLink - null null
+2025-05-15 10:34:04.287 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 49.3872ms
+2025-05-15 10:34:04.358 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/_vs/browserLink - 200 null text/javascript; charset=UTF-8 118.594ms
+2025-05-15 10:34:04.474 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - null null
+2025-05-15 10:34:04.824 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 350.6183ms
+2025-05-15 10:34:36.848 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7130/api/Login/login - application/json 59
+2025-05-15 10:34:36.864 +05:30 [INF] CORS policy execution failed.
+2025-05-15 10:34:36.865 +05:30 [INF] Request origin https://localhost:7130 does not have permission to access the resource.
+2025-05-15 10:34:36.924 +05:30 [INF] Executing endpoint 'InventoryManagement.Controllers.LoginController.Login (InventoryManagement)'
+2025-05-15 10:34:36.958 +05:30 [INF] Route matched with {action = "Login", controller = "Login"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Domain.ViewModel.LoginModel) on controller InventoryManagement.Controllers.LoginController (InventoryManagement).
+2025-05-15 10:34:37.834 +05:30 [INF] Executing action method InventoryManagement.Controllers.LoginController.Login (InventoryManagement) - Validation state: "Valid"
+2025-05-15 10:34:37.840 +05:30 [INF] Login attempt for email: suraj@gmail.com
+2025-05-15 10:34:38.530 +05:30 [INF] Executed DbCommand (41ms) [Parameters=[@__model_Email_0='?' (Size = 4000), @__model_Password_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Address], [u].[CreatedAt], [u].[CreatedBy], [u].[Email], [u].[IsActive], [u].[Password], [u].[PhoneNumber], [u].[Photo], [u].[UpdatedAt], [u].[UpdatedBy], [u].[UserId], [u].[UserName], [u].[UserTypeId]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__model_Email_0 AND [u].[Password] = @__model_Password_1
+2025-05-15 10:34:38.619 +05:30 [INF] Customer found: suraj@gmail.com
+2025-05-15 10:34:38.656 +05:30 [INF] Executed action method InventoryManagement.Controllers.LoginController.Login (InventoryManagement), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 814.6088ms.
+2025-05-15 10:34:38.667 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.Helper.Response`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-15 10:34:38.685 +05:30 [INF] Executed action InventoryManagement.Controllers.LoginController.Login (InventoryManagement) in 1717.5106ms
+2025-05-15 10:34:38.688 +05:30 [INF] Executed endpoint 'InventoryManagement.Controllers.LoginController.Login (InventoryManagement)'
+2025-05-15 10:34:38.702 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7130/api/Login/login - 200 null application/json; charset=utf-8 1853.8768ms
+2025-05-15 10:35:27.730 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/api/UserType - null null
+2025-05-15 10:35:27.783 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> System.MissingMethodException: Method not found: 'Byte[] Microsoft.IdentityModel.Tokens.Base64UrlEncoder.UnsafeDecode(System.ReadOnlyMemory`1<Char>)'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2025-05-15 10:35:27.805 +05:30 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2025-05-15 10:35:27.817 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Customer)
+2025-05-15 10:35:27.829 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2025-05-15 10:35:27.830 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/api/UserType - 401 null application/json; charset=utf-8 100.0179ms
+2025-05-15 10:40:02.293 +05:30 [INF] User profile is available. Using 'C:\Users\TGSUser131\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-15 10:40:02.808 +05:30 [INF] Now listening on: https://localhost:7130
+2025-05-15 10:40:02.811 +05:30 [INF] Now listening on: http://localhost:5085
+2025-05-15 10:40:02.815 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-15 10:40:02.817 +05:30 [INF] Hosting environment: Development
+2025-05-15 10:40:02.818 +05:30 [INF] Content root path: E:\aniket\c#\OAInventoryManagement\InventoryManagement
+2025-05-15 10:40:04.440 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/index.html - null null
+2025-05-15 10:40:04.988 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/index.html - 200 null text/html;charset=utf-8 558.3295ms
+2025-05-15 10:40:05.037 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/_vs/browserLink - null null
+2025-05-15 10:40:05.037 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-15 10:40:05.057 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 19.3617ms
+2025-05-15 10:40:05.100 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/_vs/browserLink - 200 null text/javascript; charset=UTF-8 63.2704ms
+2025-05-15 10:40:05.217 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - null null
+2025-05-15 10:40:05.490 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 273.3548ms
+2025-05-15 10:40:43.896 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7130/api/Login/login - application/json 59
+2025-05-15 10:40:43.906 +05:30 [INF] CORS policy execution failed.
+2025-05-15 10:40:43.907 +05:30 [INF] Request origin https://localhost:7130 does not have permission to access the resource.
+2025-05-15 10:40:43.968 +05:30 [INF] Executing endpoint 'InventoryManagement.Controllers.LoginController.Login (InventoryManagement)'
+2025-05-15 10:40:43.996 +05:30 [INF] Route matched with {action = "Login", controller = "Login"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Domain.ViewModel.LoginModel) on controller InventoryManagement.Controllers.LoginController (InventoryManagement).
+2025-05-15 10:40:44.866 +05:30 [INF] Executing action method InventoryManagement.Controllers.LoginController.Login (InventoryManagement) - Validation state: "Valid"
+2025-05-15 10:40:44.870 +05:30 [INF] Login attempt for email: suraj@gmail.com
+2025-05-15 10:40:45.529 +05:30 [INF] Executed DbCommand (52ms) [Parameters=[@__model_Email_0='?' (Size = 4000), @__model_Password_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Address], [u].[CreatedAt], [u].[CreatedBy], [u].[Email], [u].[IsActive], [u].[Password], [u].[PhoneNumber], [u].[Photo], [u].[UpdatedAt], [u].[UpdatedBy], [u].[UserId], [u].[UserName], [u].[UserTypeId]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__model_Email_0 AND [u].[Password] = @__model_Password_1
+2025-05-15 10:40:45.632 +05:30 [INF] Customer found: suraj@gmail.com
+2025-05-15 10:40:45.666 +05:30 [INF] Executed action method InventoryManagement.Controllers.LoginController.Login (InventoryManagement), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 795.0878ms.
+2025-05-15 10:40:45.675 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.Helper.Response`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-15 10:40:45.695 +05:30 [INF] Executed action InventoryManagement.Controllers.LoginController.Login (InventoryManagement) in 1694.5475ms
+2025-05-15 10:40:45.698 +05:30 [INF] Executed endpoint 'InventoryManagement.Controllers.LoginController.Login (InventoryManagement)'
+2025-05-15 10:40:45.709 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7130/api/Login/login - 200 null application/json; charset=utf-8 1815.098ms
+2025-05-15 10:41:10.716 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/api/UserType - null null
+2025-05-15 10:41:10.736 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> System.MissingMethodException: Method not found: 'Byte[] Microsoft.IdentityModel.Tokens.Base64UrlEncoder.UnsafeDecode(System.ReadOnlyMemory`1<Char>)'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2025-05-15 10:41:10.761 +05:30 [ERR] Authentication failed: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2025-05-15 10:41:10.766 +05:30 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2025-05-15 10:41:10.772 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-05-15 10:41:10.787 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2025-05-15 10:41:10.788 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/api/UserType - 401 null application/json; charset=utf-8 73.0437ms
+2025-05-15 10:43:02.227 +05:30 [INF] User profile is available. Using 'C:\Users\TGSUser131\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-15 10:43:02.488 +05:30 [INF] Now listening on: https://localhost:7130
+2025-05-15 10:43:02.489 +05:30 [INF] Now listening on: http://localhost:5085
+2025-05-15 10:43:02.492 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-15 10:43:02.493 +05:30 [INF] Hosting environment: Development
+2025-05-15 10:43:02.494 +05:30 [INF] Content root path: E:\aniket\c#\OAInventoryManagement\InventoryManagement
+2025-05-15 10:43:03.658 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/index.html - null null
+2025-05-15 10:43:04.133 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/index.html - 200 null text/html;charset=utf-8 489.0995ms
+2025-05-15 10:43:04.152 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-15 10:43:04.153 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/_vs/browserLink - null null
+2025-05-15 10:43:04.168 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 16.0906ms
+2025-05-15 10:43:04.236 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/_vs/browserLink - 200 null text/javascript; charset=UTF-8 82.9194ms
+2025-05-15 10:43:04.363 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - null null
+2025-05-15 10:43:04.624 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 260.9286ms
+2025-05-15 10:43:23.453 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7130/api/Login/login - application/json 59
+2025-05-15 10:43:23.465 +05:30 [INF] CORS policy execution failed.
+2025-05-15 10:43:23.466 +05:30 [INF] Request origin https://localhost:7130 does not have permission to access the resource.
+2025-05-15 10:43:23.537 +05:30 [INF] Executing endpoint 'InventoryManagement.Controllers.LoginController.Login (InventoryManagement)'
+2025-05-15 10:43:23.565 +05:30 [INF] Route matched with {action = "Login", controller = "Login"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Domain.ViewModel.LoginModel) on controller InventoryManagement.Controllers.LoginController (InventoryManagement).
+2025-05-15 10:43:24.383 +05:30 [INF] Executing action method InventoryManagement.Controllers.LoginController.Login (InventoryManagement) - Validation state: "Valid"
+2025-05-15 10:43:24.387 +05:30 [INF] Login attempt for email: suraj@gmail.com
+2025-05-15 10:43:25.032 +05:30 [INF] Executed DbCommand (45ms) [Parameters=[@__model_Email_0='?' (Size = 4000), @__model_Password_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Address], [u].[CreatedAt], [u].[CreatedBy], [u].[Email], [u].[IsActive], [u].[Password], [u].[PhoneNumber], [u].[Photo], [u].[UpdatedAt], [u].[UpdatedBy], [u].[UserId], [u].[UserName], [u].[UserTypeId]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__model_Email_0 AND [u].[Password] = @__model_Password_1
+2025-05-15 10:43:25.128 +05:30 [INF] Customer found: suraj@gmail.com
+2025-05-15 10:43:25.130 +05:30 [INF] Customer login successful for email: suraj@gmail.com
+2025-05-15 10:43:25.164 +05:30 [INF] Executed action method InventoryManagement.Controllers.LoginController.Login (InventoryManagement), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 776.0757ms.
+2025-05-15 10:43:25.174 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.Helper.Response`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-15 10:43:25.186 +05:30 [INF] Executed action InventoryManagement.Controllers.LoginController.Login (InventoryManagement) in 1616.3182ms
+2025-05-15 10:43:25.190 +05:30 [INF] Executed endpoint 'InventoryManagement.Controllers.LoginController.Login (InventoryManagement)'
+2025-05-15 10:43:25.198 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7130/api/Login/login - 200 null application/json; charset=utf-8 1744.503ms
+2025-05-15 10:43:34.379 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7130/api/Login/login - application/json 59
+2025-05-15 10:43:34.386 +05:30 [INF] CORS policy execution failed.
+2025-05-15 10:43:34.388 +05:30 [INF] Request origin https://localhost:7130 does not have permission to access the resource.
+2025-05-15 10:43:34.392 +05:30 [INF] Executing endpoint 'InventoryManagement.Controllers.LoginController.Login (InventoryManagement)'
+2025-05-15 10:43:34.395 +05:30 [INF] Route matched with {action = "Login", controller = "Login"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Domain.ViewModel.LoginModel) on controller InventoryManagement.Controllers.LoginController (InventoryManagement).
+2025-05-15 10:43:34.478 +05:30 [INF] Executing action method InventoryManagement.Controllers.LoginController.Login (InventoryManagement) - Validation state: "Valid"
+2025-05-15 10:43:34.479 +05:30 [INF] Login attempt for email: suraj@gmail.com
+2025-05-15 10:43:34.495 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[@__model_Email_0='?' (Size = 4000), @__model_Password_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Address], [u].[CreatedAt], [u].[CreatedBy], [u].[Email], [u].[IsActive], [u].[Password], [u].[PhoneNumber], [u].[Photo], [u].[UpdatedAt], [u].[UpdatedBy], [u].[UserId], [u].[UserName], [u].[UserTypeId]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__model_Email_0 AND [u].[Password] = @__model_Password_1
+2025-05-15 10:43:34.500 +05:30 [INF] Customer found: suraj@gmail.com
+2025-05-15 10:43:34.501 +05:30 [INF] Customer login successful for email: suraj@gmail.com
+2025-05-15 10:43:34.503 +05:30 [INF] Executed action method InventoryManagement.Controllers.LoginController.Login (InventoryManagement), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 23.3408ms.
+2025-05-15 10:43:34.505 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.Helper.Response`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-15 10:43:34.506 +05:30 [INF] Executed action InventoryManagement.Controllers.LoginController.Login (InventoryManagement) in 99.9596ms
+2025-05-15 10:43:34.508 +05:30 [INF] Executed endpoint 'InventoryManagement.Controllers.LoginController.Login (InventoryManagement)'
+2025-05-15 10:43:34.510 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7130/api/Login/login - 200 null application/json; charset=utf-8 131.9738ms
+2025-05-15 10:46:14.956 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/api/UserType - null null
+2025-05-15 10:46:14.986 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> System.MissingMethodException: Method not found: 'Byte[] Microsoft.IdentityModel.Tokens.Base64UrlEncoder.UnsafeDecode(System.ReadOnlyMemory`1<Char>)'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2025-05-15 10:46:15.007 +05:30 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2025-05-15 10:46:15.017 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-05-15 10:46:15.024 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2025-05-15 10:46:15.026 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/api/UserType - 401 null application/json; charset=utf-8 69.9464ms
+2025-05-15 10:53:24.597 +05:30 [INF] User profile is available. Using 'C:\Users\TGSUser131\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-15 10:53:24.991 +05:30 [INF] Now listening on: https://localhost:7130
+2025-05-15 10:53:24.993 +05:30 [INF] Now listening on: http://localhost:5085
+2025-05-15 10:53:24.997 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-15 10:53:24.998 +05:30 [INF] Hosting environment: Development
+2025-05-15 10:53:24.999 +05:30 [INF] Content root path: E:\aniket\c#\OAInventoryManagement\InventoryManagement
+2025-05-15 10:53:26.275 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/index.html - null null
+2025-05-15 10:53:26.707 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/index.html - 200 null text/html;charset=utf-8 434.2938ms
+2025-05-15 10:53:26.761 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/_vs/browserLink - null null
+2025-05-15 10:53:26.761 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-15 10:53:26.777 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 15.5312ms
+2025-05-15 10:53:26.837 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/_vs/browserLink - 200 null text/javascript; charset=UTF-8 75.4522ms
+2025-05-15 10:53:26.953 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - null null
+2025-05-15 10:53:27.274 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 320.1511ms
+2025-05-15 10:53:49.987 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7130/api/Login/login - application/json 59
+2025-05-15 10:53:50.009 +05:30 [INF] CORS policy execution failed.
+2025-05-15 10:53:50.010 +05:30 [INF] Request origin https://localhost:7130 does not have permission to access the resource.
+2025-05-15 10:53:50.083 +05:30 [INF] Executing endpoint 'InventoryManagement.Controllers.LoginController.Login (InventoryManagement)'
+2025-05-15 10:53:50.110 +05:30 [INF] Route matched with {action = "Login", controller = "Login"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Domain.ViewModel.LoginModel) on controller InventoryManagement.Controllers.LoginController (InventoryManagement).
+2025-05-15 10:53:51.196 +05:30 [INF] Executing action method InventoryManagement.Controllers.LoginController.Login (InventoryManagement) - Validation state: "Valid"
+2025-05-15 10:53:51.199 +05:30 [INF] Login attempt for email: suraj@gmail.com
+2025-05-15 10:53:51.913 +05:30 [INF] Executed DbCommand (46ms) [Parameters=[@__model_Email_0='?' (Size = 4000), @__model_Password_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Address], [u].[CreatedAt], [u].[CreatedBy], [u].[Email], [u].[IsActive], [u].[Password], [u].[PhoneNumber], [u].[Photo], [u].[UpdatedAt], [u].[UpdatedBy], [u].[UserId], [u].[UserName], [u].[UserTypeId]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__model_Email_0 AND [u].[Password] = @__model_Password_1
+2025-05-15 10:53:52.037 +05:30 [INF] Customer login successful for email: suraj@gmail.com
+2025-05-15 10:53:52.081 +05:30 [INF] Executed action method InventoryManagement.Controllers.LoginController.Login (InventoryManagement), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 880.8982ms.
+2025-05-15 10:53:52.095 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.Helper.Response`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-15 10:53:52.126 +05:30 [INF] Executed action InventoryManagement.Controllers.LoginController.Login (InventoryManagement) in 2011.4721ms
+2025-05-15 10:53:52.129 +05:30 [INF] Executed endpoint 'InventoryManagement.Controllers.LoginController.Login (InventoryManagement)'
+2025-05-15 10:53:52.140 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7130/api/Login/login - 200 null application/json; charset=utf-8 2153.4882ms
+2025-05-15 10:55:14.083 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/api/UserType - null null
+2025-05-15 10:55:14.130 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> System.MissingMethodException: Method not found: 'Byte[] Microsoft.IdentityModel.Tokens.Base64UrlEncoder.UnsafeDecode(System.ReadOnlyMemory`1<Char>)'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2025-05-15 10:55:14.156 +05:30 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2025-05-15 10:55:14.166 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Customer)
+2025-05-15 10:55:14.175 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2025-05-15 10:55:14.176 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/api/UserType - 401 null application/json; charset=utf-8 94.6127ms
+2025-05-15 10:55:22.219 +05:30 [INF] User profile is available. Using 'C:\Users\TGSUser131\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-15 10:55:22.338 +05:30 [INF] Now listening on: https://localhost:7130
+2025-05-15 10:55:22.340 +05:30 [INF] Now listening on: http://localhost:5085
+2025-05-15 10:55:22.343 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-15 10:55:22.344 +05:30 [INF] Hosting environment: Development
+2025-05-15 10:55:22.345 +05:30 [INF] Content root path: E:\aniket\c#\OAInventoryManagement\InventoryManagement
+2025-05-15 10:55:26.473 +05:30 [INF] User profile is available. Using 'C:\Users\TGSUser131\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-15 10:55:26.759 +05:30 [INF] Now listening on: https://localhost:7130
+2025-05-15 10:55:26.761 +05:30 [INF] Now listening on: http://localhost:5085
+2025-05-15 10:55:26.764 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-15 10:55:26.765 +05:30 [INF] Hosting environment: Development
+2025-05-15 10:55:26.766 +05:30 [INF] Content root path: E:\aniket\c#\OAInventoryManagement\InventoryManagement
+2025-05-15 10:55:28.178 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/index.html - null null
+2025-05-15 10:55:28.717 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/index.html - 200 null text/html;charset=utf-8 552.3292ms
+2025-05-15 10:55:28.769 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/_vs/browserLink - null null
+2025-05-15 10:55:28.768 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-15 10:55:28.808 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 39.7767ms
+2025-05-15 10:55:28.897 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/_vs/browserLink - 200 null text/javascript; charset=UTF-8 127.1016ms
+2025-05-15 10:55:29.026 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - null null
+2025-05-15 10:55:29.342 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 315.821ms
+2025-05-15 10:56:12.115 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7130/api/Login/login - application/json 59
+2025-05-15 10:56:12.122 +05:30 [INF] CORS policy execution failed.
+2025-05-15 10:56:12.124 +05:30 [INF] Request origin https://localhost:7130 does not have permission to access the resource.
+2025-05-15 10:56:12.194 +05:30 [INF] Executing endpoint 'InventoryManagement.Controllers.LoginController.Login (InventoryManagement)'
+2025-05-15 10:56:12.228 +05:30 [INF] Route matched with {action = "Login", controller = "Login"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Domain.ViewModel.LoginModel) on controller InventoryManagement.Controllers.LoginController (InventoryManagement).
+2025-05-15 10:56:13.063 +05:30 [INF] Executing action method InventoryManagement.Controllers.LoginController.Login (InventoryManagement) - Validation state: "Valid"
+2025-05-15 10:56:13.068 +05:30 [INF] Login attempt for email: suraj@gmail.com
+2025-05-15 10:56:13.747 +05:30 [INF] Executed DbCommand (52ms) [Parameters=[@__model_Email_0='?' (Size = 4000), @__model_Password_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Address], [u].[CreatedAt], [u].[CreatedBy], [u].[Email], [u].[IsActive], [u].[Password], [u].[PhoneNumber], [u].[Photo], [u].[UpdatedAt], [u].[UpdatedBy], [u].[UserId], [u].[UserName], [u].[UserTypeId]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__model_Email_0 AND [u].[Password] = @__model_Password_1
+2025-05-15 10:56:13.837 +05:30 [INF] Customer login successful for email: suraj@gmail.com
+2025-05-15 10:56:13.872 +05:30 [INF] Executed action method InventoryManagement.Controllers.LoginController.Login (InventoryManagement), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 803.2794ms.
+2025-05-15 10:56:13.881 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.Helper.Response`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-15 10:56:13.901 +05:30 [INF] Executed action InventoryManagement.Controllers.LoginController.Login (InventoryManagement) in 1669.4492ms
+2025-05-15 10:56:13.904 +05:30 [INF] Executed endpoint 'InventoryManagement.Controllers.LoginController.Login (InventoryManagement)'
+2025-05-15 10:56:13.914 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7130/api/Login/login - 200 null application/json; charset=utf-8 1798.9637ms
+2025-05-15 10:56:42.542 +05:30 [INF] User profile is available. Using 'C:\Users\TGSUser131\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-15 10:56:42.879 +05:30 [INF] Now listening on: https://localhost:7130
+2025-05-15 10:56:42.881 +05:30 [INF] Now listening on: http://localhost:5085
+2025-05-15 10:56:42.886 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-15 10:56:42.887 +05:30 [INF] Hosting environment: Development
+2025-05-15 10:56:42.888 +05:30 [INF] Content root path: E:\aniket\c#\OAInventoryManagement\InventoryManagement
+2025-05-15 10:56:44.040 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/index.html - null null
+2025-05-15 10:56:44.519 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/index.html - 200 null text/html;charset=utf-8 490.3899ms
+2025-05-15 10:56:44.578 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/_vs/browserLink - null null
+2025-05-15 10:56:44.578 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-15 10:56:44.593 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 14.6739ms
+2025-05-15 10:56:44.646 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/_vs/browserLink - 200 null text/javascript; charset=UTF-8 67.4849ms
+2025-05-15 10:56:44.794 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - null null
+2025-05-15 10:56:45.098 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 304.4434ms
+2025-05-15 10:57:07.301 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7130/api/Login/login - application/json 59
+2025-05-15 10:57:07.312 +05:30 [INF] CORS policy execution failed.
+2025-05-15 10:57:07.314 +05:30 [INF] Request origin https://localhost:7130 does not have permission to access the resource.
+2025-05-15 10:57:07.376 +05:30 [INF] Executing endpoint 'InventoryManagement.Controllers.LoginController.Login (InventoryManagement)'
+2025-05-15 10:57:07.404 +05:30 [INF] Route matched with {action = "Login", controller = "Login"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Domain.ViewModel.LoginModel) on controller InventoryManagement.Controllers.LoginController (InventoryManagement).
+2025-05-15 10:57:08.306 +05:30 [INF] Executing action method InventoryManagement.Controllers.LoginController.Login (InventoryManagement) - Validation state: "Valid"
+2025-05-15 10:57:08.312 +05:30 [INF] Login attempt for email: suraj@gmail.com
+2025-05-15 10:57:09.045 +05:30 [INF] Executed DbCommand (80ms) [Parameters=[@__model_Email_0='?' (Size = 4000), @__model_Password_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Address], [u].[CreatedAt], [u].[CreatedBy], [u].[Email], [u].[IsActive], [u].[Password], [u].[PhoneNumber], [u].[Photo], [u].[UpdatedAt], [u].[UpdatedBy], [u].[UserId], [u].[UserName], [u].[UserTypeId]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__model_Email_0 AND [u].[Password] = @__model_Password_1
+2025-05-15 10:57:09.148 +05:30 [INF] Customer login successful for email: suraj@gmail.com
+2025-05-15 10:57:09.182 +05:30 [INF] Executed action method InventoryManagement.Controllers.LoginController.Login (InventoryManagement), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 869.9959ms.
+2025-05-15 10:57:09.190 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.Helper.Response`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-15 10:57:09.218 +05:30 [INF] Executed action InventoryManagement.Controllers.LoginController.Login (InventoryManagement) in 1807.1414ms
+2025-05-15 10:57:09.222 +05:30 [INF] Executed endpoint 'InventoryManagement.Controllers.LoginController.Login (InventoryManagement)'
+2025-05-15 10:57:09.231 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7130/api/Login/login - 200 null application/json; charset=utf-8 1930.1237ms
+2025-05-15 10:57:35.428 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/api/UserType - null null
+2025-05-15 10:57:35.485 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> System.MissingMethodException: Method not found: 'Byte[] Microsoft.IdentityModel.Tokens.Base64UrlEncoder.UnsafeDecode(System.ReadOnlyMemory`1<Char>)'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2025-05-15 10:57:35.505 +05:30 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2025-05-15 10:57:35.513 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (customer)
+2025-05-15 10:57:35.521 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2025-05-15 10:57:35.530 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/api/UserType - 401 null application/json; charset=utf-8 101.9308ms
+2025-05-15 10:59:47.806 +05:30 [INF] User profile is available. Using 'C:\Users\TGSUser131\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-15 10:59:48.127 +05:30 [INF] Now listening on: https://localhost:7130
+2025-05-15 10:59:48.129 +05:30 [INF] Now listening on: http://localhost:5085
+2025-05-15 10:59:48.134 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-15 10:59:48.136 +05:30 [INF] Hosting environment: Development
+2025-05-15 10:59:48.137 +05:30 [INF] Content root path: E:\aniket\c#\OAInventoryManagement\InventoryManagement
+2025-05-15 10:59:49.694 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/index.html - null null
+2025-05-15 10:59:50.154 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/index.html - 200 null text/html;charset=utf-8 471.7251ms
+2025-05-15 10:59:50.186 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-15 10:59:50.186 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/_vs/browserLink - null null
+2025-05-15 10:59:50.209 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 23.3068ms
+2025-05-15 10:59:50.321 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/_vs/browserLink - 200 null text/javascript; charset=UTF-8 135.5631ms
+2025-05-15 10:59:50.448 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - null null
+2025-05-15 10:59:50.770 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 322.0667ms
+2025-05-15 11:00:19.400 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7130/api/Login/login - application/json 59
+2025-05-15 11:00:19.408 +05:30 [INF] CORS policy execution failed.
+2025-05-15 11:00:19.410 +05:30 [INF] Request origin https://localhost:7130 does not have permission to access the resource.
+2025-05-15 11:00:19.473 +05:30 [INF] Executing endpoint 'InventoryManagement.Controllers.LoginController.Login (InventoryManagement)'
+2025-05-15 11:00:19.499 +05:30 [INF] Route matched with {action = "Login", controller = "Login"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Domain.ViewModel.LoginModel) on controller InventoryManagement.Controllers.LoginController (InventoryManagement).
+2025-05-15 11:00:20.386 +05:30 [INF] Executing action method InventoryManagement.Controllers.LoginController.Login (InventoryManagement) - Validation state: "Valid"
+2025-05-15 11:00:20.390 +05:30 [INF] Login attempt for email: suraj@gmail.com
+2025-05-15 11:00:21.072 +05:30 [INF] Executed DbCommand (37ms) [Parameters=[@__model_Email_0='?' (Size = 4000), @__model_Password_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Address], [u].[CreatedAt], [u].[CreatedBy], [u].[Email], [u].[IsActive], [u].[Password], [u].[PhoneNumber], [u].[Photo], [u].[UpdatedAt], [u].[UpdatedBy], [u].[UserId], [u].[UserName], [u].[UserTypeId]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__model_Email_0 AND [u].[Password] = @__model_Password_1
+2025-05-15 11:00:21.171 +05:30 [INF] Customer login successful for email: suraj@gmail.com
+2025-05-15 11:00:21.208 +05:30 [INF] Executed action method InventoryManagement.Controllers.LoginController.Login (InventoryManagement), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 817.7431ms.
+2025-05-15 11:00:21.218 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.Helper.Response`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-15 11:00:21.240 +05:30 [INF] Executed action InventoryManagement.Controllers.LoginController.Login (InventoryManagement) in 1736.6409ms
+2025-05-15 11:00:21.243 +05:30 [INF] Executed endpoint 'InventoryManagement.Controllers.LoginController.Login (InventoryManagement)'
+2025-05-15 11:00:21.254 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7130/api/Login/login - 200 null application/json; charset=utf-8 1853.6258ms
+2025-05-15 11:00:45.732 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/api/UserType - null null
+2025-05-15 11:00:45.746 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> System.MissingMethodException: Method not found: 'Byte[] Microsoft.IdentityModel.Tokens.Base64UrlEncoder.UnsafeDecode(System.ReadOnlyMemory`1<Char>)'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2025-05-15 11:00:45.774 +05:30 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2025-05-15 11:00:45.783 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (customer)
+2025-05-15 11:00:45.792 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2025-05-15 11:00:45.803 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/api/UserType - 401 null application/json; charset=utf-8 79.9985ms
+2025-05-15 11:04:03.067 +05:30 [INF] User profile is available. Using 'C:\Users\TGSUser131\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-15 11:04:03.350 +05:30 [INF] Now listening on: https://localhost:7130
+2025-05-15 11:04:03.351 +05:30 [INF] Now listening on: http://localhost:5085
+2025-05-15 11:04:03.356 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-15 11:04:03.357 +05:30 [INF] Hosting environment: Development
+2025-05-15 11:04:03.358 +05:30 [INF] Content root path: E:\aniket\c#\OAInventoryManagement\InventoryManagement
+2025-05-15 11:04:04.783 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/index.html - null null
+2025-05-15 11:04:05.269 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/index.html - 200 null text/html;charset=utf-8 496.6806ms
+2025-05-15 11:04:05.297 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-15 11:04:05.299 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/_vs/browserLink - null null
+2025-05-15 11:04:05.320 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 23.1838ms
+2025-05-15 11:04:05.372 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/_vs/browserLink - 200 null text/javascript; charset=UTF-8 72.7411ms
+2025-05-15 11:04:05.505 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - null null
+2025-05-15 11:04:05.773 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 268.4622ms
+2025-05-15 11:04:30.606 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7130/api/Login/login - application/json 59
+2025-05-15 11:04:30.612 +05:30 [INF] CORS policy execution failed.
+2025-05-15 11:04:30.614 +05:30 [INF] Request origin https://localhost:7130 does not have permission to access the resource.
+2025-05-15 11:04:30.693 +05:30 [INF] Executing endpoint 'InventoryManagement.Controllers.LoginController.Login (InventoryManagement)'
+2025-05-15 11:04:30.731 +05:30 [INF] Route matched with {action = "Login", controller = "Login"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Domain.ViewModel.LoginModel) on controller InventoryManagement.Controllers.LoginController (InventoryManagement).
+2025-05-15 11:04:31.670 +05:30 [INF] Executing action method InventoryManagement.Controllers.LoginController.Login (InventoryManagement) - Validation state: "Valid"
+2025-05-15 11:04:31.676 +05:30 [INF] Login attempt for email: suraj@gmail.com
+2025-05-15 11:04:32.408 +05:30 [INF] Executed DbCommand (42ms) [Parameters=[@__model_Email_0='?' (Size = 4000), @__model_Password_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Address], [u].[CreatedAt], [u].[CreatedBy], [u].[Email], [u].[IsActive], [u].[Password], [u].[PhoneNumber], [u].[Photo], [u].[UpdatedAt], [u].[UpdatedBy], [u].[UserId], [u].[UserName], [u].[UserTypeId]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__model_Email_0 AND [u].[Password] = @__model_Password_1
+2025-05-15 11:04:32.506 +05:30 [INF] Customer login successful for email: suraj@gmail.com
+2025-05-15 11:04:32.544 +05:30 [INF] Executed action method InventoryManagement.Controllers.LoginController.Login (InventoryManagement), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 868.9384ms.
+2025-05-15 11:04:32.553 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.Helper.Response`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-15 11:04:32.573 +05:30 [INF] Executed action InventoryManagement.Controllers.LoginController.Login (InventoryManagement) in 1836.9195ms
+2025-05-15 11:04:32.576 +05:30 [INF] Executed endpoint 'InventoryManagement.Controllers.LoginController.Login (InventoryManagement)'
+2025-05-15 11:04:32.584 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7130/api/Login/login - 200 null application/json; charset=utf-8 1978.5741ms
+2025-05-15 11:05:01.961 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/api/UserType/claims - null null
+2025-05-15 11:05:01.999 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> System.MissingMethodException: Method not found: 'Byte[] Microsoft.IdentityModel.Tokens.Base64UrlEncoder.UnsafeDecode(System.ReadOnlyMemory`1<Char>)'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2025-05-15 11:05:02.036 +05:30 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2025-05-15 11:05:02.049 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (customer)
+2025-05-15 11:05:02.065 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2025-05-15 11:05:02.067 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/api/UserType/claims - 401 null application/json; charset=utf-8 113.1634ms
+2025-05-15 11:05:16.665 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/api/UserType - null null
+2025-05-15 11:05:16.672 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> System.MissingMethodException: Method not found: 'Byte[] Microsoft.IdentityModel.Tokens.Base64UrlEncoder.UnsafeDecode(System.ReadOnlyMemory`1<Char>)'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2025-05-15 11:05:16.680 +05:30 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2025-05-15 11:05:16.683 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (customer)
+2025-05-15 11:05:16.685 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2025-05-15 11:05:16.686 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/api/UserType - 401 null application/json; charset=utf-8 21.1264ms
+2025-05-15 11:08:41.642 +05:30 [INF] User profile is available. Using 'C:\Users\TGSUser131\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-15 11:08:41.959 +05:30 [INF] Now listening on: https://localhost:7130
+2025-05-15 11:08:41.960 +05:30 [INF] Now listening on: http://localhost:5085
+2025-05-15 11:08:41.963 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-15 11:08:41.964 +05:30 [INF] Hosting environment: Development
+2025-05-15 11:08:41.965 +05:30 [INF] Content root path: E:\aniket\c#\OAInventoryManagement\InventoryManagement
+2025-05-15 11:08:43.635 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/index.html - null null
+2025-05-15 11:08:44.133 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/index.html - 200 null text/html;charset=utf-8 509.7639ms
+2025-05-15 11:08:44.254 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-15 11:08:44.254 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/_vs/browserLink - null null
+2025-05-15 11:08:44.277 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 22.982ms
+2025-05-15 11:08:44.346 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/_vs/browserLink - 200 null text/javascript; charset=UTF-8 91.7373ms
+2025-05-15 11:08:44.488 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - null null
+2025-05-15 11:08:44.838 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 349.9654ms
+2025-05-15 11:08:50.774 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/api/UserType/claims - null null
+2025-05-15 11:08:50.845 +05:30 [INF] Executing endpoint 'InventoryManagement.Controllers.UserTypeController.GetClaims (InventoryManagement)'
+2025-05-15 11:08:50.864 +05:30 [INF] Route matched with {action = "GetClaims", controller = "UserType"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetClaims() on controller InventoryManagement.Controllers.UserTypeController (InventoryManagement).
+2025-05-15 11:08:51.683 +05:30 [INF] Executing action method InventoryManagement.Controllers.UserTypeController.GetClaims (InventoryManagement) - Validation state: "Valid"
+2025-05-15 11:08:51.690 +05:30 [INF] Executed action method InventoryManagement.Controllers.UserTypeController.GetClaims (InventoryManagement), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1.4508ms.
+2025-05-15 11:08:51.696 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType2`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], InventoryManagement, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-15 11:08:51.715 +05:30 [INF] Executed action InventoryManagement.Controllers.UserTypeController.GetClaims (InventoryManagement) in 846.8153ms
+2025-05-15 11:08:51.717 +05:30 [INF] Executed endpoint 'InventoryManagement.Controllers.UserTypeController.GetClaims (InventoryManagement)'
+2025-05-15 11:08:51.726 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/api/UserType/claims - 200 null application/json; charset=utf-8 951.4094ms
+2025-05-15 11:08:57.892 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/api/UserType - null null
+2025-05-15 11:08:57.919 +05:30 [INF] Executing endpoint 'InventoryManagement.Controllers.UserTypeController.GetAll (InventoryManagement)'
+2025-05-15 11:08:57.927 +05:30 [INF] Route matched with {action = "GetAll", controller = "UserType"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller InventoryManagement.Controllers.UserTypeController (InventoryManagement).
+2025-05-15 11:08:58.004 +05:30 [INF] Executing action method InventoryManagement.Controllers.UserTypeController.GetAll (InventoryManagement) - Validation state: "Valid"
+2025-05-15 11:08:58.566 +05:30 [INF] Executed DbCommand (29ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[CreatedAt], [u].[CreatedBy], [u].[IsActive], [u].[TypeName], [u].[UpdatedAt], [u].[UpdatedBy]
+FROM [UserTypes] AS [u]
+2025-05-15 11:08:58.646 +05:30 [INF] Executed action method InventoryManagement.Controllers.UserTypeController.GetAll (InventoryManagement), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 638.2653ms.
+2025-05-15 11:08:58.649 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Domain.ViewModel.UserTypeViewModel, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-15 11:08:58.661 +05:30 [INF] Executed action InventoryManagement.Controllers.UserTypeController.GetAll (InventoryManagement) in 729.8544ms
+2025-05-15 11:08:58.665 +05:30 [INF] Executed endpoint 'InventoryManagement.Controllers.UserTypeController.GetAll (InventoryManagement)'
+2025-05-15 11:08:58.679 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/api/UserType - 200 null application/json; charset=utf-8 787.4051ms
+2025-05-15 11:20:47.269 +05:30 [INF] User profile is available. Using 'C:\Users\TGSUser131\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-15 11:20:47.508 +05:30 [INF] Now listening on: https://localhost:7130
+2025-05-15 11:20:47.510 +05:30 [INF] Now listening on: http://localhost:5085
+2025-05-15 11:20:47.513 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-15 11:20:47.514 +05:30 [INF] Hosting environment: Development
+2025-05-15 11:20:47.515 +05:30 [INF] Content root path: E:\aniket\c#\OAInventoryManagement\InventoryManagement
+2025-05-15 11:20:48.672 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/index.html - null null
+2025-05-15 11:20:49.140 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/index.html - 200 null text/html;charset=utf-8 478.8962ms
+2025-05-15 11:20:49.168 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-15 11:20:49.168 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/_vs/browserLink - null null
+2025-05-15 11:20:49.194 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 26.5715ms
+2025-05-15 11:20:49.256 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/_vs/browserLink - 200 null text/javascript; charset=UTF-8 88.5637ms
+2025-05-15 11:20:49.374 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - null null
+2025-05-15 11:20:49.612 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 238.4256ms
+2025-05-15 11:37:09.559 +05:30 [INF] User profile is available. Using 'C:\Users\TGSUser131\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-15 11:37:09.873 +05:30 [INF] Now listening on: https://localhost:7130
+2025-05-15 11:37:09.891 +05:30 [INF] Now listening on: http://localhost:5085
+2025-05-15 11:37:09.898 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-15 11:37:09.900 +05:30 [INF] Hosting environment: Development
+2025-05-15 11:37:09.901 +05:30 [INF] Content root path: E:\aniket\c#\OAInventoryManagement\InventoryManagement
+2025-05-15 11:37:11.367 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/index.html - null null
+2025-05-15 11:37:11.901 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/index.html - 200 null text/html;charset=utf-8 546.4255ms
+2025-05-15 11:37:11.956 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-15 11:37:11.956 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/_vs/browserLink - null null
+2025-05-15 11:37:11.966 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 10.0078ms
+2025-05-15 11:37:12.028 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/_vs/browserLink - 200 null text/javascript; charset=UTF-8 72.2825ms
+2025-05-15 11:37:12.126 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - null null
+2025-05-15 11:37:12.429 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 303.0075ms
+2025-05-15 11:38:35.219 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7130/api/Login/login - application/json 59
+2025-05-15 11:38:35.240 +05:30 [INF] CORS policy execution failed.
+2025-05-15 11:38:35.241 +05:30 [INF] Request origin https://localhost:7130 does not have permission to access the resource.
+2025-05-15 11:38:36.295 +05:30 [INF] Executing endpoint 'InventoryManagement.Controllers.LoginController.Login (InventoryManagement)'
+2025-05-15 11:38:36.323 +05:30 [INF] Route matched with {action = "Login", controller = "Login"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Domain.ViewModel.LoginModel) on controller InventoryManagement.Controllers.LoginController (InventoryManagement).
+2025-05-15 11:38:37.682 +05:30 [INF] Executing action method InventoryManagement.Controllers.LoginController.Login (InventoryManagement) - Validation state: "Valid"
+2025-05-15 11:38:37.686 +05:30 [INF] Login attempt for email: suraj@gmail.com
+2025-05-15 11:38:38.908 +05:30 [INF] Executed DbCommand (86ms) [Parameters=[@__model_Email_0='?' (Size = 4000), @__model_Password_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Address], [u].[CreatedAt], [u].[CreatedBy], [u].[Email], [u].[IsActive], [u].[Password], [u].[PhoneNumber], [u].[Photo], [u].[UpdatedAt], [u].[UpdatedBy], [u].[UserId], [u].[UserName], [u].[UserTypeId]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__model_Email_0 AND [u].[Password] = @__model_Password_1
+2025-05-15 11:38:39.137 +05:30 [INF] Executed action method InventoryManagement.Controllers.LoginController.Login (InventoryManagement), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1449.3283ms.
+2025-05-15 11:38:39.145 +05:30 [INF] Executing OkObjectResult, writing value of type 'Domain.Helper.Response`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-15 11:38:39.158 +05:30 [INF] Executed action InventoryManagement.Controllers.LoginController.Login (InventoryManagement) in 2830.4269ms
+2025-05-15 11:38:39.160 +05:30 [INF] Executed endpoint 'InventoryManagement.Controllers.LoginController.Login (InventoryManagement)'
+2025-05-15 11:38:39.171 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7130/api/Login/login - 200 null application/json; charset=utf-8 3952.0715ms
+2025-05-15 11:39:01.717 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/api/UserType - null null
+2025-05-15 11:39:01.782 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> System.MissingMethodException: Method not found: 'Byte[] Microsoft.IdentityModel.Tokens.Base64UrlEncoder.UnsafeDecode(System.ReadOnlyMemory`1<Char>)'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2025-05-15 11:39:01.804 +05:30 [ERR] Authentication failed: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2025-05-15 11:39:01.808 +05:30 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2025-05-15 11:39:01.816 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Customer)
+2025-05-15 11:39:01.825 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2025-05-15 11:39:01.827 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/api/UserType - 401 null application/json; charset=utf-8 110.5607ms
+2025-05-15 11:39:42.872 +05:30 [INF] User profile is available. Using 'C:\Users\TGSUser131\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-15 11:39:43.118 +05:30 [INF] Now listening on: https://localhost:7130
+2025-05-15 11:39:43.119 +05:30 [INF] Now listening on: http://localhost:5085
+2025-05-15 11:39:43.122 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-15 11:39:43.123 +05:30 [INF] Hosting environment: Development
+2025-05-15 11:39:43.124 +05:30 [INF] Content root path: E:\aniket\c#\OAInventoryManagement\InventoryManagement
+2025-05-15 11:39:44.548 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/index.html - null null
+2025-05-15 11:39:44.982 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/index.html - 200 null text/html;charset=utf-8 445.2744ms
+2025-05-15 11:39:45.013 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/_vs/browserLink - null null
+2025-05-15 11:39:45.014 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-15 11:39:45.042 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 28.6938ms
+2025-05-15 11:39:45.079 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/_vs/browserLink - 200 null text/javascript; charset=UTF-8 65.8575ms
+2025-05-15 11:39:45.212 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - null null
+2025-05-15 11:39:45.480 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 267.4255ms
+2025-05-15 12:28:56.517 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-15 12:28:56.524 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 7.7631ms
+2025-05-15 17:51:24.643 +05:30 [INF] User profile is available. Using 'C:\Users\TGSUser131\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-15 17:51:25.036 +05:30 [INF] Now listening on: https://localhost:7130
+2025-05-15 17:51:25.038 +05:30 [INF] Now listening on: http://localhost:5085
+2025-05-15 17:51:25.042 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-15 17:51:25.044 +05:30 [INF] Hosting environment: Development
+2025-05-15 17:51:25.045 +05:30 [INF] Content root path: E:\aniket\c#\OAInventoryManagement\InventoryManagement
+2025-05-15 17:51:25.844 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/index.html - null null
+2025-05-15 17:51:26.407 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/index.html - 200 null text/html;charset=utf-8 574.1851ms
+2025-05-15 17:51:26.438 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-15 17:51:26.439 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/_vs/browserLink - null null
+2025-05-15 17:51:26.459 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 20.5415ms
+2025-05-15 17:51:26.534 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/_vs/browserLink - 200 null text/javascript; charset=UTF-8 95.6063ms
+2025-05-15 17:51:26.694 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - null null
+2025-05-15 17:51:27.128 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7130/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 434.5214ms
+2025-05-15 17:52:11.767 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7130/api/Login/RegisterAsCustomer - multipart/form-data; boundary=----WebKitFormBoundaryqOAMjQ839OcUfkR1 594467
+2025-05-15 17:52:11.793 +05:30 [INF] CORS policy execution failed.
+2025-05-15 17:52:11.797 +05:30 [INF] Request origin https://localhost:7130 does not have permission to access the resource.
+2025-05-15 17:52:11.892 +05:30 [INF] Executing endpoint 'InventoryManagement.Controllers.LoginController.RegisterAsCustomer (InventoryManagement)'
+2025-05-15 17:52:11.919 +05:30 [INF] Route matched with {action = "RegisterAsCustomer", controller = "Login"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RegisterAsCustomer(Domain.ViewModel.UserInsertModel) on controller InventoryManagement.Controllers.LoginController (InventoryManagement).
+2025-05-15 17:52:12.803 +05:30 [INF] Executing action method InventoryManagement.Controllers.LoginController.RegisterAsCustomer (InventoryManagement) - Validation state: "Valid"
+2025-05-15 17:52:14.640 +05:30 [INF] Executed DbCommand (52ms) [Parameters=[@__model_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Address], [u].[CreatedAt], [u].[CreatedBy], [u].[Email], [u].[IsActive], [u].[Password], [u].[PhoneNumber], [u].[Photo], [u].[UpdatedAt], [u].[UpdatedBy], [u].[UserId], [u].[UserName], [u].[UserTypeId]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__model_Email_0
+2025-05-15 17:52:14.706 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[CreatedBy], [u].[IsActive], [u].[TypeName], [u].[UpdatedAt], [u].[UpdatedBy]
+FROM [UserTypes] AS [u]
+WHERE LOWER([u].[TypeName]) = N'supplier'
+2025-05-15 17:52:14.777 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__supplierType_Id_0='?' (DbType = Guid), @__model_Email_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Address], [u].[CreatedAt], [u].[CreatedBy], [u].[Email], [u].[IsActive], [u].[Password], [u].[PhoneNumber], [u].[Photo], [u].[UpdatedAt], [u].[UpdatedBy], [u].[UserId], [u].[UserName], [u].[UserTypeId]
+FROM [Users] AS [u]
+WHERE [u].[UserTypeId] = @__supplierType_Id_0 AND [u].[Email] = @__model_Email_1
+2025-05-15 17:52:14.810 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[CreatedBy], [u].[IsActive], [u].[TypeName], [u].[UpdatedAt], [u].[UpdatedBy]
+FROM [UserTypes] AS [u]
+WHERE LOWER([u].[TypeName]) = N'customer'
+2025-05-15 17:52:14.983 +05:30 [ERR] Failed executing DbCommand (12ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 4000), @p2='?' (DbType = DateTime2), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (DbType = Boolean), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (DbType = DateTime2), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (Size = 4000), @p13='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Id], [Address], [CreatedAt], [CreatedBy], [Email], [IsActive], [Password], [PhoneNumber], [Photo], [UpdatedAt], [UpdatedBy], [UserId], [UserName], [UserTypeId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13);
+2025-05-15 17:52:15.024 +05:30 [ERR] An exception occurred in the database while saving changes for context type 'Repository.Utilities.AppDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'CreatedBy', table 'OAInventoryManagementWEBAPI.dbo.Users'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:9ab7671c-c31b-4e7f-8b17-2051b570f93e
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'CreatedBy', table 'OAInventoryManagementWEBAPI.dbo.Users'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:9ab7671c-c31b-4e7f-8b17-2051b570f93e
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2025-05-15 17:52:15.483 +05:30 [ERR] Exception during customer registration.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'CreatedBy', table 'OAInventoryManagementWEBAPI.dbo.Users'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:9ab7671c-c31b-4e7f-8b17-2051b570f93e
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Repository.Repo.RepositoryCommon`1.SaveChanges() in E:\aniket\c#\OAInventoryManagement\Repository\Repo\RepositoryCommon.cs:line 70
+   at Repository.Repo.RepositoryCommon`1.Insert(T model) in E:\aniket\c#\OAInventoryManagement\Repository\Repo\RepositoryCommon.cs:line 36
+   at Service.Custom.CustomerSer.CustomerService.Insert(UserInsertModel model, String photoFileName) in E:\aniket\c#\OAInventoryManagement\Service\Custom\CustomerSer\CustomerService.cs:line 104
+   at InventoryManagement.Controllers.LoginController.RegisterAsCustomer(UserInsertModel model) in E:\aniket\c#\OAInventoryManagement\InventoryManagement\Controllers\LoginController.cs:line 99
+2025-05-15 17:52:15.545 +05:30 [INF] Executed action method InventoryManagement.Controllers.LoginController.RegisterAsCustomer (InventoryManagement), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 2733.9614ms.
+2025-05-15 17:52:15.553 +05:30 [INF] Executing ObjectResult, writing value of type 'Domain.Helper.Response`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-15 17:52:15.566 +05:30 [INF] Executed action InventoryManagement.Controllers.LoginController.RegisterAsCustomer (InventoryManagement) in 3641.1445ms
+2025-05-15 17:52:15.568 +05:30 [INF] Executed endpoint 'InventoryManagement.Controllers.LoginController.RegisterAsCustomer (InventoryManagement)'
+2025-05-15 17:52:15.579 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7130/api/Login/RegisterAsCustomer - 500 null application/json; charset=utf-8 3811.5746ms
+2025-05-15 17:56:26.748 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7130/api/Login/RegisterAsCustomer - multipart/form-data; boundary=----WebKitFormBoundaryJplDFttmE0O9afnG 594464
+2025-05-15 17:56:26.762 +05:30 [INF] CORS policy execution failed.
+2025-05-15 17:56:26.763 +05:30 [INF] Request origin https://localhost:7130 does not have permission to access the resource.
+2025-05-15 17:56:26.765 +05:30 [INF] Executing endpoint 'InventoryManagement.Controllers.LoginController.RegisterAsCustomer (InventoryManagement)'
+2025-05-15 17:56:26.767 +05:30 [INF] Route matched with {action = "RegisterAsCustomer", controller = "Login"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RegisterAsCustomer(Domain.ViewModel.UserInsertModel) on controller InventoryManagement.Controllers.LoginController (InventoryManagement).
+2025-05-15 17:56:26.865 +05:30 [INF] Executing action method InventoryManagement.Controllers.LoginController.RegisterAsCustomer (InventoryManagement) - Validation state: "Valid"
+2025-05-15 17:56:26.874 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__model_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Address], [u].[CreatedAt], [u].[CreatedBy], [u].[Email], [u].[IsActive], [u].[Password], [u].[PhoneNumber], [u].[Photo], [u].[UpdatedAt], [u].[UpdatedBy], [u].[UserId], [u].[UserName], [u].[UserTypeId]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__model_Email_0
+2025-05-15 17:56:26.878 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[CreatedBy], [u].[IsActive], [u].[TypeName], [u].[UpdatedAt], [u].[UpdatedBy]
+FROM [UserTypes] AS [u]
+WHERE LOWER([u].[TypeName]) = N'supplier'
+2025-05-15 17:56:26.883 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__supplierType_Id_0='?' (DbType = Guid), @__model_Email_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Address], [u].[CreatedAt], [u].[CreatedBy], [u].[Email], [u].[IsActive], [u].[Password], [u].[PhoneNumber], [u].[Photo], [u].[UpdatedAt], [u].[UpdatedBy], [u].[UserId], [u].[UserName], [u].[UserTypeId]
+FROM [Users] AS [u]
+WHERE [u].[UserTypeId] = @__supplierType_Id_0 AND [u].[Email] = @__model_Email_1
+2025-05-15 17:56:26.890 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[CreatedBy], [u].[IsActive], [u].[TypeName], [u].[UpdatedAt], [u].[UpdatedBy]
+FROM [UserTypes] AS [u]
+WHERE LOWER([u].[TypeName]) = N'customer'
+2025-05-15 17:56:26.900 +05:30 [ERR] Failed executing DbCommand (4ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 4000), @p2='?' (DbType = DateTime2), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (DbType = Boolean), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (DbType = DateTime2), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (Size = 4000), @p13='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Id], [Address], [CreatedAt], [CreatedBy], [Email], [IsActive], [Password], [PhoneNumber], [Photo], [UpdatedAt], [UpdatedBy], [UserId], [UserName], [UserTypeId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13);
+2025-05-15 17:56:26.905 +05:30 [ERR] An exception occurred in the database while saving changes for context type 'Repository.Utilities.AppDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'CreatedBy', table 'OAInventoryManagementWEBAPI.dbo.Users'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:9ab7671c-c31b-4e7f-8b17-2051b570f93e
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'CreatedBy', table 'OAInventoryManagementWEBAPI.dbo.Users'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:9ab7671c-c31b-4e7f-8b17-2051b570f93e
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2025-05-15 17:56:27.250 +05:30 [ERR] Exception during customer registration.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'CreatedBy', table 'OAInventoryManagementWEBAPI.dbo.Users'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:9ab7671c-c31b-4e7f-8b17-2051b570f93e
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Repository.Repo.RepositoryCommon`1.SaveChanges() in E:\aniket\c#\OAInventoryManagement\Repository\Repo\RepositoryCommon.cs:line 70
+   at Repository.Repo.RepositoryCommon`1.Insert(T model) in E:\aniket\c#\OAInventoryManagement\Repository\Repo\RepositoryCommon.cs:line 36
+   at Service.Custom.CustomerSer.CustomerService.Insert(UserInsertModel model, String photoFileName) in E:\aniket\c#\OAInventoryManagement\Service\Custom\CustomerSer\CustomerService.cs:line 104
+   at InventoryManagement.Controllers.LoginController.RegisterAsCustomer(UserInsertModel model) in E:\aniket\c#\OAInventoryManagement\InventoryManagement\Controllers\LoginController.cs:line 99
+2025-05-15 17:56:27.272 +05:30 [INF] Executed action method InventoryManagement.Controllers.LoginController.RegisterAsCustomer (InventoryManagement), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 405.2408ms.
+2025-05-15 17:56:27.275 +05:30 [INF] Executing ObjectResult, writing value of type 'Domain.Helper.Response`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-15 17:56:27.277 +05:30 [INF] Executed action InventoryManagement.Controllers.LoginController.RegisterAsCustomer (InventoryManagement) in 508.2086ms
+2025-05-15 17:56:27.279 +05:30 [INF] Executed endpoint 'InventoryManagement.Controllers.LoginController.RegisterAsCustomer (InventoryManagement)'
+2025-05-15 17:56:27.281 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7130/api/Login/RegisterAsCustomer - 500 null application/json; charset=utf-8 533.0118ms
