@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "E:\\aniket\\c#\\OAInventoryManagement\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{00E0142B-44CA-4789-A385-898AC2998D7D}|InventoryManagement\\InventoryManagement.csproj|e:\\aniket\\c#\\oainventorymanagement\\inventorymanagement\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00E0142B-44CA-4789-A385-898AC2998D7D}|InventoryManagement\\InventoryManagement.csproj|solutionrelative:inventorymanagement\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00E0142B-44CA-4789-A385-898AC2998D7D}|InventoryManagement\\InventoryManagement.csproj|e:\\aniket\\c#\\oainventorymanagement\\inventorymanagement\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00E0142B-44CA-4789-A385-898AC2998D7D}|InventoryManagement\\InventoryManagement.csproj|solutionrelative:inventorymanagement\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{50980511-7A45-481F-8A43-3BD6A8BB9563}|Domain\\Domain.csproj|e:\\aniket\\c#\\oainventorymanagement\\domain\\viewmodel\\userviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{50980511-7A45-481F-8A43-3BD6A8BB9563}|Domain\\Domain.csproj|solutionrelative:domain\\viewmodel\\userviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -31,19 +39,45 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "CategoryController.cs",
+              "DocumentMoniker": "E:\\aniket\\c#\\OAInventoryManagement\\InventoryManagement\\Controllers\\CategoryController.cs",
+              "RelativeDocumentMoniker": "InventoryManagement\\Controllers\\CategoryController.cs",
+              "ToolTip": "E:\\aniket\\c#\\OAInventoryManagement\\InventoryManagement\\Controllers\\CategoryController.cs",
+              "RelativeToolTip": "InventoryManagement\\Controllers\\CategoryController.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABkAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T07:04:13.24Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\aniket\\c#\\OAInventoryManagement\\InventoryManagement\\Program.cs",
+              "RelativeDocumentMoniker": "InventoryManagement\\Program.cs",
+              "ToolTip": "E:\\aniket\\c#\\OAInventoryManagement\\InventoryManagement\\Program.cs",
+              "RelativeToolTip": "InventoryManagement\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T07:03:31.978Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "UserViewModel.cs",
               "DocumentMoniker": "E:\\aniket\\c#\\OAInventoryManagement\\Domain\\ViewModel\\UserViewModel.cs",
               "RelativeDocumentMoniker": "Domain\\ViewModel\\UserViewModel.cs",
               "ToolTip": "E:\\aniket\\c#\\OAInventoryManagement\\Domain\\ViewModel\\UserViewModel.cs",
               "RelativeToolTip": "Domain\\ViewModel\\UserViewModel.cs",
-              "ViewState": "AQIAABQAAAAAAAAAAAA5wBUAAAAmAAAA",
+              "ViewState": "AQIAABUAAAAAAAAAAAAgwBUAAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-15T12:23:29.621Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "UserType.cs",
               "DocumentMoniker": "E:\\aniket\\c#\\OAInventoryManagement\\Domain\\Models\\UserType.cs",
               "RelativeDocumentMoniker": "Domain\\Models\\UserType.cs",
@@ -55,7 +89,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "User.cs",
               "DocumentMoniker": "E:\\aniket\\c#\\OAInventoryManagement\\Domain\\Models\\User.cs",
               "RelativeDocumentMoniker": "Domain\\Models\\User.cs",
@@ -67,7 +101,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "BaseEntity.cs",
               "DocumentMoniker": "E:\\aniket\\c#\\OAInventoryManagement\\Domain\\Models\\BaseEntity.cs",
               "RelativeDocumentMoniker": "Domain\\Models\\BaseEntity.cs",
