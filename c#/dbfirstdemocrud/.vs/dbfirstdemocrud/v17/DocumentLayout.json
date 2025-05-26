@@ -7,11 +7,11 @@
       "RelativeMoniker": "D:0:0:{F6165B54-D7EC-4BE6-B4F8-B483C82E12FE}|dbfirstdemocrud\\dbfirstdemocrud.csproj|solutionrelative:dbfirstdemocrud\\models\\schoolcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F6165B54-D7EC-4BE6-B4F8-B483C82E12FE}|dbfirstdemocrud\\dbfirstdemocrud.csproj|e:\\aniket\\c#\\dbfirstdemocrud\\dbfirstdemocrud\\models\\studentaddress.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F6165B54-D7EC-4BE6-B4F8-B483C82E12FE}|dbfirstdemocrud\\dbfirstdemocrud.csproj|E:\\aniket\\c#\\dbfirstdemocrud\\dbfirstdemocrud\\models\\studentaddress.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F6165B54-D7EC-4BE6-B4F8-B483C82E12FE}|dbfirstdemocrud\\dbfirstdemocrud.csproj|solutionrelative:dbfirstdemocrud\\models\\studentaddress.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F6165B54-D7EC-4BE6-B4F8-B483C82E12FE}|dbfirstdemocrud\\dbfirstdemocrud.csproj|e:\\aniket\\c#\\dbfirstdemocrud\\dbfirstdemocrud\\models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F6165B54-D7EC-4BE6-B4F8-B483C82E12FE}|dbfirstdemocrud\\dbfirstdemocrud.csproj|E:\\aniket\\c#\\dbfirstdemocrud\\dbfirstdemocrud\\models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F6165B54-D7EC-4BE6-B4F8-B483C82E12FE}|dbfirstdemocrud\\dbfirstdemocrud.csproj|solutionrelative:dbfirstdemocrud\\models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -22,12 +22,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -64,8 +60,7 @@
               "RelativeToolTip": "dbfirstdemocrud\\Models\\Student.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-27T05:15:19.657Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-27T05:15:19.657Z"
             }
           ]
         }
