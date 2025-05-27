@@ -1,0 +1,24 @@
+### GET ALL ITEMS
+GET http://localhost:5005/items 
+
+### GET Single ITEM
+GET http://localhost:5005/items/1 
+
+### ADD ITEM
+POST  http://localhost:5005/items 
+Content-Type: application/json
+
+{
+    "name":"New Item"
+}
+
+### Delete ITEM
+DELETE  http://localhost:5005/items/1
+
+### UPDATE ITEM
+PUT  http://localhost:5005/items/2
+Content-Type: application/json
+
+{
+    "name":"Updated Item"
+}
