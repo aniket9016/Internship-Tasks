@@ -8,10 +8,11 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import DownloadIcon from "@mui/icons-material/Download";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import axios from "axios";
+import { BrowserRouter as Router, Routes, Route, Link, useParams } from "react-router-dom";
 
 const API_BASE = "http://localhost:5000";
 
-function App() {
+const FileList = () => {
   const [file, setFile] = useState(null);
   const [files, setFiles] = useState([]);
   const [snackbar, setSnackbar] = useState({ open: false, message: "", severity: "success" });
@@ -113,7 +114,7 @@ function App() {
               key={name}
               secondaryAction={
                 <Stack direction="row" spacing={1}>
-                  <IconButton href={viewUrl} target="_blank" title="View File">
+                  <IconButton component={Link} to={`/preview/${name}`} title="View File">
                     <VisibilityIcon />
                   </IconButton>
                   <IconButton href={downloadUrl} title="Download File">
@@ -145,6 +146,40 @@ function App() {
         </Alert>
       </Snackbar>
     </Container>
+  );
+};
+
+const FilePreview = () => {
+  const { filename } = useParams();
+  const fileUrl = `${API_BASE}/uploads/${filename}`;
+
+  return (
+    <Container maxWidth="md" sx={{ mt: 5 }}>
+      <Typography variant="h5" gutterBottom>Preview: {filename}</Typography>
+      <Box mt={2}>
+        <iframe
+          src={fileUrl}
+          width="100%"
+          height="600px"
+          style={{ border: "1px solid #ccc" }}
+          title="File Preview"
+        />
+      </Box>
+      <Box mt={2}>
+        <Button variant="contained" component={Link} to="/" color="primary">Back</Button>
+      </Box>
+    </Container>
+  );
+};
+
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<FileList />} />
+        <Route path="/preview/:filename" element={<FilePreview />} />
+      </Routes>
+    </Router>
   );
 }
 
