@@ -1,0 +1,138 @@
+USE taskailogger;
+
+-- Create the GoogleSheetSyncLog table
+CREATE TABLE GoogleSheetSyncLog (
+    id BIGINT PRIMARY KEY AUTO_INCREMENT,
+    batchNumber BIGINT,
+    spreadSheetId VARCHAR(100),
+    sheetId VARCHAR(100),
+    syncLogStartedOn DATETIME,
+    syncLogCompletedOn DATETIME
+);
+
+-- Create the GoogleSheetSyncLogErrors table
+CREATE TABLE GoogleSheetSyncLogErrors (
+    id BIGINT PRIMARY KEY AUTO_INCREMENT,
+    googleSheetSyncLogId BIGINT,
+    rowIndex BIGINT,
+    columnIndex BIGINT,
+    sheetValue VARCHAR(500),
+    dbValue VARCHAR(500),
+    createdOn DATETIME,
+    FOREIGN KEY (googleSheetSyncLogId) REFERENCES GoogleSheetSyncLog(id)
+);
+
+INSERT INTO GoogleSheetSyncLog (batchNumber, spreadSheetId, sheetId, syncLogStartedOn, syncLogCompletedOn)
+VALUES
+(1001, 'spread_001', 'sheet_01', '2025-05-28 10:00:00', '2025-05-28 10:05:00'),
+(1002, 'spread_002', 'sheet_02', '2025-05-28 11:00:00', '2025-05-28 11:03:00'),
+(1003, 'spread_003', 'sheet_03', '2025-05-28 12:00:00', '2025-05-28 12:10:00'),
+(1004, 'spread_004', 'sheet_04', '2025-05-28 13:00:00', '2025-05-28 13:06:00'),
+(1005, 'spread_005', 'sheet_05', '2025-05-28 14:00:00', '2025-05-28 14:04:00');
+(1006, 'spread_006', 'sheet_06', '2025-05-28 16:00:00', '2025-05-28 16:02:00'),
+(1007, 'spread_007', 'sheet_07', '2025-05-28 17:00:00', '2025-05-28 17:07:00'),
+(1008, 'spread_008', 'sheet_08', '2025-05-28 18:00:00', '2025-05-28 18:05:00'),
+(1009, 'spread_009', 'sheet_09', '2025-05-28 19:00:00', '2025-05-28 19:03:00'),
+(1010, 'spread_010', 'sheet_10', '2025-05-28 20:00:00', '2025-05-28 20:04:00'),
+(1011, 'spread_011', 'sheet_11', '2025-05-28 21:00:00', '2025-05-28 21:06:00'),
+(1012, 'spread_012', 'sheet_12', '2025-05-28 22:00:00', '2025-05-28 22:04:00'),
+(1013, 'spread_013', 'sheet_13', '2025-05-28 23:00:00', '2025-05-28 23:05:00'),
+(1014, 'spread_014', 'sheet_14', '2025-05-29 00:00:00', '2025-05-29 00:02:00'),
+(1015, 'spread_015', 'sheet_15', '2025-05-29 01:00:00', '2025-05-29 01:05:00'),
+(1016, 'spread_016', 'sheet_16', '2025-05-29 02:00:00', '2025-05-29 02:08:00'),
+(1017, 'spread_017', 'sheet_17', '2025-05-29 03:00:00', '2025-05-29 03:09:00'),
+(1018, 'spread_018', 'sheet_18', '2025-05-29 04:00:00', '2025-05-29 04:02:00'),
+(1019, 'spread_019', 'sheet_19', '2025-05-29 05:00:00', '2025-05-29 05:04:00'),
+(1020, 'spread_020', 'sheet_20', '2025-05-29 06:00:00', '2025-05-29 06:09:00');
+
+INSERT INTO GoogleSheetSyncLogErrors (googleSheetSyncLogId, rowIndex, columnIndex, sheetValue, dbValue, createdOn)
+VALUES
+(1, 2, 3, 'John Doe', 'Jonathan Doe', '2025-05-28 10:01:00'),
+(2, 4, 2, '123', '123.00', '2025-05-28 11:01:00'),
+(3, 5, 1, 'TRUE', '1', '2025-05-28 12:01:00'),
+(4, 6, 4, 'Pending', 'Completed', '2025-05-28 13:01:00'),
+(5, 7, 5, 'N/A', 'NULL', '2025-05-28 14:01:00');
+(6, 1, 2, 'val_6', 'db_6', '2025-05-28 16:00:00'),
+(7, 3, 5, 'val_7', 'db_7', '2025-05-28 17:00:00'),
+(8, 9, 1, 'val_8', 'db_8', '2025-05-28 18:00:00'),
+(9, 1, 4, 'val_9', 'db_9', '2025-05-28 19:00:00'),
+(10, 3, 7, 'val_10', 'db_10', '2025-05-28 20:00:00'),
+(11, 9, 10, 'val_11', 'db_11', '2025-05-28 21:00:00'),
+(12, 4, 7, 'val_12', 'db_12', '2025-05-28 22:00:00'),
+(13, 6, 4, 'val_13', 'db_13', '2025-05-28 23:00:00'),
+(14, 7, 7, 'val_14', 'db_14', '2025-05-29 00:00:00'),
+(15, 4, 5, 'val_15', 'db_15', '2025-05-29 01:00:00'),
+(16, 10, 2, 'val_16', 'db_16', '2025-05-29 02:00:00'),
+(17, 3, 5, 'val_17', 'db_17', '2025-05-29 03:00:00'),
+(18, 8, 1, 'val_18', 'db_18', '2025-05-29 04:00:00'),
+(19, 2, 3, 'val_19', 'db_19', '2025-05-29 05:00:00'),
+(20, 10, 8, 'val_20', 'db_20', '2025-05-29 06:00:00');
+
+USE taskailogger;
+DELIMITER //
+
+DROP PROCEDURE IF EXISTS SearchSheetData;
+
+CREATE PROCEDURE SearchSheetData(
+    IN batchNumberParam VARCHAR(255),
+    IN spreadSheetIdParam VARCHAR(255),
+    IN sheetIdParam VARCHAR(255),
+    IN searchTextParam VARCHAR(255),  -- Global search
+    IN pageNumber INT,                -- Page number (starts from 1)
+    IN pageSize INT                   -- Number of records per page
+)
+BEGIN
+    DECLARE offsetValue INT;
+
+    SET offsetValue = (IFNULL(pageNumber, 1) - 1) * IFNULL(pageSize, 10);
+
+    -- Create temporary result set
+    CREATE TEMPORARY TABLE IF NOT EXISTS TempResult AS
+    SELECT 
+        gsl.id AS logId,
+        gsl.batchNumber,
+        gsl.spreadSheetId,
+        gsl.sheetId,
+        gse.id AS errorLogId,
+        gse.googleSheetSyncLogId,
+        gse.rowIndex,
+        gse.columnIndex,
+        gse.sheetValue,
+        gse.dbValue
+    FROM 
+        GoogleSheetSyncLog gsl
+    JOIN 
+        GoogleSheetSyncLogErrors gse ON gsl.id = gse.googleSheetSyncLogId
+    WHERE 
+        (IFNULL(batchNumberParam, '') = '' OR gsl.batchNumber LIKE CONCAT('%', batchNumberParam, '%'))
+        AND (IFNULL(spreadSheetIdParam, '') = '' OR gsl.spreadSheetId LIKE CONCAT('%', spreadSheetIdParam, '%'))
+        AND (IFNULL(sheetIdParam, '') = '' OR gsl.sheetId LIKE CONCAT('%', sheetIdParam, '%'))
+        AND (
+            IFNULL(searchTextParam, '') = '' OR (
+                gsl.batchNumber LIKE CONCAT('%', searchTextParam, '%') OR
+                gsl.spreadSheetId LIKE CONCAT('%', searchTextParam, '%') OR
+                gsl.sheetId LIKE CONCAT('%', searchTextParam, '%') OR
+                gse.rowIndex LIKE CONCAT('%', searchTextParam, '%') OR
+                gse.columnIndex LIKE CONCAT('%', searchTextParam, '%') OR
+                gse.sheetValue LIKE CONCAT('%', searchTextParam, '%') OR
+                gse.dbValue LIKE CONCAT('%', searchTextParam, '%')
+            )
+        );
+
+    -- Return paginated results
+    IF EXISTS (SELECT 1 FROM TempResult) THEN
+        SELECT * FROM TempResult ORDER BY logId LIMIT pageSize OFFSET offsetValue;
+    ELSE
+        SELECT 'No matching data found.' AS Message;
+    END IF;
+
+    DROP TEMPORARY TABLE IF EXISTS TempResult;
+END //
+
+DELIMITER ;
+CALL SearchSheetData('', '', '', '', 1, 5);
+CALL SearchSheetData('1001', '', '', '', 5, 1);
+
+
+
+
