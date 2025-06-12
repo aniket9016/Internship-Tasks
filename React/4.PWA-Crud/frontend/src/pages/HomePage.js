@@ -38,8 +38,6 @@ export default function HomePage() {
   useEffect(() => {
     fetchEmployees();
     loadOfflineEmployees();
-
-    // Reload offline employees on network change
     window.addEventListener("online", handleSync);
     return () => window.removeEventListener("online", handleSync);
   }, []);
@@ -52,7 +50,13 @@ export default function HomePage() {
       const formData = new FormData();
       for (const key in emp) {
         if (key === "profile_image") {
-          formData.append("profile_image", new Blob([new Uint8Array(emp.profile_image.data)], { type: emp.profile_image.type }), emp.imageName);
+          formData.append(
+            "profile_image",
+            new Blob([new Uint8Array(emp.profile_image.data)], {
+              type: emp.profile_image.type,
+            }),
+            emp.imageName
+          );
         } else {
           formData.append(key, emp[key]);
         }
@@ -105,6 +109,8 @@ export default function HomePage() {
           await saveOffline(formData);
         }
       }
+
+      // ✅ Clear modal and reset state after save
       setShowForm(false);
       setSelectedEmp(null);
       fetchEmployees();

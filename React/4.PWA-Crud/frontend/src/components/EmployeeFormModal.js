@@ -1,236 +1,237 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Modal, Button, Form } from "react-bootstrap";
 
 export default function EmployeeFormModal({ show, onHide, onSave, initialData }) {
-  const initialForm = {
+  const defaultForm = {
     first_name: "",
     last_name: "",
     age: "",
     city: "",
-    department: "",
+    department: "IT",
     gender: "Male",
     mobile: "",
+    profile_image: null,
   };
 
-  const [form, setForm] = useState(initialForm);
-  const [file, setFile] = useState(null);
+  const [form, setForm] = useState(defaultForm);
   const [preview, setPreview] = useState(null);
+  const [existingImage, setExistingImage] = useState(null);
   const [errors, setErrors] = useState({});
+  const firstNameRef = useRef(null);
 
   useEffect(() => {
+    if (show && firstNameRef.current) {
+      firstNameRef.current.focus();
+    }
+
     if (initialData) {
-      setForm(initialData);
-      setPreview(null);
-      setErrors({});
-    } else {
-      setForm(initialForm);
-      setFile(null);
-      setPreview(null);
-      setErrors({});
-    }
-  }, [initialData]);
+      setForm({
+        ...defaultForm,
+        ...initialData,
+        profile_image: null, // New image will override this if selected
+      });
 
-  useEffect(() => {
-    if (!show) {
+      // Show existing image if available
+      if (initialData.profile_image_url) {
+        setExistingImage(initialData.profile_image_url);
+      } else {
+        setExistingImage(null);
+      }
+
       setPreview(null);
-      setFile(null);
-      setErrors({});
+    } else {
+      setForm(defaultForm);
+      setPreview(null);
+      setExistingImage(null);
     }
-  }, [show]);
+
+    setErrors({});
+  }, [initialData, show]);
 
   const handleChange = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
+    const { name, value } = e.target;
+    setForm((prev) => ({ ...prev, [name]: value }));
+    setErrors((prev) => ({ ...prev, [name]: "" }));
   };
 
   const handleFileChange = (e) => {
-    const selected = e.target.files[0];
-    if (selected) {
-      const allowedTypes = ["image/jpeg", "image/png", "image/webp"];
-      const maxSize = 2 * 1024 * 1024; // 2MB
-
-      if (!allowedTypes.includes(selected.type)) {
-        setErrors({ ...errors, profile_image: "Only JPG, PNG, or WEBP files allowed" });
-        setFile(null);
-        setPreview(null);
-        return;
-      }
-
-      if (selected.size > maxSize) {
-        setErrors({ ...errors, profile_image: "File size must be under 2MB" });
-        setFile(null);
-        setPreview(null);
-        return;
-      }
-
-      setErrors({ ...errors, profile_image: null });
-      setFile(selected);
-      setPreview(URL.createObjectURL(selected));
+    const file = e.target.files[0];
+    if (file) {
+      setForm((prev) => ({ ...prev, profile_image: file }));
+      setPreview(URL.createObjectURL(file));
+      setExistingImage(null); // Hide old image when new is selected
     }
   };
 
-  const validateForm = () => {
+  const validate = () => {
     const newErrors = {};
-
-    if (!form.first_name.trim()) newErrors.first_name = "First name is required";
-    if (!form.last_name.trim()) newErrors.last_name = "Last name is required";
-    if (!form.age || form.age < 18 || form.age > 65) newErrors.age = "Valid age (18–65) is required";
-    if (!form.city.trim()) newErrors.city = "City is required";
-    if (!form.department.trim()) newErrors.department = "Department is required";
-    if (!form.mobile.trim() || !/^\d{10}$/.test(form.mobile)) newErrors.mobile = "Valid 10-digit mobile is required";
-
+    if (!form.first_name.trim()) newErrors.first_name = "First name is required.";
+    if (!form.last_name.trim()) newErrors.last_name = "Last name is required.";
+    if (!form.age || form.age < 18 || form.age > 65) newErrors.age = "Age must be 18–65.";
+    if (!form.city.trim()) newErrors.city = "City is required.";
+    if (!form.mobile.match(/^[0-9]{10}$/)) newErrors.mobile = "Mobile must be 10 digits.";
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = () => {
-    if (!validateForm()) return;
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!validate()) return;
 
-    const data = new FormData();
-    Object.entries(form).forEach(([key, val]) => data.append(key, val));
-    if (file) data.append("profile_image", file);
-    onSave(data);
+    const formData = new FormData();
+    for (const key in form) {
+      if (form[key] !== null) formData.append(key, form[key]);
+    }
+
+    if (initialData?.id) {
+      formData.append("id", initialData.id);
+    }
+
+    onSave(formData);
+    setForm(defaultForm);
+    setPreview(null);
+    setExistingImage(null);
+    setErrors({});
+  };
+
+  const handleClose = () => {
+    setForm(defaultForm);
+    setPreview(null);
+    setExistingImage(null);
+    setErrors({});
+    onHide();
   };
 
   return (
-    <Modal show={show} onHide={onHide} centered>
+    <Modal show={show} onHide={handleClose} centered>
       <Modal.Header closeButton>
-        <Modal.Title>{initialData ? "Edit" : "Add"} Employee</Modal.Title>
+        <Modal.Title>{initialData ? "Edit Employee" : "Add Employee"}</Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <Form>
-          <Form.Group>
+        <Form onSubmit={handleSubmit}>
+          <Form.Group controlId="profile_image" className="mb-3">
             <Form.Label>Profile Image</Form.Label>
             <Form.Control type="file" accept="image/*" onChange={handleFileChange} />
+            {(preview || existingImage) && (
+              <img
+                src={preview || existingImage}
+                alt="Preview"
+                className="mt-3"
+                style={{
+                  width: "100%",
+                  height: "200px",
+                  objectFit: "cover",
+                  borderRadius: "10px",
+                }}
+              />
+            )}
           </Form.Group>
 
-          {preview ? (
-            <img
-              src={preview}
-              alt="Preview"
-              className="mt-2 mb-3 d-block"
-              style={{
-                width: "100%",
-                maxWidth: "150px",
-                height: "150px",
-                objectFit: "cover",
-                borderRadius: "8px",
-              }}
-            />
-          ) : initialData?.profile_image ? (
-            <img
-              src={`http://localhost:5000/uploads/${initialData.profile_image}`}
-              alt="Preview"
-              className="mt-2 mb-3 d-block"
-              style={{
-                width: "100%",
-                maxWidth: "150px",
-                height: "150px",
-                objectFit: "cover",
-                borderRadius: "8px",
-              }}
-            />
-          ) : null}
-          {errors.profile_image && <small className="text-danger">{errors.profile_image}</small>}
-
-          <Form.Control
-            type="text"
-            placeholder="First Name"
-            name="first_name"
-            value={form.first_name}
-            onChange={handleChange}
-            className="mb-1"
-          />
-          {errors.first_name && <small className="text-danger">{errors.first_name}</small>}
-
-          <Form.Control
-            type="text"
-            placeholder="Last Name"
-            name="last_name"
-            value={form.last_name}
-            onChange={handleChange}
-            className="mb-1"
-          />
-          {errors.last_name && <small className="text-danger">{errors.last_name}</small>}
-
-          <Form.Control
-            type="number"
-            placeholder="Age"
-            name="age"
-            value={form.age}
-            onChange={handleChange}
-            className="mb-1"
-          />
-          {errors.age && <small className="text-danger">{errors.age}</small>}
-
-          <Form.Control
-            type="text"
-            placeholder="City"
-            name="city"
-            value={form.city}
-            onChange={handleChange}
-            className="mb-1"
-          />
-          {errors.city && <small className="text-danger">{errors.city}</small>}
-
-          <Form.Control
-            type="text"
-            placeholder="Department"
-            name="department"
-            value={form.department}
-            onChange={handleChange}
-            className="mb-1"
-          />
-          {errors.department && <small className="text-danger">{errors.department}</small>}
-
-          <Form.Group className="mb-1 mt-2">
-            <Form.Check
-              inline
-              label="Male"
-              name="gender"
-              type="radio"
-              value="Male"
-              checked={form.gender === "Male"}
+          <Form.Group className="mb-2">
+            <Form.Control
+              ref={firstNameRef}
+              type="text"
+              name="first_name"
+              value={form.first_name}
               onChange={handleChange}
+              placeholder="First Name"
+              isInvalid={!!errors.first_name}
             />
-            <Form.Check
-              inline
-              label="Female"
-              name="gender"
-              type="radio"
-              value="Female"
-              checked={form.gender === "Female"}
-              onChange={handleChange}
-            />
-            <Form.Check
-              inline
-              label="Other"
-              name="gender"
-              type="radio"
-              value="Other"
-              checked={form.gender === "Other"}
-              onChange={handleChange}
-            />
+            <Form.Control.Feedback type="invalid">{errors.first_name}</Form.Control.Feedback>
           </Form.Group>
 
-          <Form.Control
-            type="text"
-            placeholder="Mobile"
-            name="mobile"
-            value={form.mobile}
-            onChange={handleChange}
-            className="mb-1"
-          />
-          {errors.mobile && <small className="text-danger">{errors.mobile}</small>}
+          <Form.Group className="mb-2">
+            <Form.Control
+              type="text"
+              name="last_name"
+              value={form.last_name}
+              onChange={handleChange}
+              placeholder="Last Name"
+              isInvalid={!!errors.last_name}
+            />
+            <Form.Control.Feedback type="invalid">{errors.last_name}</Form.Control.Feedback>
+          </Form.Group>
+
+          <Form.Group className="mb-2">
+            <Form.Control
+              type="number"
+              name="age"
+              value={form.age}
+              onChange={handleChange}
+              placeholder="Age"
+              isInvalid={!!errors.age}
+            />
+            <Form.Control.Feedback type="invalid">{errors.age}</Form.Control.Feedback>
+          </Form.Group>
+
+          <Form.Group className="mb-2">
+            <Form.Control
+              type="text"
+              name="city"
+              value={form.city}
+              onChange={handleChange}
+              placeholder="City"
+              isInvalid={!!errors.city}
+            />
+            <Form.Control.Feedback type="invalid">{errors.city}</Form.Control.Feedback>
+          </Form.Group>
+
+          <Form.Group className="mb-2">
+            <Form.Label>Department</Form.Label>
+            <Form.Select name="department" value={form.department} onChange={handleChange}>
+              <option value="IT">IT</option>
+              <option value="HR">HR</option>
+              <option value="Sales">Sales</option>
+              <option value="Marketing">Marketing</option>
+            </Form.Select>
+          </Form.Group>
+
+          <Form.Group className="mb-2">
+            <Form.Label>Gender</Form.Label>
+            <div>
+              <Form.Check
+                inline
+                label="Male"
+                name="gender"
+                type="radio"
+                value="Male"
+                checked={form.gender === "Male"}
+                onChange={handleChange}
+              />
+              <Form.Check
+                inline
+                label="Female"
+                name="gender"
+                type="radio"
+                value="Female"
+                checked={form.gender === "Female"}
+                onChange={handleChange}
+              />
+            </div>
+          </Form.Group>
+
+          <Form.Group className="mb-2">
+            <Form.Control
+              type="text"
+              name="mobile"
+              value={form.mobile}
+              onChange={handleChange}
+              placeholder="Mobile"
+              isInvalid={!!errors.mobile}
+            />
+            <Form.Control.Feedback type="invalid">{errors.mobile}</Form.Control.Feedback>
+          </Form.Group>
+
+          <div className="d-flex justify-content-end mt-3">
+            <Button variant="secondary" className="me-2" onClick={handleClose}>
+              Cancel
+            </Button>
+            <Button type="submit" variant="primary">
+              {initialData ? "Update" : "Add"}
+            </Button>
+          </div>
         </Form>
       </Modal.Body>
-      <Modal.Footer>
-        <Button variant="secondary" onClick={onHide}>
-          Cancel
-        </Button>
-        <Button variant="primary" onClick={handleSubmit}>
-          {initialData ? "Update" : "Add"}
-        </Button>
-      </Modal.Footer>
     </Modal>
   );
 }
