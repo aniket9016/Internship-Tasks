@@ -23,12 +23,28 @@ const FileList = () => {
   const [files, setFiles] = useState([]);
   const [pendingFiles, setPendingFiles] = useState([]);
   const [snackbar, setSnackbar] = useState({ open: false, message: "", severity: "success" });
+  const [isOnline, setIsOnline] = useState(navigator.onLine);
 
   useEffect(() => {
     fetchFiles();
-    loadOfflineFiles();
-    window.addEventListener("online", syncLocalFiles);
-    return () => window.removeEventListener("online", syncLocalFiles);
+    if (!navigator.onLine) loadOfflineFiles();
+
+    const updateOnlineStatus = () => {
+      setIsOnline(navigator.onLine);
+      if (navigator.onLine) {
+        syncLocalFiles();
+      } else {
+        loadOfflineFiles();
+      }
+    };
+
+    window.addEventListener("online", updateOnlineStatus);
+    window.addEventListener("offline", updateOnlineStatus);
+
+    return () => {
+      window.removeEventListener("online", updateOnlineStatus);
+      window.removeEventListener("offline", updateOnlineStatus);
+    };
   }, []);
 
   const fetchFiles = async () => {
@@ -59,9 +75,7 @@ const FileList = () => {
   const handleUpload = async () => {
     if (!file) return showToast("Please choose a file first", "warning");
 
-    const isOnline = navigator.onLine;
-
-    if (!isOnline) {
+    if (!navigator.onLine) {
       await addFileToIndexedDB(file);
       showToast("Saved locally (offline). Will sync when online.", "info");
       resetFileInput();
@@ -95,7 +109,22 @@ const FileList = () => {
 
     for (const { name, data, type } of pending) {
       try {
-        const file = new File([new Uint8Array(data)], name, { type });
+        // Check if file already exists on server
+        const existsRes = await axios.get(`${API_BASE}/exists/${name}`);
+        if (existsRes.data.exists) {
+          console.log(`Skipped (already exists): ${name}`);
+          await deleteFileFromIndexedDB(name);
+          continue;
+        }
+      } catch (err) {
+        if (err?.response?.status !== 404) {
+          console.error("Error checking existence for", name);
+          continue;
+        }
+      }
+
+      const file = new File([new Uint8Array(data)], name, { type });
+      try {
         await uploadFileToServer(file);
         await deleteFileFromIndexedDB(name);
         console.log(`Synced: ${name}`);
@@ -185,26 +214,30 @@ const FileList = () => {
         </List>
       )}
 
-      <Typography variant="h6" gutterBottom mt={4}>
-        Pending Uploads (Offline)
-      </Typography>
-      {pendingFiles.length === 0 ? (
-        <Typography>No offline files pending.</Typography>
-      ) : (
-        <List>
-          {pendingFiles.map(({ name }) => (
-            <ListItem
-              key={name}
-              secondaryAction={
-                <IconButton onClick={() => handleDeleteOffline(name)} title="Delete File" color="error">
-                  <DeleteIcon />
-                </IconButton>
-              }
-            >
-              <ListItemText primary={name} />
-            </ListItem>
-          ))}
-        </List>
+      {!isOnline && (
+        <>
+          <Typography variant="h6" gutterBottom mt={4}>
+            Pending Uploads (Offline)
+          </Typography>
+          {pendingFiles.length === 0 ? (
+            <Typography>No offline files pending.</Typography>
+          ) : (
+            <List>
+              {pendingFiles.map(({ name }) => (
+                <ListItem
+                  key={name}
+                  secondaryAction={
+                    <IconButton onClick={() => handleDeleteOffline(name)} title="Delete File" color="error">
+                      <DeleteIcon />
+                    </IconButton>
+                  }
+                >
+                  <ListItemText primary={name} />
+                </ListItem>
+              ))}
+            </List>
+          )}
+        </>
       )}
 
       <Snackbar

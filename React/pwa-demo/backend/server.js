@@ -16,6 +16,16 @@ if (!fs.existsSync(uploadDir)) {
 // Serve static files
 app.use("/uploads", express.static(uploadDir));
 
+// ✅ Check if file exists
+app.get("/exists/:filename", (req, res) => {
+  const filePath = path.join(uploadDir, req.params.filename);
+  if (fs.existsSync(filePath)) {
+    res.status(200).json({ exists: true });
+  } else {
+    res.status(404).json({ exists: false });
+  }
+});
+
 const storage = multer.diskStorage({
   destination: (req, file, cb) => cb(null, "uploads/"),
   filename: (req, file, cb) => {
