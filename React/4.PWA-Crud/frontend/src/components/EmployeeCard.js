@@ -1,31 +1,35 @@
 import React from "react";
-import { Button, Card } from "react-bootstrap";
+import { Card, Button } from "react-bootstrap";
 
-const EmployeeCard = ({ emp, onEdit, onDelete }) => (
-  <Card className="m-2" style={{ width: "18rem" }}>
-    <Card.Img
-      variant="top"
-      src={emp.image_url || "https://via.placeholder.com/150"}
-      style={{ height: "200px", objectFit: "cover" }}
-    />
-    <Card.Body>
-      <Card.Title>
-        {emp.first_name} {emp.last_name} ({emp.gender})
-      </Card.Title>
-      <Card.Text>
-        Age: {emp.age} <br />
-        City: {emp.city} <br />
-        Dept: {emp.department} <br />
-        Mobile: {emp.mobile}
-      </Card.Text>
-      <Button variant="warning" onClick={() => onEdit(emp)} className="me-2">
-        Edit
-      </Button>
-      <Button variant="danger" onClick={() => onDelete(emp.id)}>
-        Delete
-      </Button>
-    </Card.Body>
-  </Card>
-);
+export default function EmployeeCard({ emp, onEdit, onDelete, onView }) {
+  return (
+    <Card className="mb-3">
+      <Card.Img
+        variant="top"
+        src={emp.image_url || "https://via.placeholder.com/150"}
+        style={{
+          width: "100%",
+          height: "200px",
+          objectFit: "cover",
+          objectPosition: "center",
+        }}
+        className="img-fluid rounded"
+      />
 
-export default EmployeeCard;
+      <Card.Body className="text-center">
+        <Card.Title>
+          {emp.first_name} {emp.last_name}
+        </Card.Title>
+        <Button variant="info" size="sm" onClick={() => onView(emp)}>
+          View
+        </Button>{" "}
+        <Button variant="warning" size="sm" onClick={() => onEdit(emp)}>
+          Edit
+        </Button>{" "}
+        <Button variant="danger" size="sm" onClick={() => onDelete(emp.id)}>
+          Delete
+        </Button>
+      </Card.Body>
+    </Card>
+  );
+}

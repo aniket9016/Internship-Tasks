@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { Button, Card, Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-import { getEmployees, deleteEmployee } from "../api";
+import { getEmployees, deleteEmployee, addEmployee, updateEmployee } from "../api";
 import EmployeeFormModal from "../components/EmployeeFormModal";
 import ConfirmModal from "../components/ConfirmModal";
+import EmployeeCard from "../components/EmployeeCard";
 import { toast } from "react-toastify";
 
 export default function HomePage() {
@@ -18,7 +19,7 @@ export default function HomePage() {
     try {
       const { data } = await getEmployees();
       setEmployees(data);
-    } catch (err) {
+    } catch {
       toast.error("Error fetching employees");
     }
   };
@@ -39,7 +40,7 @@ export default function HomePage() {
       setShowForm(false);
       setSelectedEmp(null);
       fetchEmployees();
-    } catch (err) {
+    } catch {
       toast.error("Save failed");
     }
   };
@@ -49,9 +50,8 @@ export default function HomePage() {
       await deleteEmployee(deleteId);
       toast.success("Employee deleted!");
       setShowDelete(false);
-      setDeleteId(null);
       fetchEmployees();
-    } catch (err) {
+    } catch {
       toast.error("Delete failed");
     }
   };
@@ -65,34 +65,18 @@ export default function HomePage() {
       <Row>
         {employees.map(emp => (
           <Col key={emp.id} md={3}>
-            <Card className="mb-3">
-              <Card.Img
-                variant="top"
-                src={emp.image_url || "https://via.placeholder.com/150"}
-                height="150"
-                style={{ objectFit: "cover" }}
-              />
-              <Card.Body className="text-center">
-                <Card.Title>{emp.first_name} {emp.last_name}</Card.Title>
-                <Button
-                  variant="info"
-                  size="sm"
-                  onClick={() => navigate(`/employee/${emp.id}`)}
-                >
-                  View
-                </Button>{" "}
-                <Button
-                  variant="danger"
-                  size="sm"
-                  onClick={() => {
-                    setDeleteId(emp.id);
-                    setShowDelete(true);
-                  }}
-                >
-                  Delete
-                </Button>
-              </Card.Body>
-            </Card>
+            <EmployeeCard
+              emp={emp}
+              onView={() => navigate(`/employee/${emp.id}`)}
+              onEdit={(data) => {
+                setSelectedEmp(data);
+                setShowForm(true);
+              }}
+              onDelete={(id) => {
+                setDeleteId(id);
+                setShowDelete(true);
+              }}
+            />
           </Col>
         ))}
       </Row>
@@ -110,10 +94,7 @@ export default function HomePage() {
       <ConfirmModal
         show={showDelete}
         onConfirm={handleDelete}
-        onCancel={() => {
-          setShowDelete(false);
-          setDeleteId(null);
-        }}
+        onCancel={() => setShowDelete(false)}
       />
     </Container>
   );

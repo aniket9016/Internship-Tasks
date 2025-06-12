@@ -19,3 +19,4 @@ export const updateEmployee = (id, data) =>
   });
 
 export const deleteEmployee = (id) => API.delete(`/employees/${id}`);
+export const getEmployeeById = (id) => API.get(`/employees/${id}`);

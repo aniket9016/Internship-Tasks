@@ -44,8 +44,28 @@ export default function EmployeeFormModal({ show, onHide, onSave, initialData })
 
   const handleFileChange = (e) => {
     const selected = e.target.files[0];
-    setFile(selected);
-    setPreview(URL.createObjectURL(selected));
+    if (selected) {
+      const allowedTypes = ["image/jpeg", "image/png", "image/webp"];
+      const maxSize = 2 * 1024 * 1024; // 2MB
+
+      if (!allowedTypes.includes(selected.type)) {
+        setErrors({ ...errors, profile_image: "Only JPG, PNG, or WEBP files allowed" });
+        setFile(null);
+        setPreview(null);
+        return;
+      }
+
+      if (selected.size > maxSize) {
+        setErrors({ ...errors, profile_image: "File size must be under 2MB" });
+        setFile(null);
+        setPreview(null);
+        return;
+      }
+
+      setErrors({ ...errors, profile_image: null });
+      setFile(selected);
+      setPreview(URL.createObjectURL(selected));
+    }
   };
 
   const validateForm = () => {
@@ -87,19 +107,30 @@ export default function EmployeeFormModal({ show, onHide, onSave, initialData })
             <img
               src={preview}
               alt="Preview"
-              height={100}
               className="mt-2 mb-3 d-block"
-              style={{ objectFit: "cover" }}
+              style={{
+                width: "100%",
+                maxWidth: "150px",
+                height: "150px",
+                objectFit: "cover",
+                borderRadius: "8px",
+              }}
             />
           ) : initialData?.profile_image ? (
             <img
               src={`http://localhost:5000/uploads/${initialData.profile_image}`}
               alt="Preview"
-              height={100}
               className="mt-2 mb-3 d-block"
-              style={{ objectFit: "cover" }}
+              style={{
+                width: "100%",
+                maxWidth: "150px",
+                height: "150px",
+                objectFit: "cover",
+                borderRadius: "8px",
+              }}
             />
           ) : null}
+          {errors.profile_image && <small className="text-danger">{errors.profile_image}</small>}
 
           <Form.Control
             type="text"

@@ -1,7 +1,7 @@
 import React from "react";
 import { Modal, Button } from "react-bootstrap";
 
-export default function ConfirmDeleteModal({ show, onConfirm, onCancel }) {
+export default function ConfirmModal({ show, onConfirm, onCancel }) {
   return (
     <Modal show={show} onHide={onCancel} centered>
       <Modal.Header closeButton>
