@@ -3,6 +3,7 @@ const multer = require("multer");
 const cors = require("cors");
 const path = require("path");
 const fs = require("fs");
+const mime = require("mime-types"); // 📦 npm install mime-types
 
 const app = express();
 app.use(cors());
@@ -12,7 +13,8 @@ if (!fs.existsSync(uploadDir)) {
   fs.mkdirSync(uploadDir);
 }
 
-app.use("/uploads", express.static(uploadDir)); // Important
+// Serve static files
+app.use("/uploads", express.static(uploadDir));
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => cb(null, "uploads/"),
@@ -27,6 +29,7 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage });
 
+// Upload route
 app.post("/upload", (req, res) => {
   upload.single("file")(req, res, (err) => {
     if (err) {
@@ -41,29 +44,47 @@ app.post("/upload", (req, res) => {
   });
 });
 
+// List files
 app.get("/files", (req, res) => {
   fs.readdir(uploadDir, (err, files) => {
     if (err) return res.status(500).send("Unable to scan files");
-    const fileList = files.map((file) => ({
-      name: file,
-      viewUrl: `http://localhost:5000/uploads/${file}`,
-      downloadUrl: `http://localhost:5000/download/${file}`,
-    }));
+
+    const fileList = files.map((file) => {
+      const filePath = path.join(uploadDir, file);
+      const mimeType = mime.lookup(filePath) || "application/octet-stream";
+      return {
+        name: file,
+        type: mimeType,
+        viewUrl: `http://localhost:5000/uploads/${file}`,
+        downloadUrl: `http://localhost:5000/download/${file}`,
+      };
+    });
+
     res.json(fileList);
   });
 });
 
+// Download file
 app.get("/download/:filename", (req, res) => {
   const filePath = path.join(uploadDir, req.params.filename);
+  if (!fs.existsSync(filePath)) {
+    return res.status(404).json({ error: "File not found" });
+  }
   res.download(filePath);
 });
 
+// Delete file
 app.delete("/delete/:filename", (req, res) => {
   const filePath = path.join(uploadDir, req.params.filename);
+  if (!fs.existsSync(filePath)) {
+    return res.status(404).json({ error: "File not found" });
+  }
+
   fs.unlink(filePath, (err) => {
     if (err) return res.status(500).send("Error deleting file");
     res.send({ message: "File deleted successfully." });
   });
 });
 
+// Start server
 app.listen(5000, () => console.log("Server running on http://localhost:5000"));

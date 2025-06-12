@@ -10,15 +10,25 @@ import VisibilityIcon from "@mui/icons-material/Visibility";
 import axios from "axios";
 import { BrowserRouter as Router, Routes, Route, Link, useParams } from "react-router-dom";
 
+import {
+  addFileToIndexedDB,
+  getAllPendingFiles,
+  deleteFileFromIndexedDB
+} from "./utils/db";
+
 const API_BASE = "http://localhost:5000";
 
 const FileList = () => {
   const [file, setFile] = useState(null);
   const [files, setFiles] = useState([]);
+  const [pendingFiles, setPendingFiles] = useState([]);
   const [snackbar, setSnackbar] = useState({ open: false, message: "", severity: "success" });
 
   useEffect(() => {
     fetchFiles();
+    loadOfflineFiles();
+    window.addEventListener("online", syncLocalFiles);
+    return () => window.removeEventListener("online", syncLocalFiles);
   }, []);
 
   const fetchFiles = async () => {
@@ -28,6 +38,11 @@ const FileList = () => {
     } catch {
       showToast("Failed to load files", "error");
     }
+  };
+
+  const loadOfflineFiles = async () => {
+    const offline = await getAllPendingFiles();
+    setPendingFiles(offline);
   };
 
   const showToast = (message, severity = "success") => {
@@ -44,13 +59,27 @@ const FileList = () => {
   const handleUpload = async () => {
     if (!file) return showToast("Please choose a file first", "warning");
 
+    const isOnline = navigator.onLine;
+
+    if (!isOnline) {
+      await addFileToIndexedDB(file);
+      showToast("Saved locally (offline). Will sync when online.", "info");
+      resetFileInput();
+      loadOfflineFiles();
+      return;
+    }
+
+    await uploadFileToServer(file);
+    resetFileInput();
+  };
+
+  const uploadFileToServer = async (fileToUpload) => {
     const formData = new FormData();
-    formData.append("file", file);
+    formData.append("file", fileToUpload);
 
     try {
       await axios.post(`${API_BASE}/upload`, formData);
       showToast("File uploaded successfully!");
-      resetFileInput();
       fetchFiles();
     } catch (err) {
       if (err?.response?.status === 409) {
@@ -61,6 +90,24 @@ const FileList = () => {
     }
   };
 
+  const syncLocalFiles = async () => {
+    const pending = await getAllPendingFiles();
+
+    for (const { name, data, type } of pending) {
+      try {
+        const file = new File([new Uint8Array(data)], name, { type });
+        await uploadFileToServer(file);
+        await deleteFileFromIndexedDB(name);
+        console.log(`Synced: ${name}`);
+      } catch (err) {
+        console.error(`Failed to sync ${name}`, err);
+      }
+    }
+
+    await fetchFiles();
+    await loadOfflineFiles();
+  };
+
   const handleDelete = async (filename) => {
     try {
       await axios.delete(`${API_BASE}/delete/${filename}`);
@@ -69,6 +116,12 @@ const FileList = () => {
     } catch {
       showToast("Failed to delete file", "error");
     }
+  };
+
+  const handleDeleteOffline = async (filename) => {
+    await deleteFileFromIndexedDB(filename);
+    showToast("Offline file removed", "info");
+    loadOfflineFiles();
   };
 
   return (
@@ -132,6 +185,28 @@ const FileList = () => {
         </List>
       )}
 
+      <Typography variant="h6" gutterBottom mt={4}>
+        Pending Uploads (Offline)
+      </Typography>
+      {pendingFiles.length === 0 ? (
+        <Typography>No offline files pending.</Typography>
+      ) : (
+        <List>
+          {pendingFiles.map(({ name }) => (
+            <ListItem
+              key={name}
+              secondaryAction={
+                <IconButton onClick={() => handleDeleteOffline(name)} title="Delete File" color="error">
+                  <DeleteIcon />
+                </IconButton>
+              }
+            >
+              <ListItemText primary={name} />
+            </ListItem>
+          ))}
+        </List>
+      )}
+
       <Snackbar
         open={snackbar.open}
         autoHideDuration={4000}
@@ -172,7 +247,7 @@ const FilePreview = () => {
   );
 };
 
-function App() {
+export default function App() {
   return (
     <Router>
       <Routes>
@@ -182,5 +257,3 @@ function App() {
     </Router>
   );
 }
-
-export default App;
