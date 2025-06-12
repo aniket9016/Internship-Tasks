@@ -28,12 +28,12 @@ export default function EmployeeFormModal({ show, onHide, onSave, initialData })
       setForm({
         ...defaultForm,
         ...initialData,
-        profile_image: null, // New image will override this if selected
+        profile_image: null, // Reset image input
       });
 
-      // Show existing image if available
-      if (initialData.profile_image_url) {
-        setExistingImage(initialData.profile_image_url);
+      // ✅ Updated to check 'image_url' instead of 'profile_image_url'
+      if (initialData.image_url) {
+        setExistingImage(initialData.image_url);
       } else {
         setExistingImage(null);
       }
@@ -59,7 +59,7 @@ export default function EmployeeFormModal({ show, onHide, onSave, initialData })
     if (file) {
       setForm((prev) => ({ ...prev, profile_image: file }));
       setPreview(URL.createObjectURL(file));
-      setExistingImage(null); // Hide old image when new is selected
+      setExistingImage(null); // Hide old image when new selected
     }
   };
 
