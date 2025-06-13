@@ -14,9 +14,7 @@ import {
   Badge,
   Card,
   CardContent,
-  Grid,
-  Divider,
-  Snackbar
+  Grid
 } from "@mui/material";
 import {
   Add as AddIcon,
@@ -44,8 +42,7 @@ import {
 import {
   saveEmployeeOffline,
   getOfflineEmployees,
-  deleteOfflineEmployee,
-  clearOfflineEmployees
+  deleteOfflineEmployee
 } from "../utils/idb";
 
 import EmployeeFormModal from "../components/EmployeeFormModal";
@@ -66,8 +63,9 @@ export default function HomePage() {
   const [lastSyncTime, setLastSyncTime] = useState(null);
   const navigate = useNavigate();
 
-  // Memoized function to fetch employees
   const fetchEmployees = useCallback(async (showRefreshIndicator = false) => {
+    if (!isOnline) return;
+    
     try {
       if (showRefreshIndicator) setRefreshing(true);
       else setLoading(true);
@@ -79,10 +77,8 @@ export default function HomePage() {
         toast.success("Employee data refreshed successfully");
       }
     } catch (err) {
-      if (isOnline) {
-        toast.error("Failed to fetch employees from server");
-        console.error("Fetch error:", err);
-      }
+      toast.error("Failed to fetch employees from server");
+      console.error("Fetch error:", err);
     } finally {
       setLoading(false);
       setRefreshing(false);
@@ -105,7 +101,6 @@ export default function HomePage() {
     const handleOnline = () => {
       setIsOnline(true);
       toast.success("Back online! You can now sync your data.");
-      // Auto-refresh data when coming back online
       fetchEmployees(true);
     };
     
@@ -132,42 +127,20 @@ export default function HomePage() {
     setSyncing(true);
     try {
       const offlineData = await getOfflineEmployees();
-      let syncedCount = 0;
-      let errorCount = 0;
       
       if (offlineData.length === 0) {
         toast.info("No offline data to sync");
         return;
       }
 
+      let syncedCount = 0;
+      let errorCount = 0;
+
       for (const emp of offlineData) {
         try {
-          const formData = new FormData();
-          Object.entries(emp).forEach(([key, val]) => {
-            if (key !== "localId" && key !== "offlineAction" && key !== "timestamp") {
-              if (key === "profile_image" && val?.data) {
-                const blob = new Blob([new Uint8Array(val.data)], {
-                  type: val.type || "image/jpeg"
-                });
-                formData.append(key, blob, emp.imageName || "image.jpg");
-              } else if (val !== null && val !== undefined) {
-                formData.append(key, val);
-              }
-            }
-          });
-          
-          if (emp.offlineAction === "add") {
-            await addEmployee(formData);
-          } else if (emp.offlineAction === "edit") {
-            await updateEmployee(emp.id, formData);
-          } else if (emp.offlineAction === "delete") {
-            await deleteEmployee(emp.id);
-          }
-          
-          // Remove from offline storage after successful sync
+          await syncSingleEmployee(emp);
           await deleteOfflineEmployee(emp.localId);
           syncedCount++;
-          
         } catch (syncError) {
           console.error(`Failed to sync employee ${emp.first_name} ${emp.last_name}:`, syncError);
           errorCount++;
@@ -191,6 +164,46 @@ export default function HomePage() {
     }
   };
 
+  const syncSingleEmployee = async (emp) => {
+    const formData = createFormDataFromEmployee(emp);
+    
+    switch (emp.offlineAction) {
+      case "add":
+        await addEmployee(formData);
+        break;
+      case "edit":
+        await updateEmployee(emp.id, formData);
+        break;
+      case "delete":
+        await deleteEmployee(emp.id);
+        break;
+      default:
+        throw new Error(`Unknown offline action: ${emp.offlineAction}`);
+    }
+  };
+
+  const createFormDataFromEmployee = (emp) => {
+    const formData = new FormData();
+    
+    Object.entries(emp).forEach(([key, val]) => {
+      if (["localId", "offlineAction", "timestamp"].includes(key)) {
+        return; // Skip these fields
+      }
+      
+      if (key === "profile_image" && val?.data) {
+        // Handle offline image data
+        const blob = new Blob([new Uint8Array(val.data)], {
+          type: val.type || "image/jpeg"
+        });
+        formData.append(key, blob, emp.imageName || "image.jpg");
+      } else if (val !== null && val !== undefined && val !== '') {
+        formData.append(key, val.toString());
+      }
+    });
+    
+    return formData;
+  };
+
   const handleSave = async (formData) => {
     try {
       if (selectedEmp) {
@@ -200,10 +213,7 @@ export default function HomePage() {
           toast.success("Employee updated successfully");
           await fetchEmployees();
         } else {
-          if (!selectedEmp.localId) {
-            formData.append("id", selectedEmp.id);
-          }
-          await saveOffline(formData, "edit");
+          await saveOffline(formData, "edit", selectedEmp);
         }
       } else {
         // Add new employee
@@ -223,31 +233,42 @@ export default function HomePage() {
     }
   };
 
-  const saveOffline = async (formData, action) => {
+  const saveOffline = async (formData, action, existingEmployee = null) => {
     try {
-      const plain = { offlineAction: action };
-      for (let [k, v] of formData.entries()) {
-        if (k === "profile_image" && v instanceof File) {
-          const buffer = await v.arrayBuffer();
-          plain[k] = { data: Array.from(new Uint8Array(buffer)), type: v.type };
-          plain.imageName = v.name;
+      const employeeData = { 
+        offlineAction: action,
+        timestamp: new Date().toISOString()
+      };
+      
+      // Convert FormData to plain object
+      for (let [key, value] of formData.entries()) {
+        if (key === "profile_image" && value instanceof File) {
+          const buffer = await value.arrayBuffer();
+          employeeData[key] = { 
+            data: Array.from(new Uint8Array(buffer)), 
+            type: value.type,
+            name: value.name
+          };
+          employeeData.imageName = value.name;
         } else {
-          plain[k] = v;
+          employeeData[key] = value;
         }
       }
       
-      // If updating existing employee, preserve the ID and localId
-      if (action === 'edit' && selectedEmp) {
-        if (selectedEmp.localId) {
-          plain.localId = selectedEmp.localId;
+      // Preserve existing employee data for edits
+      if (action === 'edit' && existingEmployee) {
+        if (existingEmployee.localId) {
+          employeeData.localId = existingEmployee.localId;
         } else {
-          plain.id = selectedEmp.id;
+          employeeData.id = existingEmployee.id;
         }
       }
       
-      await saveEmployeeOffline(plain, action);
+      await saveEmployeeOffline(employeeData);
       await loadOfflineEmployees();
-      toast.success(`Employee ${action === 'add' ? 'added' : 'updated'} offline`);
+      
+      const actionText = action === 'add' ? 'added' : 'updated';
+      toast.success(`Employee ${actionText} offline - will sync when back online`);
     } catch (err) {
       console.error("Offline save error:", err);
       throw err;
@@ -256,8 +277,8 @@ export default function HomePage() {
 
   const handleDelete = async () => {
     try {
-      const employeeToDelete = employees.find((e) => e.id === deleteId) || 
-                              offlineEmployees.find((e) => e.localId === deleteId);
+      const employeeToDelete = [...employees, ...offlineEmployees]
+        .find(e => (e.id === deleteId) || (e.localId === deleteId));
       
       if (!employeeToDelete) {
         toast.error("Employee not found");
@@ -271,18 +292,15 @@ export default function HomePage() {
         toast.success("Offline employee deleted");
       } else if (!isOnline) {
         // Mark online employee for offline deletion
-        const formData = new FormData();
-        Object.entries(employeeToDelete).forEach(([k, v]) => {
-          if (v !== null && v !== undefined) {
-            formData.append(k, v);
-          }
-        });
-        formData.append("id", employeeToDelete.id);
-        await saveOffline(formData, "delete");
-        await loadOfflineEmployees();
-        toast.success("Employee marked for deletion offline");
+        const deleteData = {
+          ...employeeToDelete,
+          offlineAction: "delete",
+          timestamp: new Date().toISOString()
+        };
+        await saveEmployeeOffline(deleteData);
+        toast.success("Employee marked for deletion - will sync when back online");
       } else {
-        // Delete online employee
+        // Delete online employee immediately
         await deleteEmployee(deleteId);
         toast.success("Employee deleted successfully");
         await fetchEmployees();
@@ -306,11 +324,6 @@ export default function HomePage() {
   };
 
   const handleDeleteClick = (employee) => {
-    if (!isOnline && !employee.localId) {
-      toast.warning("Cannot delete online employee while offline");
-      return;
-    }
-    
     setDeleteId(employee.id || employee.localId);
     setShowDelete(true);
   };
@@ -342,11 +355,7 @@ export default function HomePage() {
       return `http://localhost:5000/uploads/${row.profile_image}`;
     }
     
-    if (row.image_url) {
-      return row.image_url;
-    }
-    
-    return null;
+    return row.image_url || null;
   };
 
   const columns = [
@@ -365,7 +374,6 @@ export default function HomePage() {
               height: 50,
               border: '2px solid',
               borderColor: row.localId ? 'warning.main' : 'primary.light',
-              boxShadow: 1
             }}
           >
             {!imageUrl && <PersonIcon />}
@@ -500,7 +508,6 @@ export default function HomePage() {
               color="error"
               size="small"
               onClick={() => handleDeleteClick(row)}
-              disabled={!isOnline && !row.localId}
             >
               <DeleteIcon fontSize="small" />
             </IconButton>
@@ -562,7 +569,6 @@ export default function HomePage() {
             label={isOnline ? "Online" : "Offline"}
             color={isOnline ? "success" : "error"}
             variant="filled"
-            sx={{ fontWeight: 'bold' }}
           />
           
           {isOnline && (
@@ -585,7 +591,6 @@ export default function HomePage() {
                 onClick={handleSync}
                 disabled={syncing}
                 color="warning"
-                sx={{ fontWeight: 'bold' }}
               >
                 {syncing ? "Syncing..." : "Sync Data"}
               </Button>
@@ -597,7 +602,6 @@ export default function HomePage() {
             onClick={() => setShowForm(true)} 
             variant="contained"
             size="large"
-            sx={{ fontWeight: 'bold' }}
           >
             Add Employee
           </Button>
@@ -762,7 +766,7 @@ export default function HomePage() {
           setDeleteId(null);
         }}
         title="Delete Employee"
-        message={`Are you sure you want to delete this employee? This action cannot be undone.`}
+        message="Are you sure you want to delete this employee? This action cannot be undone."
       />
     </Container>
   );

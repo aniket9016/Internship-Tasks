@@ -22,8 +22,7 @@ import {
 } from "@mui/material";
 import {
   Close as CloseIcon,
-  CloudUpload as UploadIcon,
-  Delete as DeleteIcon
+  CloudUpload as UploadIcon
 } from "@mui/icons-material";
 
 export default function EmployeeFormModal({ show, onHide, onSave, initialData }) {
@@ -234,23 +233,7 @@ export default function EmployeeFormModal({ show, onHide, onSave, initialData })
                     boxShadow: 3
                   }}
                 />
-                {/* Only show delete button for newly uploaded images (preview), not existing images */}
-                {preview && (
-                  <IconButton
-                    size="small"
-                    onClick={handleRemoveImage}
-                    sx={{
-                      position: 'absolute',
-                      top: 0,
-                      right: 0,
-                      bgcolor: 'error.main',
-                      color: 'white',
-                      '&:hover': { bgcolor: 'error.dark' }
-                    }}
-                  >
-                    <DeleteIcon fontSize="small" />
-                  </IconButton>
-                )}
+                
               </Box>
 
               <input
