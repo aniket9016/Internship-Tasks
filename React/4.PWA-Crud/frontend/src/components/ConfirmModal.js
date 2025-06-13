@@ -1,17 +1,46 @@
 import React from "react";
-import { Modal, Button } from "react-bootstrap";
+import {
+  Dialog,
+  DialogTitle,
+  DialogContent,
+  DialogActions,
+  Button,
+  Typography,
+  IconButton
+} from "@mui/material";
+import { Close as CloseIcon } from "@mui/icons-material";
 
 export default function ConfirmModal({ show, onConfirm, onCancel }) {
   return (
-    <Modal show={show} onHide={onCancel} centered>
-      <Modal.Header closeButton>
-        <Modal.Title>Confirm Delete</Modal.Title>
-      </Modal.Header>
-      <Modal.Body>Are you sure you want to delete this employee?</Modal.Body>
-      <Modal.Footer>
-        <Button variant="secondary" onClick={onCancel}>Cancel</Button>
-        <Button variant="danger" onClick={onConfirm}>Delete</Button>
-      </Modal.Footer>
-    </Modal>
+    <Dialog open={show} onClose={onCancel} maxWidth="sm" fullWidth>
+      <DialogTitle>
+        Confirm Delete
+        <IconButton
+          aria-label="close"
+          onClick={onCancel}
+          sx={{
+            position: 'absolute',
+            right: 8,
+            top: 8,
+            color: (theme) => theme.palette.grey[500],
+          }}
+        >
+          <CloseIcon />
+        </IconButton>
+      </DialogTitle>
+      <DialogContent>
+        <Typography variant="body1">
+          Are you sure you want to delete this employee?
+        </Typography>
+      </DialogContent>
+      <DialogActions>
+        <Button onClick={onCancel} variant="outlined">
+          Cancel
+        </Button>
+        <Button onClick={onConfirm} variant="contained" color="error">
+          Delete
+        </Button>
+      </DialogActions>
+    </Dialog>
   );
 }

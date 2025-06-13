@@ -1,5 +1,28 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Modal, Button, Form } from "react-bootstrap";
+import {
+  Dialog,
+  DialogTitle,
+  DialogContent,
+  DialogActions,
+  Button,
+  TextField,
+  FormControl,
+  InputLabel,
+  Select,
+  MenuItem,
+  FormLabel,
+  RadioGroup,
+  FormControlLabel,
+  Radio,
+  Box,
+  IconButton,
+  Typography,
+  Avatar
+} from "@mui/material";
+import {
+  Close as CloseIcon,
+  CloudUpload as UploadIcon
+} from "@mui/icons-material";
 
 export default function EmployeeFormModal({ show, onHide, onSave, initialData }) {
   const defaultForm = {
@@ -18,22 +41,39 @@ export default function EmployeeFormModal({ show, onHide, onSave, initialData })
   const [existingImage, setExistingImage] = useState(null);
   const [errors, setErrors] = useState({});
   const firstNameRef = useRef(null);
+  const fileInputRef = useRef(null);
 
   useEffect(() => {
     if (show && firstNameRef.current) {
-      firstNameRef.current.focus();
+      setTimeout(() => firstNameRef.current.focus(), 100);
     }
+
+    let objectUrl = null;
 
     if (initialData) {
       setForm({
         ...defaultForm,
         ...initialData,
-        profile_image: null, // Reset image input
+        profile_image: null,
       });
 
-      // ✅ Updated to check 'image_url' instead of 'profile_image_url'
       if (initialData.image_url) {
         setExistingImage(initialData.image_url);
+      } else if (
+        initialData.profile_image &&
+        initialData.profile_image.data &&
+        initialData.profile_image.type
+      ) {
+        try {
+          const blob = new Blob([new Uint8Array(initialData.profile_image.data)], {
+            type: initialData.profile_image.type,
+          });
+          objectUrl = URL.createObjectURL(blob);
+          setExistingImage(objectUrl);
+        } catch (err) {
+          console.error("Failed to parse offline image blob", err);
+          setExistingImage(null);
+        }
       } else {
         setExistingImage(null);
       }
@@ -46,6 +86,10 @@ export default function EmployeeFormModal({ show, onHide, onSave, initialData })
     }
 
     setErrors({});
+
+    return () => {
+      if (objectUrl) URL.revokeObjectURL(objectUrl);
+    };
   }, [initialData, show]);
 
   const handleChange = (e) => {
@@ -59,7 +103,7 @@ export default function EmployeeFormModal({ show, onHide, onSave, initialData })
     if (file) {
       setForm((prev) => ({ ...prev, profile_image: file }));
       setPreview(URL.createObjectURL(file));
-      setExistingImage(null); // Hide old image when new selected
+      setExistingImage(null);
     }
   };
 
@@ -88,10 +132,7 @@ export default function EmployeeFormModal({ show, onHide, onSave, initialData })
     }
 
     onSave(formData);
-    setForm(defaultForm);
-    setPreview(null);
-    setExistingImage(null);
-    setErrors({});
+    handleClose();
   };
 
   const handleClose = () => {
@@ -103,135 +144,166 @@ export default function EmployeeFormModal({ show, onHide, onSave, initialData })
   };
 
   return (
-    <Modal show={show} onHide={handleClose} centered>
-      <Modal.Header closeButton>
-        <Modal.Title>{initialData ? "Edit Employee" : "Add Employee"}</Modal.Title>
-      </Modal.Header>
-      <Modal.Body>
-        <Form onSubmit={handleSubmit}>
-          <Form.Group controlId="profile_image" className="mb-3">
-            <Form.Label>Profile Image</Form.Label>
-            <Form.Control type="file" accept="image/*" onChange={handleFileChange} />
-            {(preview || existingImage) && (
-              <img
-                src={preview || existingImage}
-                alt="Preview"
-                className="mt-3"
-                style={{
-                  width: "100%",
-                  height: "200px",
-                  objectFit: "cover",
-                  borderRadius: "10px",
-                }}
+    <Dialog open={show} onClose={handleClose} maxWidth="md" fullWidth>
+      <DialogTitle>
+        {initialData ? "Edit Employee" : "Add Employee"}
+        <IconButton
+          aria-label="close"
+          onClick={handleClose}
+          sx={{
+            position: 'absolute',
+            right: 8,
+            top: 8,
+            color: (theme) => theme.palette.grey[500],
+          }}
+        >
+          <CloseIcon />
+        </IconButton>
+      </DialogTitle>
+
+      <form onSubmit={handleSubmit}>
+        <DialogContent>
+          <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
+            {/* Profile Image Section */}
+            <Box sx={{ textAlign: 'center' }}>
+              <Typography variant="h6" gutterBottom>
+                Profile Image
+              </Typography>
+
+              <Box sx={{ mb: 2 }}>
+                <Avatar
+                  src={preview || existingImage}
+                  sx={{
+                    width: 120,
+                    height: 120,
+                    margin: '0 auto',
+                    mb: 2
+                  }}
+                />
+              </Box>
+
+              <input
+                ref={fileInputRef}
+                type="file"
+                accept="image/*"
+                onChange={handleFileChange}
+                style={{ display: 'none' }}
               />
-            )}
-          </Form.Group>
 
-          <Form.Group className="mb-2">
-            <Form.Control
-              ref={firstNameRef}
-              type="text"
-              name="first_name"
-              value={form.first_name}
-              onChange={handleChange}
-              placeholder="First Name"
-              isInvalid={!!errors.first_name}
-            />
-            <Form.Control.Feedback type="invalid">{errors.first_name}</Form.Control.Feedback>
-          </Form.Group>
+              <Button
+                variant="outlined"
+                startIcon={<UploadIcon />}
+                onClick={() => fileInputRef.current.click()}
+              >
+                Upload Image
+              </Button>
+            </Box>
 
-          <Form.Group className="mb-2">
-            <Form.Control
-              type="text"
-              name="last_name"
-              value={form.last_name}
-              onChange={handleChange}
-              placeholder="Last Name"
-              isInvalid={!!errors.last_name}
-            />
-            <Form.Control.Feedback type="invalid">{errors.last_name}</Form.Control.Feedback>
-          </Form.Group>
-
-          <Form.Group className="mb-2">
-            <Form.Control
-              type="number"
-              name="age"
-              value={form.age}
-              onChange={handleChange}
-              placeholder="Age"
-              isInvalid={!!errors.age}
-            />
-            <Form.Control.Feedback type="invalid">{errors.age}</Form.Control.Feedback>
-          </Form.Group>
-
-          <Form.Group className="mb-2">
-            <Form.Control
-              type="text"
-              name="city"
-              value={form.city}
-              onChange={handleChange}
-              placeholder="City"
-              isInvalid={!!errors.city}
-            />
-            <Form.Control.Feedback type="invalid">{errors.city}</Form.Control.Feedback>
-          </Form.Group>
-
-          <Form.Group className="mb-2">
-            <Form.Label>Department</Form.Label>
-            <Form.Select name="department" value={form.department} onChange={handleChange}>
-              <option value="IT">IT</option>
-              <option value="HR">HR</option>
-              <option value="Sales">Sales</option>
-              <option value="Marketing">Marketing</option>
-            </Form.Select>
-          </Form.Group>
-
-          <Form.Group className="mb-2">
-            <Form.Label>Gender</Form.Label>
-            <div>
-              <Form.Check
-                inline
-                label="Male"
-                name="gender"
-                type="radio"
-                value="Male"
-                checked={form.gender === "Male"}
+            {/* Form Fields */}
+            <Box sx={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 2 }}>
+              <TextField
+                inputRef={firstNameRef}
+                name="first_name"
+                label="First Name"
+                value={form.first_name}
                 onChange={handleChange}
+                error={!!errors.first_name}
+                helperText={errors.first_name}
+                required
+                fullWidth
               />
-              <Form.Check
-                inline
-                label="Female"
-                name="gender"
-                type="radio"
-                value="Female"
-                checked={form.gender === "Female"}
+
+              <TextField
+                name="last_name"
+                label="Last Name"
+                value={form.last_name}
                 onChange={handleChange}
+                error={!!errors.last_name}
+                helperText={errors.last_name}
+                required
+                fullWidth
               />
-            </div>
-          </Form.Group>
+            </Box>
 
-          <Form.Group className="mb-2">
-            <Form.Control
-              type="text"
-              name="mobile"
-              value={form.mobile}
-              onChange={handleChange}
-              placeholder="Mobile"
-              isInvalid={!!errors.mobile}
-            />
-            <Form.Control.Feedback type="invalid">{errors.mobile}</Form.Control.Feedback>
-          </Form.Group>
+            <Box sx={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 2 }}>
+              <TextField
+                name="age"
+                label="Age"
+                type="number"
+                value={form.age}
+                onChange={handleChange}
+                error={!!errors.age}
+                helperText={errors.age}
+                required
+                fullWidth
+                InputProps={{ inputProps: { min: 18, max: 65 } }}
+              />
 
-          <div className="d-flex justify-content-end mt-3">
-            <Button variant="secondary" className="me-2" onClick={handleClose}>
-              Cancel
-            </Button>
-            <Button type="submit" variant="primary">
-              {initialData ? "Update" : "Add"}
-            </Button>
-          </div>
-        </Form>
-      </Modal.Body>
-    </Modal>
+              <TextField
+                name="city"
+                label="City"
+                value={form.city}
+                onChange={handleChange}
+                error={!!errors.city}
+                helperText={errors.city}
+                required
+                fullWidth
+              />
+            </Box>
+
+            <Box sx={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 2 }}>
+              <FormControl fullWidth>
+                <InputLabel>Department</InputLabel>
+                <Select
+                  name="department"
+                  value={form.department}
+                  onChange={handleChange}
+                  label="Department"
+                >
+                  <MenuItem value="IT">IT</MenuItem>
+                  <MenuItem value="HR">HR</MenuItem>
+                  <MenuItem value="Sales">Sales</MenuItem>
+                  <MenuItem value="Marketing">Marketing</MenuItem>
+                </Select>
+              </FormControl>
+
+              <TextField
+                name="mobile"
+                label="Mobile"
+                value={form.mobile}
+                onChange={handleChange}
+                error={!!errors.mobile}
+                helperText={errors.mobile}
+                required
+                fullWidth
+                inputProps={{ maxLength: 10 }}
+              />
+            </Box>
+
+            <FormControl component="fieldset">
+              <FormLabel component="legend">Gender</FormLabel>
+              <RadioGroup
+                row
+                name="gender"
+                value={form.gender}
+                onChange={handleChange}
+              >
+                <FormControlLabel value="Male" control={<Radio />} label="Male" />
+                <FormControlLabel value="Female" control={<Radio />} label="Female" />
+              </RadioGroup>
+            </FormControl>
+          </Box>
+        </DialogContent>
+
+        <DialogActions sx={{ padding: 3 }}>
+          <Button onClick={handleClose} variant="outlined">
+            Cancel
+          </Button>
+          <Button type="submit" variant="contained">
+            {initialData ? "Update" : "Add"}
+          </Button>
+        </DialogActions>
+      </form>
+    </Dialog>
   );
 }
