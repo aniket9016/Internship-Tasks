@@ -17,11 +17,13 @@ import {
   Box,
   IconButton,
   Typography,
-  Avatar
+  Avatar,
+  Paper
 } from "@mui/material";
 import {
   Close as CloseIcon,
-  CloudUpload as UploadIcon
+  CloudUpload as UploadIcon,
+  Delete as DeleteIcon
 } from "@mui/icons-material";
 
 export default function EmployeeFormModal({ show, onHide, onSave, initialData }) {
@@ -101,19 +103,63 @@ export default function EmployeeFormModal({ show, onHide, onSave, initialData })
   const handleFileChange = (e) => {
     const file = e.target.files[0];
     if (file) {
+      // Validate file type
+      if (!file.type.startsWith('image/')) {
+        setErrors(prev => ({ ...prev, profile_image: "Please select a valid image file" }));
+        return;
+      }
+      
+      // Validate file size (5MB limit)
+      if (file.size > 5 * 1024 * 1024) {
+        setErrors(prev => ({ ...prev, profile_image: "Image size should be less than 5MB" }));
+        return;
+      }
+
       setForm((prev) => ({ ...prev, profile_image: file }));
       setPreview(URL.createObjectURL(file));
       setExistingImage(null);
+      setErrors(prev => ({ ...prev, profile_image: "" }));
+    }
+  };
+
+  const handleRemoveImage = () => {
+    setForm((prev) => ({ ...prev, profile_image: null }));
+    setPreview(null);
+    setExistingImage(null);
+    if (fileInputRef.current) {
+      fileInputRef.current.value = "";
     }
   };
 
   const validate = () => {
     const newErrors = {};
-    if (!form.first_name.trim()) newErrors.first_name = "First name is required.";
-    if (!form.last_name.trim()) newErrors.last_name = "Last name is required.";
-    if (!form.age || form.age < 18 || form.age > 65) newErrors.age = "Age must be 18–65.";
-    if (!form.city.trim()) newErrors.city = "City is required.";
-    if (!form.mobile.match(/^[0-9]{10}$/)) newErrors.mobile = "Mobile must be 10 digits.";
+    
+    if (!form.first_name.trim()) {
+      newErrors.first_name = "First name is required.";
+    } else if (form.first_name.trim().length < 2) {
+      newErrors.first_name = "First name must be at least 2 characters.";
+    }
+    
+    if (!form.last_name.trim()) {
+      newErrors.last_name = "Last name is required.";
+    } else if (form.last_name.trim().length < 2) {
+      newErrors.last_name = "Last name must be at least 2 characters.";
+    }
+    
+    if (!form.age || form.age < 18 || form.age > 65) {
+      newErrors.age = "Age must be between 18 and 65.";
+    }
+    
+    if (!form.city.trim()) {
+      newErrors.city = "City is required.";
+    } else if (form.city.trim().length < 2) {
+      newErrors.city = "City must be at least 2 characters.";
+    }
+    
+    if (!form.mobile.match(/^[0-9]{10}$/)) {
+      newErrors.mobile = "Mobile must be exactly 10 digits.";
+    }
+    
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
@@ -124,7 +170,9 @@ export default function EmployeeFormModal({ show, onHide, onSave, initialData })
 
     const formData = new FormData();
     for (const key in form) {
-      if (form[key] !== null) formData.append(key, form[key]);
+      if (form[key] !== null && form[key] !== undefined) {
+        formData.append(key, form[key]);
+      }
     }
 
     if (initialData?.id) {
@@ -143,10 +191,14 @@ export default function EmployeeFormModal({ show, onHide, onSave, initialData })
     onHide();
   };
 
+  const currentImage = preview || existingImage;
+
   return (
     <Dialog open={show} onClose={handleClose} maxWidth="md" fullWidth>
-      <DialogTitle>
-        {initialData ? "Edit Employee" : "Add Employee"}
+      <DialogTitle sx={{ pb: 2 }}>
+        <Typography variant="h5" component="div">
+          {initialData ? "Edit Employee" : "Add Employee"}
+        </Typography>
         <IconButton
           aria-label="close"
           onClick={handleClose}
@@ -162,24 +214,43 @@ export default function EmployeeFormModal({ show, onHide, onSave, initialData })
       </DialogTitle>
 
       <form onSubmit={handleSubmit}>
-        <DialogContent>
+        <DialogContent sx={{ pt: 0 }}>
           <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
             {/* Profile Image Section */}
-            <Box sx={{ textAlign: 'center' }}>
-              <Typography variant="h6" gutterBottom>
+            <Paper elevation={1} sx={{ p: 3, textAlign: 'center', bgcolor: 'grey.50' }}>
+              <Typography variant="h6" gutterBottom color="primary">
                 Profile Image
               </Typography>
 
-              <Box sx={{ mb: 2 }}>
+              <Box sx={{ mb: 3, position: 'relative', display: 'inline-block' }}>
                 <Avatar
-                  src={preview || existingImage}
+                  src={currentImage}
                   sx={{
-                    width: 120,
-                    height: 120,
+                    width: 140,
+                    height: 140,
                     margin: '0 auto',
-                    mb: 2
+                    border: '4px solid',
+                    borderColor: 'primary.light',
+                    boxShadow: 3
                   }}
                 />
+                {/* Only show delete button for newly uploaded images (preview), not existing images */}
+                {preview && (
+                  <IconButton
+                    size="small"
+                    onClick={handleRemoveImage}
+                    sx={{
+                      position: 'absolute',
+                      top: 0,
+                      right: 0,
+                      bgcolor: 'error.main',
+                      color: 'white',
+                      '&:hover': { bgcolor: 'error.dark' }
+                    }}
+                  >
+                    <DeleteIcon fontSize="small" />
+                  </IconButton>
+                )}
               </Box>
 
               <input
@@ -194,82 +265,121 @@ export default function EmployeeFormModal({ show, onHide, onSave, initialData })
                 variant="outlined"
                 startIcon={<UploadIcon />}
                 onClick={() => fileInputRef.current.click()}
+                sx={{ mb: 1 }}
               >
-                Upload Image
+                {currentImage ? "Change Image" : "Upload Image"}
               </Button>
-            </Box>
+              
+              {errors.profile_image && (
+                <Typography variant="caption" color="error" display="block">
+                  {errors.profile_image}
+                </Typography>
+              )}
+              
+              <Typography variant="caption" color="text.secondary" display="block">
+                Max size: 5MB. Supported formats: JPG, PNG, GIF
+              </Typography>
+            </Paper>
 
-            {/* Form Fields */}
-            <Box sx={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 2 }}>
-              <TextField
-                inputRef={firstNameRef}
-                name="first_name"
-                label="First Name"
-                value={form.first_name}
-                onChange={handleChange}
-                error={!!errors.first_name}
-                helperText={errors.first_name}
-                required
-                fullWidth
-              />
-
-              <TextField
-                name="last_name"
-                label="Last Name"
-                value={form.last_name}
-                onChange={handleChange}
-                error={!!errors.last_name}
-                helperText={errors.last_name}
-                required
-                fullWidth
-              />
-            </Box>
-
-            <Box sx={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 2 }}>
-              <TextField
-                name="age"
-                label="Age"
-                type="number"
-                value={form.age}
-                onChange={handleChange}
-                error={!!errors.age}
-                helperText={errors.age}
-                required
-                fullWidth
-                InputProps={{ inputProps: { min: 18, max: 65 } }}
-              />
-
-              <TextField
-                name="city"
-                label="City"
-                value={form.city}
-                onChange={handleChange}
-                error={!!errors.city}
-                helperText={errors.city}
-                required
-                fullWidth
-              />
-            </Box>
-
-            <Box sx={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 2 }}>
-              <FormControl fullWidth>
-                <InputLabel>Department</InputLabel>
-                <Select
-                  name="department"
-                  value={form.department}
+            {/* Personal Information */}
+            <Paper elevation={1} sx={{ p: 3 }}>
+              <Typography variant="h6" gutterBottom color="primary" sx={{ mb: 2 }}>
+                Personal Information
+              </Typography>
+              
+              <Box sx={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 2, mb: 2 }}>
+                <TextField
+                  inputRef={firstNameRef}
+                  name="first_name"
+                  label="First Name"
+                  value={form.first_name}
                   onChange={handleChange}
-                  label="Department"
-                >
-                  <MenuItem value="IT">IT</MenuItem>
-                  <MenuItem value="HR">HR</MenuItem>
-                  <MenuItem value="Sales">Sales</MenuItem>
-                  <MenuItem value="Marketing">Marketing</MenuItem>
-                </Select>
-              </FormControl>
+                  error={!!errors.first_name}
+                  helperText={errors.first_name}
+                  required
+                  fullWidth
+                />
+
+                <TextField
+                  name="last_name"
+                  label="Last Name"
+                  value={form.last_name}
+                  onChange={handleChange}
+                  error={!!errors.last_name}
+                  helperText={errors.last_name}
+                  required
+                  fullWidth
+                />
+              </Box>
+
+              <Box sx={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 2, mb: 2 }}>
+                <TextField
+                  name="age"
+                  label="Age"
+                  type="number"
+                  value={form.age}
+                  onChange={handleChange}
+                  error={!!errors.age}
+                  helperText={errors.age}
+                  required
+                  fullWidth
+                  InputProps={{ inputProps: { min: 18, max: 65 } }}
+                />
+
+                <FormControl component="fieldset">
+                  <FormLabel component="legend">Gender</FormLabel>
+                  <RadioGroup
+                    row
+                    name="gender"
+                    value={form.gender}
+                    onChange={handleChange}
+                  >
+                    <FormControlLabel value="Male" control={<Radio />} label="Male" />
+                    <FormControlLabel value="Female" control={<Radio />} label="Female" />
+                  </RadioGroup>
+                </FormControl>
+              </Box>
+            </Paper>
+
+            {/* Work Information */}
+            <Paper elevation={1} sx={{ p: 3 }}>
+              <Typography variant="h6" gutterBottom color="primary" sx={{ mb: 2 }}>
+                Work Information
+              </Typography>
+              
+              <Box sx={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 2, mb: 2 }}>
+                <FormControl fullWidth>
+                  <InputLabel>Department</InputLabel>
+                  <Select
+                    name="department"
+                    value={form.department}
+                    onChange={handleChange}
+                    label="Department"
+                  >
+                    <MenuItem value="IT">IT</MenuItem>
+                    <MenuItem value="HR">HR</MenuItem>
+                    <MenuItem value="Sales">Sales</MenuItem>
+                    <MenuItem value="Marketing">Marketing</MenuItem>
+                    <MenuItem value="Finance">Finance</MenuItem>
+                    <MenuItem value="Operations">Operations</MenuItem>
+                  </Select>
+                </FormControl>
+
+                <TextField
+                  name="city"
+                  label="City"
+                  value={form.city}
+                  onChange={handleChange}
+                  error={!!errors.city}
+                  helperText={errors.city}
+                  required
+                  fullWidth
+                />
+              </Box>
 
               <TextField
                 name="mobile"
-                label="Mobile"
+                label="Mobile Number"
                 value={form.mobile}
                 onChange={handleChange}
                 error={!!errors.mobile}
@@ -277,30 +387,18 @@ export default function EmployeeFormModal({ show, onHide, onSave, initialData })
                 required
                 fullWidth
                 inputProps={{ maxLength: 10 }}
+                placeholder="Enter 10-digit mobile number"
               />
-            </Box>
-
-            <FormControl component="fieldset">
-              <FormLabel component="legend">Gender</FormLabel>
-              <RadioGroup
-                row
-                name="gender"
-                value={form.gender}
-                onChange={handleChange}
-              >
-                <FormControlLabel value="Male" control={<Radio />} label="Male" />
-                <FormControlLabel value="Female" control={<Radio />} label="Female" />
-              </RadioGroup>
-            </FormControl>
+            </Paper>
           </Box>
         </DialogContent>
 
-        <DialogActions sx={{ padding: 3 }}>
-          <Button onClick={handleClose} variant="outlined">
+        <DialogActions sx={{ padding: 3, gap: 1 }}>
+          <Button onClick={handleClose} variant="outlined" size="large">
             Cancel
           </Button>
-          <Button type="submit" variant="contained">
-            {initialData ? "Update" : "Add"}
+          <Button type="submit" variant="contained" size="large">
+            {initialData ? "Update Employee" : "Add Employee"}
           </Button>
         </DialogActions>
       </form>
