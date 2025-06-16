@@ -29,6 +29,7 @@ export default function EmployeeFormModal({ show, onHide, onSave, initialData })
   const defaultForm = {
     first_name: "",
     last_name: "",
+    date_of_birth: "",
     age: "",
     city: "",
     department: "IT",
@@ -44,6 +45,40 @@ export default function EmployeeFormModal({ show, onHide, onSave, initialData })
   const firstNameRef = useRef(null);
   const fileInputRef = useRef(null);
 
+  // Function to calculate age from date of birth
+  const calculateAge = (dateOfBirth) => {
+    if (!dateOfBirth) return "";
+    
+    const today = new Date();
+    const birthDate = new Date(dateOfBirth);
+    
+    // Check if birth date is valid and not in the future
+    if (isNaN(birthDate.getTime()) || birthDate > today) {
+      return "";
+    }
+    
+    let age = today.getFullYear() - birthDate.getFullYear();
+    const monthDiff = today.getMonth() - birthDate.getMonth();
+    
+    // If birthday hasn't occurred this year yet, subtract 1
+    if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+      age--;
+    }
+    
+    return age;
+  };
+
+  // Function to calculate date of birth from age (for editing existing records)
+  const calculateDateOfBirth = (age) => {
+    if (!age || age <= 0) return "";
+    
+    const today = new Date();
+    const birthYear = today.getFullYear() - age;
+    
+    // Set to January 1st of the birth year as an approximation
+    return `${birthYear}-01-01`;
+  };
+
   useEffect(() => {
     if (show && firstNameRef.current) {
       setTimeout(() => firstNameRef.current.focus(), 100);
@@ -52,11 +87,18 @@ export default function EmployeeFormModal({ show, onHide, onSave, initialData })
     let objectUrl = null;
 
     if (initialData) {
-      setForm({
+      const updatedForm = {
         ...defaultForm,
         ...initialData,
         profile_image: null,
-      });
+      };
+
+      // If we have an age but no date_of_birth, calculate approximate date_of_birth
+      if (initialData.age && !initialData.date_of_birth) {
+        updatedForm.date_of_birth = calculateDateOfBirth(initialData.age);
+      }
+
+      setForm(updatedForm);
 
       if (initialData.image_url) {
         setExistingImage(initialData.image_url);
@@ -95,7 +137,18 @@ export default function EmployeeFormModal({ show, onHide, onSave, initialData })
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setForm((prev) => ({ ...prev, [name]: value }));
+    
+    if (name === "date_of_birth") {
+      const age = calculateAge(value);
+      setForm((prev) => ({ 
+        ...prev, 
+        [name]: value,
+        age: age
+      }));
+    } else {
+      setForm((prev) => ({ ...prev, [name]: value }));
+    }
+    
     setErrors((prev) => ({ ...prev, [name]: "" }));
   };
 
@@ -145,8 +198,20 @@ export default function EmployeeFormModal({ show, onHide, onSave, initialData })
       newErrors.last_name = "Last name must be at least 2 characters.";
     }
     
-    if (!form.age || form.age < 18 || form.age > 65) {
-      newErrors.age = "Age must be between 18 and 65.";
+    if (!form.date_of_birth) {
+      newErrors.date_of_birth = "Date of birth is required.";
+    } else {
+      const birthDate = new Date(form.date_of_birth);
+      const today = new Date();
+      const age = calculateAge(form.date_of_birth);
+      
+      if (birthDate > today) {
+        newErrors.date_of_birth = "Date of birth cannot be in the future.";
+      } else if (age < 18) {
+        newErrors.date_of_birth = "Employee must be at least 18 years old.";
+      } else if (age > 65) {
+        newErrors.date_of_birth = "Employee cannot be older than 65 years.";
+      }
     }
     
     if (!form.city.trim()) {
@@ -170,7 +235,10 @@ export default function EmployeeFormModal({ show, onHide, onSave, initialData })
     const formData = new FormData();
     for (const key in form) {
       if (form[key] !== null && form[key] !== undefined) {
-        formData.append(key, form[key]);
+        // Don't send date_of_birth to backend, only send the calculated age
+        if (key !== "date_of_birth") {
+          formData.append(key, form[key]);
+        }
       }
     }
 
@@ -191,6 +259,20 @@ export default function EmployeeFormModal({ show, onHide, onSave, initialData })
   };
 
   const currentImage = preview || existingImage;
+
+  // Calculate max date (18 years ago from today)
+  const getMaxDate = () => {
+    const today = new Date();
+    const maxDate = new Date(today.getFullYear() - 18, today.getMonth(), today.getDate());
+    return maxDate.toISOString().split('T')[0];
+  };
+
+  // Calculate min date (65 years ago from today)
+  const getMinDate = () => {
+    const today = new Date();
+    const minDate = new Date(today.getFullYear() - 65, today.getMonth(), today.getDate());
+    return minDate.toISOString().split('T')[0];
+  };
 
   return (
     <Dialog open={show} onClose={handleClose} maxWidth="md" fullWidth>
@@ -297,16 +379,22 @@ export default function EmployeeFormModal({ show, onHide, onSave, initialData })
 
               <Box sx={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 2, mb: 2 }}>
                 <TextField
-                  name="age"
-                  label="Age"
-                  type="number"
-                  value={form.age}
+                  name="date_of_birth"
+                  label="Date of Birth"
+                  type="date"
+                  value={form.date_of_birth}
                   onChange={handleChange}
-                  error={!!errors.age}
-                  helperText={errors.age}
+                  error={!!errors.date_of_birth}
+                  helperText={errors.date_of_birth || `Age: ${form.age || 'Not calculated'} years`}
                   required
                   fullWidth
-                  InputProps={{ inputProps: { min: 18, max: 65 } }}
+                  InputLabelProps={{
+                    shrink: true,
+                  }}
+                  inputProps={{
+                    min: getMinDate(),
+                    max: getMaxDate()
+                  }}
                 />
 
                 <FormControl component="fieldset">
