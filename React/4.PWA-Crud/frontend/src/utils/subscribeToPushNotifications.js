@@ -6,9 +6,7 @@ const SERVER_URL = process.env.REACT_APP_SERVER_URL || "http://localhost:5000";
 // Convert VAPID key to Uint8Array
 function urlBase64ToUint8Array(base64String) {
   const padding = '='.repeat((4 - base64String.length % 4) % 4);
-  const base64 = (base64String + padding)
-    .replace(/-/g, '+')
-    .replace(/_/g, '/');
+  const base64 = (base64String + padding).replace(/-/g, '+').replace(/_/g, '/');
 
   const rawData = window.atob(base64);
   const outputArray = new Uint8Array(rawData.length);
@@ -24,7 +22,7 @@ export function isPushNotificationSupported() {
   return 'serviceWorker' in navigator && 'PushManager' in window;
 }
 
-// Check service worker status - ADDED MISSING FUNCTION
+// Check service worker status
 export async function checkServiceWorkerStatus() {
   try {
     if (!('serviceWorker' in navigator)) {
@@ -37,7 +35,7 @@ export async function checkServiceWorkerStatus() {
     }
 
     const registration = await navigator.serviceWorker.getRegistration();
-    
+
     if (!registration) {
       return {
         supported: true,
@@ -54,7 +52,7 @@ export async function checkServiceWorkerStatus() {
       supported: true,
       ready: isReady,
       active: isActive,
-      registration: registration,
+      registration,
       message: isActive ? 'Service Worker active and ready' : 'Service Worker registered but not active'
     };
   } catch (error) {
@@ -80,14 +78,24 @@ export async function getSubscriptionStatus() {
       };
     }
 
-    const registration = await navigator.serviceWorker.ready;
+    const registration = await navigator.serviceWorker.getRegistration();
+
+    if (!registration) {
+      return {
+        supported: true,
+        subscribed: false,
+        permission: Notification.permission,
+        subscription: null
+      };
+    }
+
     const subscription = await registration.pushManager.getSubscription();
-    
+
     return {
       supported: true,
       subscribed: !!subscription,
       permission: Notification.permission,
-      subscription: subscription
+      subscription
     };
   } catch (error) {
     console.error('[SubscriptionUtils] Error getting subscription status:', error);
@@ -108,22 +116,17 @@ export async function subscribeToPushNotifications() {
       throw new Error('Push notifications are not supported in this browser');
     }
 
-    // Wait for service worker to be ready
     const registration = await navigator.serviceWorker.ready;
     console.log('[SubscriptionUtils] Service worker ready:', registration);
 
-    // Check if already subscribed
     let subscription = await registration.pushManager.getSubscription();
-    
+
     if (subscription) {
       console.log('[SubscriptionUtils] Already subscribed:', subscription);
-      
-      // Send existing subscription to server
       await sendSubscriptionToServer(subscription);
       return subscription;
     }
 
-    // Subscribe to push notifications
     console.log('[SubscriptionUtils] Creating new subscription...');
     subscription = await registration.pushManager.subscribe({
       userVisibleOnly: true,
@@ -132,13 +135,12 @@ export async function subscribeToPushNotifications() {
 
     console.log('[SubscriptionUtils] New subscription created:', subscription);
 
-    // Send subscription to server
     await sendSubscriptionToServer(subscription);
-    
+
     return subscription;
   } catch (error) {
     console.error('[SubscriptionUtils] Error subscribing to push notifications:', error);
-    
+
     if (error.name === 'NotAllowedError') {
       throw new Error('Push notifications permission denied');
     } else if (error.name === 'NotSupportedError') {
@@ -153,7 +155,7 @@ export async function subscribeToPushNotifications() {
 async function sendSubscriptionToServer(subscription) {
   try {
     console.log('[SubscriptionUtils] Sending subscription to server...');
-    
+
     const response = await fetch(`${SERVER_URL}/api/save-subscription`, {
       method: 'POST',
       headers: {
@@ -169,7 +171,7 @@ async function sendSubscriptionToServer(subscription) {
 
     const result = await response.json();
     console.log('[SubscriptionUtils] Subscription saved successfully:', result);
-    
+
     return result;
   } catch (error) {
     console.error('[SubscriptionUtils] Error sending subscription to server:', error);
@@ -181,7 +183,7 @@ async function sendSubscriptionToServer(subscription) {
 export async function sendTestNotification() {
   try {
     console.log('[SubscriptionUtils] Sending test notification...');
-    
+
     const response = await fetch(`${SERVER_URL}/api/send-test-notification`, {
       method: 'POST',
       headers: {
@@ -195,7 +197,7 @@ export async function sendTestNotification() {
 
     const result = await response.json();
     console.log('[SubscriptionUtils] Test notification sent:', result);
-    
+
     return result;
   } catch (error) {
     console.error('[SubscriptionUtils] Error sending test notification:', error);

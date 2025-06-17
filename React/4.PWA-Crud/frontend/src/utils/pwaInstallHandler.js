@@ -93,7 +93,7 @@ class PWAInstallHandler {
       if (permission === 'granted') {
         console.log('[PWA] Notification permission granted, subscribing...');
         await subscribeToPushNotifications();
-        toast.success('✅ Notifications enabled! You should receive a welcome message shortly.');
+        toast.success('Notifications enabled! You should receive a welcome message shortly.');
       } else if (permission === 'denied') {
         toast.warning('Notifications were denied. You can enable them later from your browser settings.');
       } else {

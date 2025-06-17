@@ -12,33 +12,19 @@ import "react-toastify/dist/ReactToastify.css";
 
 const theme = createTheme({
   palette: {
-    primary: {
-      main: "#1976d2",
-      light: "#42a5f5",
-      dark: "#1565c0",
-    },
-    secondary: {
-      main: "#dc004e",
-    },
-    background: {
-      default: "#f5f5f5",
-    },
+    primary: { main: "#1976d2", light: "#42a5f5", dark: "#1565c0" },
+    secondary: { main: "#dc004e" },
+    background: { default: "#f5f5f5" },
   },
   typography: {
     fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
-    h4: {
-      fontWeight: 600,
-    },
-    h5: {
-      fontWeight: 500,
-    },
+    h4: { fontWeight: 600 },
+    h5: { fontWeight: 500 },
   },
   components: {
     MuiCard: {
       styleOverrides: {
-        root: {
-          borderRadius: 12,
-        },
+        root: { borderRadius: 12 },
       },
     },
     MuiButton: {
@@ -62,29 +48,20 @@ const theme = createTheme({
 
 export default function App() {
   const [isSyncing, setIsSyncing] = useState(false);
-  const [isAppInstalled, setIsAppInstalled] = useState(false);
 
   useEffect(() => {
-    let swRegistration = null;
-
     // Register service worker
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('/sw.js')
         .then(registration => {
-          console.log('Service Worker registered successfully:', registration);
-          swRegistration = registration;
-          
-          // Listen for service worker updates
-          registration.addEventListener('updatefound', () => {
-            console.log('New service worker version found');
-          });
+          console.log('Service Worker registered:', registration);
         })
         .catch(error => {
           console.error('Service Worker registration failed:', error);
         });
     }
 
-    // Handle online/offline sync
+    // Handle sync when back online
     const handleOnline = async () => {
       if (isSyncing) return;
       setIsSyncing(true);
@@ -92,55 +69,37 @@ export default function App() {
         await syncOfflineEmployees();
         toast.success("📡 Data synced successfully!");
       } catch (error) {
-        console.error('Error syncing offline employees:', error);
-        toast.error("❌ Failed to sync offline data");
+        console.error('Sync failed:', error);
+        // toast removed for failed sync (could be added if needed)
       } finally {
         setIsSyncing(false);
       }
     };
 
-    // Handle offline notification
+    // Notify when offline
     const handleOffline = () => {
-      toast.warning("🔌 You're now offline. Changes will sync when you're back online.");
+      toast.warning("🔌 You're offline. Changes will sync when you're back online.");
     };
 
-    // PWA Install handling
+    // Handle PWA install (removed toast)
     const handlePWAInstall = () => {
-      const installShown = localStorage.getItem('pwa-install-toast-shown');
-      if (!installShown) {
-        toast.success("🎉 App installed successfully! You can now use it offline.");
-        localStorage.setItem('pwa-install-toast-shown', 'true');
-      }
-      setIsAppInstalled(true);
-    };
-
-    // Check if app is already installed
-    const checkInstallStatus = () => {
-      // Check if running as standalone PWA
-      if (window.matchMedia('(display-mode: standalone)').matches || 
-          window.navigator.standalone === true) {
-        setIsAppInstalled(true);
-      }
+      console.log("App installed as PWA");
     };
 
     // Event listeners
     window.addEventListener("online", handleOnline);
     window.addEventListener("offline", handleOffline);
     window.addEventListener("appinstalled", handlePWAInstall);
-    
-    // Initialize PWA install handler if available
-    if (typeof pwaInstallHandler === 'function') {
+
+    // Optional install prompt
+    if (typeof pwaInstallHandler === "function") {
       try {
         pwaInstallHandler();
       } catch (error) {
-        console.warn('PWA install handler error:', error);
+        console.warn("PWA install handler error:", error);
       }
     }
 
-    // Check initial install status
-    checkInstallStatus();
-
-    // Cleanup
     return () => {
       window.removeEventListener("online", handleOnline);
       window.removeEventListener("offline", handleOffline);
@@ -157,10 +116,8 @@ export default function App() {
           <Route path="/employee/:id" element={<EmployeeDetails />} />
         </Routes>
 
-        {/* Notification Button - shows when notifications are not enabled */}
         <NotificationButton />
 
-        {/* Sync indicator */}
         {isSyncing && (
           <div
             style={{
@@ -185,15 +142,11 @@ export default function App() {
           hideProgressBar={false}
           newestOnTop={false}
           closeOnClick
-          rtl={false}
           pauseOnFocusLoss
           draggable
           pauseOnHover
           theme="light"
-          toastStyle={{
-            fontSize: "14px",
-            borderRadius: "8px",
-          }}
+          toastStyle={{ fontSize: "14px", borderRadius: "8px" }}
         />
       </Router>
     </ThemeProvider>

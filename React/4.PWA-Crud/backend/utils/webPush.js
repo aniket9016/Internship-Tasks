@@ -35,7 +35,7 @@ async function sendWelcomeNotification(subscription) {
     console.log(`📤 Sending welcome notification to: ${subscription.endpoint.substring(0, 50)}...`);
     
     const result = await webpush.sendNotification(subscription, payload);
-    console.log("✅ Welcome notification sent successfully");
+    console.log("Welcome notification sent successfully");
     return result;
     
   } catch (error) {

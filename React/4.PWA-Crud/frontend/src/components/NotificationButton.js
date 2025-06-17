@@ -5,7 +5,11 @@ import NotificationsOffIcon from "@mui/icons-material/NotificationsOff";
 import CheckIcon from "@mui/icons-material/Check";
 import BugReportIcon from "@mui/icons-material/BugReport";
 import { requestNotificationPermission } from "../utils/requestNotificationPermission";
-import { subscribeToPushNotifications, getSubscriptionStatus, sendTestNotification } from "../utils/subscribeToPushNotifications";
+import {
+  subscribeToPushNotifications,
+  getSubscriptionStatus,
+  sendTestNotification,
+} from "../utils/subscribeToPushNotifications";
 import { toast } from "react-toastify";
 
 export default function NotificationButton() {
@@ -17,101 +21,86 @@ export default function NotificationButton() {
   const [hasShownWelcomeToast, setHasShownWelcomeToast] = useState(false);
 
   useEffect(() => {
-    checkNotificationStatus();
-    
-    // Enable debug mode in development
-    if (process.env.NODE_ENV === 'development') {
+    const checkStatus = async () => {
+      try {
+        const status = await getSubscriptionStatus();
+        setSupported(status.supported);
+        setSubscribed(status.subscribed);
+
+        const shouldShow = !(status.permission === "granted" && status.subscribed);
+        setShow(shouldShow);
+      } catch (error) {
+        console.error("[NotificationButton] Error checking status:", error);
+        setSupported(false);
+        setShow(true);
+      }
+    };
+
+    checkStatus();
+
+    const interval = setInterval(checkStatus, 5000); // Check every 5s to auto-hide if granted
+    return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    if (process.env.NODE_ENV === "development") {
       setDebugMode(true);
     }
 
-    // Check if welcome toast was already shown
-    const welcomeShown = localStorage.getItem('welcome-toast-shown');
+    const welcomeShown = localStorage.getItem("welcome-toast-shown");
     if (welcomeShown) {
       setHasShownWelcomeToast(true);
     }
   }, []);
 
-  const checkNotificationStatus = async () => {
-    try {
-      const status = await getSubscriptionStatus();
-      console.log('[NotificationButton] Status check:', status);
-      
-      setSupported(status.supported);
-      setSubscribed(status.subscribed);
-      
-      if (!status.supported) {
-        setShow(false);
-        return;
-      }
-
-      // Show button if not subscribed or permission is not granted
-      if (!status.subscribed || status.permission !== "granted") {
-        setShow(true);
-      } else {
-        setShow(false);
-      }
-    } catch (error) {
-      console.error('[NotificationButton] Error checking status:', error);
-      setShow(true);
-      setSupported(false);
-    }
-  };
-
   const handleClick = async () => {
     if (debugMode && subscribed) {
-      // In debug mode, if already subscribed, send test notification
       handleTestNotification();
       return;
     }
 
     setLoading(true);
-    
+
     try {
-      console.log('[NotificationButton] Starting notification setup...');
-      
-      // First request notification permission
+      console.log("[NotificationButton] Starting notification setup...");
+
       const permission = await requestNotificationPermission();
-      console.log('[NotificationButton] Permission result:', permission);
-      
+      console.log("[NotificationButton] Permission result:", permission);
+
       if (permission !== "granted") {
-        toast.error("❌ Notifications permission denied. Please enable notifications in your browser settings.");
+        toast.error(
+          "❌ Notifications permission denied. Please enable notifications in your browser settings."
+        );
         setLoading(false);
         return;
       }
 
-      // Then subscribe to push notifications
-      console.log('[NotificationButton] Subscribing to push notifications...');
       const subscription = await subscribeToPushNotifications();
-      console.log('[NotificationButton] Subscription successful:', subscription);
-      
-      setSubscribed(true);
-      setShow(false);
-      
-      // Only show welcome toast if it hasn't been shown before
+      console.log("[NotificationButton] Subscription successful:", subscription);
+
+      if (subscription && Notification.permission === "granted") {
+        setSubscribed(true);
+        setShow(false); // ✅ Immediately hide the button
+      }
+
       if (!hasShownWelcomeToast) {
         toast.success("🎉 Notifications enabled! You should receive a welcome message shortly.");
-        localStorage.setItem('welcome-toast-shown', 'true');
+        localStorage.setItem("welcome-toast-shown", "true");
         setHasShownWelcomeToast(true);
       }
-      
-      // Double-check status after successful setup
-      setTimeout(() => {
-        checkNotificationStatus();
-      }, 2000);
-      
+
     } catch (error) {
-      console.error('[NotificationButton] Error enabling notifications:', error);
-      
+      console.error("[NotificationButton] Error enabling notifications:", error);
+
       let errorMessage = "Failed to enable notifications. ";
-      
-      if (error.message.includes('not supported')) {
+      if (error.message.includes("not supported")) {
         errorMessage += "Your browser doesn't support push notifications.";
-      } else if (error.message.includes('HTTP error')) {
+      } else if (error.message.includes("HTTP error")) {
         errorMessage += "Server error. Please try again later.";
       } else {
         errorMessage += "Please try again or check your browser settings.";
       }
-      
+
       toast.error(errorMessage);
     } finally {
       setLoading(false);
@@ -123,17 +112,13 @@ export default function NotificationButton() {
       toast.info("🧪 Sending test notification...");
       await sendTestNotification();
     } catch (error) {
-      console.error('[NotificationButton] Error sending test notification:', error);
+      console.error("[NotificationButton] Error sending test notification:", error);
       toast.error("Failed to send test notification");
     }
   };
 
-  if (!supported) {
-    return null; // Don't show button if not supported
-  }
-
-  if (!show && !debugMode) {
-    return null; // Don't show if notifications are already set up (unless in debug mode)
+  if (!supported || (!show && !debugMode)) {
+    return null;
   }
 
   const getButtonColor = () => {
@@ -147,7 +132,8 @@ export default function NotificationButton() {
     if (!supported) return "Push notifications not supported";
     if (debugMode && subscribed) return "Test Notification (Debug Mode)";
     if (subscribed) return "Notifications Enabled";
-    if (Notification.permission === "denied") return "Notifications Blocked - Check Browser Settings";
+    if (Notification.permission === "denied")
+      return "Notifications Blocked - Check Browser Settings";
     return "Enable Notifications";
   };
 
