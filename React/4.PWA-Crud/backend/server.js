@@ -5,7 +5,9 @@ const formbody = require("@fastify/formbody");
 const multipart = require("@fastify/multipart");
 const fastifyStatic = require("@fastify/static");
 const sequelize = require("./db");
+
 const employeeRoutes = require("./routes/employee.routes");
+const notificationRoutes = require("./routes/notification.routes"); // ✅ added
 
 const app = Fastify({ logger: true });
 
@@ -16,12 +18,14 @@ app.register(cors, {
 
 app.register(formbody);
 app.register(multipart);
+
 app.register(fastifyStatic, {
   root: path.join(__dirname, "uploads"),
   prefix: "/uploads/",
 });
 
 app.register(employeeRoutes);
+app.register(notificationRoutes); // ✅ registered
 
 const start = async () => {
   try {

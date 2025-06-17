@@ -64,6 +64,9 @@ import EmployeeFormModal from "../components/EmployeeFormModal";
 import ConfirmModal from "../components/ConfirmModal";
 import { toast } from "react-toastify";
 
+import NotificationButton from "../components/NotificationButton";
+
+
 // Local storage keys
 const STORAGE_KEYS = {
   SEARCH_TERM: "employee_search_term",
@@ -738,528 +741,538 @@ export default function HomePage() {
   };
 
   return (
-    <Container maxWidth="xl" sx={{ mt: 4, pb: 4 }}>
-      {/* Header Section */}
-      <Box
-        sx={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          mb: 3,
-          flexWrap: "wrap",
-          gap: 2,
-        }}
-      >
-        <Box>
-          <Typography
-            variant="h4"
-            sx={{
-              fontWeight: "bold",
-              color: "primary.main",
-              display: "flex",
-              alignItems: "center",
-              gap: 1,
-            }}
-          >
-            <DashboardIcon fontSize="large" />
-            Employee Manager
-          </Typography>
-          <Typography variant="subtitle1" color="text.secondary">
-            Progressive Web Application
-          </Typography>
-        </Box>
-
+    <>
+      <Container maxWidth="xl" sx={{ mt: 4, pb: 4 }}>
+        {/* Header Section */}
         <Box
           sx={{
             display: "flex",
+            justifyContent: "space-between",
             alignItems: "center",
-            gap: 2,
+            mb: 3,
             flexWrap: "wrap",
+            gap: 2,
           }}
         >
-          <Chip
-            icon={isOnline ? <OnlineIcon /> : <OfflineIcon />}
-            label={isOnline ? "Online" : "Offline"}
-            color={isOnline ? "success" : "error"}
-            variant="filled"
-          />
-
-          {isOnline && (
-            <Tooltip title="Refresh Data">
-              <IconButton
-                color="primary"
-                onClick={() => fetchEmployees(true)}
-                disabled={refreshing}
-              >
-                {refreshing ? <CircularProgress size={20} /> : <RefreshIcon />}
-              </IconButton>
-            </Tooltip>
-          )}
-
-          {isOnline && offlineEmployees.length > 0 && (
-            <Badge badgeContent={offlineEmployees.length} color="warning">
-              <Button
-                variant="outlined"
-                startIcon={
-                  syncing ? <CircularProgress size={18} /> : <CloudSyncIcon />
-                }
-                onClick={handleSync}
-                disabled={syncing}
-                color="warning"
-              >
-                {syncing ? "Syncing..." : "Sync Data"}
-              </Button>
-            </Badge>
-          )}
-
-          <Button
-            startIcon={<AddIcon />}
-            onClick={() => setShowForm(true)}
-            variant="contained"
-            size="large"
-          >
-            Add Employee
-          </Button>
-        </Box>
-      </Box>
-
-      {/* Statistics Cards */}
-      <Grid container spacing={2} sx={{ mb: 3 }}>
-        <Grid item xs={12} sm={6} md={3}>
-          <Card
-            sx={{ bgcolor: "primary.light", color: "primary.contrastText" }}
-          >
-            <CardContent sx={{ textAlign: "center", py: 2 }}>
-              <GroupIcon sx={{ fontSize: 40, mb: 1 }} />
-              <Typography variant="h4" sx={{ fontWeight: "bold" }}>
-                {stats.total}
-              </Typography>
-              <Typography variant="body2">Total Employees</Typography>
-            </CardContent>
-          </Card>
-        </Grid>
-
-        <Grid item xs={12} sm={6} md={3}>
-          <Card sx={{ bgcolor: "info.light", color: "info.contrastText" }}>
-            <CardContent sx={{ textAlign: "center", py: 2 }}>
-              <SearchIcon sx={{ fontSize: 40, mb: 1 }} />
-              <Typography variant="h4" sx={{ fontWeight: "bold" }}>
-                {stats.filtered}
-              </Typography>
-              <Typography variant="body2">Filtered Results</Typography>
-            </CardContent>
-          </Card>
-        </Grid>
-
-        <Grid item xs={12} sm={6} md={3}>
-          <Card
-            sx={{ bgcolor: "success.light", color: "success.contrastText" }}
-          >
-            <CardContent sx={{ textAlign: "center", py: 2 }}>
-              <OnlineIcon sx={{ fontSize: 40, mb: 1 }} />
-              <Typography variant="h4" sx={{ fontWeight: "bold" }}>
-                {stats.online}
-              </Typography>
-              <Typography variant="body2">Online Records</Typography>
-            </CardContent>
-          </Card>
-        </Grid>
-
-        <Grid item xs={12} sm={6} md={3}>
-          <Card
-            sx={{ bgcolor: "warning.light", color: "warning.contrastText" }}
-          >
-            <CardContent sx={{ textAlign: "center", py: 2 }}>
-              <OfflineIcon sx={{ fontSize: 40, mb: 1 }} />
-              <Typography variant="h4" sx={{ fontWeight: "bold" }}>
-                {stats.offline}
-              </Typography>
-              <Typography variant="body2">Pending Sync</Typography>
-            </CardContent>
-          </Card>
-        </Grid>
-      </Grid>
-
-      {/* Search and Filter Section */}
-      <Paper sx={{ mb: 3, p: 3, borderRadius: 2, bgcolor: "#fafafa" }}>
-        {/* Main Search Bar */}
-        <Box sx={{ mb: 2 }}>
-          <TextField
-            fullWidth
-            placeholder="Search employees by name, department, city, mobile, or email..."
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-            InputProps={{
-              startAdornment: (
-                <InputAdornment position="start">
-                  <SearchIcon sx={{ color: "rgba(0,0,0,0.6)" }} />
-                </InputAdornment>
-              ),
-              endAdornment: searchTerm && (
-                <InputAdornment position="end">
-                  <IconButton
-                    size="small"
-                    onClick={() => setSearchTerm("")}
-                    sx={{ color: "rgba(0,0,0,0.6)" }}
-                  >
-                    <ClearIcon />
-                  </IconButton>
-                </InputAdornment>
-              ),
-              sx: {
-                bgcolor: "white",
-                "& .MuiOutlinedInput-root": {
-                  "&:hover fieldset": {
-                    borderColor: "primary.main",
-                  },
-                },
-                "& input::placeholder": {
-                  color: "rgba(0,0,0,0.7)",
-                },
-              },
-            }}
-            variant="outlined"
-            size="medium"
-          />
-        </Box>
-
-        {/* Advanced Filters */}
-        <Accordion
-          expanded={filtersExpanded}
-          onChange={() => setFiltersExpanded(!filtersExpanded)}
-          sx={{
-            boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
-            "&:before": { display: "none" },
-            borderRadius: 1,
-          }}
-        >
-          <AccordionSummary
-            expandIcon={<ExpandMoreIcon />}
-            sx={{
-              bgcolor: "grey.100",
-              borderRadius: "4px 4px 0 0",
-              minHeight: 56,
-              border: "1px solid grey",
-              "&.Mui-expanded": {
-                minHeight: 56,
-              },
-            }}
-          >
-            <Box
+          <Box>
+            <Typography
+              variant="h4"
               sx={{
+                fontWeight: "bold",
+                color: "primary.main",
                 display: "flex",
                 alignItems: "center",
-                gap: 2,
-                width: "100%",
+                gap: 1,
               }}
             >
-              <Badge badgeContent={activeFiltersCount} color="primary">
-                <FilterIcon
-                  sx={{ color: activeFiltersCount > 0 ? "black" : "grey.600" }}
-                />
-              </Badge>
-              <Typography
-                variant="subtitle1"
-                sx={{ color: "rgba(0,0,0,0.8)", fontWeight: 500 }}
-              >
-                Advanced Filters
-              </Typography>
-              {activeFiltersCount > 0 && (
-                <Button
-                  size="small"
-                  startIcon={<ClearIcon />}
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    clearAllFilters();
-                  }}
-                  sx={{
-                    ml: "auto",
-                    color: "rgba(0,0,0,0.6)",
-                    "&:hover": { bgcolor: "rgba(0,0,0,0.08)" },
-                  }}
-                >
-                  Clear All
-                </Button>
-              )}
-            </Box>
-          </AccordionSummary>
-          <AccordionDetails sx={{ bgcolor: "white", pt: 3 }}>
-            <Grid container spacing={3}>
-              <Grid item xs={12} sm={6} md={4}>
-                <FormControl fullWidth>
-                  <InputLabel>Department</InputLabel>
-                  <Select
-                    value={departmentFilter}
-                    onChange={(e) => setDepartmentFilter(e.target.value)}
-                    label="Department"
-                    sx={{
-                      bgcolor: "white",
-                      "& .MuiOutlinedInput-notchedOutline": {
-                        borderColor: "rgba(0,0,0,0.3)",
-                      },
-                    }}
-                  >
-                    <MenuItem value="">
-                      <em>All Departments</em>
-                    </MenuItem>
-                    {filterOptions.departments.map((dept) => (
-                      <MenuItem key={dept} value={dept}>
-                        {dept}
-                      </MenuItem>
-                    ))}
-                  </Select>
-                </FormControl>
-              </Grid>
+              <DashboardIcon fontSize="large" />
+              Employee Manager
+            </Typography>
+            <Typography variant="subtitle1" color="text.secondary">
+              Progressive Web Application
+            </Typography>
+          </Box>
 
-              <Grid item xs={12} sm={6} md={4}>
-                <FormControl fullWidth>
-                  <InputLabel>City</InputLabel>
-                  <Select
-                    value={cityFilter}
-                    onChange={(e) => setCityFilter(e.target.value)}
-                    label="City"
-                    sx={{
-                      bgcolor: "white",
-                      "& .MuiOutlinedInput-notchedOutline": {
-                        borderColor: "rgba(0,0,0,0.3)",
-                      },
-                    }}
-                  >
-                    <MenuItem value="">
-                      <em>All Cities</em>
-                    </MenuItem>
-                    {filterOptions.cities.map((city) => (
-                      <MenuItem key={city} value={city}>
-                        {city}
-                      </MenuItem>
-                    ))}
-                  </Select>
-                </FormControl>
-              </Grid>
-
-              <Grid item xs={12} sm={6} md={4}>
-                <FormControl fullWidth>
-                  <InputLabel>Status</InputLabel>
-                  <Select
-                    value={statusFilter}
-                    onChange={(e) => setStatusFilter(e.target.value)}
-                    label="Status"
-                    sx={{
-                      bgcolor: "white",
-                      "& .MuiOutlinedInput-notchedOutline": {
-                        borderColor: "rgba(0,0,0,0.3)",
-                      },
-                    }}
-                  >
-                    <MenuItem value="">
-                      <em>All Status</em>
-                    </MenuItem>
-                    {filterOptions.statuses.map((status) => (
-                      <MenuItem key={status.value} value={status.value}>
-                        {status.label}
-                      </MenuItem>
-                    ))}
-                  </Select>
-                </FormControl>
-              </Grid>
-            </Grid>
-
-            {/* Active Filters Display */}
-            {activeFiltersCount > 0 && (
-              <Box sx={{ mt: 3 }}>
-                <Divider sx={{ mb: 2 }} />
-                <Typography
-                  variant="subtitle2"
-                  sx={{ mb: 1, color: "rgba(0,0,0,0.7)" }}
-                >
-                  Active Filters:
-                </Typography>
-                <Stack direction="row" spacing={1} flexWrap="wrap">
-                  {searchTerm && (
-                    <Chip
-                      label={`Search: "${searchTerm}"`}
-                      onDelete={() => setSearchTerm("")}
-                      size="small"
-                      sx={{
-                        bgcolor: "rgba(0,0,0,0.08)",
-                        color: "rgba(0,0,0,0.8)",
-                      }}
-                    />
-                  )}
-                  {departmentFilter && (
-                    <Chip
-                      label={`Department: ${departmentFilter}`}
-                      onDelete={() => setDepartmentFilter("")}
-                      size="small"
-                      sx={{
-                        bgcolor: "rgba(0,0,0,0.08)",
-                        color: "rgba(0,0,0,0.8)",
-                      }}
-                    />
-                  )}
-                  {cityFilter && (
-                    <Chip
-                      label={`City: ${cityFilter}`}
-                      onDelete={() => setCityFilter("")}
-                      size="small"
-                      sx={{
-                        bgcolor: "rgba(0,0,0,0.08)",
-                        color: "rgba(0,0,0,0.8)",
-                      }}
-                    />
-                  )}
-                  {statusFilter && (
-                    <Chip
-                      label={`Status: ${
-                        filterOptions.statuses.find(
-                          (s) => s.value === statusFilter
-                        )?.label
-                      }`}
-                      onDelete={() => setStatusFilter("")}
-                      size="small"
-                      sx={{
-                        bgcolor: "rgba(0,0,0,0.08)",
-                        color: "rgba(0,0,0,0.8)",
-                      }}
-                    />
-                  )}
-                </Stack>
-              </Box>
-            )}
-          </AccordionDetails>
-        </Accordion>
-      </Paper>
-
-      {/* Status Alerts */}
-      {!isOnline && (
-        <Alert severity="warning" sx={{ mb: 3 }}>
-          <Typography variant="body2">
-            <strong>Offline Mode:</strong> All changes will be saved locally and
-            synced when you're back online.
-            {stats.offline > 0 && ` You have ${stats.offline} pending changes.`}
-          </Typography>
-        </Alert>
-      )}
-
-      {offlineEmployees.length > 0 && isOnline && (
-        <Alert severity="info" sx={{ mb: 3 }}>
-          <Typography variant="body2">
-            <strong>Sync Available:</strong> You have {stats.pending} new,{" "}
-            {stats.modified} modified, and {stats.toDelete} deleted employee(s)
-            waiting to be synced.
-          </Typography>
-        </Alert>
-      )}
-
-      {/* Results Info */}
-      {activeFiltersCount > 0 && (
-        <Box sx={{ mb: 2 }}>
-          <Typography variant="body2" color="text.secondary">
-            Showing {stats.filtered} of {stats.total} employees
-            {stats.filtered !== stats.total && " (filtered)"}
-          </Typography>
-        </Box>
-      )}
-
-      {/* Data Grid */}
-      <Paper
-        sx={{
-          height: 600,
-          width: "100%",
-          boxShadow: 3,
-          borderRadius: 2,
-          overflow: "hidden",
-        }}
-      >
-        <DataGrid
-          rows={filteredEmployees}
-          columns={columns}
-          getRowId={(row) => row.id || row.localId || Math.random()}
-          disableRowSelectionOnClick
-          disableColumnFilter
-          loading={loading}
-          pageSizeOptions={[10, 25, 50, 100]}
-          initialState={{
-            pagination: {
-              paginationModel: { page: 0, pageSize: 10 },
-            },
-          }}
-          sx={{
-            "& .MuiDataGrid-cell": {
+          <Box
+            sx={{
               display: "flex",
               alignItems: "center",
-            },
-            "& .MuiDataGrid-row:hover": {
-              bgcolor: "action.hover",
-            },
-            "& .MuiDataGrid-columnHeaders": {
-              bgcolor: "primary.light",
-              color: "primary.contrastText",
-              fontWeight: "bold",
-            },
-          }}
-          slots={{
-            noRowsOverlay: () => (
+              gap: 2,
+              flexWrap: "wrap",
+            }}
+          >
+            <Chip
+              icon={isOnline ? <OnlineIcon /> : <OfflineIcon />}
+              label={isOnline ? "Online" : "Offline"}
+              color={isOnline ? "success" : "error"}
+              variant="filled"
+            />
+
+            {isOnline && (
+              <Tooltip title="Refresh Data">
+                <IconButton
+                  color="primary"
+                  onClick={() => fetchEmployees(true)}
+                  disabled={refreshing}
+                >
+                  {refreshing ? (
+                    <CircularProgress size={20} />
+                  ) : (
+                    <RefreshIcon />
+                  )}
+                </IconButton>
+              </Tooltip>
+            )}
+
+            {isOnline && offlineEmployees.length > 0 && (
+              <Badge badgeContent={offlineEmployees.length} color="warning">
+                <Button
+                  variant="outlined"
+                  startIcon={
+                    syncing ? <CircularProgress size={18} /> : <CloudSyncIcon />
+                  }
+                  onClick={handleSync}
+                  disabled={syncing}
+                  color="warning"
+                >
+                  {syncing ? "Syncing..." : "Sync Data"}
+                </Button>
+              </Badge>
+            )}
+
+            <Button
+              startIcon={<AddIcon />}
+              onClick={() => setShowForm(true)}
+              variant="contained"
+              size="large"
+            >
+              Add Employee
+            </Button>
+          </Box>
+        </Box>
+
+        {/* Statistics Cards */}
+        <Grid container spacing={2} sx={{ mb: 3 }}>
+          <Grid item xs={12} sm={6} md={3}>
+            <Card
+              sx={{ bgcolor: "primary.light", color: "primary.contrastText" }}
+            >
+              <CardContent sx={{ textAlign: "center", py: 2 }}>
+                <GroupIcon sx={{ fontSize: 40, mb: 1 }} />
+                <Typography variant="h4" sx={{ fontWeight: "bold" }}>
+                  {stats.total}
+                </Typography>
+                <Typography variant="body2">Total Employees</Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+
+          <Grid item xs={12} sm={6} md={3}>
+            <Card sx={{ bgcolor: "info.light", color: "info.contrastText" }}>
+              <CardContent sx={{ textAlign: "center", py: 2 }}>
+                <SearchIcon sx={{ fontSize: 40, mb: 1 }} />
+                <Typography variant="h4" sx={{ fontWeight: "bold" }}>
+                  {stats.filtered}
+                </Typography>
+                <Typography variant="body2">Filtered Results</Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+
+          <Grid item xs={12} sm={6} md={3}>
+            <Card
+              sx={{ bgcolor: "success.light", color: "success.contrastText" }}
+            >
+              <CardContent sx={{ textAlign: "center", py: 2 }}>
+                <OnlineIcon sx={{ fontSize: 40, mb: 1 }} />
+                <Typography variant="h4" sx={{ fontWeight: "bold" }}>
+                  {stats.online}
+                </Typography>
+                <Typography variant="body2">Online Records</Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+
+          <Grid item xs={12} sm={6} md={3}>
+            <Card
+              sx={{ bgcolor: "warning.light", color: "warning.contrastText" }}
+            >
+              <CardContent sx={{ textAlign: "center", py: 2 }}>
+                <OfflineIcon sx={{ fontSize: 40, mb: 1 }} />
+                <Typography variant="h4" sx={{ fontWeight: "bold" }}>
+                  {stats.offline}
+                </Typography>
+                <Typography variant="body2">Pending Sync</Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+        </Grid>
+
+        {/* Search and Filter Section */}
+        <Paper sx={{ mb: 3, p: 3, borderRadius: 2, bgcolor: "#fafafa" }}>
+          {/* Main Search Bar */}
+          <Box sx={{ mb: 2 }}>
+            <TextField
+              fullWidth
+              placeholder="Search employees by name, department, city, mobile, or email..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              InputProps={{
+                startAdornment: (
+                  <InputAdornment position="start">
+                    <SearchIcon sx={{ color: "rgba(0,0,0,0.6)" }} />
+                  </InputAdornment>
+                ),
+                endAdornment: searchTerm && (
+                  <InputAdornment position="end">
+                    <IconButton
+                      size="small"
+                      onClick={() => setSearchTerm("")}
+                      sx={{ color: "rgba(0,0,0,0.6)" }}
+                    >
+                      <ClearIcon />
+                    </IconButton>
+                  </InputAdornment>
+                ),
+                sx: {
+                  bgcolor: "white",
+                  "& .MuiOutlinedInput-root": {
+                    "&:hover fieldset": {
+                      borderColor: "primary.main",
+                    },
+                  },
+                  "& input::placeholder": {
+                    color: "rgba(0,0,0,0.7)",
+                  },
+                },
+              }}
+              variant="outlined"
+              size="medium"
+            />
+          </Box>
+
+          {/* Advanced Filters */}
+          <Accordion
+            expanded={filtersExpanded}
+            onChange={() => setFiltersExpanded(!filtersExpanded)}
+            sx={{
+              boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
+              "&:before": { display: "none" },
+              borderRadius: 1,
+            }}
+          >
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              sx={{
+                bgcolor: "grey.100",
+                borderRadius: "4px 4px 0 0",
+                minHeight: 56,
+                border: "1px solid grey",
+                "&.Mui-expanded": {
+                  minHeight: 56,
+                },
+              }}
+            >
               <Box
                 sx={{
                   display: "flex",
-                  flexDirection: "column",
                   alignItems: "center",
-                  justifyContent: "center",
-                  height: "100%",
                   gap: 2,
+                  width: "100%",
                 }}
               >
-                <PersonIcon sx={{ fontSize: 60, color: "text.secondary" }} />
-                <Typography variant="h6" color="text.secondary">
-                  {activeFiltersCount > 0
-                    ? "No employees match your filters"
-                    : "No employees found"}
+                <Badge badgeContent={activeFiltersCount} color="primary">
+                  <FilterIcon
+                    sx={{
+                      color: activeFiltersCount > 0 ? "black" : "grey.600",
+                    }}
+                  />
+                </Badge>
+                <Typography
+                  variant="subtitle1"
+                  sx={{ color: "rgba(0,0,0,0.8)", fontWeight: 500 }}
+                >
+                  Advanced Filters
                 </Typography>
-                {activeFiltersCount > 0 ? (
+                {activeFiltersCount > 0 && (
                   <Button
-                    variant="outlined"
+                    size="small"
                     startIcon={<ClearIcon />}
-                    onClick={clearAllFilters}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      clearAllFilters();
+                    }}
+                    sx={{
+                      ml: "auto",
+                      color: "rgba(0,0,0,0.6)",
+                      "&:hover": { bgcolor: "rgba(0,0,0,0.08)" },
+                    }}
                   >
-                    Clear All Filters
-                  </Button>
-                ) : (
-                  <Button
-                    variant="contained"
-                    startIcon={<AddIcon />}
-                    onClick={() => setShowForm(true)}
-                  >
-                    Add First Employee
+                    Clear All
                   </Button>
                 )}
               </Box>
-            ),
+            </AccordionSummary>
+            <AccordionDetails sx={{ bgcolor: "white", pt: 3 }}>
+              <Grid container spacing={3}>
+                <Grid item xs={12} sm={6} md={4}>
+                  <FormControl fullWidth>
+                    <InputLabel>Department</InputLabel>
+                    <Select
+                      value={departmentFilter}
+                      onChange={(e) => setDepartmentFilter(e.target.value)}
+                      label="Department"
+                      sx={{
+                        bgcolor: "white",
+                        "& .MuiOutlinedInput-notchedOutline": {
+                          borderColor: "rgba(0,0,0,0.3)",
+                        },
+                      }}
+                    >
+                      <MenuItem value="">
+                        <em>All Departments</em>
+                      </MenuItem>
+                      {filterOptions.departments.map((dept) => (
+                        <MenuItem key={dept} value={dept}>
+                          {dept}
+                        </MenuItem>
+                      ))}
+                    </Select>
+                  </FormControl>
+                </Grid>
+
+                <Grid item xs={12} sm={6} md={4}>
+                  <FormControl fullWidth>
+                    <InputLabel>City</InputLabel>
+                    <Select
+                      value={cityFilter}
+                      onChange={(e) => setCityFilter(e.target.value)}
+                      label="City"
+                      sx={{
+                        bgcolor: "white",
+                        "& .MuiOutlinedInput-notchedOutline": {
+                          borderColor: "rgba(0,0,0,0.3)",
+                        },
+                      }}
+                    >
+                      <MenuItem value="">
+                        <em>All Cities</em>
+                      </MenuItem>
+                      {filterOptions.cities.map((city) => (
+                        <MenuItem key={city} value={city}>
+                          {city}
+                        </MenuItem>
+                      ))}
+                    </Select>
+                  </FormControl>
+                </Grid>
+
+                <Grid item xs={12} sm={6} md={4}>
+                  <FormControl fullWidth>
+                    <InputLabel>Status</InputLabel>
+                    <Select
+                      value={statusFilter}
+                      onChange={(e) => setStatusFilter(e.target.value)}
+                      label="Status"
+                      sx={{
+                        bgcolor: "white",
+                        "& .MuiOutlinedInput-notchedOutline": {
+                          borderColor: "rgba(0,0,0,0.3)",
+                        },
+                      }}
+                    >
+                      <MenuItem value="">
+                        <em>All Status</em>
+                      </MenuItem>
+                      {filterOptions.statuses.map((status) => (
+                        <MenuItem key={status.value} value={status.value}>
+                          {status.label}
+                        </MenuItem>
+                      ))}
+                    </Select>
+                  </FormControl>
+                </Grid>
+              </Grid>
+
+              {/* Active Filters Display */}
+              {activeFiltersCount > 0 && (
+                <Box sx={{ mt: 3 }}>
+                  <Divider sx={{ mb: 2 }} />
+                  <Typography
+                    variant="subtitle2"
+                    sx={{ mb: 1, color: "rgba(0,0,0,0.7)" }}
+                  >
+                    Active Filters:
+                  </Typography>
+                  <Stack direction="row" spacing={1} flexWrap="wrap">
+                    {searchTerm && (
+                      <Chip
+                        label={`Search: "${searchTerm}"`}
+                        onDelete={() => setSearchTerm("")}
+                        size="small"
+                        sx={{
+                          bgcolor: "rgba(0,0,0,0.08)",
+                          color: "rgba(0,0,0,0.8)",
+                        }}
+                      />
+                    )}
+                    {departmentFilter && (
+                      <Chip
+                        label={`Department: ${departmentFilter}`}
+                        onDelete={() => setDepartmentFilter("")}
+                        size="small"
+                        sx={{
+                          bgcolor: "rgba(0,0,0,0.08)",
+                          color: "rgba(0,0,0,0.8)",
+                        }}
+                      />
+                    )}
+                    {cityFilter && (
+                      <Chip
+                        label={`City: ${cityFilter}`}
+                        onDelete={() => setCityFilter("")}
+                        size="small"
+                        sx={{
+                          bgcolor: "rgba(0,0,0,0.08)",
+                          color: "rgba(0,0,0,0.8)",
+                        }}
+                      />
+                    )}
+                    {statusFilter && (
+                      <Chip
+                        label={`Status: ${
+                          filterOptions.statuses.find(
+                            (s) => s.value === statusFilter
+                          )?.label
+                        }`}
+                        onDelete={() => setStatusFilter("")}
+                        size="small"
+                        sx={{
+                          bgcolor: "rgba(0,0,0,0.08)",
+                          color: "rgba(0,0,0,0.8)",
+                        }}
+                      />
+                    )}
+                  </Stack>
+                </Box>
+              )}
+            </AccordionDetails>
+          </Accordion>
+        </Paper>
+
+        {/* Status Alerts */}
+        {!isOnline && (
+          <Alert severity="warning" sx={{ mb: 3 }}>
+            <Typography variant="body2">
+              <strong>Offline Mode:</strong> All changes will be saved locally
+              and synced when you're back online.
+              {stats.offline > 0 &&
+                ` You have ${stats.offline} pending changes.`}
+            </Typography>
+          </Alert>
+        )}
+
+        {offlineEmployees.length > 0 && isOnline && (
+          <Alert severity="info" sx={{ mb: 3 }}>
+            <Typography variant="body2">
+              <strong>Sync Available:</strong> You have {stats.pending} new,{" "}
+              {stats.modified} modified, and {stats.toDelete} deleted
+              employee(s) waiting to be synced.
+            </Typography>
+          </Alert>
+        )}
+
+        {/* Results Info */}
+        {activeFiltersCount > 0 && (
+          <Box sx={{ mb: 2 }}>
+            <Typography variant="body2" color="text.secondary">
+              Showing {stats.filtered} of {stats.total} employees
+              {stats.filtered !== stats.total && " (filtered)"}
+            </Typography>
+          </Box>
+        )}
+
+        {/* Data Grid */}
+        <Paper
+          sx={{
+            height: 600,
+            width: "100%",
+            boxShadow: 3,
+            borderRadius: 2,
+            overflow: "hidden",
           }}
+        >
+          <DataGrid
+            rows={filteredEmployees}
+            columns={columns}
+            getRowId={(row) => row.id || row.localId || Math.random()}
+            disableRowSelectionOnClick
+            disableColumnFilter
+            loading={loading}
+            pageSizeOptions={[10, 25, 50, 100]}
+            initialState={{
+              pagination: {
+                paginationModel: { page: 0, pageSize: 10 },
+              },
+            }}
+            sx={{
+              "& .MuiDataGrid-cell": {
+                display: "flex",
+                alignItems: "center",
+              },
+              "& .MuiDataGrid-row:hover": {
+                bgcolor: "action.hover",
+              },
+              "& .MuiDataGrid-columnHeaders": {
+                bgcolor: "primary.light",
+                color: "primary.contrastText",
+                fontWeight: "bold",
+              },
+            }}
+            slots={{
+              noRowsOverlay: () => (
+                <Box
+                  sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    height: "100%",
+                    gap: 2,
+                  }}
+                >
+                  <PersonIcon sx={{ fontSize: 60, color: "text.secondary" }} />
+                  <Typography variant="h6" color="text.secondary">
+                    {activeFiltersCount > 0
+                      ? "No employees match your filters"
+                      : "No employees found"}
+                  </Typography>
+                  {activeFiltersCount > 0 ? (
+                    <Button
+                      variant="outlined"
+                      startIcon={<ClearIcon />}
+                      onClick={clearAllFilters}
+                    >
+                      Clear All Filters
+                    </Button>
+                  ) : (
+                    <Button
+                      variant="contained"
+                      startIcon={<AddIcon />}
+                      onClick={() => setShowForm(true)}
+                    >
+                      Add First Employee
+                    </Button>
+                  )}
+                </Box>
+              ),
+            }}
+          />
+        </Paper>
+
+        {/* Modals */}
+        <EmployeeFormModal
+          show={showForm}
+          onHide={() => {
+            setShowForm(false);
+            setSelectedEmp(null);
+          }}
+          onSave={handleSave}
+          initialData={selectedEmp}
         />
-      </Paper>
 
-      {/* Modals */}
-      <EmployeeFormModal
-        show={showForm}
-        onHide={() => {
-          setShowForm(false);
-          setSelectedEmp(null);
-        }}
-        onSave={handleSave}
-        initialData={selectedEmp}
-      />
-
-      <ConfirmModal
-        show={showDelete}
-        onConfirm={handleDelete}
-        onCancel={() => {
-          setShowDelete(false);
-          setDeleteId(null);
-        }}
-        title="Delete Employee"
-        message="Are you sure you want to delete this employee? This action cannot be undone."
-      />
-    </Container>
+        <ConfirmModal
+          show={showDelete}
+          onConfirm={handleDelete}
+          onCancel={() => {
+            setShowDelete(false);
+            setDeleteId(null);
+          }}
+          title="Delete Employee"
+          message="Are you sure you want to delete this employee? This action cannot be undone."
+        />
+      </Container>
+      <NotificationButton />
+    </>
   );
 }
