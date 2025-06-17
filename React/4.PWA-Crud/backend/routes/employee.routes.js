@@ -21,6 +21,20 @@ function generateUniqueFilename(baseName) {
   return name;
 }
 
+function calculateAge(dob) {
+  const birthDate = new Date(dob);
+  const today = new Date();
+
+  let age = today.getFullYear() - birthDate.getFullYear();
+  const m = today.getMonth() - birthDate.getMonth();
+
+  if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+    age--;
+  }
+
+  return age;
+}
+
 module.exports = async function routes(fastify, options) {
   // Create employee
   fastify.post("/employees", async (req, reply) => {
@@ -43,7 +57,9 @@ module.exports = async function routes(fastify, options) {
           fields[part.fieldname] = part.value;
         }
       }
-
+      if (fields.date_of_birth) {
+        fields.age = calculateAge(fields.date_of_birth);
+      }
       const newEmp = await Employee.create({ ...fields, profile_image });
       reply.code(201).send(newEmp);
     } catch (err) {
@@ -56,12 +72,14 @@ module.exports = async function routes(fastify, options) {
   fastify.get("/employees", async (req, reply) => {
     try {
       const all = await Employee.findAll();
-      reply.send(all.map((emp) => ({
-        ...emp.toJSON(),
-        image_url: emp.profile_image
-          ? `http://localhost:5000/uploads/${emp.profile_image}`
-          : null,
-      })));
+      reply.send(
+        all.map((emp) => ({
+          ...emp.toJSON(),
+          image_url: emp.profile_image
+            ? `http://localhost:5000/uploads/${emp.profile_image}`
+            : null,
+        }))
+      );
     } catch (err) {
       console.error("Error fetching employees:", err);
       reply.code(500).send({ error: "Server error while fetching employees" });
@@ -109,6 +127,10 @@ module.exports = async function routes(fastify, options) {
         } else if (part.type === "field") {
           fields[part.fieldname] = part.value;
         }
+      }
+
+      if (fields.date_of_birth) {
+        fields.age = calculateAge(fields.date_of_birth);
       }
 
       await emp.update({ ...fields, profile_image });

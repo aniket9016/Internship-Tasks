@@ -4,6 +4,7 @@ const sequelize = require("../db");
 const Employee = sequelize.define("Employee", {
   first_name: DataTypes.STRING,
   last_name: DataTypes.STRING,
+  date_of_birth: DataTypes.DATEONLY,
   age: DataTypes.INTEGER,
   city: DataTypes.STRING,
   department: DataTypes.STRING,

@@ -18,14 +18,19 @@ import {
   IconButton,
   Typography,
   Avatar,
-  Paper
+  Paper,
 } from "@mui/material";
 import {
   Close as CloseIcon,
-  CloudUpload as UploadIcon
+  CloudUpload as UploadIcon,
 } from "@mui/icons-material";
 
-export default function EmployeeFormModal({ show, onHide, onSave, initialData }) {
+export default function EmployeeFormModal({
+  show,
+  onHide,
+  onSave,
+  initialData,
+}) {
   const defaultForm = {
     first_name: "",
     last_name: "",
@@ -48,33 +53,36 @@ export default function EmployeeFormModal({ show, onHide, onSave, initialData })
   // Function to calculate age from date of birth
   const calculateAge = (dateOfBirth) => {
     if (!dateOfBirth) return "";
-    
+
     const today = new Date();
     const birthDate = new Date(dateOfBirth);
-    
+
     // Check if birth date is valid and not in the future
     if (isNaN(birthDate.getTime()) || birthDate > today) {
       return "";
     }
-    
+
     let age = today.getFullYear() - birthDate.getFullYear();
     const monthDiff = today.getMonth() - birthDate.getMonth();
-    
+
     // If birthday hasn't occurred this year yet, subtract 1
-    if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+    if (
+      monthDiff < 0 ||
+      (monthDiff === 0 && today.getDate() < birthDate.getDate())
+    ) {
       age--;
     }
-    
+
     return age;
   };
 
   // Function to calculate date of birth from age (for editing existing records)
   const calculateDateOfBirth = (age) => {
     if (!age || age <= 0) return "";
-    
+
     const today = new Date();
     const birthYear = today.getFullYear() - age;
-    
+
     // Set to January 1st of the birth year as an approximation
     return `${birthYear}-01-01`;
   };
@@ -108,9 +116,12 @@ export default function EmployeeFormModal({ show, onHide, onSave, initialData })
         initialData.profile_image.type
       ) {
         try {
-          const blob = new Blob([new Uint8Array(initialData.profile_image.data)], {
-            type: initialData.profile_image.type,
-          });
+          const blob = new Blob(
+            [new Uint8Array(initialData.profile_image.data)],
+            {
+              type: initialData.profile_image.type,
+            }
+          );
           objectUrl = URL.createObjectURL(blob);
           setExistingImage(objectUrl);
         } catch (err) {
@@ -137,18 +148,18 @@ export default function EmployeeFormModal({ show, onHide, onSave, initialData })
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    
+
     if (name === "date_of_birth") {
       const age = calculateAge(value);
-      setForm((prev) => ({ 
-        ...prev, 
+      setForm((prev) => ({
+        ...prev,
         [name]: value,
-        age: age
+        age: age,
       }));
     } else {
       setForm((prev) => ({ ...prev, [name]: value }));
     }
-    
+
     setErrors((prev) => ({ ...prev, [name]: "" }));
   };
 
@@ -156,21 +167,27 @@ export default function EmployeeFormModal({ show, onHide, onSave, initialData })
     const file = e.target.files[0];
     if (file) {
       // Validate file type
-      if (!file.type.startsWith('image/')) {
-        setErrors(prev => ({ ...prev, profile_image: "Please select a valid image file" }));
+      if (!file.type.startsWith("image/")) {
+        setErrors((prev) => ({
+          ...prev,
+          profile_image: "Please select a valid image file",
+        }));
         return;
       }
-      
+
       // Validate file size (5MB limit)
       if (file.size > 5 * 1024 * 1024) {
-        setErrors(prev => ({ ...prev, profile_image: "Image size should be less than 5MB" }));
+        setErrors((prev) => ({
+          ...prev,
+          profile_image: "Image size should be less than 5MB",
+        }));
         return;
       }
 
       setForm((prev) => ({ ...prev, profile_image: file }));
       setPreview(URL.createObjectURL(file));
       setExistingImage(null);
-      setErrors(prev => ({ ...prev, profile_image: "" }));
+      setErrors((prev) => ({ ...prev, profile_image: "" }));
     }
   };
 
@@ -185,26 +202,26 @@ export default function EmployeeFormModal({ show, onHide, onSave, initialData })
 
   const validate = () => {
     const newErrors = {};
-    
+
     if (!form.first_name.trim()) {
       newErrors.first_name = "First name is required.";
     } else if (form.first_name.trim().length < 2) {
       newErrors.first_name = "First name must be at least 2 characters.";
     }
-    
+
     if (!form.last_name.trim()) {
       newErrors.last_name = "Last name is required.";
     } else if (form.last_name.trim().length < 2) {
       newErrors.last_name = "Last name must be at least 2 characters.";
     }
-    
+
     if (!form.date_of_birth) {
       newErrors.date_of_birth = "Date of birth is required.";
     } else {
       const birthDate = new Date(form.date_of_birth);
       const today = new Date();
       const age = calculateAge(form.date_of_birth);
-      
+
       if (birthDate > today) {
         newErrors.date_of_birth = "Date of birth cannot be in the future.";
       } else if (age < 18) {
@@ -213,17 +230,17 @@ export default function EmployeeFormModal({ show, onHide, onSave, initialData })
         newErrors.date_of_birth = "Employee cannot be older than 65 years.";
       }
     }
-    
+
     if (!form.city.trim()) {
       newErrors.city = "City is required.";
     } else if (form.city.trim().length < 2) {
       newErrors.city = "City must be at least 2 characters.";
     }
-    
+
     if (!form.mobile.match(/^[0-9]{10}$/)) {
       newErrors.mobile = "Mobile must be exactly 10 digits.";
     }
-    
+
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
@@ -235,10 +252,8 @@ export default function EmployeeFormModal({ show, onHide, onSave, initialData })
     const formData = new FormData();
     for (const key in form) {
       if (form[key] !== null && form[key] !== undefined) {
-        // Don't send date_of_birth to backend, only send the calculated age
-        if (key !== "date_of_birth") {
-          formData.append(key, form[key]);
-        }
+        // Send both date_of_birth and age to backend
+        formData.append(key, form[key]);
       }
     }
 
@@ -263,15 +278,23 @@ export default function EmployeeFormModal({ show, onHide, onSave, initialData })
   // Calculate max date (18 years ago from today)
   const getMaxDate = () => {
     const today = new Date();
-    const maxDate = new Date(today.getFullYear() - 18, today.getMonth(), today.getDate());
-    return maxDate.toISOString().split('T')[0];
+    const maxDate = new Date(
+      today.getFullYear() - 18,
+      today.getMonth(),
+      today.getDate()
+    );
+    return maxDate.toISOString().split("T")[0];
   };
 
   // Calculate min date (65 years ago from today)
   const getMinDate = () => {
     const today = new Date();
-    const minDate = new Date(today.getFullYear() - 65, today.getMonth(), today.getDate());
-    return minDate.toISOString().split('T')[0];
+    const minDate = new Date(
+      today.getFullYear() - 65,
+      today.getMonth(),
+      today.getDate()
+    );
+    return minDate.toISOString().split("T")[0];
   };
 
   return (
@@ -284,7 +307,7 @@ export default function EmployeeFormModal({ show, onHide, onSave, initialData })
           aria-label="close"
           onClick={handleClose}
           sx={{
-            position: 'absolute',
+            position: "absolute",
             right: 8,
             top: 8,
             color: (theme) => theme.palette.grey[500],
@@ -296,26 +319,30 @@ export default function EmployeeFormModal({ show, onHide, onSave, initialData })
 
       <form onSubmit={handleSubmit}>
         <DialogContent sx={{ pt: 0 }}>
-          <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
+          <Box sx={{ display: "flex", flexDirection: "column", gap: 3 }}>
             {/* Profile Image Section */}
-            <Paper elevation={1} sx={{ p: 3, textAlign: 'center', bgcolor: 'grey.50' }}>
+            <Paper
+              elevation={1}
+              sx={{ p: 3, textAlign: "center", bgcolor: "grey.50" }}
+            >
               <Typography variant="h6" gutterBottom color="primary">
                 Profile Image
               </Typography>
 
-              <Box sx={{ mb: 3, position: 'relative', display: 'inline-block' }}>
+              <Box
+                sx={{ mb: 3, position: "relative", display: "inline-block" }}
+              >
                 <Avatar
                   src={currentImage}
                   sx={{
                     width: 140,
                     height: 140,
-                    margin: '0 auto',
-                    border: '4px solid',
-                    borderColor: 'primary.light',
-                    boxShadow: 3
+                    margin: "0 auto",
+                    border: "4px solid",
+                    borderColor: "primary.light",
+                    boxShadow: 3,
                   }}
                 />
-                
               </Box>
 
               <input
@@ -323,7 +350,7 @@ export default function EmployeeFormModal({ show, onHide, onSave, initialData })
                 type="file"
                 accept="image/*"
                 onChange={handleFileChange}
-                style={{ display: 'none' }}
+                style={{ display: "none" }}
               />
 
               <Button
@@ -334,25 +361,52 @@ export default function EmployeeFormModal({ show, onHide, onSave, initialData })
               >
                 {currentImage ? "Change Image" : "Upload Image"}
               </Button>
-              
+
+              {currentImage && (
+                <Button
+                  variant="text"
+                  color="error"
+                  onClick={handleRemoveImage}
+                  sx={{ ml: 1, mb: 1 }}
+                >
+                  Remove Image
+                </Button>
+              )}
+
               {errors.profile_image && (
                 <Typography variant="caption" color="error" display="block">
                   {errors.profile_image}
                 </Typography>
               )}
-              
-              <Typography variant="caption" color="text.secondary" display="block">
+
+              <Typography
+                variant="caption"
+                color="text.secondary"
+                display="block"
+              >
                 Max size: 5MB. Supported formats: JPG, PNG, GIF
               </Typography>
             </Paper>
 
             {/* Personal Information */}
             <Paper elevation={1} sx={{ p: 3 }}>
-              <Typography variant="h6" gutterBottom color="primary" sx={{ mb: 2 }}>
+              <Typography
+                variant="h6"
+                gutterBottom
+                color="primary"
+                sx={{ mb: 2 }}
+              >
                 Personal Information
               </Typography>
-              
-              <Box sx={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 2, mb: 2 }}>
+
+              <Box
+                sx={{
+                  display: "grid",
+                  gridTemplateColumns: "1fr 1fr",
+                  gap: 2,
+                  mb: 2,
+                }}
+              >
                 <TextField
                   inputRef={firstNameRef}
                   name="first_name"
@@ -377,48 +431,80 @@ export default function EmployeeFormModal({ show, onHide, onSave, initialData })
                 />
               </Box>
 
-              <Box sx={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 2, mb: 2 }}>
+              <Box
+                sx={{
+                  display: "grid",
+                  gridTemplateColumns: "1fr 1fr",
+                  gap: 2,
+                  mb: 2,
+                }}
+              >
                 <TextField
-                  name="date_of_birth"
                   label="Date of Birth"
                   type="date"
-                  value={form.date_of_birth}
+                  name="date_of_birth"
+                  value={form.date_of_birth || ""}
                   onChange={handleChange}
                   error={!!errors.date_of_birth}
-                  helperText={errors.date_of_birth || `Age: ${form.age || 'Not calculated'} years`}
+                  helperText={errors.date_of_birth}
                   required
                   fullWidth
-                  InputLabelProps={{
-                    shrink: true,
-                  }}
+                  InputLabelProps={{ shrink: true }}
                   inputProps={{
                     min: getMinDate(),
-                    max: getMaxDate()
+                    max: getMaxDate(),
                   }}
                 />
 
-                <FormControl component="fieldset">
-                  <FormLabel component="legend">Gender</FormLabel>
-                  <RadioGroup
-                    row
-                    name="gender"
-                    value={form.gender}
-                    onChange={handleChange}
-                  >
-                    <FormControlLabel value="Male" control={<Radio />} label="Male" />
-                    <FormControlLabel value="Female" control={<Radio />} label="Female" />
-                  </RadioGroup>
-                </FormControl>
+                <TextField
+                  label="Age"
+                  value={form.age || ""}
+                  InputProps={{ readOnly: true }}
+                  fullWidth
+                />
               </Box>
+
+              <FormControl component="fieldset">
+                <FormLabel component="legend">Gender</FormLabel>
+                <RadioGroup
+                  row
+                  name="gender"
+                  value={form.gender}
+                  onChange={handleChange}
+                >
+                  <FormControlLabel
+                    value="Male"
+                    control={<Radio />}
+                    label="Male"
+                  />
+                  <FormControlLabel
+                    value="Female"
+                    control={<Radio />}
+                    label="Female"
+                  />
+                </RadioGroup>
+              </FormControl>
             </Paper>
 
             {/* Work Information */}
             <Paper elevation={1} sx={{ p: 3 }}>
-              <Typography variant="h6" gutterBottom color="primary" sx={{ mb: 2 }}>
+              <Typography
+                variant="h6"
+                gutterBottom
+                color="primary"
+                sx={{ mb: 2 }}
+              >
                 Work Information
               </Typography>
-              
-              <Box sx={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 2, mb: 2 }}>
+
+              <Box
+                sx={{
+                  display: "grid",
+                  gridTemplateColumns: "1fr 1fr",
+                  gap: 2,
+                  mb: 2,
+                }}
+              >
                 <FormControl fullWidth>
                   <InputLabel>Department</InputLabel>
                   <Select
