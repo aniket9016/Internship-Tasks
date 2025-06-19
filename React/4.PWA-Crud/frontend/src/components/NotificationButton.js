@@ -69,7 +69,7 @@ export default function NotificationButton() {
 
       if (permission !== "granted") {
         toast.error(
-          "❌ Notifications permission denied. Please enable notifications in your browser settings."
+          "Notifications permission denied. Please enable notifications in your browser settings."
         );
         setLoading(false);
         return;
